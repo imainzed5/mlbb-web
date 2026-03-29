@@ -28,6 +28,7 @@ export const metadata: Metadata = createPageMetadata({
   title: "Meta Tracker",
   description:
     "Track the live MLBB meta with lane-aware power boards, contested picks, rising heroes, and tier snapshots.",
+  imagePath: "/meta/opengraph-image",
   path: "/meta",
 });
 

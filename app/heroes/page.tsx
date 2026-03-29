@@ -14,6 +14,7 @@ export const metadata: Metadata = createPageMetadata({
   title: "Heroes",
   description:
     "Browse MLBB heroes by role, tier, pick rate, and win rate in a dense beginner-friendly browser.",
+  imagePath: "/heroes/opengraph-image",
   path: "/heroes",
 });
 

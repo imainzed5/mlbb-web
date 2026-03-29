@@ -6,7 +6,6 @@ import { startTransition, useEffect, useState } from "react";
 import { HeroTrendChart } from "@/components/charts/HeroTrendChart";
 import { StateMessage } from "@/components/ui/StateMessage";
 import { HeroInsightPanel } from "@/components/hero/HeroInsightPanel";
-import { HeroMatchupList } from "@/components/hero/HeroMatchupList";
 import {
   HERO_DETAIL_DEFAULT_RANK,
   HERO_DETAIL_DEFAULT_TREND_WINDOW,
@@ -134,7 +133,7 @@ export function HeroDetailExplorer({ initialData, slug }: HeroDetailExplorerProp
   }).format(new Date(detailData.generatedAt));
 
   return (
-    <div className="space-y-5">
+    <div className="min-w-0 space-y-5">
       <section
         className="space-y-4 rounded-2xl bg-card-surface p-4 sm:p-5"
         style={{ border: "0.5px solid var(--border-subtle)" }}
@@ -180,7 +179,7 @@ export function HeroDetailExplorer({ initialData, slug }: HeroDetailExplorerProp
             </select>
           </label>
 
-          <div>
+          <div className="min-w-0">
             <div className="mb-2 text-[11px] font-medium tracking-[0.16em] text-text-muted uppercase">
               Trend window
             </div>
@@ -224,32 +223,6 @@ export function HeroDetailExplorer({ initialData, slug }: HeroDetailExplorerProp
           />
         ) : null}
       </section>
-
-      {detailData.overview.insights.length > 0 ? (
-        <HeroInsightPanel insights={detailData.overview.insights} />
-      ) : (
-        <StateMessage
-          title="Draft notes are unavailable"
-          description="This hero does not currently expose narrative assist, strong, or weak relation notes."
-          tone="muted"
-        />
-      )}
-
-      <HeroMatchupList
-        title="Counter edges"
-        description="Opponents where this hero gains the strongest positive win-rate swing in the selected counters feed."
-        emptyTitle="No matchup edges yet"
-        emptyDescription="The counters endpoint did not return structured matchup rows for this hero and rank filter."
-        items={detailData.counters}
-      />
-
-      <HeroMatchupList
-        title="Best teammates"
-        description="Pairings that create the strongest positive win-rate swing in the selected compatibility feed."
-        emptyTitle="No teammate data yet"
-        emptyDescription="The compatibility endpoint did not return structured teammate rows for this hero and rank filter."
-        items={detailData.teammates}
-      />
 
       <section
         className="space-y-4 rounded-2xl bg-card-surface p-4 sm:p-5"
@@ -297,6 +270,16 @@ export function HeroDetailExplorer({ initialData, slug }: HeroDetailExplorerProp
           />
         )}
       </section>
+
+      {detailData.overview.insights.length > 0 ? (
+        <HeroInsightPanel insights={detailData.overview.insights} />
+      ) : (
+        <StateMessage
+          title="Draft notes are unavailable"
+          description="This hero does not currently expose narrative assist, strong, or weak relation notes."
+          tone="muted"
+        />
+      )}
     </div>
   );
 }

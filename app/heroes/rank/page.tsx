@@ -14,6 +14,7 @@ export const metadata: Metadata = createPageMetadata({
   title: "Hero Rank",
   description:
     "Track MLBB hero rankings with tier grouping plus live win, pick, and ban rate context.",
+  imagePath: "/heroes/rank/opengraph-image",
   path: "/heroes/rank",
 });
 

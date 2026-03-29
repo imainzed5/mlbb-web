@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 
 import { HeroBuildPlanCard } from "@/components/hero/HeroBuildPlanCard";
 import { HeroDetailExplorer } from "@/components/hero/HeroDetailExplorer";
+import { HeroMatchupList } from "@/components/hero/HeroMatchupList";
 import { RoleBadge } from "@/components/heroes/RoleBadge";
 import { TierBadge } from "@/components/heroes/TierBadge";
 import { PageContainer } from "@/components/layout/PageContainer";
@@ -270,7 +271,7 @@ export default async function HeroDetailPage({ params }: HeroDetailPageProps) {
         </section>
 
         <div className="grid gap-5 2xl:grid-cols-[minmax(0,1.35fr)_360px]">
-          <div className="space-y-5">
+          <div className="min-w-0 space-y-5">
             <section
               className="space-y-4 rounded-2xl bg-card-surface p-4 sm:p-5"
               style={{ border: "0.5px solid var(--border-subtle)" }}
@@ -412,10 +413,26 @@ export default async function HeroDetailPage({ params }: HeroDetailPageProps) {
                 />
               )}
             </section>
+
+            <HeroDetailExplorer slug={overview.slug} initialData={heroPageData} />
           </div>
 
-          <div className="space-y-4">
-            <HeroDetailExplorer slug={overview.slug} initialData={heroPageData} />
+          <div className="space-y-5 self-start">
+            <HeroMatchupList
+              title="They counter"
+              description="Opponents where this hero gains the strongest positive win-rate swing in the selected counters feed."
+              emptyTitle="No matchup edges yet"
+              emptyDescription="The counters endpoint did not return structured matchup rows for this hero and rank filter."
+              items={heroPageData.counters}
+            />
+
+            <HeroMatchupList
+              title="Best teammates"
+              description="Pairings that create the strongest positive win-rate swing in the selected compatibility feed."
+              emptyTitle="No teammate data yet"
+              emptyDescription="The compatibility endpoint did not return structured teammate rows for this hero and rank filter."
+              items={heroPageData.teammates}
+            />
           </div>
         </div>
       </PageContainer>
