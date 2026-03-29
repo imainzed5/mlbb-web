@@ -195,11 +195,12 @@ export function HeroRankBoardClient({ heroes }: HeroRankBoardClientProps) {
                 type="button"
                 onClick={() => setActiveRole("All")}
                 className="rounded-full px-3 py-1.5 text-[11px] font-medium transition-colors"
-                style={{
-                  background: activeRole === "All" ? "var(--accent-surface)" : "var(--card-surface)",
-                  border: "0.5px solid var(--border-subtle)",
-                  color: activeRole === "All" ? "var(--accent-text)" : "var(--text-secondary)",
-                }}
+                  style={{
+                    background: activeRole === "All" ? "#2d2414" : "var(--card-surface)",
+                    border: activeRole === "All" ? "1px solid #8f6a10" : "0.5px solid var(--border-subtle)",
+                    color: activeRole === "All" ? "#fcd34d" : "var(--text-secondary)",
+                    WebkitTextFillColor: activeRole === "All" ? "#fcd34d" : undefined,
+                  }}
               >
                 All roles
               </button>
@@ -211,10 +212,11 @@ export function HeroRankBoardClient({ heroes }: HeroRankBoardClientProps) {
                   className="rounded-full px-3 py-1.5 text-[11px] font-medium transition-colors"
                   style={{
                     background:
-                      activeRole === role ? "var(--accent-surface)" : "var(--card-surface)",
-                    border: "0.5px solid var(--border-subtle)",
+                      activeRole === role ? "#2d2414" : "var(--card-surface)",
+                    border: activeRole === role ? "1px solid #8f6a10" : "0.5px solid var(--border-subtle)",
                     color:
-                      activeRole === role ? "var(--accent-text)" : "var(--text-secondary)",
+                      activeRole === role ? "#fcd34d" : "var(--text-secondary)",
+                    WebkitTextFillColor: activeRole === role ? "#fcd34d" : undefined,
                   }}
                 >
                   {role}
@@ -236,10 +238,11 @@ export function HeroRankBoardClient({ heroes }: HeroRankBoardClientProps) {
                   className="rounded-full px-3 py-1.5 text-[11px] font-medium transition-colors"
                   style={{
                     background:
-                      activeTier === tier ? "var(--accent-surface)" : "var(--card-surface)",
-                    border: "0.5px solid var(--border-subtle)",
+                      activeTier === tier ? "#2d2414" : "var(--card-surface)",
+                    border: activeTier === tier ? "1px solid #8f6a10" : "0.5px solid var(--border-subtle)",
                     color:
-                      activeTier === tier ? "var(--accent-text)" : "var(--text-secondary)",
+                      activeTier === tier ? "#fcd34d" : "var(--text-secondary)",
+                    WebkitTextFillColor: activeTier === tier ? "#fcd34d" : undefined,
                   }}
                 >
                   {tier === "All" ? "All tiers" : `Tier ${tier}`}

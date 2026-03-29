@@ -95,6 +95,11 @@ export default async function HeroDetailPage({ params, searchParams }: HeroDetai
   }
 
   const { overview } = heroPageData;
+  const counteredByInsight =
+    overview.insights.find((insight) => insight.title === "Watch Out For") ?? null;
+  const draftInsights = overview.insights.filter(
+    (insight) => insight.title !== "Watch Out For"
+  );
   const generatedAt = new Intl.DateTimeFormat("en-US", {
     dateStyle: "medium",
     timeStyle: "short",
@@ -433,7 +438,16 @@ export default async function HeroDetailPage({ params, searchParams }: HeroDetai
               )}
             </section>
 
-            <HeroDetailExplorer slug={overview.slug} initialData={heroPageData} />
+            <HeroDetailExplorer
+              slug={overview.slug}
+              initialData={{
+                ...heroPageData,
+                overview: {
+                  ...heroPageData.overview,
+                  insights: draftInsights,
+                },
+              }}
+            />
           </div>
 
           <div className="space-y-5 self-start">
@@ -452,6 +466,44 @@ export default async function HeroDetailPage({ params, searchParams }: HeroDetai
               emptyDescription="The compatibility endpoint did not return structured teammate rows for this hero and rank filter."
               items={heroPageData.teammates}
             />
+
+            {counteredByInsight ? (
+              <section
+                className="space-y-4 rounded-2xl bg-card-surface p-4 sm:p-5"
+                style={{ border: "0.5px solid var(--border-subtle)" }}
+              >
+                <div>
+                  <h2 className="text-[18px] font-medium text-text-primary">Watch out for</h2>
+                  <p className="mt-1 text-[12px] leading-6 text-text-secondary">
+                    Opponents that create a strong negative win-rate swing against this hero in the selected counters feed.
+                  </p>
+                </div>
+
+                <div
+                  className="rounded-xl bg-page-background/70 p-4"
+                  style={{ border: "0.5px solid var(--border-subtle)" }}
+                >
+                  <p className="text-[12px] leading-6 text-text-secondary">
+                    {counteredByInsight.description}
+                  </p>
+
+                  {counteredByInsight.heroes.length > 0 ? (
+                    <div className="mt-4 flex flex-wrap gap-2 text-[11px]">
+                      {counteredByInsight.heroes.map((hero) => (
+                        <Link
+                          key={hero.heroId}
+                          href={`/heroes/${hero.slug}`}
+                          className="rounded-full bg-card-surface px-3 py-1.5 text-text-secondary transition-colors hover:border-accent-primary hover:text-accent-text"
+                          style={{ border: "0.5px solid var(--border-subtle)" }}
+                        >
+                          {hero.name}
+                        </Link>
+                      ))}
+                    </div>
+                  ) : null}
+                </div>
+              </section>
+            ) : null}
           </div>
         </div>
       </PageContainer>

@@ -61,9 +61,18 @@ export function HeroFilters({
             className={[
               "inline-flex items-center gap-1.5 rounded-md px-2.5 py-1.5 text-[11px] font-medium transition-colors",
               activeView === "grid"
-                ? "bg-accent-surface text-accent-text"
+                ? ""
                 : "text-text-secondary hover:text-text-primary",
             ].join(" ")}
+            style={
+              activeView === "grid"
+                ? {
+                    background: "#2d2414",
+                    color: "#fcd34d",
+                    WebkitTextFillColor: "#fcd34d",
+                  }
+                : undefined
+            }
           >
             <LayoutGrid className="size-3.5" strokeWidth={2} />
             <span className="hidden xs:inline">Grid</span>
@@ -75,9 +84,18 @@ export function HeroFilters({
             className={[
               "inline-flex items-center gap-1.5 rounded-md px-2.5 py-1.5 text-[11px] font-medium transition-colors",
               activeView === "list"
-                ? "bg-accent-surface text-accent-text"
+                ? ""
                 : "text-text-secondary hover:text-text-primary",
             ].join(" ")}
+            style={
+              activeView === "list"
+                ? {
+                    background: "#2d2414",
+                    color: "#fcd34d",
+                    WebkitTextFillColor: "#fcd34d",
+                  }
+                : undefined
+            }
           >
             <Rows3 className="size-3.5" strokeWidth={2} />
             <span className="hidden xs:inline">List</span>

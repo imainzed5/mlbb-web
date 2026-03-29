@@ -263,10 +263,11 @@ export function MetaDashboardClient({ data }: MetaDashboardClientProps) {
               className="rounded-full px-3 py-1.5 text-[11px] font-medium transition-colors"
               style={{
                 background:
-                  activeLane === option.value ? "var(--accent-surface)" : "var(--card-surface)",
-                border: "0.5px solid var(--border-subtle)",
+                  activeLane === option.value ? "#2d2414" : "var(--card-surface)",
+                border: activeLane === option.value ? "1px solid #8f6a10" : "0.5px solid var(--border-subtle)",
                 color:
-                  activeLane === option.value ? "var(--accent-text)" : "var(--text-secondary)",
+                  activeLane === option.value ? "#fcd34d" : "var(--text-secondary)",
+                WebkitTextFillColor: activeLane === option.value ? "#fcd34d" : undefined,
               }}
             >
               {option.label}
@@ -283,10 +284,11 @@ export function MetaDashboardClient({ data }: MetaDashboardClientProps) {
               className="rounded-full px-3 py-1.5 text-[11px] font-medium transition-colors"
               style={{
                 background:
-                  activeRole === option.value ? "var(--accent-surface)" : "var(--card-surface)",
-                border: "0.5px solid var(--border-subtle)",
+                  activeRole === option.value ? "#2d2414" : "var(--card-surface)",
+                border: activeRole === option.value ? "1px solid #8f6a10" : "0.5px solid var(--border-subtle)",
                 color:
-                  activeRole === option.value ? "var(--accent-text)" : "var(--text-secondary)",
+                  activeRole === option.value ? "#fcd34d" : "var(--text-secondary)",
+                WebkitTextFillColor: activeRole === option.value ? "#fcd34d" : undefined,
               }}
             >
               {option.label}

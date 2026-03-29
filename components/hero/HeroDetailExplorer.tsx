@@ -193,13 +193,15 @@ export function HeroDetailExplorer({ initialData, slug }: HeroDetailExplorerProp
                   style={{
                     background:
                       activeTrendWindow === option.value
-                        ? "var(--accent-surface)"
+                        ? "#2d2414"
                         : "var(--card-surface)",
-                    border: "0.5px solid var(--border-subtle)",
+                    border: activeTrendWindow === option.value ? "1px solid #8f6a10" : "0.5px solid var(--border-subtle)",
                     color:
                       activeTrendWindow === option.value
-                        ? "var(--accent-text)"
+                        ? "#fcd34d"
                         : "var(--text-secondary)",
+                    WebkitTextFillColor:
+                      activeTrendWindow === option.value ? "#fcd34d" : undefined,
                   }}
                 >
                   {option.label}

@@ -27,10 +27,16 @@ export function RoleFilterChips({
             className={[
               "shrink-0 rounded-full px-3 py-1.5 text-[12px] font-medium transition-colors",
               isActive
-                ? "border border-accent-primary bg-accent-surface text-accent-text"
+                ? ""
                 : "bg-card-surface text-text-secondary hover:text-text-primary",
             ].join(" ")}
-            style={{ borderWidth: isActive ? "1px" : "0.5px", borderColor: isActive ? "var(--accent-primary)" : "var(--border-subtle)" }}
+            style={{
+              background: isActive ? "#2d2414" : undefined,
+              border: isActive ? "1px solid #8f6a10" : "0.5px solid var(--border-subtle)",
+              borderWidth: isActive ? "1px" : "0.5px",
+              color: isActive ? "#fcd34d" : undefined,
+              WebkitTextFillColor: isActive ? "#fcd34d" : undefined,
+            }}
           >
             {role}
           </button>

@@ -50,9 +50,16 @@ export function Topbar() {
                     className={cn(
                       "shrink-0 rounded-full px-3 py-2 text-[13px] font-medium transition-colors",
                       active
-                        ? "text-text-primary"
+                        ? ""
                         : "text-text-secondary hover:text-text-primary"
                     )}
+                    style={
+                      active
+                        ? {
+                            color: "var(--highlight-text)",
+                          }
+                        : undefined
+                    }
                   >
                     {item.label}
                   </Link>
@@ -79,9 +86,17 @@ export function Topbar() {
                 className={cn(
                   "flex min-h-14 flex-col items-center justify-center gap-1 rounded-2xl px-2 py-2 text-[10px] font-medium transition-colors",
                   active
-                    ? "bg-accent-surface text-accent-text"
+                    ? ""
                     : "text-text-secondary hover:text-text-primary"
                 )}
+                style={
+                  active
+                    ? {
+                        background: "var(--highlight-surface)",
+                        color: "var(--highlight-text)",
+                      }
+                    : undefined
+                }
               >
                 <Icon className="size-4.5" strokeWidth={2} />
                 <span>{item.label}</span>

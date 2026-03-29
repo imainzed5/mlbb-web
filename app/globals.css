@@ -11,6 +11,9 @@
   --color-accent-primary: var(--accent-primary);
   --color-accent-surface: var(--accent-surface);
   --color-accent-text: var(--accent-text);
+  --color-highlight-surface: var(--highlight-surface);
+  --color-highlight-border: var(--highlight-border);
+  --color-highlight-text: var(--highlight-text);
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
   --color-text-muted: var(--text-muted);
@@ -35,6 +38,9 @@
   --accent-primary: #378add;
   --accent-surface: #1a3557;
   --accent-text: #85b7eb;
+  --highlight-surface: #2d2414;
+  --highlight-border: #8f6a10;
+  --highlight-text: #fcd34d;
   --text-primary: #e2e8f0;
   --text-secondary: #8892a0;
   --text-muted: #5a6477;
