@@ -8,6 +8,7 @@ import { TierBadge } from "./TierBadge";
 
 type HeroListProps = {
   heroes: HeroBrowserItem[];
+  source?: "heroes" | "rank";
 };
 
 function getHeroInitials(name: string) {
@@ -19,13 +20,13 @@ function getHeroInitials(name: string) {
     .join("");
 }
 
-export function HeroList({ heroes }: HeroListProps) {
+export function HeroList({ heroes, source = "heroes" }: HeroListProps) {
   return (
     <div className="space-y-2.5 sm:space-y-3">
       {heroes.map((hero, index) => (
         <Link
           key={hero.heroId}
-          href={`/heroes/${hero.slug}`}
+          href={`/heroes/${hero.slug}?from=${source}`}
           className="group grid grid-cols-[auto_auto_minmax(0,1fr)] items-center gap-x-3 gap-y-1.5 rounded-xl bg-card-surface px-3 py-2.5 transition-colors hover:border-accent-primary sm:px-4 sm:py-3"
           style={{ border: "0.5px solid var(--border-subtle)" }}
         >

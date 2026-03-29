@@ -284,7 +284,7 @@ export function HeroRankBoardClient({ heroes }: HeroRankBoardClientProps) {
                   {tierHeroes.map((hero, index) => (
                     <Link
                       key={hero.heroId}
-                      href={`/heroes/${hero.slug}`}
+                      href={`/heroes/${hero.slug}?from=rank`}
                       className="group grid grid-cols-[auto_auto_minmax(0,1fr)] items-center gap-x-3 gap-y-1.5 rounded-xl bg-page-background/70 px-3 py-2.5 transition-colors hover:border-accent-primary sm:px-4 sm:py-3"
                       style={{ border: "0.5px solid var(--border-subtle)" }}
                     >

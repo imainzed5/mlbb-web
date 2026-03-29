@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ArrowLeft } from "lucide-react";
 
 import { HeroBuildPlanCard } from "@/components/hero/HeroBuildPlanCard";
 import { HeroDetailExplorer } from "@/components/hero/HeroDetailExplorer";
@@ -18,6 +20,7 @@ import { createPageMetadata } from "@/lib/seo/metadata";
 
 type HeroDetailPageProps = {
   params: Promise<{ slug: string }>;
+  searchParams?: Promise<{ from?: string | string[] }>;
 };
 
 function getHeroInitials(name: string) {
@@ -59,8 +62,16 @@ export async function generateMetadata({
   });
 }
 
-export default async function HeroDetailPage({ params }: HeroDetailPageProps) {
+function getSearchParamValue(value: string | string[] | undefined) {
+  return Array.isArray(value) ? value[0] : value;
+}
+
+export default async function HeroDetailPage({ params, searchParams }: HeroDetailPageProps) {
   const { slug } = await params;
+  const resolvedSearchParams = searchParams ? await searchParams : undefined;
+  const source = getSearchParamValue(resolvedSearchParams?.from);
+  const backHref = source === "rank" ? "/heroes/rank" : "/heroes";
+  const backLabel = source === "rank" ? "Back to rank board" : "Back to heroes";
   let heroPageData = null;
 
   try {
@@ -102,6 +113,14 @@ export default async function HeroDetailPage({ params }: HeroDetailPageProps) {
             createHeroPageJsonLd(overview),
           ]}
         />
+
+        <Link
+          href={backHref}
+          className="inline-flex items-center gap-2 rounded-full border border-border-subtle bg-card-surface px-3.5 py-2 text-[12px] font-medium text-text-secondary transition-colors hover:border-accent-primary hover:text-accent-text"
+        >
+          <ArrowLeft className="size-4" strokeWidth={2} />
+          {backLabel}
+        </Link>
 
         <section
           className="relative overflow-hidden rounded-[28px] bg-card-surface p-5 sm:p-6 lg:p-7"

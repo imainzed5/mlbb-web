@@ -103,9 +103,9 @@ export function HeroesPageClient({ initialData }: HeroesPageClientProps) {
       />
       {visibleHeroes.length > 0 ? (
         activeView === "grid" ? (
-          <HeroGrid heroes={visibleHeroes} />
+          <HeroGrid heroes={visibleHeroes} source="heroes" />
         ) : (
-          <HeroList heroes={visibleHeroes} />
+          <HeroList heroes={visibleHeroes} source="heroes" />
         )
       ) : (
         <StateMessage

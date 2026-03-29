@@ -8,6 +8,7 @@ import { TierBadge } from "./TierBadge";
 
 type HeroCardProps = {
   hero: HeroBrowserItem;
+  source?: "heroes" | "rank";
 };
 
 function getHeroInitials(name: string) {
@@ -31,9 +32,9 @@ function getWinRateClassName(winRate: number) {
   return "text-text-muted";
 }
 
-export function HeroCard({ hero }: HeroCardProps) {
+export function HeroCard({ hero, source = "heroes" }: HeroCardProps) {
   return (
-    <Link href={`/heroes/${hero.slug}`} className="group block">
+    <Link href={`/heroes/${hero.slug}?from=${source}`} className="group block">
       <article
         className="overflow-hidden rounded-2xl bg-card-surface transition-colors group-hover:border-accent-primary"
         style={{ border: "0.5px solid var(--border-subtle)" }}

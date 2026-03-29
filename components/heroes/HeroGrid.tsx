@@ -4,13 +4,14 @@ import { HeroCard } from "./HeroCard";
 
 type HeroGridProps = {
   heroes: HeroBrowserItem[];
+  source?: "heroes" | "rank";
 };
 
-export function HeroGrid({ heroes }: HeroGridProps) {
+export function HeroGrid({ heroes, source = "heroes" }: HeroGridProps) {
   return (
     <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-[repeat(auto-fill,minmax(150px,1fr))] sm:gap-3.5 lg:grid-cols-[repeat(auto-fill,minmax(176px,1fr))] lg:gap-4 xl:grid-cols-[repeat(auto-fill,minmax(184px,1fr))]">
       {heroes.map((hero) => (
-        <HeroCard key={hero.heroId} hero={hero} />
+        <HeroCard key={hero.heroId} hero={hero} source={source} />
       ))}
     </div>
   );
