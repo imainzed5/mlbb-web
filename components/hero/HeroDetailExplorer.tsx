@@ -213,7 +213,7 @@ export function HeroDetailExplorer({ initialData, slug }: HeroDetailExplorerProp
 
         {detailData.stale ? (
           <p className="text-[12px] leading-6 text-text-secondary">
-            Some optional modules are using fallback data because an upstream endpoint is temporarily unavailable.
+            Some sections are temporarily using backup data while the latest hero updates catch up.
           </p>
         ) : null}
 
@@ -267,7 +267,7 @@ export function HeroDetailExplorer({ initialData, slug }: HeroDetailExplorerProp
         ) : (
           <StateMessage
             title="Trend history is unavailable"
-            description="The trends endpoint did not return a recent time series for this hero and filter combination."
+            description="There is not enough recent trend history to show this view yet."
             tone="muted"
           />
         )}
@@ -278,7 +278,7 @@ export function HeroDetailExplorer({ initialData, slug }: HeroDetailExplorerProp
       ) : (
         <StateMessage
           title="Draft notes are unavailable"
-          description="This hero does not currently expose narrative assist, strong, or weak relation notes."
+          description="Draft notes have not been added for this hero yet."
           tone="muted"
         />
       )}

@@ -15,7 +15,7 @@ export function HeroInsightPanel({ insights }: HeroInsightPanelProps) {
       <div>
         <h2 className="text-[18px] font-medium text-text-primary">Draft notes</h2>
         <p className="mt-1 text-[12px] leading-6 text-text-secondary">
-          Narrative matchup guidance from the upstream MLBB dataset.
+          Quick matchup notes and draft guidance for this hero.
         </p>
       </div>
 

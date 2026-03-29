@@ -284,8 +284,8 @@ export default async function HeroDetailPage({ params, searchParams }: HeroDetai
                     </div>
                     <p className="text-[12px] leading-6 text-text-secondary">
                       {heroPageData.stale
-                        ? "Some optional hero modules are temporarily using fallback data while upstream endpoints recover."
-                        : "All hero detail modules were assembled from the latest upstream MLBB hero endpoints."}
+                        ? "Some sections are temporarily using backup data while the latest hero updates catch up."
+                        : "Everything on this page is synced from the latest available hero data."}
                     </p>
                   </div>
                 </div>
@@ -362,7 +362,7 @@ export default async function HeroDetailPage({ params, searchParams }: HeroDetai
               <div>
                 <h2 className="text-[18px] font-medium text-text-primary">Build plans</h2>
                 <p className="mt-1 text-[12px] leading-6 text-text-secondary">
-                  Recommended item paths, emblem setups, and battle spell suggestions when the upstream MLBB feeds expose structured build-plan data.
+                  Recommended item paths, emblem setups, and battle spell suggestions for this hero.
                 </p>
               </div>
 
@@ -373,7 +373,7 @@ export default async function HeroDetailPage({ params, searchParams }: HeroDetai
               ) : (
                 <StateMessage
                   title="No published build plan yet"
-                  description="The current hero detail feed is not returning a structured recommended build for this hero, and the legacy academy lane route is also not exposing a usable build payload right now."
+                  description="A polished build guide has not been published for this hero yet, so this section will appear once one is available."
                   tone="muted"
                 />
               )}
@@ -386,7 +386,7 @@ export default async function HeroDetailPage({ params, searchParams }: HeroDetai
               <div>
                 <h2 className="text-[18px] font-medium text-text-primary">Skill combos</h2>
                 <p className="mt-1 text-[12px] leading-6 text-text-secondary">
-                  Rotation notes and combo patterns taken from the hero’s skill-combo feed.
+                  Rotation notes and combo patterns gathered for this hero.
                 </p>
               </div>
 
@@ -432,7 +432,7 @@ export default async function HeroDetailPage({ params, searchParams }: HeroDetai
               ) : (
                 <StateMessage
                   title="No combo sheet published yet"
-                  description="The skill-combo endpoint has not exposed combo copy for this hero yet."
+                  description="Combo notes have not been added for this hero yet."
                   tone="muted"
                 />
               )}
@@ -455,7 +455,7 @@ export default async function HeroDetailPage({ params, searchParams }: HeroDetai
               title="They counter"
               description="Opponents where this hero gains the strongest positive win-rate swing in the selected counters feed."
               emptyTitle="No matchup edges yet"
-              emptyDescription="The counters endpoint did not return structured matchup rows for this hero and rank filter."
+              emptyDescription="There are no clear counter edges to show for this hero in the current view."
               items={heroPageData.counters}
             />
 
@@ -463,7 +463,7 @@ export default async function HeroDetailPage({ params, searchParams }: HeroDetai
               title="Best teammates"
               description="Pairings that create the strongest positive win-rate swing in the selected compatibility feed."
               emptyTitle="No teammate data yet"
-              emptyDescription="The compatibility endpoint did not return structured teammate rows for this hero and rank filter."
+              emptyDescription="There are no standout teammate pairings to show for this hero in the current view."
               items={heroPageData.teammates}
             />
 
