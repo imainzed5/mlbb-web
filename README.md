@@ -37,6 +37,10 @@ Required variables:
 - `NEXT_PUBLIC_SITE_URL` canonical site URL used for metadata, sitemap, and Open Graph output
 - `MLBB_PLAYER_SESSION_SECRET` long random secret used to sign the HTTP-only player session cookie
 
+Optional variables:
+
+- `MLBB_API_FALLBACK_BASE_URLS` comma-separated fallback API base URLs used when the primary upstream is unavailable
+
 ## Scripts
 
 ```bash

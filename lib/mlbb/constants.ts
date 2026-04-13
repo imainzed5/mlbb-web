@@ -1,7 +1,23 @@
 export const DEFAULT_LANGUAGE = "en";
 
+const DEFAULT_MLBB_API_BASE_URL = "https://mlbb.rone.dev/api";
+const DEFAULT_MLBB_API_FALLBACK_BASE_URLS = [
+  "https://openmlbb.fastapicloud.dev/api",
+] as const;
+
 export const MLBB_API_BASE_URL =
-  process.env.MLBB_API_BASE_URL ?? "https://mlbb-stats.rone.dev/api";
+  process.env.MLBB_API_BASE_URL?.trim() || DEFAULT_MLBB_API_BASE_URL;
+
+export const MLBB_API_FALLBACK_BASE_URLS = (() => {
+  const configuredFallbacks = (process.env.MLBB_API_FALLBACK_BASE_URLS ?? "")
+    .split(",")
+    .map((value) => value.trim())
+    .filter(Boolean);
+
+  return configuredFallbacks.length > 0
+    ? configuredFallbacks
+    : [...DEFAULT_MLBB_API_FALLBACK_BASE_URLS];
+})();
 
 export const MLBB_SUPPORTED_RANKS = [
   "all",

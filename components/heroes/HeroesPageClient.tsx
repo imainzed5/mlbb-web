@@ -107,6 +107,12 @@ export function HeroesPageClient({ initialData }: HeroesPageClientProps) {
         ) : (
           <HeroList heroes={visibleHeroes} source="heroes" />
         )
+      ) : initialData.stale && initialData.heroes.length === 0 ? (
+        <StateMessage
+          title="Live hero data is temporarily unavailable"
+          description="The upstream MLBB API is unavailable and there is no hero snapshot cached yet. Please try again shortly."
+          tone="error"
+        />
       ) : (
         <StateMessage
           title="No heroes match the current filters"
@@ -114,6 +120,14 @@ export function HeroesPageClient({ initialData }: HeroesPageClientProps) {
           tone="muted"
         />
       )}
+
+      {initialData.stale && initialData.heroes.length > 0 ? (
+        <StateMessage
+          title="Hero browser is using stale data"
+          description="One or more upstream endpoints were unavailable during aggregation, so some metrics may be temporarily out of date."
+          tone="muted"
+        />
+      ) : null}
     </div>
   );
 }

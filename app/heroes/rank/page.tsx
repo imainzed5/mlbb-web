@@ -40,7 +40,10 @@ export default async function HeroRankPage() {
             titleClassName="text-[20px]"
             descriptionClassName="text-[13px]"
           />
-          <HeroRankBoardClient heroes={heroBrowserData.heroes} />
+          <HeroRankBoardClient
+            heroes={heroBrowserData.heroes}
+            stale={heroBrowserData.stale}
+          />
         </PageContainer>
       </main>
     );

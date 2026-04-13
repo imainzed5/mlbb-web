@@ -12,6 +12,7 @@ import type { HeroBrowserItem, HeroRole, HeroTier } from "@/lib/heroes/types";
 
 type HeroRankBoardClientProps = {
   heroes: HeroBrowserItem[];
+  stale?: boolean;
 };
 
 type RoleFilterValue = "All" | HeroRole;
@@ -74,7 +75,7 @@ function getHeroInitials(name: string) {
     .join("");
 }
 
-export function HeroRankBoardClient({ heroes }: HeroRankBoardClientProps) {
+export function HeroRankBoardClient({ heroes, stale = false }: HeroRankBoardClientProps) {
   const [query, setQuery] = useState("");
   const [activeRole, setActiveRole] = useState<RoleFilterValue>("All");
   const [activeTier, setActiveTier] = useState<TierFilterValue>("All");
@@ -346,12 +347,28 @@ export function HeroRankBoardClient({ heroes }: HeroRankBoardClientProps) {
           })}
         </div>
       ) : (
+        stale && heroes.length === 0 ? (
+          <StateMessage
+            title="Live rank data is temporarily unavailable"
+            description="The upstream MLBB API is unavailable and there is no ranking snapshot cached yet. Please try again shortly."
+            tone="error"
+          />
+        ) : (
+          <StateMessage
+            title="No heroes match the current board filters"
+            description="Clear the search, open the tier filter back up, or switch the role filter to All to restore the full ranking board."
+            tone="muted"
+          />
+        )
+      )}
+
+      {stale && heroes.length > 0 ? (
         <StateMessage
-          title="No heroes match the current board filters"
-          description="Clear the search, open the tier filter back up, or switch the role filter to All to restore the full ranking board."
+          title="Rank board is using stale data"
+          description="One or more upstream endpoints were unavailable during aggregation, so some rank metrics may be temporarily out of date."
           tone="muted"
         />
-      )}
+      ) : null}
     </div>
   );
 }
