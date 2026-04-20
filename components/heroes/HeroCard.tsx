@@ -1,8 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import type { HeroBrowserItem } from "@/lib/heroes/types";
 
+import { HeroAvatarImage } from "./HeroAvatarImage";
 import { RoleBadge } from "./RoleBadge";
 import { TierBadge } from "./TierBadge";
 
@@ -53,15 +53,13 @@ export function HeroCard({ hero, source = "heroes" }: HeroCardProps) {
             </div>
           </div>
 
-          {hero.image ? (
-            <Image
-              src={hero.image}
-              alt={hero.name}
-              fill
-              sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, (max-width: 1440px) 20vw, 200px"
-              className="object-cover"
-            />
-          ) : null}
+          <HeroAvatarImage
+            primarySrc={hero.image}
+            fallbackSrc={hero.smallmap}
+            alt={hero.name}
+            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, (max-width: 1440px) 20vw, 200px"
+            className="object-cover"
+          />
         </div>
 
         <div className="space-y-2 p-2.5 sm:space-y-2 sm:p-3">

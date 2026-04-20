@@ -1,8 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import type { HeroBrowserItem } from "@/lib/heroes/types";
 
+import { HeroAvatarImage } from "./HeroAvatarImage";
 import { RoleBadge } from "./RoleBadge";
 import { TierBadge } from "./TierBadge";
 
@@ -38,15 +38,13 @@ export function HeroList({ heroes, source = "heroes" }: HeroListProps) {
             <div className="absolute inset-0 flex items-center justify-center text-[12px] font-medium tracking-[0.08em] text-text-secondary">
               {getHeroInitials(hero.name)}
             </div>
-            {hero.image ? (
-              <Image
-                src={hero.image}
-                alt={hero.name}
-                fill
-                sizes="48px"
-                className="object-cover"
-              />
-            ) : null}
+            <HeroAvatarImage
+              primarySrc={hero.image}
+              fallbackSrc={hero.smallmap}
+              alt={hero.name}
+              sizes="48px"
+              className="object-cover"
+            />
           </div>
 
           <div className="min-w-0 flex-1">

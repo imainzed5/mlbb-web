@@ -183,7 +183,7 @@ export function mergeHeroBrowserRecords(
         heroId,
         slug,
         name,
-        image: heroData?.head ?? null,
+        image: heroData?.head ?? heroData?.smallmap ?? null,
         smallmap: heroData?.smallmap ?? null,
         roles,
         primaryRole: roles[0],
