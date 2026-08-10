@@ -1,7 +1,7 @@
 export const DEFAULT_LANGUAGE = "en";
 
-const DEFAULT_MLBB_API_BASE_URL = "https://mlbb.rone.dev/api";
-const DEFAULT_MLBB_API_FALLBACK_BASE_URLS = [
+export const DEFAULT_MLBB_API_BASE_URL = "https://mlbb.rone.dev/api";
+export const DEFAULT_MLBB_API_FALLBACK_BASE_URLS = [
   "https://openmlbb.fastapicloud.dev/api",
 ] as const;
 

@@ -123,8 +123,16 @@ export function HeroesPageClient({ initialData }: HeroesPageClientProps) {
 
       {initialData.stale && initialData.heroes.length > 0 ? (
         <StateMessage
-          title="Hero browser is using stale data"
-          description="One or more upstream endpoints were unavailable during aggregation, so some metrics may be temporarily out of date."
+          title={
+            initialData.source === "snapshot"
+              ? "Hero browser is using a saved snapshot"
+              : "Hero browser is using stale data"
+          }
+          description={
+            initialData.source === "snapshot"
+              ? "The live MLBB API is unavailable, so the roster is loaded from a read-only snapshot. Live win-rate data will return automatically when the upstream service recovers."
+              : "One or more upstream endpoints were unavailable during aggregation, so some metrics may be temporarily out of date."
+          }
           tone="muted"
         />
       ) : null}

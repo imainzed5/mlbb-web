@@ -46,4 +46,6 @@ export type HeroBrowserPayload = {
   summary: HeroBrowserSummary;
   generatedAt: string;
   stale: boolean;
+  source: "live" | "partial" | "snapshot";
+  snapshotAt: string | null;
 };

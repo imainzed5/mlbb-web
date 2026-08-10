@@ -11,6 +11,11 @@ import type {
 } from "@/lib/mlbb/types";
 
 import { buildHeroBrowserSummary, mergeHeroBrowserRecords } from "./normalizers";
+import {
+  FALLBACK_HERO_BROWSER_ITEMS,
+  FALLBACK_HERO_BROWSER_SUMMARY,
+  FALLBACK_HERO_SNAPSHOT_AT,
+} from "./fallbackSnapshot";
 import type { HeroBrowserPayload } from "./types";
 
 async function fetchOptionalCollection<RecordType>(
@@ -108,14 +113,20 @@ export const getHeroBrowserData = cache(async (
     positionRecords,
     rankRecords
   );
+  const usingSnapshot = heroes.length === 0;
+  const upstreamStale =
+    heroListResponse === null ||
+    positionsResponse === null ||
+    rankResponse === null;
 
   return {
-    heroes,
-    summary: buildHeroBrowserSummary(heroes),
+    heroes: usingSnapshot ? FALLBACK_HERO_BROWSER_ITEMS : heroes,
+    summary: usingSnapshot
+      ? FALLBACK_HERO_BROWSER_SUMMARY
+      : buildHeroBrowserSummary(heroes),
     generatedAt: new Date().toISOString(),
-    stale:
-      heroListResponse === null ||
-      positionsResponse === null ||
-      rankResponse === null,
+    stale: upstreamStale || usingSnapshot,
+    source: usingSnapshot ? "snapshot" : upstreamStale ? "partial" : "live",
+    snapshotAt: usingSnapshot ? FALLBACK_HERO_SNAPSHOT_AT : null,
   };
 });
