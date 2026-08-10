@@ -54,6 +54,7 @@ npm run typecheck
 
 - The upstream MLBB API used by this project is based on [ridwaanhall/api-mobilelegends](https://github.com/ridwaanhall/api-mobilelegends).
 - Hero browser data is normalized from multiple upstream endpoints before it reaches the UI.
+- The hero browser tries the configured API host plus both documented API hosts and falls back to a read-only 132-hero snapshot if the upstream service is unavailable.
 - Hero detail pages use a fault-tolerant loader so optional modules can fall back cleanly if a single upstream endpoint is missing data.
 - Player account-connect uses same-origin route handlers and a signed HTTP-only cookie so the upstream JWT is kept out of client-side runtime.
 - SEO is wired through typed metadata helpers, JSON-LD, sitemap generation, robots rules, and route-level Open Graph images.

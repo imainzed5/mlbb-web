@@ -1,6 +1,8 @@
 import { MlbbApiError } from "@/lib/mlbb/errors";
 
 import {
+  DEFAULT_MLBB_API_BASE_URL,
+  DEFAULT_MLBB_API_FALLBACK_BASE_URLS,
   DEFAULT_LANGUAGE,
   MLBB_API_BASE_URL,
   MLBB_API_FALLBACK_BASE_URLS,
@@ -81,14 +83,19 @@ function resolveAlternativeBaseUrl(value: unknown) {
 }
 
 function shouldRetryWithFallback(status: number) {
-  return status === 429 || status >= 500;
+  return status === 404 || status === 429 || status >= 500;
 }
 
 function getCollectionBaseUrlCandidates() {
   const dedupe = new Set<string>();
   const candidates: string[] = [];
 
-  for (const candidate of [MLBB_API_BASE_URL, ...MLBB_API_FALLBACK_BASE_URLS]) {
+  for (const candidate of [
+    MLBB_API_BASE_URL,
+    ...MLBB_API_FALLBACK_BASE_URLS,
+    DEFAULT_MLBB_API_BASE_URL,
+    ...DEFAULT_MLBB_API_FALLBACK_BASE_URLS,
+  ]) {
     if (!candidate) {
       continue;
     }
