@@ -50,7 +50,11 @@ function toNumber(value: unknown) {
 }
 
 function toStringValue(value: unknown) {
-  return typeof value === "string" && value.trim() ? value : null;
+  if (typeof value === "string" && value.trim()) {
+    return value;
+  }
+
+  return typeof value === "number" && Number.isFinite(value) ? String(value) : null;
 }
 
 function toIntegerList(value: unknown) {
@@ -78,6 +82,10 @@ function getRecords(value: unknown) {
 
   if (asArray(objectValue.list).length > 0) {
     return asArray(objectValue.list);
+  }
+
+  if (asArray(objectValue.result).length > 0) {
+    return asArray(objectValue.result);
   }
 
   if (asArray(objectValue.data).length > 0) {
@@ -123,7 +131,12 @@ function normalizeHeroHighlight(
     image: toStringValue(data?.ix) ?? toStringValue(data?.i2x),
     label,
     name: heroName,
-    value: formatter(toNumber(data?.value) ?? toNumber(data?.score) ?? toNumber(data?.mr)),
+    value: formatter(
+      toNumber(data?.v) ??
+        toNumber(data?.value) ??
+        toNumber(data?.score) ??
+        toNumber(data?.mr)
+    ),
   };
 }
 
@@ -203,19 +216,25 @@ function normalizeRecentMatches(raw: unknown): PlayerRecentMatch[] {
 export async function getPlayerDashboardData(
   session: PlayerSession
 ): Promise<PlayerDashboardData> {
-  const [profileRaw, statsRaw, seasonRaw, frequentRaw, matchesRaw] = await Promise.all([
+  const [profileRaw, statsRaw, seasonRaw] = await Promise.all([
     fetchPlayerInfo(session.jwt),
     fetchPlayerStats(session.jwt),
     fetchPlayerSeasonIds(session.jwt),
-    fetchPlayerFrequentHeroes(session.jwt),
-    fetchPlayerRecentMatches(session.jwt),
   ]);
+  const seasonIds = toIntegerList(asObject(seasonRaw)?.sids ?? seasonRaw);
+  const activeSeasonId = seasonIds[0];
+  const [frequentRaw, matchesRaw] = activeSeasonId
+    ? await Promise.all([
+        fetchPlayerFrequentHeroes(session.jwt, { seasonId: activeSeasonId }),
+        fetchPlayerRecentMatches(session.jwt, { seasonId: activeSeasonId }),
+      ])
+    : [null, null];
 
   return {
     frequentHeroes: normalizeFrequentHeroes(frequentRaw),
     matches: normalizeRecentMatches(matchesRaw),
     profile: normalizePlayerProfile(profileRaw, session),
-    seasonIds: toIntegerList(asObject(seasonRaw)?.sids ?? seasonRaw),
+    seasonIds,
     session,
     stats: normalizePlayerStats(statsRaw),
   };

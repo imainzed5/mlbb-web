@@ -1,6 +1,6 @@
 import "server-only";
 
-import { fetchMlbbMutation } from "@/lib/mlbb/client";
+import { fetchMlbbMutation, fetchMlbbQuery } from "@/lib/mlbb/client";
 
 import type { PlayerAuthLoginResult } from "./types";
 
@@ -72,30 +72,32 @@ export async function loginPlayerWithVerificationCode(
 }
 
 export async function logoutPlayerSession(jwt: string) {
-  await fetchMlbbMutation<unknown, { jwt: string }>("/user/auth/logout", {
-    body: { jwt },
+  await fetchMlbbMutation<unknown, undefined>("/user/auth/logout", {
+    headers: {
+      authorization: `Bearer ${jwt}`,
+    },
   });
 }
 
 export async function fetchPlayerInfo(jwt: string) {
-  const payload = await fetchMlbbMutation<unknown, { jwt: string }>("/user/info", {
-    body: { jwt },
+  const payload = await fetchMlbbQuery<unknown>("/user/info", {
+    jwt,
   });
 
   return payload.data;
 }
 
 export async function fetchPlayerStats(jwt: string) {
-  const payload = await fetchMlbbMutation<unknown, { jwt: string }>("/user/stats", {
-    body: { jwt },
+  const payload = await fetchMlbbQuery<unknown>("/user/stats", {
+    jwt,
   });
 
   return payload.data;
 }
 
 export async function fetchPlayerSeasonIds(jwt: string) {
-  const payload = await fetchMlbbMutation<unknown, { jwt: string }>("/user/season", {
-    body: { jwt },
+  const payload = await fetchMlbbQuery<unknown>("/user/season", {
+    jwt,
   });
 
   return payload.data;
@@ -103,13 +105,13 @@ export async function fetchPlayerSeasonIds(jwt: string) {
 
 export async function fetchPlayerRecentMatches(
   jwt: string,
-  options: { limit?: number; seasonId?: number } = {}
+  options: { limit?: number; seasonId: number }
 ) {
-  const payload = await fetchMlbbMutation<unknown, { jwt: string }>("/user/matches", {
-    body: { jwt },
+  const payload = await fetchMlbbQuery<unknown>("/user/matches", {
+    jwt,
     searchParams: {
       limit: options.limit ?? 8,
-      sid: options.seasonId ?? 0,
+      sid: options.seasonId,
     },
   });
 
@@ -118,15 +120,15 @@ export async function fetchPlayerRecentMatches(
 
 export async function fetchPlayerFrequentHeroes(
   jwt: string,
-  options: { limit?: number; seasonId?: number } = {}
+  options: { limit?: number; seasonId: number }
 ) {
-  const payload = await fetchMlbbMutation<unknown, { jwt: string }>(
+  const payload = await fetchMlbbQuery<unknown>(
     "/user/heroes/frequent",
     {
-      body: { jwt },
+      jwt,
       searchParams: {
         limit: options.limit ?? 6,
-        sid: options.seasonId ?? 0,
+        sid: options.seasonId,
       },
     }
   );
