@@ -25,13 +25,17 @@ function createMlbbUrl(path: string, baseUrl = MLBB_API_BASE_URL) {
 }
 
 type MlbbFetchOptions = {
+  headers?: Record<string, string>;
   revalidate?: number;
+  searchParams?: Record<string, number | string | null | undefined>;
 };
 
 type MlbbMutationOptions<BodyType> = {
-  body: BodyType;
-  revalidate?: number;
-  searchParams?: Record<string, number | string | null | undefined>;
+  body?: BodyType;
+} & MlbbFetchOptions;
+
+type MlbbQueryOptions = MlbbFetchOptions & {
+  jwt?: string;
 };
 
 function readErrorText(value: unknown) {
@@ -63,20 +67,26 @@ function readMlbbErrorMessage(payload: MlbbErrorPayload | null) {
   );
 }
 
+function normalizeBaseUrl(value: string) {
+  const url = new URL(value.trim());
+  const normalizedPath = url.pathname.replace(/\/+$/, "");
+
+  if (normalizedPath === "") {
+    url.pathname = "/api";
+  } else {
+    url.pathname = normalizedPath;
+  }
+
+  return url.toString();
+}
+
 function resolveAlternativeBaseUrl(value: unknown) {
   if (typeof value !== "string" || value.trim().length === 0) {
     return null;
   }
 
   try {
-    const alternativeUrl = new URL(value.trim());
-    const normalizedPath = alternativeUrl.pathname.replace(/\/+$/, "");
-
-    if (normalizedPath === "" || normalizedPath === "/") {
-      alternativeUrl.pathname = "/api";
-    }
-
-    return alternativeUrl.toString();
+    return normalizeBaseUrl(value);
   } catch {
     return null;
   }
@@ -86,7 +96,7 @@ function shouldRetryWithFallback(status: number) {
   return status === 404 || status === 429 || status >= 500;
 }
 
-function getCollectionBaseUrlCandidates() {
+function getBaseUrlCandidates() {
   const dedupe = new Set<string>();
   const candidates: string[] = [];
 
@@ -101,7 +111,7 @@ function getCollectionBaseUrlCandidates() {
     }
 
     try {
-      const normalizedCandidate = new URL(candidate.trim()).toString();
+      const normalizedCandidate = normalizeBaseUrl(candidate);
 
       if (dedupe.has(normalizedCandidate)) {
         continue;
@@ -117,11 +127,15 @@ function getCollectionBaseUrlCandidates() {
   return candidates;
 }
 
-async function fetchMlbbCollectionResponse(
+async function fetchMlbbResponse(
   path: string,
-  options?: MlbbFetchOptions
+  request: {
+    body?: BodyInit;
+    method: "GET" | "POST";
+    options?: MlbbFetchOptions;
+  }
 ) {
-  const baseUrlQueue = getCollectionBaseUrlCandidates();
+  const baseUrlQueue = getBaseUrlCandidates();
   const attemptedBaseUrls = new Set<string>();
   let lastError: MlbbApiError | null = null;
 
@@ -135,15 +149,35 @@ async function fetchMlbbCollectionResponse(
     attemptedBaseUrls.add(baseUrl);
 
     const url = createMlbbUrl(path, baseUrl);
+    if (request.options?.searchParams) {
+      Object.entries(request.options.searchParams).forEach(([key, value]) => {
+        if (value === undefined || value === null || value === "") {
+          return;
+        }
+
+        url.searchParams.set(key, String(value));
+      });
+    }
+
+    const headers = new Headers(request.options?.headers);
+    headers.set("accept", "application/json");
+    headers.set("accept-language", DEFAULT_LANGUAGE);
+
+    if (request.body !== undefined) {
+      headers.set("content-type", "application/json");
+    }
+
     let response: Response;
 
     try {
       response = await fetch(url, {
-        headers: {
-          accept: "application/json",
-          "accept-language": DEFAULT_LANGUAGE,
-        },
-        next: options?.revalidate ? { revalidate: options.revalidate } : undefined,
+        body: request.body,
+        cache: request.options?.revalidate ? undefined : "no-store",
+        headers,
+        method: request.method,
+        next: request.options?.revalidate
+          ? { revalidate: request.options.revalidate }
+          : undefined,
       });
     } catch (error) {
       lastError = new MlbbApiError(
@@ -195,7 +229,10 @@ export async function fetchMlbbCollection<RecordType>(
   path: string,
   options?: MlbbFetchOptions
 ) {
-  const { response, url } = await fetchMlbbCollectionResponse(path, options);
+  const { response, url } = await fetchMlbbResponse(path, {
+    method: "GET",
+    options,
+  });
 
   const payload = (await response.json()) as MlbbCollectionResponse<RecordType>;
 
@@ -213,36 +250,43 @@ export async function fetchMlbbMutation<ResponseType, BodyType>(
   path: string,
   options: MlbbMutationOptions<BodyType>
 ) {
-  const url = createMlbbUrl(path);
-
-  if (options.searchParams) {
-    Object.entries(options.searchParams).forEach(([key, value]) => {
-      if (value === undefined || value === null || value === "") {
-        return;
-      }
-
-      url.searchParams.set(key, String(value));
-    });
-  }
-
-  const response = await fetch(url, {
+  const body = options.body === undefined ? undefined : JSON.stringify(options.body);
+  const { response, url } = await fetchMlbbResponse(path, {
+    body,
     method: "POST",
-    headers: {
-      accept: "application/json",
-      "accept-language": DEFAULT_LANGUAGE,
-      "content-type": "application/json",
-    },
-    body: JSON.stringify(options.body),
-    cache: options.revalidate ? undefined : "no-store",
-    next: options.revalidate ? { revalidate: options.revalidate } : undefined,
+    options,
   });
 
-  if (!response.ok) {
-    throw new MlbbApiError("Failed to fetch MLBB API data.", {
-      status: response.status,
-      url: url.toString(),
-    });
+  const payload = (await response.json()) as MlbbMutationResponse<ResponseType>;
+
+  if (payload.code !== 0) {
+    throw new MlbbApiError(
+      payload.message ?? payload.msg ?? "MLBB API returned an error.",
+      {
+        status: response.status,
+        url: url.toString(),
+      }
+    );
   }
+
+  return payload;
+}
+
+export async function fetchMlbbQuery<ResponseType>(
+  path: string,
+  options: MlbbQueryOptions
+) {
+  const headers = {
+    ...options.headers,
+    ...(options.jwt ? { authorization: `Bearer ${options.jwt}` } : {}),
+  };
+  const { response, url } = await fetchMlbbResponse(path, {
+    method: "GET",
+    options: {
+      ...options,
+      headers,
+    },
+  });
 
   const payload = (await response.json()) as MlbbMutationResponse<ResponseType>;
 
