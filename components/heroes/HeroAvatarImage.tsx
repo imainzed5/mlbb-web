@@ -1,12 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 
 type HeroAvatarImageProps = {
   alt: string;
   className?: string;
   fallbackSrc?: string | null;
+  preload?: boolean;
   primarySrc: string | null;
   sizes: string;
 };
@@ -23,6 +24,7 @@ export function HeroAvatarImage({
   alt,
   className,
   fallbackSrc,
+  preload = false,
   primarySrc,
   sizes,
 }: HeroAvatarImageProps) {
@@ -30,11 +32,9 @@ export function HeroAvatarImage({
     () => normalizeSourceList(primarySrc, fallbackSrc),
     [primarySrc, fallbackSrc]
   );
-  const [sourceIndex, setSourceIndex] = useState(0);
-
-  useEffect(() => {
-    setSourceIndex(0);
-  }, [sources]);
+  const sourceKey = sources.join("\u0000");
+  const [failedSource, setFailedSource] = useState<{ key: string; index: number } | null>(null);
+  const sourceIndex = failedSource?.key === sourceKey ? failedSource.index : 0;
 
   const src = sources[sourceIndex] ?? null;
 
@@ -47,15 +47,18 @@ export function HeroAvatarImage({
       src={src}
       alt={alt}
       fill
+      preload={preload}
       sizes={sizes}
       className={className ?? "object-cover"}
       onError={() => {
-        setSourceIndex((currentIndex) => {
+        setFailedSource((current) => {
+          const currentIndex = current?.key === sourceKey ? current.index : 0;
+
           if (currentIndex >= sources.length - 1) {
-            return currentIndex;
+            return current ?? { key: sourceKey, index: currentIndex };
           }
 
-          return currentIndex + 1;
+          return { key: sourceKey, index: currentIndex + 1 };
         });
       }}
     />

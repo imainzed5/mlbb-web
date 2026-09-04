@@ -48,18 +48,12 @@ export function Topbar() {
                     key={item.href}
                     href={item.href}
                     className={cn(
-                      "shrink-0 rounded-full px-3 py-2 text-[13px] font-medium transition-colors",
+                      "shrink-0 rounded-full px-3 py-2 text-[13px] font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary/70 focus-visible:ring-offset-2 focus-visible:ring-offset-nav-surface",
                       active
-                        ? ""
-                        : "text-text-secondary hover:text-text-primary"
+                        ? "text-highlight-text"
+                        : "text-text-secondary hover:text-highlight-text"
                     )}
-                    style={
-                      active
-                        ? {
-                            color: "var(--highlight-text)",
-                          }
-                        : undefined
-                    }
+                    aria-current={active ? "page" : undefined}
                   >
                     {item.label}
                   </Link>
@@ -84,19 +78,12 @@ export function Topbar() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "flex min-h-14 flex-col items-center justify-center gap-1 rounded-2xl px-2 py-2 text-[10px] font-medium transition-colors",
+                  "flex min-h-14 flex-col items-center justify-center gap-1 rounded-2xl px-2 py-2 text-[10px] font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary/70 focus-visible:ring-offset-2 focus-visible:ring-offset-nav-surface",
                   active
-                    ? ""
-                    : "text-text-secondary hover:text-text-primary"
+                    ? "text-highlight-text"
+                    : "text-text-secondary hover:text-highlight-text"
                 )}
-                style={
-                  active
-                    ? {
-                        background: "var(--highlight-surface)",
-                        color: "var(--highlight-text)",
-                      }
-                    : undefined
-                }
+                aria-current={active ? "page" : undefined}
               >
                 <Icon className="size-4.5" strokeWidth={2} />
                 <span>{item.label}</span>

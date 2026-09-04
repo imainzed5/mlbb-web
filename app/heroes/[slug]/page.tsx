@@ -9,6 +9,7 @@ import { HeroDetailExplorer } from "@/components/hero/HeroDetailExplorer";
 import { HeroMatchupList } from "@/components/hero/HeroMatchupList";
 import { RoleBadge } from "@/components/heroes/RoleBadge";
 import { TierBadge } from "@/components/heroes/TierBadge";
+import { HeroAvatarImage } from "@/components/heroes/HeroAvatarImage";
 import { PageContainer } from "@/components/layout/PageContainer";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { StateMessage } from "@/components/ui/StateMessage";
@@ -153,15 +154,14 @@ export default async function HeroDetailPage({ params, searchParams }: HeroDetai
               <div className="absolute inset-0 flex items-center justify-center text-[32px] font-medium tracking-[0.08em] text-text-secondary">
                 {getHeroInitials(overview.name)}
               </div>
-              {overview.portrait ? (
-                <Image
-                  src={overview.portrait}
-                  alt={overview.name}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 260px"
-                  className="object-cover"
-                />
-              ) : null}
+              <HeroAvatarImage
+                primarySrc={overview.portrait}
+                fallbackSrc={overview.image}
+                alt={overview.name}
+                sizes="(max-width: 1024px) 100vw, 260px"
+                className="object-cover"
+                preload
+              />
             </div>
 
             <div className="space-y-6">

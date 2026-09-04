@@ -102,6 +102,18 @@ function normalizeSpecialties(value: unknown) {
     .filter(Boolean);
 }
 
+function firstNonEmptyImage(...values: Array<string | null | undefined>) {
+  for (const value of values) {
+    const normalized = value?.trim();
+
+    if (normalized) {
+      return normalized;
+    }
+  }
+
+  return null;
+}
+
 function resolveHeroReference(
   heroId: number | null | undefined,
   catalogById: Map<number, HeroCatalogItem>,
@@ -285,17 +297,27 @@ export function normalizeHeroOverview(
     banRate: hero.banRate,
     difficulty: clampPercent(toNumber(heroData?.difficulty)),
     heroId: hero.heroId,
-    image: heroData?.head ?? detailRecord.data?.head ?? hero.image,
+    image: firstNonEmptyImage(heroData?.head, detailRecord.data?.head, hero.image),
     insights,
     lanes: hero.lanes,
     name: hero.name,
-    painting: heroData?.painting ?? detailRecord.data?.head_big ?? hero.image,
+    painting: firstNonEmptyImage(
+      heroData?.painting,
+      detailRecord.data?.head_big,
+      detailRecord.data?.head,
+      heroData?.head,
+      hero.image
+    ),
     pickRate: hero.pickRate,
     portrait:
-      heroData?.squareheadbig ??
-      heroData?.squarehead ??
-      detailRecord.data?.head_big ??
-      hero.image,
+      firstNonEmptyImage(
+        heroData?.squareheadbig,
+        heroData?.squarehead,
+        detailRecord.data?.head_big,
+        detailRecord.data?.head,
+        heroData?.head,
+        hero.image
+      ),
     primaryRole: hero.primaryRole,
     roles: hero.roles,
     skillPriority: (heroData?.recommendlevellabel ?? "")
