@@ -575,7 +575,20 @@ export default async function Home() {
   const metaPulseItems = getMetaPulseItems(heroBrowserData.heroes);
 
   return (
-    <main className="pb-24 sm:pb-8">
+    <main className="relative isolate overflow-hidden pb-24 sm:pb-8">
+      <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
+        <div
+          className="absolute inset-0 opacity-[0.18]"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(55, 138, 221, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(55, 138, 221, 0.08) 1px, transparent 1px)",
+            backgroundSize: "72px 72px",
+            maskImage: "linear-gradient(to bottom, black 0%, black 55%, transparent 100%)",
+          }}
+        />
+        <div className="absolute -left-48 top-12 size-[34rem] rounded-full bg-accent-primary/[0.045] blur-3xl" />
+        <div className="absolute -right-48 top-[34rem] size-[30rem] rounded-full bg-[#2b5784]/[0.04] blur-3xl" />
+      </div>
       <PageContainer className="py-5 sm:py-8">
         <JsonLd data={createWebSiteJsonLd()} />
 
