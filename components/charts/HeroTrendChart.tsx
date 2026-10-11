@@ -39,14 +39,14 @@ export function HeroTrendChart({ points }: HeroTrendChartProps) {
   if (!isMounted) {
     return (
       <div
-        className="h-[280px] w-full overflow-hidden rounded-xl bg-page-background/70"
+        className="h-[280px] w-full overflow-hidden rounded-md bg-page-background/70"
         style={{ border: "0.5px solid var(--border-subtle)" }}
       />
     );
   }
 
   return (
-    <div className="h-[280px] w-full overflow-hidden rounded-xl">
+    <div className="h-[280px] w-full overflow-hidden rounded-md">
       <ResponsiveContainer initialDimension={{ width: 1, height: 280 }}>
         <LineChart data={points} margin={{ top: 8, right: 8, bottom: 0, left: 0 }}>
           <CartesianGrid stroke="rgba(90, 100, 119, 0.28)" vertical={false} />

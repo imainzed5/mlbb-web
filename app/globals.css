@@ -2,7 +2,12 @@
 @import "tw-animate-css";
 
 @theme inline {
-  --font-sans: "Segoe UI", Inter, system-ui, sans-serif;
+  --font-sans: var(--font-geist), "Segoe UI", system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, Consolas, monospace;
+  --color-surface-raised: var(--surface-raised);
+  --color-border-strong: var(--border-strong);
+  --color-positive: var(--positive);
+  --color-negative: var(--negative);
   --color-page-background: var(--page-background);
   --color-nav-surface: var(--nav-surface);
   --color-card-surface: var(--card-surface);
@@ -24,17 +29,21 @@
   --color-tier-a: var(--tier-a);
   --color-tier-b: var(--tier-b);
   --color-tier-c: var(--tier-c);
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
+  --radius-sm: 5px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
 }
 
 :root {
-  --page-background: #0f1117;
-  --nav-surface: #161b27;
-  --card-surface: #1c2130;
-  --card-surface-strong: #252c3d;
-  --border-subtle: #2a2f3e;
+  --page-background: #0d0f15;
+  --nav-surface: #13161f;
+  --card-surface: #171b26;
+  --card-surface-strong: #1e2331;
+  --surface-raised: #1e2331;
+  --border-subtle: #262c3b;
+  --border-strong: #323a4d;
+  --positive: #4ade80;
+  --negative: #f87171;
   --accent-primary: #378add;
   --accent-surface: #1a3557;
   --accent-text: #85b7eb;
@@ -47,7 +56,7 @@
   --success-soft: #4ade80;
   --warning-soft: #facc15;
   --negative-soft: #94a3b8;
-  --tier-s: #facc15;
+  --tier-s: #f5c542;
   --tier-a: #4ade80;
   --tier-b: #60a5fa;
   --tier-c: #5a6477;
@@ -85,7 +94,12 @@
     @apply bg-page-background font-sans text-text-primary;
     font-size: 14px;
     font-weight: 400;
-    line-height: 1.5;
+    line-height: 1.45;
+  }
+
+  table,
+  .font-mono {
+    font-variant-numeric: tabular-nums;
   }
 
   a {
@@ -111,4 +125,18 @@
   *::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(180deg, #24496f, var(--accent-primary));
   }
+}
+
+@utility num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+@utility eyebrow {
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
 }

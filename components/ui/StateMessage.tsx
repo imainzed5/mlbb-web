@@ -22,7 +22,7 @@ export function StateMessage({
   className,
 }: StateMessageProps) {
   return (
-    <div className={cn("rounded-xl border p-5", toneClasses[tone], className)}>
+    <div className={cn("rounded-md border p-5", toneClasses[tone], className)}>
       <h2 className="text-[15px] font-medium">{title}</h2>
       <div className="mt-2 text-[13px] leading-6">{description}</div>
     </div>

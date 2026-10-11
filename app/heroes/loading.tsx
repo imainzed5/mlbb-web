@@ -1,23 +1,18 @@
 import { PageContainer } from "@/components/layout/PageContainer";
-import { HeroCardSkeleton } from "@/components/heroes/HeroCardSkeleton";
 
 export default function Loading() {
   return (
     <main>
-      <PageContainer className="space-y-6 py-10 sm:py-12">
-        <div className="h-6 w-28 animate-pulse rounded bg-card-surface" />
-        <div className="grid grid-cols-2 gap-3 xl:grid-cols-4">
-          {Array.from({ length: 4 }).map((_, index) => (
-            <div
-              key={index}
-              className="h-[68px] animate-pulse rounded-lg bg-card-surface"
-            />
-          ))}
+      <div className="h-[49px] border-b border-border-subtle" />
+      <PageContainer className="space-y-5 py-6 sm:py-8">
+        <div className="space-y-2">
+          <div className="h-7 w-48 animate-pulse rounded-sm bg-card-surface" />
+          <div className="h-4 w-96 max-w-full animate-pulse rounded-sm bg-card-surface" />
         </div>
-        <div className="h-12 animate-pulse rounded-lg bg-card-surface" />
-        <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-[repeat(auto-fill,minmax(150px,1fr))] sm:gap-3.5 lg:grid-cols-[repeat(auto-fill,minmax(176px,1fr))] lg:gap-4 xl:grid-cols-[repeat(auto-fill,minmax(184px,1fr))]">
-          {Array.from({ length: 12 }).map((_, index) => (
-            <HeroCardSkeleton key={index} />
+        <div className="h-8 animate-pulse rounded-md bg-card-surface" />
+        <div className="overflow-hidden rounded-lg border border-border-subtle">
+          {Array.from({ length: 14 }).map((_, index) => (
+            <div key={index} className="h-[45px] animate-pulse border-b border-border-subtle bg-card-surface last:border-b-0" />
           ))}
         </div>
       </PageContainer>

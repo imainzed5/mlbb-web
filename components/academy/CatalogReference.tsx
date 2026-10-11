@@ -32,7 +32,7 @@ export function CatalogReference({ kind, name, id }: { kind: AcademyKind; name: 
   }
   return <>
     <button type="button" onClick={open} className="text-left text-accent-text underline decoration-accent-text/40 underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary" aria-haspopup="dialog">{name}</button>
-    <dialog ref={dialog} onCancel={() => pending.current?.abort()} onClick={event => { if (event.target === dialog.current) close(); }} className="m-auto max-h-[85dvh] w-[min(92vw,560px)] overflow-y-auto rounded-2xl border border-border-subtle bg-card-surface p-6 text-text-primary shadow-xl backdrop:bg-black/70" aria-label={`${name} reference`}>
+    <dialog ref={dialog} onCancel={() => pending.current?.abort()} onClick={event => { if (event.target === dialog.current) close(); }} className="m-auto max-h-[85dvh] w-[min(92vw,560px)] overflow-y-auto rounded-lg border border-border-subtle bg-card-surface p-6 text-text-primary shadow-xl backdrop:bg-black/70" aria-label={`${name} reference`}>
       <div className="flex items-start justify-between gap-4"><h2 className="text-xl font-semibold">{entry?.name ?? name}</h2><button type="button" onClick={close} className={actionClass} autoFocus>Close</button></div>
       <div className="mt-5 space-y-4" aria-live="polite">
         {status === "loading" && <p>Loading reference…</p>}

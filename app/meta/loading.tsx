@@ -3,7 +3,7 @@ import { PageContainer } from "@/components/layout/PageContainer";
 function LoadingCard() {
   return (
     <div
-      className="h-28 animate-pulse rounded-2xl bg-card-surface"
+      className="h-28 animate-pulse rounded-lg bg-card-surface"
       style={{ border: "0.5px solid var(--border-subtle)" }}
     />
   );
@@ -19,7 +19,7 @@ export default function MetaLoading() {
         </section>
 
         <section
-          className="space-y-4 rounded-2xl bg-card-surface p-5"
+          className="space-y-4 rounded-lg bg-card-surface p-5"
           style={{ border: "0.5px solid var(--border-subtle)" }}
         >
           <div className="h-5 w-40 animate-pulse rounded-lg bg-page-background/80" />

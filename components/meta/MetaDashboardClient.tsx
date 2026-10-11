@@ -55,14 +55,14 @@ function MetaHeroRow({
   return (
     <Link
       href={`/heroes/${hero.slug}`}
-      className="group flex items-start gap-3 rounded-xl bg-page-background/70 p-3.5 transition-colors hover:border-accent-primary sm:items-center"
+      className="group flex items-start gap-3 rounded-md bg-page-background/70 p-3.5 transition-colors hover:border-accent-primary sm:items-center"
       style={{ border: "0.5px solid var(--border-subtle)" }}
     >
       <div className="flex size-7 shrink-0 items-center justify-center rounded-full bg-card-surface text-[11px] font-medium text-text-secondary">
         {index + 1}
       </div>
 
-      <div className="relative size-12 shrink-0 overflow-hidden rounded-xl bg-card-surface-strong">
+      <div className="relative size-12 shrink-0 overflow-hidden rounded-md bg-card-surface-strong">
         <div className="absolute inset-0 flex items-center justify-center text-[12px] font-medium tracking-[0.08em] text-text-secondary">
           {getHeroInitials(hero.name)}
         </div>
@@ -202,7 +202,7 @@ export function MetaDashboardClient({ data }: MetaDashboardClientProps) {
   return (
     <div className="space-y-6 sm:space-y-7">
       <section
-        className="space-y-4 rounded-2xl bg-card-surface p-4 sm:p-5"
+        className="space-y-4 rounded-lg bg-card-surface p-4 sm:p-5"
         style={{ border: "0.5px solid var(--border-subtle)" }}
       >
         <div className="flex flex-wrap items-start justify-between gap-4">
@@ -232,7 +232,7 @@ export function MetaDashboardClient({ data }: MetaDashboardClientProps) {
               onChange={(event) =>
                 updateUrl(activeLane, activeRole, normalizeHeroDetailRank(event.target.value))
               }
-              className="w-full rounded-xl bg-page-background px-3 py-2.5 text-[13px] text-text-primary outline-none transition-colors focus:border-accent-primary"
+              className="w-full rounded-md bg-page-background px-3 py-2.5 text-[13px] text-text-primary outline-none transition-colors focus:border-accent-primary"
               style={{ border: "0.5px solid var(--border-subtle)" }}
             >
               {HERO_DETAIL_RANK_OPTIONS.map((option) => (
@@ -243,7 +243,7 @@ export function MetaDashboardClient({ data }: MetaDashboardClientProps) {
             </select>
           </label>
 
-          <div className="rounded-xl bg-page-background/70 p-4" style={{ border: "0.5px solid var(--border-subtle)" }}>
+          <div className="rounded-md bg-page-background/70 p-4" style={{ border: "0.5px solid var(--border-subtle)" }}>
             <div className="text-[11px] font-medium tracking-[0.16em] text-text-muted uppercase">
               Current read
             </div>
@@ -308,22 +308,22 @@ export function MetaDashboardClient({ data }: MetaDashboardClientProps) {
       </section>
 
       <section className="grid grid-cols-2 gap-3 sm:gap-4 xl:grid-cols-4">
-        <article className="rounded-2xl bg-card-surface p-4" style={{ border: "0.5px solid var(--border-subtle)" }}>
+        <article className="rounded-lg bg-card-surface p-4" style={{ border: "0.5px solid var(--border-subtle)" }}>
           <div className="text-[11px] font-medium tracking-[0.16em] text-text-muted uppercase">Highest win rate</div>
           <div className="mt-3 text-[18px] font-medium text-text-primary">{view.summary.topWinHero?.name ?? "No hero"}</div>
           <div className="mt-1 text-[12px] text-success-soft">{view.summary.topWinHero ? `${view.summary.topWinHero.winRate.toFixed(1)}% WR` : "Waiting for data"}</div>
         </article>
-        <article className="rounded-2xl bg-card-surface p-4" style={{ border: "0.5px solid var(--border-subtle)" }}>
+        <article className="rounded-lg bg-card-surface p-4" style={{ border: "0.5px solid var(--border-subtle)" }}>
           <div className="text-[11px] font-medium tracking-[0.16em] text-text-muted uppercase">Highest pick rate</div>
           <div className="mt-3 text-[18px] font-medium text-text-primary">{view.summary.topPickHero?.name ?? "No hero"}</div>
           <div className="mt-1 text-[12px] text-accent-text">{view.summary.topPickHero ? `${view.summary.topPickHero.pickRate.toFixed(1)}% PR` : "Waiting for data"}</div>
         </article>
-        <article className="rounded-2xl bg-card-surface p-4" style={{ border: "0.5px solid var(--border-subtle)" }}>
+        <article className="rounded-lg bg-card-surface p-4" style={{ border: "0.5px solid var(--border-subtle)" }}>
           <div className="text-[11px] font-medium tracking-[0.16em] text-text-muted uppercase">Most contested</div>
           <div className="mt-3 text-[18px] font-medium text-text-primary">{view.summary.topBanHero?.name ?? "No hero"}</div>
           <div className="mt-1 text-[12px] text-warning-soft">{view.summary.topBanHero ? `${view.summary.topBanHero.banRate.toFixed(1)}% BR` : "Waiting for data"}</div>
         </article>
-        <article className="rounded-2xl bg-card-surface p-4" style={{ border: "0.5px solid var(--border-subtle)" }}>
+        <article className="rounded-lg bg-card-surface p-4" style={{ border: "0.5px solid var(--border-subtle)" }}>
           <div className="text-[11px] font-medium tracking-[0.16em] text-text-muted uppercase">Slice size</div>
           <div className="mt-3 text-[18px] font-medium text-text-primary">{view.summary.heroCount} heroes</div>
           <div className="mt-1 text-[12px] text-text-secondary">{view.summary.topTierCount} in S tier</div>
@@ -333,7 +333,7 @@ export function MetaDashboardClient({ data }: MetaDashboardClientProps) {
       {view.filteredHeroes.length > 0 ? (
         <>
           <div className="grid gap-6 2xl:grid-cols-[minmax(0,1.2fr)_minmax(320px,0.8fr)]">
-            <section className="space-y-4 rounded-2xl bg-card-surface p-4 sm:p-5" style={{ border: "0.5px solid var(--border-subtle)" }}>
+            <section className="space-y-4 rounded-lg bg-card-surface p-4 sm:p-5" style={{ border: "0.5px solid var(--border-subtle)" }}>
               <div>
                 <h2 className="text-[18px] font-medium text-text-primary">Power board</h2>
                 <p className="mt-1 text-[12px] leading-6 text-text-secondary">The current win-rate, pick-rate, and ban-rate leaders for the selected lane slice.</p>
@@ -369,7 +369,7 @@ export function MetaDashboardClient({ data }: MetaDashboardClientProps) {
 
               <div className="space-y-3">
                 {view.tierSnapshots.map((snapshot) => (
-                  <article key={snapshot.tier} className="rounded-2xl bg-card-surface p-4" style={{ border: "0.5px solid var(--border-subtle)" }}>
+                  <article key={snapshot.tier} className="rounded-lg bg-card-surface p-4" style={{ border: "0.5px solid var(--border-subtle)" }}>
                     <div className="flex items-center justify-between gap-3">
                       <div className="flex items-center gap-3">
                         <TierBadge tier={snapshot.tier} />
@@ -390,14 +390,14 @@ export function MetaDashboardClient({ data }: MetaDashboardClientProps) {
             </section>
           </div>
 
-          <section className="space-y-4 rounded-2xl bg-card-surface p-4 sm:p-5" style={{ border: "0.5px solid var(--border-subtle)" }}>
+          <section className="space-y-4 rounded-lg bg-card-surface p-4 sm:p-5" style={{ border: "0.5px solid var(--border-subtle)" }}>
             <div>
               <h2 className="text-[18px] font-medium text-text-primary">Role pressure board</h2>
               <p className="mt-1 text-[12px] leading-6 text-text-secondary">A role-by-role read on the selected lane slice, built from the same normalized hero contract.</p>
             </div>
             <div className="grid gap-4 sm:grid-cols-2 2xl:grid-cols-3">
               {view.roleSnapshots.map((snapshot) => (
-                <article key={snapshot.role} className="rounded-xl bg-page-background/70 p-4" style={{ border: "0.5px solid var(--border-subtle)" }}>
+                <article key={snapshot.role} className="rounded-md bg-page-background/70 p-4" style={{ border: "0.5px solid var(--border-subtle)" }}>
                   <div className="flex items-center justify-between gap-3">
                     <RoleBadge role={snapshot.role} />
                     <span className="text-[11px] text-text-muted">{snapshot.count} heroes</span>
@@ -416,7 +416,7 @@ export function MetaDashboardClient({ data }: MetaDashboardClientProps) {
             </div>
           </section>
 
-          <section className="space-y-4 rounded-2xl bg-card-surface p-4 sm:p-5" style={{ border: "0.5px solid var(--border-subtle)" }}>
+          <section className="space-y-4 rounded-lg bg-card-surface p-4 sm:p-5" style={{ border: "0.5px solid var(--border-subtle)" }}>
             <div>
               <h2 className="text-[18px] font-medium text-text-primary">Meta comparisons</h2>
               <p className="mt-1 text-[12px] leading-6 text-text-secondary">Compare rising, contested, and safer power picks within the currently selected lane slice.</p>
@@ -444,7 +444,7 @@ export function MetaDashboardClient({ data }: MetaDashboardClientProps) {
           </section>
 
           <div className="grid gap-6 2xl:grid-cols-2">
-            <section className="space-y-4 rounded-2xl bg-card-surface p-4 sm:p-5" style={{ border: "0.5px solid var(--border-subtle)" }}>
+            <section className="space-y-4 rounded-lg bg-card-surface p-4 sm:p-5" style={{ border: "0.5px solid var(--border-subtle)" }}>
               <div>
                 <h2 className="text-[18px] font-medium text-text-primary">Most contested heroes</h2>
                 <p className="mt-1 text-[12px] leading-6 text-text-secondary">Heroes that are absorbing the most ban pressure in the selected lane slice.</p>
@@ -456,7 +456,7 @@ export function MetaDashboardClient({ data }: MetaDashboardClientProps) {
               </div>
             </section>
 
-            <section className="space-y-4 rounded-2xl bg-card-surface p-4 sm:p-5" style={{ border: "0.5px solid var(--border-subtle)" }}>
+            <section className="space-y-4 rounded-lg bg-card-surface p-4 sm:p-5" style={{ border: "0.5px solid var(--border-subtle)" }}>
               <div>
                 <h2 className="text-[18px] font-medium text-text-primary">Flexible draft picks</h2>
                 <p className="mt-1 text-[12px] leading-6 text-text-secondary">Multi-role heroes with enough live pick pressure to matter in flexible drafts for the selected lane slice.</p>

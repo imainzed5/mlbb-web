@@ -9,11 +9,11 @@ type HeroInsightPanelProps = {
 export function HeroInsightPanel({ insights }: HeroInsightPanelProps) {
   return (
     <section
-      className="space-y-4 rounded-2xl bg-card-surface p-4 sm:p-5"
+      className="space-y-3 rounded-lg bg-card-surface p-4"
       style={{ border: "0.5px solid var(--border-subtle)" }}
     >
       <div>
-        <h2 className="text-[18px] font-medium text-text-primary">Draft notes</h2>
+        <h2 className="text-[14px] font-semibold text-text-primary">Draft notes</h2>
         <p className="mt-1 text-[12px] leading-6 text-text-secondary">
           Quick matchup notes and draft guidance for this hero.
         </p>
@@ -23,7 +23,7 @@ export function HeroInsightPanel({ insights }: HeroInsightPanelProps) {
         {insights.map((insight) => (
           <article
             key={insight.title}
-            className="space-y-3 rounded-xl bg-page-background/70 p-4"
+            className="space-y-3 rounded-md bg-page-background/70 p-4"
             style={{ border: "0.5px solid var(--border-subtle)" }}
           >
             <div>
@@ -39,7 +39,7 @@ export function HeroInsightPanel({ insights }: HeroInsightPanelProps) {
                   <Link
                     key={hero.heroId}
                     href={`/heroes/${hero.slug}`}
-                    className="rounded-full bg-card-surface px-3 py-1.5 text-text-secondary transition-colors hover:border-accent-primary hover:text-accent-text"
+                    className="rounded-sm bg-card-surface px-2 py-0.5 text-text-secondary transition-colors hover:border-accent-primary hover:text-accent-text"
                     style={{ border: "0.5px solid var(--border-subtle)" }}
                   >
                     {hero.name}

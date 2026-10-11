@@ -63,7 +63,7 @@ export default async function PlayerDashboardPage({
       <main>
         <PageContainer className="space-y-7 py-8 sm:space-y-9 sm:py-10">
           <section
-            className="grid gap-7 rounded-[28px] bg-card-surface p-5 sm:p-6 xl:grid-cols-[minmax(0,1fr)_auto] xl:items-start"
+            className="grid gap-7 rounded-lg bg-card-surface p-5 sm:p-6 xl:grid-cols-[minmax(0,1fr)_auto] xl:items-start"
             style={{ border: "0.5px solid var(--border-subtle)" }}
           >
             <div className="space-y-5">
@@ -77,7 +77,7 @@ export default async function PlayerDashboardPage({
               </div>
 
               <div className="flex flex-wrap items-center gap-4">
-                <div className="relative flex size-20 items-center justify-center overflow-hidden rounded-2xl bg-card-surface-strong text-[20px] font-medium text-text-secondary">
+                <div className="relative flex size-20 items-center justify-center overflow-hidden rounded-lg bg-card-surface-strong text-[20px] font-medium text-text-secondary">
                   {getPlayerInitials(profile.name)}
                   {profile.avatar ? (
                     <Image
@@ -101,25 +101,25 @@ export default async function PlayerDashboardPage({
               </div>
 
               <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
-                <div className="rounded-xl bg-page-background/70 p-4" style={{ border: "0.5px solid var(--border-subtle)" }}>
+                <div className="rounded-md bg-page-background/70 p-4" style={{ border: "0.5px solid var(--border-subtle)" }}>
                   <div className="text-[11px] text-text-muted">Current rank</div>
                   <div className="mt-2 text-[16px] font-medium text-text-primary">
                     {profile.rankLevel ?? "Unavailable"}
                   </div>
                 </div>
-                <div className="rounded-xl bg-page-background/70 p-4" style={{ border: "0.5px solid var(--border-subtle)" }}>
+                <div className="rounded-md bg-page-background/70 p-4" style={{ border: "0.5px solid var(--border-subtle)" }}>
                   <div className="text-[11px] text-text-muted">Highest rank</div>
                   <div className="mt-2 text-[16px] font-medium text-text-primary">
                     {profile.historyRankLevel ?? "Unavailable"}
                   </div>
                 </div>
-                <div className="rounded-xl bg-page-background/70 p-4" style={{ border: "0.5px solid var(--border-subtle)" }}>
+                <div className="rounded-md bg-page-background/70 p-4" style={{ border: "0.5px solid var(--border-subtle)" }}>
                   <div className="text-[11px] text-text-muted">Level</div>
                   <div className="mt-2 text-[16px] font-medium text-text-primary">
                     {profile.level ?? "--"}
                   </div>
                 </div>
-                <div className="rounded-xl bg-page-background/70 p-4" style={{ border: "0.5px solid var(--border-subtle)" }}>
+                <div className="rounded-md bg-page-background/70 p-4" style={{ border: "0.5px solid var(--border-subtle)" }}>
                   <div className="text-[11px] text-text-muted">Region</div>
                   <div className="mt-2 text-[16px] font-medium text-text-primary">
                     {profile.regCountry ?? "Unknown"}
@@ -132,23 +132,23 @@ export default async function PlayerDashboardPage({
           </section>
 
           <section className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
-            <article className="rounded-2xl bg-card-surface p-4" style={{ border: "0.5px solid var(--border-subtle)" }}>
+            <article className="rounded-lg bg-card-surface p-4" style={{ border: "0.5px solid var(--border-subtle)" }}>
               <div className="text-[11px] font-medium tracking-[0.16em] text-text-muted uppercase">Win rate</div>
               <div className="mt-3 text-[20px] font-medium text-success-soft">
                 {stats.winRate === null ? "--" : `${stats.winRate.toFixed(1)}%`}
               </div>
             </article>
-            <article className="rounded-2xl bg-card-surface p-4" style={{ border: "0.5px solid var(--border-subtle)" }}>
+            <article className="rounded-lg bg-card-surface p-4" style={{ border: "0.5px solid var(--border-subtle)" }}>
               <div className="text-[11px] font-medium tracking-[0.16em] text-text-muted uppercase">Matches played</div>
               <div className="mt-3 text-[20px] font-medium text-text-primary">{stats.totalMatches}</div>
             </article>
-            <article className="rounded-2xl bg-card-surface p-4" style={{ border: "0.5px solid var(--border-subtle)" }}>
+            <article className="rounded-lg bg-card-surface p-4" style={{ border: "0.5px solid var(--border-subtle)" }}>
               <div className="text-[11px] font-medium tracking-[0.16em] text-text-muted uppercase">Average score</div>
               <div className="mt-3 text-[20px] font-medium text-accent-text">
                 {stats.averageScore === null ? "--" : stats.averageScore.toFixed(1)}
               </div>
             </article>
-            <article className="rounded-2xl bg-card-surface p-4" style={{ border: "0.5px solid var(--border-subtle)" }}>
+            <article className="rounded-lg bg-card-surface p-4" style={{ border: "0.5px solid var(--border-subtle)" }}>
               <div className="text-[11px] font-medium tracking-[0.16em] text-text-muted uppercase">MVP / streak</div>
               <div className="mt-3 text-[20px] font-medium text-text-primary">
                 {stats.mvpCount} / {stats.winStreak}
@@ -157,7 +157,7 @@ export default async function PlayerDashboardPage({
           </section>
 
           <div className="grid gap-7 2xl:grid-cols-[minmax(0,1.1fr)_minmax(340px,0.9fr)]">
-            <section className="space-y-4 rounded-2xl bg-card-surface p-4 sm:p-5" style={{ border: "0.5px solid var(--border-subtle)" }}>
+            <section className="space-y-4 rounded-lg bg-card-surface p-4 sm:p-5" style={{ border: "0.5px solid var(--border-subtle)" }}>
               <div>
                 <h2 className="text-[18px] font-medium text-text-primary">Recent matches</h2>
                 <p className="mt-1 text-[12px] leading-6 text-text-secondary">
@@ -170,7 +170,7 @@ export default async function PlayerDashboardPage({
                   {dashboardData.matches.map((match) => (
                     <article
                       key={match.battleId}
-                      className="grid gap-3 rounded-xl bg-page-background/70 p-4 md:grid-cols-[minmax(0,1fr)_auto] md:items-center"
+                      className="grid gap-3 rounded-md bg-page-background/70 p-4 md:grid-cols-[minmax(0,1fr)_auto] md:items-center"
                       style={{ border: "0.5px solid var(--border-subtle)" }}
                     >
                       <div>
@@ -210,7 +210,7 @@ export default async function PlayerDashboardPage({
             </section>
 
             <div className="space-y-5">
-              <section className="space-y-4 rounded-2xl bg-card-surface p-4 sm:p-5" style={{ border: "0.5px solid var(--border-subtle)" }}>
+              <section className="space-y-4 rounded-lg bg-card-surface p-4 sm:p-5" style={{ border: "0.5px solid var(--border-subtle)" }}>
                 <div>
                   <h2 className="text-[18px] font-medium text-text-primary">Most played heroes</h2>
                   <p className="mt-1 text-[12px] leading-6 text-text-secondary">
@@ -223,7 +223,7 @@ export default async function PlayerDashboardPage({
                     {dashboardData.frequentHeroes.map((hero) => (
                       <article
                         key={hero.heroId}
-                        className="rounded-xl bg-page-background/70 p-4"
+                        className="rounded-md bg-page-background/70 p-4"
                         style={{ border: "0.5px solid var(--border-subtle)" }}
                       >
                         <div className="flex items-center justify-between gap-3">
@@ -252,7 +252,7 @@ export default async function PlayerDashboardPage({
                 )}
               </section>
 
-              <section className="space-y-4 rounded-2xl bg-card-surface p-4 sm:p-5" style={{ border: "0.5px solid var(--border-subtle)" }}>
+              <section className="space-y-4 rounded-lg bg-card-surface p-4 sm:p-5" style={{ border: "0.5px solid var(--border-subtle)" }}>
                 <div>
                   <h2 className="text-[18px] font-medium text-text-primary">Season history</h2>
                   <p className="mt-1 text-[12px] leading-6 text-text-secondary">
@@ -281,7 +281,7 @@ export default async function PlayerDashboardPage({
                 )}
               </section>
 
-              <section className="space-y-4 rounded-2xl bg-card-surface p-4 sm:p-5" style={{ border: "0.5px solid var(--border-subtle)" }}>
+              <section className="space-y-4 rounded-lg bg-card-surface p-4 sm:p-5" style={{ border: "0.5px solid var(--border-subtle)" }}>
                 <div>
                   <h2 className="text-[18px] font-medium text-text-primary">Performance highlights</h2>
                   <p className="mt-1 text-[12px] leading-6 text-text-secondary">
@@ -294,7 +294,7 @@ export default async function PlayerDashboardPage({
                     {stats.highlights.map((highlight) => (
                       <article
                         key={`${highlight.label}-${highlight.name}`}
-                        className="rounded-xl bg-page-background/70 p-4"
+                        className="rounded-md bg-page-background/70 p-4"
                         style={{ border: "0.5px solid var(--border-subtle)" }}
                       >
                         <div className="text-[11px] text-text-muted">{highlight.label}</div>

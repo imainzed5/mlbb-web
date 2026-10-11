@@ -10,7 +10,7 @@ export function RoleBadge({ role }: RoleBadgeProps) {
 
   return (
     <span
-      className="inline-flex items-center rounded-full px-2 py-1 text-[12px] font-medium"
+      className="inline-flex items-center rounded-sm px-1.5 py-0.5 text-[11.5px] font-medium"
       style={{
         backgroundColor: styles.background,
         color: styles.text,

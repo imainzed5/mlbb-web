@@ -1,6 +1,6 @@
 import { cache } from "react";
 
-import type { HeroDetailRank } from "@/lib/hero/types";
+import type { HeroDetailRank, HeroTrendWindow } from "@/lib/hero/types";
 import { REVALIDATE_WINDOWS } from "@/lib/mlbb/cache";
 import { HERO_BROWSER_PAGE_SIZE } from "@/lib/mlbb/constants";
 import { fetchMlbbCollection } from "@/lib/mlbb/client";
@@ -87,7 +87,8 @@ function createFallbackHeroListRecords(
 }
 
 export const getHeroBrowserData = cache(async (
-  rank: HeroDetailRank = "all"
+  rank: HeroDetailRank = "all",
+  days: HeroTrendWindow = 7
 ): Promise<HeroBrowserPayload> => {
   const [heroListResponse, positionsResponse, rankResponse] = await Promise.all([
     fetchOptionalCollection<RawHeroListRecord>(
@@ -99,7 +100,7 @@ export const getHeroBrowserData = cache(async (
       REVALIDATE_WINDOWS.heroes
     ),
     fetchOptionalCollection<RawHeroRankRecord>(
-      `/heroes/rank?days=7&rank=${rank}&sort_field=win_rate&sort_order=desc&size=${HERO_BROWSER_PAGE_SIZE}&index=1&lang=en`,
+      `/heroes/rank?days=${days}&rank=${rank}&sort_field=win_rate&sort_order=desc&size=${HERO_BROWSER_PAGE_SIZE}&index=1&lang=en`,
       REVALIDATE_WINDOWS.heroRank
     ),
   ]);

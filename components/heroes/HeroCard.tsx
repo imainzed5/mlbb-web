@@ -3,12 +3,10 @@ import Link from "next/link";
 import type { HeroBrowserItem } from "@/lib/heroes/types";
 
 import { HeroAvatarImage } from "./HeroAvatarImage";
-import { RoleBadge } from "./RoleBadge";
 import { TierBadge } from "./TierBadge";
 
 type HeroCardProps = {
   hero: HeroBrowserItem;
-  source?: "heroes" | "rank";
 };
 
 function getHeroInitials(name: string) {
@@ -32,15 +30,14 @@ function getWinRateClassName(winRate: number) {
   return "text-text-muted";
 }
 
-export function HeroCard({ hero, source = "heroes" }: HeroCardProps) {
+export function HeroCard({ hero }: HeroCardProps) {
   return (
-    <Link href={`/heroes/${hero.slug}?from=${source}`} className="group block">
+    <Link href={`/heroes/${hero.slug}`} className="group block">
       <article
-        className="overflow-hidden rounded-2xl bg-card-surface transition-colors group-hover:border-accent-primary"
-        style={{ border: "0.5px solid var(--border-subtle)" }}
+        className="overflow-hidden rounded-lg bg-card-surface transition-colors border border-border-subtle group-hover:border-accent-primary"
       >
-        <div className="relative aspect-[5/4] bg-card-surface-strong sm:aspect-[4/3] lg:aspect-[5/4]">
-          <div className="absolute left-2.5 top-2.5 z-10 sm:left-3 sm:top-3">
+        <div className="relative aspect-square bg-card-surface-strong">
+          <div className="absolute left-1.5 top-1.5 z-10">
             <TierBadge tier={hero.tier} />
           </div>
 
@@ -62,13 +59,13 @@ export function HeroCard({ hero, source = "heroes" }: HeroCardProps) {
           />
         </div>
 
-        <div className="space-y-2 p-2.5 sm:space-y-2 sm:p-3">
-          <div className="truncate text-[13px] font-medium text-[#d0d7e3] sm:text-[14px]">
+        <div className="space-y-1 px-2 py-1.5">
+          <div className="truncate text-[12.5px] font-semibold text-text-primary">
             {hero.name}
           </div>
           <div className="flex items-center justify-between gap-2.5">
-            <RoleBadge role={hero.primaryRole} />
-            <span className={`text-[11px] font-medium sm:text-[12px] ${getWinRateClassName(hero.winRate)}`}>
+            <span className="truncate text-[11px] text-text-secondary">{hero.primaryRole}</span>
+            <span className={`num text-[11.5px] ${getWinRateClassName(hero.winRate)}`}>
               {hero.winRate.toFixed(1)}%
             </span>
           </div>

@@ -1,56 +1,51 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft } from "lucide-react";
-import { formatPublicTimestamp } from "@/lib/date-time";
 
-import { HeroBuildPlanCard } from "@/components/hero/HeroBuildPlanCard";
+import { HeroTrendChart } from "@/components/charts/HeroTrendChart";
+import { HeroBuildSheet } from "@/components/hero/HeroBuildSheet";
 import { HeroDurationPanel } from "@/components/hero/HeroDurationPanel";
+import { HeroInsightPanel } from "@/components/hero/HeroInsightPanel";
+import { HeroChipList, HeroMatchupList } from "@/components/hero/HeroMatchupList";
 import { HeroWallpaperPreview } from "@/components/hero/HeroWallpaperPreview";
-import { HeroDetailExplorer } from "@/components/hero/HeroDetailExplorer";
-import { HeroMatchupList } from "@/components/hero/HeroMatchupList";
-import { RoleBadge } from "@/components/heroes/RoleBadge";
-import { TierBadge } from "@/components/heroes/TierBadge";
+import { GlobalFilters } from "@/components/heroes/GlobalFilters";
 import { HeroAvatarImage } from "@/components/heroes/HeroAvatarImage";
+import { TierBadge } from "@/components/heroes/TierBadge";
+import { winRateTone } from "@/components/heroes/StatCells";
 import { PageContainer } from "@/components/layout/PageContainer";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { StateMessage } from "@/components/ui/StateMessage";
+import { formatPublicTimestamp } from "@/lib/date-time";
+import {
+  HERO_DETAIL_DEFAULT_RANK,
+  HERO_DETAIL_DEFAULT_TREND_WINDOW,
+  normalizeHeroDetailRank,
+  normalizeHeroTrendWindow,
+} from "@/lib/hero/constants";
 import { getHeroCatalogItemBySlug } from "@/lib/hero/getHeroCatalog";
 import { getHeroPageData } from "@/lib/hero/getHeroPageData";
+import { ROLE_DOT } from "@/lib/heroes/constants";
 import { getErrorMessage } from "@/lib/mlbb/errors";
 import { createBreadcrumbJsonLd, createHeroPageJsonLd } from "@/lib/seo/jsonld";
 import { createPageMetadata } from "@/lib/seo/metadata";
+import { cn } from "@/lib/utils";
 
 type HeroDetailPageProps = {
   params: Promise<{ slug: string }>;
-  searchParams?: Promise<{ from?: string | string[] }>;
+  searchParams: Promise<{ rank?: string | string[]; days?: string | string[] }>;
 };
 
-function getHeroInitials(name: string) {
-  return name
-    .split(/\s+/)
-    .filter(Boolean)
-    .slice(0, 2)
-    .map((part) => part[0]?.toUpperCase() ?? "")
-    .join("");
-}
+const LANE_LABELS: Record<string, string> = { exp: "EXP lane", mid: "Mid lane", roam: "Roam", jungle: "Jungle", gold: "Gold lane" };
 
-export async function generateMetadata({
-  params,
-}: HeroDetailPageProps): Promise<Metadata> {
+const first = (value: string | string[] | undefined) => (Array.isArray(value) ? value[0] : value);
+
+export async function generateMetadata({ params }: HeroDetailPageProps): Promise<Metadata> {
   const { slug } = await params;
   const hero = await getHeroCatalogItemBySlug(slug);
 
   if (!hero) {
-    return {
-      robots: {
-        follow: false,
-        index: false,
-      },
-      title: "Hero not found",
-    };
+    return { robots: { follow: false, index: false }, title: "Hero not found" };
   }
 
   return createPageMetadata({
@@ -62,29 +57,59 @@ export async function generateMetadata({
   });
 }
 
-function getSearchParamValue(value: string | string[] | undefined) {
-  return Array.isArray(value) ? value[0] : value;
+function trendDelta(points: { winRate: number; pickRate: number; banRate: number }[], key: "winRate" | "pickRate" | "banRate") {
+  if (points.length < 2) return null;
+  return Number((points[points.length - 1][key] - points[0][key]).toFixed(1));
 }
+
+function Stat({ label, value, tone, delta, deltaLabel }: { label: string; value: string; tone?: string; delta: number | null; deltaLabel: string }) {
+  return (
+    <div>
+      <div className="eyebrow">{label}</div>
+      <div className={cn("num text-[22px] font-semibold", tone)}>{value}</div>
+      <div className="num text-[11.5px]">
+        {delta === null ? (
+          <span className="text-text-muted">–</span>
+        ) : (
+          <span className={delta > 0 ? "text-positive" : delta < 0 ? "text-negative" : "text-negative-soft"}>
+            {delta > 0 ? "▲" : delta < 0 ? "▼" : "•"} {Math.abs(delta).toFixed(1)} {deltaLabel}
+          </span>
+        )}
+      </div>
+    </div>
+  );
+}
+
+const sections = [
+  ["build", "Build"],
+  ["counters", "Counters"],
+  ["trends", "Trends"],
+  ["combos", "Combos"],
+  ["duration", "Duration"],
+  ["about", "About"],
+  ["artwork", "Artwork"],
+] as const;
 
 export default async function HeroDetailPage({ params, searchParams }: HeroDetailPageProps) {
   const { slug } = await params;
-  const resolvedSearchParams = searchParams ? await searchParams : undefined;
-  const source = getSearchParamValue(resolvedSearchParams?.from);
-  const backHref = source === "rank" ? "/heroes/rank" : "/heroes";
-  const backLabel = source === "rank" ? "Back to rank board" : "Back to heroes";
+  const query = await searchParams;
+  const rank = normalizeHeroDetailRank(first(query.rank));
+  const trendWindow = normalizeHeroTrendWindow(first(query.days));
+  const linkQuery = new URLSearchParams({
+    ...(rank !== HERO_DETAIL_DEFAULT_RANK ? { rank } : {}),
+    ...(trendWindow !== HERO_DETAIL_DEFAULT_TREND_WINDOW ? { days: String(trendWindow) } : {}),
+  }).toString();
+  const heroQuery = linkQuery ? `?${linkQuery}` : "";
+
   let heroPageData = null;
 
   try {
-    heroPageData = await getHeroPageData(slug);
+    heroPageData = await getHeroPageData(slug, { rank, trendWindow });
   } catch (error) {
     return (
       <main>
-        <PageContainer className="space-y-5 py-8 sm:space-y-6 sm:py-10">
-          <StateMessage
-            title="Unable to load hero detail"
-            description={getErrorMessage(error)}
-            tone="error"
-          />
+        <PageContainer className="py-8">
+          <StateMessage title="Unable to load hero detail" description={getErrorMessage(error)} tone="error" />
         </PageContainer>
       </main>
     );
@@ -94,415 +119,195 @@ export default async function HeroDetailPage({ params, searchParams }: HeroDetai
     notFound();
   }
 
-  const { overview } = heroPageData;
-  const counteredByInsight =
-    overview.insights.find((insight) => insight.title === "Watch Out For") ?? null;
-  const draftInsights = overview.insights.filter(
-    (insight) => insight.title !== "Watch Out For"
-  );
-  const generatedAt = formatPublicTimestamp(heroPageData.generatedAt);
+  const { overview, trends } = heroPageData;
+  const weakAgainst = overview.insights.find((insight) => insight.title === "Watch Out For") ?? null;
+  const draftInsights = overview.insights.filter((insight) => insight.title !== "Watch Out For");
+  const deltaLabel = `in ${trendWindow}d`;
 
   return (
     <main>
-      <PageContainer className="space-y-6 py-8 sm:space-y-7 sm:py-10">
-        <JsonLd
-          data={[
-            createBreadcrumbJsonLd([
-              { name: "MLBB Stats", path: "/" },
-              { name: "Heroes", path: "/heroes" },
-              { name: overview.name, path: `/heroes/${overview.slug}` },
-            ]),
-            createHeroPageJsonLd(overview),
-          ]}
-        />
+      <JsonLd
+        data={[
+          createBreadcrumbJsonLd([
+            { name: "MLBB Stats", path: "/" },
+            { name: "Heroes", path: "/heroes" },
+            { name: overview.name, path: `/heroes/${overview.slug}` },
+          ]),
+          createHeroPageJsonLd(overview),
+        ]}
+      />
 
-        <Link
-          href={backHref}
-          className="inline-flex items-center gap-2 rounded-full border border-border-subtle bg-card-surface px-3.5 py-2 text-[12px] font-medium text-text-secondary transition-colors hover:border-accent-primary hover:text-accent-text"
-        >
-          <ArrowLeft className="size-4" strokeWidth={2} />
-          {backLabel}
-        </Link>
+      <div className="border-b border-border-subtle">
+        <PageContainer className="py-2.5">
+          <Suspense>
+            <GlobalFilters trailing={`Synced ${formatPublicTimestamp(heroPageData.generatedAt)}`} />
+          </Suspense>
+        </PageContainer>
+      </div>
 
-        <section
-          className="relative overflow-hidden rounded-[28px] bg-card-surface p-5 sm:p-6 lg:p-7"
-          style={{ border: "0.5px solid var(--border-subtle)" }}
-        >
+      <PageContainer className="space-y-4 py-5 sm:py-6">
+        <section className="relative overflow-hidden rounded-lg border border-border-subtle bg-card-surface">
           {overview.painting ? (
-            <div className="absolute inset-0 opacity-20">
-              <Image
-                src={overview.painting}
-                alt={overview.name}
-                fill
-                sizes="100vw"
-                className="object-cover"
-              />
+            <div className="absolute inset-y-0 right-0 w-full opacity-35 sm:w-2/3">
+              <Image src={overview.painting} alt="" fill sizes="(max-width: 640px) 100vw, 66vw" className="object-cover object-[center_25%]" preload />
+              <div className="absolute inset-0 bg-gradient-to-r from-card-surface via-card-surface/70 to-transparent" />
             </div>
           ) : null}
 
-          <div className="absolute inset-0 bg-gradient-to-r from-page-background via-page-background/94 to-page-background/72" />
-
-          <div className="relative grid gap-6 xl:grid-cols-[260px_minmax(0,1fr)] xl:items-start">
-            <div className="relative mx-auto aspect-[4/5] w-full max-w-[320px] overflow-hidden rounded-[24px] bg-card-surface-strong xl:mx-0 xl:max-w-none">
-              <div className="absolute left-3 top-3 z-10">
-                <TierBadge tier={overview.tier} />
-              </div>
-              <div className="absolute inset-0 flex items-center justify-center text-[32px] font-medium tracking-[0.08em] text-text-secondary">
-                {getHeroInitials(overview.name)}
-              </div>
-              <HeroAvatarImage
-                primarySrc={overview.portrait}
-                fallbackSrc={overview.image}
-                alt={overview.name}
-                sizes="(max-width: 1024px) 100vw, 260px"
-                className="object-cover"
-                preload
-              />
+          <div className="relative flex flex-wrap items-center gap-5 p-4 sm:p-5">
+            <div className="relative size-20 shrink-0 overflow-hidden rounded-lg border-2 bg-surface-raised sm:size-24" style={{ borderColor: `var(--tier-${overview.tier.toLowerCase()})` }}>
+              <HeroAvatarImage primarySrc={overview.image} fallbackSrc={overview.portrait} alt={overview.name} sizes="96px" preload />
             </div>
 
-            <div className="space-y-6">
-              <div className="space-y-3">
-                <div className="flex flex-wrap items-center gap-2">
-                  <RoleBadge role={overview.primaryRole} />
-                  {overview.specialties.slice(0, 3).map((specialty) => (
-                    <span
-                      key={specialty}
-                      className="rounded-full bg-card-surface px-2.5 py-1 text-[11px] text-text-secondary"
-                      style={{ border: "0.5px solid var(--border-subtle)" }}
-                    >
-                      {specialty}
-                    </span>
-                  ))}
-                </div>
-
-                <div>
-                  <h1 className="text-[32px] font-medium tracking-[-0.04em] text-text-primary sm:text-[40px]">
-                    {overview.name}
-                  </h1>
-                  <p className="mt-3 max-w-3xl text-[14px] leading-7 text-text-secondary sm:text-[15px]">
-                    {overview.story ||
-                      `${overview.name} is currently tier ${overview.tier} with live MLBB performance tracking for builds, counters, teammates, and recent trend movement.`}
-                  </p>
-                </div>
+            <div className="min-w-0">
+              <h1 className="text-[30px] font-bold leading-tight tracking-[-0.03em] sm:text-[34px]">{overview.name}</h1>
+              <div className="mt-1.5 flex flex-wrap gap-1.5 text-[11.5px]">
+                {overview.roles.map((role) => (
+                  <span key={role} className="rounded-sm border border-border-subtle bg-page-background/80 px-2 py-0.5" style={{ color: ROLE_DOT[role] }}>
+                    {role}
+                  </span>
+                ))}
+                {overview.lanes.map((lane) => (
+                  <span key={lane} className="rounded-sm border border-border-subtle bg-page-background/80 px-2 py-0.5 text-text-secondary">
+                    {LANE_LABELS[lane] ?? lane}
+                  </span>
+                ))}
+                {overview.specialties.slice(0, 2).map((specialty) => (
+                  <span key={specialty} className="rounded-sm border border-border-subtle bg-page-background/80 px-2 py-0.5 text-text-secondary">
+                    {specialty}
+                  </span>
+                ))}
               </div>
+            </div>
 
-              <div className="grid grid-cols-2 gap-3 sm:gap-4 xl:grid-cols-4">
-                <div
-                  className="rounded-xl bg-page-background/70 p-3.5 sm:p-4"
-                  style={{ border: "0.5px solid var(--border-subtle)" }}
-                >
-                  <div className="text-[11px] text-text-muted">Win rate</div>
-                  <div className="mt-2 text-[18px] font-medium text-success-soft">
-                    {overview.winRate.toFixed(1)}%
-                  </div>
-                </div>
-                <div
-                  className="rounded-xl bg-page-background/70 p-3.5 sm:p-4"
-                  style={{ border: "0.5px solid var(--border-subtle)" }}
-                >
-                  <div className="text-[11px] text-text-muted">Pick rate</div>
-                  <div className="mt-2 text-[18px] font-medium text-accent-text">
-                    {overview.pickRate.toFixed(1)}%
-                  </div>
-                </div>
-                <div
-                  className="rounded-xl bg-page-background/70 p-3.5 sm:p-4"
-                  style={{ border: "0.5px solid var(--border-subtle)" }}
-                >
-                  <div className="text-[11px] text-text-muted">Ban rate</div>
-                  <div className="mt-2 text-[18px] font-medium text-warning-soft">
-                    {overview.banRate.toFixed(1)}%
-                  </div>
-                </div>
-                <div
-                  className="rounded-xl bg-page-background/70 p-3.5 sm:p-4"
-                  style={{ border: "0.5px solid var(--border-subtle)" }}
-                >
-                  <div className="text-[11px] text-text-muted">Difficulty</div>
-                  <div className="mt-2 text-[18px] font-medium text-text-primary">
-                    {overview.difficulty.toFixed(0)}/100
-                  </div>
-                </div>
+            <div className="flex w-full flex-wrap gap-x-7 gap-y-3 sm:ml-auto sm:w-auto">
+              <div>
+                <div className="eyebrow">Tier</div>
+                <TierBadge tier={overview.tier} size="lg" className="mt-0.5" />
               </div>
-
-              <div className="grid gap-4 2xl:grid-cols-[minmax(0,1fr)_minmax(260px,0.85fr)]">
-                <div
-                  className="rounded-xl bg-page-background/70 p-4"
-                  style={{ border: "0.5px solid var(--border-subtle)" }}
-                >
-                  <div className="text-[11px] font-medium tracking-[0.16em] text-text-muted uppercase">
-                    Draft snapshot
-                  </div>
-                  <div className="mt-3 grid gap-4 sm:grid-cols-3">
-                    <div>
-                      <div className="text-[11px] text-text-muted">Roles</div>
-                      <div className="mt-2 text-[13px] font-medium text-text-primary">
-                        {overview.roles.join(", ")}
-                      </div>
-                    </div>
-                    <div>
-                      <div className="text-[11px] text-text-muted">Lanes</div>
-                      <div className="mt-2 text-[13px] font-medium uppercase text-text-primary">
-                        {overview.lanes.length ? overview.lanes.join(", ") : "TBD"}
-                      </div>
-                    </div>
-                    <div>
-                      <div className="text-[11px] text-text-muted">Skill priority</div>
-                      <div className="mt-2 flex flex-wrap gap-2">
-                        {overview.skillPriority.length > 0 ? (
-                          overview.skillPriority.map((value) => (
-                            <span
-                              key={value}
-                              className="rounded-full bg-card-surface px-2.5 py-1 text-[11px] text-text-secondary"
-                              style={{ border: "0.5px solid var(--border-subtle)" }}
-                            >
-                              Skill {value}
-                            </span>
-                          ))
-                        ) : (
-                          <span className="text-[12px] text-text-muted">Not available</span>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div
-                  className="rounded-xl bg-page-background/70 p-4"
-                  style={{ border: "0.5px solid var(--border-subtle)" }}
-                >
-                  <div className="text-[11px] font-medium tracking-[0.16em] text-text-muted uppercase">
-                    Data freshness
-                  </div>
-                  <div className="mt-3 space-y-2">
-                    <div className="text-[13px] font-medium text-text-primary">
-                      Last sync {generatedAt}
-                    </div>
-                    <p className="text-[12px] leading-6 text-text-secondary">
-                      {heroPageData.stale
-                        ? "Some sections are temporarily using backup data while the latest hero updates catch up."
-                        : "Everything on this page is synced from the latest available hero data."}
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <Stat label="Win rate" value={`${overview.winRate.toFixed(1)}%`} tone={winRateTone(overview.winRate)} delta={trendDelta(trends, "winRate")} deltaLabel={deltaLabel} />
+              <Stat label="Pick rate" value={`${overview.pickRate.toFixed(1)}%`} delta={trendDelta(trends, "pickRate")} deltaLabel={deltaLabel} />
+              <Stat label="Ban rate" value={`${overview.banRate.toFixed(1)}%`} tone={overview.banRate >= 20 ? "text-tier-s" : undefined} delta={trendDelta(trends, "banRate")} deltaLabel={deltaLabel} />
             </div>
           </div>
         </section>
 
-        <div className="grid gap-5 2xl:grid-cols-[minmax(0,1.35fr)_360px]">
-          <div className="min-w-0 space-y-5">
-            <section
-              className="space-y-4 rounded-2xl bg-card-surface p-4 sm:p-5"
-              style={{ border: "0.5px solid var(--border-subtle)" }}
-            >
-              <div>
-                <h2 className="text-[18px] font-medium text-text-primary">Overview</h2>
-                <p className="mt-1 text-[12px] leading-6 text-text-secondary">
-                  A quick read on the hero profile, specialties, and at-a-glance attribute spread.
-                </p>
-              </div>
+        <nav aria-label="Hero sections" className="sticky top-14 z-30 -mx-4 flex gap-5 overflow-x-auto border-b border-border-subtle bg-page-background/95 px-4 text-[13px] backdrop-blur sm:mx-0 sm:px-0">
+          {sections.map(([id, label]) => (
+            <a key={id} href={`#${id}`} className="border-b-2 border-transparent py-2.5 whitespace-nowrap text-text-secondary hover:border-border-strong hover:text-text-primary">
+              {label}
+            </a>
+          ))}
+        </nav>
 
-              <div className="grid gap-3 sm:grid-cols-2">
-                {overview.attributes.map((attribute) => (
-                  <div
-                    key={attribute.label}
-                    className="space-y-2 rounded-xl bg-page-background/70 p-4"
-                    style={{ border: "0.5px solid var(--border-subtle)" }}
-                  >
-                    <div className="flex items-center justify-between gap-3 text-[12px]">
-                      <span className="text-text-secondary">{attribute.label}</span>
-                      <span className="font-medium text-text-primary">
-                        {attribute.value.toFixed(0)}
-                      </span>
-                    </div>
-                    <div className="h-2 overflow-hidden rounded-full bg-card-surface">
-                      <div
-                        className="h-full rounded-full bg-accent-primary"
-                        style={{ width: `${attribute.value}%` }}
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
+        {heroPageData.stale ? (
+          <p className="text-[12px] text-text-muted">Some sections are using backup data while the latest hero updates catch up.</p>
+        ) : null}
 
-              <div
-                className="rounded-xl bg-page-background/70 p-4"
-                style={{ border: "0.5px solid var(--border-subtle)" }}
-              >
-                <div className="text-[11px] font-medium tracking-[0.16em] text-text-muted uppercase">
-                  Role identity
-                </div>
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {overview.roles.map((role) => (
-                    <RoleBadge key={role} role={role} />
-                  ))}
-                </div>
-                {overview.specialties.length > 0 ? (
-                  <div className="mt-4 flex flex-wrap gap-2 text-[11px]">
-                    {overview.specialties.map((specialty) => (
-                      <span
-                        key={specialty}
-                        className="rounded-full bg-card-surface px-3 py-1.5 text-text-secondary"
-                        style={{ border: "0.5px solid var(--border-subtle)" }}
-                      >
-                        {specialty}
-                      </span>
-                    ))}
-                  </div>
-                ) : null}
-              </div>
+        <div className="grid gap-4 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)]">
+          <div className="min-w-0 space-y-4">
+            <section id="build" className="scroll-mt-28">
+              <HeroBuildSheet heroName={overview.name} plans={heroPageData.builds} skillPriority={overview.skillPriority} />
             </section>
 
-            <section className="space-y-4">
-              <div>
-                <h2 className="text-[18px] font-medium text-text-primary">Build plans</h2>
-                <p className="mt-1 text-[12px] leading-6 text-text-secondary">
-                  Recommended item paths, emblem setups, and battle spell suggestions for this hero.
-                </p>
+            <section id="trends" className="scroll-mt-28 rounded-lg border border-border-subtle bg-card-surface p-4">
+              <div className="mb-3 flex items-baseline justify-between gap-3">
+                <h2 className="text-[14px] font-semibold">Trends</h2>
+                <span className="text-[11.5px] text-text-muted">Last {trendWindow} days</span>
               </div>
-
-              {heroPageData.builds.length > 0 ? (
-                heroPageData.builds.map((plan) => (
-                  <HeroBuildPlanCard key={`${plan.title}-${plan.creatorName ?? "plan"}`} plan={plan} />
-                ))
+              {trends.length > 0 ? (
+                <HeroTrendChart points={trends} />
               ) : (
-                <StateMessage
-                  title="No published build plan yet"
-                  description="A polished build guide has not been published for this hero yet, so this section will appear once one is available."
-                  tone="muted"
-                />
+                <p className="text-[12.5px] text-text-secondary">Not enough recent history to chart this window yet.</p>
               )}
             </section>
 
-            <section
-              className="space-y-4 rounded-2xl bg-card-surface p-5"
-              style={{ border: "0.5px solid var(--border-subtle)" }}
-            >
-              <div>
-                <h2 className="text-[18px] font-medium text-text-primary">Skill combos</h2>
-                <p className="mt-1 text-[12px] leading-6 text-text-secondary">
-                  Rotation notes and combo patterns gathered for this hero.
-                </p>
-              </div>
+            {draftInsights.length > 0 ? <HeroInsightPanel insights={draftInsights} /> : null}
 
+            <section id="combos" className="scroll-mt-28 rounded-lg border border-border-subtle bg-card-surface p-4">
+              <h2 className="mb-3 text-[14px] font-semibold">Skill combos</h2>
               {heroPageData.combos.length > 0 ? (
-                <div className="grid gap-4 xl:grid-cols-2">
+                <div className="grid gap-3 xl:grid-cols-2">
                   {heroPageData.combos.map((combo, comboIndex) => (
-                    <article
-                      key={`${combo.title}-${comboIndex}`}
-                      className="space-y-3 rounded-xl bg-page-background/70 p-4"
-                      style={{ border: "0.5px solid var(--border-subtle)" }}
-                    >
-                      <div>
-                        <div className="text-[13px] font-medium text-text-primary">{combo.title}</div>
-                        {combo.description ? (
-                          <p className="mt-2 text-[12px] leading-6 text-text-secondary">
-                            {combo.description}
-                          </p>
-                        ) : null}
-                      </div>
+                    <article key={`${combo.title}-${comboIndex}`} className="space-y-2 rounded-md border border-border-subtle bg-page-background p-3">
+                      <div className="text-[13px] font-semibold">{combo.title}</div>
                       {combo.icons.length > 0 ? (
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-1.5">
                           {combo.icons.map((icon, iconIndex) => (
-                            <div
-                              key={`${combo.title}-${icon.skillId}-${iconIndex}`}
-                              className="relative size-11 overflow-hidden rounded-xl bg-card-surface-strong"
-                            >
-                              {icon.icon ? (
-                                <Image
-                                  src={icon.icon}
-                                  alt={`Skill ${icon.skillId}`}
-                                  fill
-                                  sizes="44px"
-                                  className="object-cover"
-                                />
-                              ) : null}
+                            <div key={`${icon.skillId}-${iconIndex}`} className="relative size-9 overflow-hidden rounded-md border border-border-strong bg-surface-raised">
+                              {icon.icon ? <Image src={icon.icon} alt={`Skill ${icon.skillId}`} fill sizes="36px" className="object-cover" /> : null}
                             </div>
                           ))}
                         </div>
                       ) : null}
+                      {combo.description ? <p className="text-[12px] leading-5 text-text-secondary">{combo.description}</p> : null}
                     </article>
                   ))}
                 </div>
               ) : (
-                <StateMessage
-                  title="No combo sheet published yet"
-                  description="Combo notes have not been added for this hero yet."
-                  tone="muted"
-                />
+                <p className="text-[12.5px] text-text-secondary">No combo notes have been published for this hero yet.</p>
               )}
             </section>
 
-            <HeroDurationPanel heroId={overview.heroId} />
-            <Suspense fallback={<p className="text-sm text-text-secondary">Loading hero artwork…</p>}><HeroWallpaperPreview heroId={overview.heroId} slug={overview.slug} /></Suspense>
-            <HeroDetailExplorer
-              slug={overview.slug}
-              initialData={{
-                ...heroPageData,
-                overview: {
-                  ...heroPageData.overview,
-                  insights: draftInsights,
-                },
-              }}
-            />
+            <div id="duration" className="scroll-mt-28">
+              <Suspense>
+                <HeroDurationPanel heroId={overview.heroId} />
+              </Suspense>
+            </div>
+
+            <section id="about" className="scroll-mt-28 rounded-lg border border-border-subtle bg-card-surface p-4">
+              <h2 className="mb-3 text-[14px] font-semibold">About {overview.name}</h2>
+              <div className="grid gap-x-6 gap-y-2.5 sm:grid-cols-2">
+                {overview.attributes.map((attribute) => (
+                  <div key={attribute.label}>
+                    <div className="flex justify-between text-[12px]">
+                      <span className="text-text-secondary">{attribute.label}</span>
+                      <span className="num">{attribute.value.toFixed(0)}</span>
+                    </div>
+                    <div className="mt-1 h-1 overflow-hidden rounded-full bg-border-strong">
+                      <div className="h-full rounded-full bg-accent-primary" style={{ width: `${attribute.value}%` }} />
+                    </div>
+                  </div>
+                ))}
+                <div>
+                  <div className="flex justify-between text-[12px]">
+                    <span className="text-text-secondary">Difficulty</span>
+                    <span className="num">{overview.difficulty.toFixed(0)}</span>
+                  </div>
+                  <div className="mt-1 h-1 overflow-hidden rounded-full bg-border-strong">
+                    <div className="h-full rounded-full bg-tier-s" style={{ width: `${overview.difficulty}%` }} />
+                  </div>
+                </div>
+              </div>
+              {overview.story ? <p className="mt-4 max-w-[70ch] text-[13px] leading-6 text-text-secondary">{overview.story}</p> : null}
+            </section>
+
+            <div id="artwork" className="scroll-mt-28">
+              <Suspense fallback={<p className="text-sm text-text-secondary">Loading hero artwork…</p>}>
+                <HeroWallpaperPreview heroId={overview.heroId} slug={overview.slug} />
+              </Suspense>
+            </div>
           </div>
 
-          <div className="space-y-5 self-start">
+          <aside id="counters" className="scroll-mt-28 space-y-4 self-start lg:sticky lg:top-28">
+            {weakAgainst ? (
+              <HeroChipList title="Weak against" description={weakAgainst.description} heroes={weakAgainst.heroes} query={heroQuery} />
+            ) : null}
             <HeroMatchupList
-              title="They counter"
-              description="Opponents where this hero gains the strongest positive win-rate swing in the selected counters feed."
-              emptyTitle="No matchup edges yet"
-              emptyDescription="There are no clear counter edges to show for this hero in the current view."
+              title="Strong against"
+              hint="Δ win rate"
+              emptyText="No clear matchup edges in this rank and window."
               items={heroPageData.counters}
+              query={heroQuery}
             />
-
             <HeroMatchupList
               title="Best teammates"
-              description="Pairings that create the strongest positive win-rate swing in the selected compatibility feed."
-              emptyTitle="No teammate data yet"
-              emptyDescription="There are no standout teammate pairings to show for this hero in the current view."
+              hint="Δ win rate together"
+              emptyText="No standout teammate pairings in this rank and window."
               items={heroPageData.teammates}
+              query={heroQuery}
             />
-
-            {counteredByInsight ? (
-              <section
-                className="space-y-4 rounded-2xl bg-card-surface p-4 sm:p-5"
-                style={{ border: "0.5px solid var(--border-subtle)" }}
-              >
-                <div>
-                  <h2 className="text-[18px] font-medium text-text-primary">Watch out for</h2>
-                  <p className="mt-1 text-[12px] leading-6 text-text-secondary">
-                    Opponents that create a strong negative win-rate swing against this hero in the selected counters feed.
-                  </p>
-                </div>
-
-                <div
-                  className="rounded-xl bg-page-background/70 p-4"
-                  style={{ border: "0.5px solid var(--border-subtle)" }}
-                >
-                  <p className="text-[12px] leading-6 text-text-secondary">
-                    {counteredByInsight.description}
-                  </p>
-
-                  {counteredByInsight.heroes.length > 0 ? (
-                    <div className="mt-4 flex flex-wrap gap-2 text-[11px]">
-                      {counteredByInsight.heroes.map((hero) => (
-                        <Link
-                          key={hero.heroId}
-                          href={`/heroes/${hero.slug}`}
-                          className="rounded-full bg-card-surface px-3 py-1.5 text-text-secondary transition-colors hover:border-accent-primary hover:text-accent-text"
-                          style={{ border: "0.5px solid var(--border-subtle)" }}
-                        >
-                          {hero.name}
-                        </Link>
-                      ))}
-                    </div>
-                  ) : null}
-                </div>
-              </section>
-            ) : null}
-          </div>
+          </aside>
         </div>
       </PageContainer>
     </main>

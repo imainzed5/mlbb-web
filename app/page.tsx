@@ -1,643 +1,242 @@
 import Link from "next/link";
 import { connection } from "next/server";
-import {
-  ArrowRight,
-  ArrowUpRight,
-  BarChart3,
-  BookOpen,
-  Crown,
-  Flame,
-  Shield,
-  UserRound,
-} from "lucide-react";
+import { ArrowRight, BookOpen, Calculator, Trophy, UserRound } from "lucide-react";
 
 import { HeroAvatarImage } from "@/components/heroes/HeroAvatarImage";
+import { DeltaValue, WinRateValue } from "@/components/heroes/StatCells";
+import { TierBadge } from "@/components/heroes/TierBadge";
+import { HeroSearch } from "@/components/layout/HeroSearch";
 import { PageContainer } from "@/components/layout/PageContainer";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { getHeroFeatureVisual } from "@/lib/heroes/getHeroFeatureVisual";
-import { getHeroBrowserData } from "@/lib/heroes/getHeroBrowserData";
-import type { HeroBrowserItem, HeroBrowserPayload } from "@/lib/heroes/types";
+import { formatPublicTimestamp } from "@/lib/date-time";
+import { getLeagueData, type League, type ScheduledMatch } from "@/lib/esports/data";
+import { ROLE_DOT } from "@/lib/heroes/constants";
+import { getHeroTierList } from "@/lib/heroes/getHeroTierList";
+import type { HeroTierListItem } from "@/lib/heroes/types";
 import { createWebSiteJsonLd } from "@/lib/seo/jsonld";
 import { createPageMetadata } from "@/lib/seo/metadata";
-
-const primaryRoutes = [
-  { href: "/academy", label: "Academy reference", description: "Search equipment, battle spells, emblems, and talents.", icon: BookOpen },
-  { href: "/esports", label: "Esports & scenarios", description: "Follow PH/ID leagues and explore playoff outcomes.", icon: Crown },
-  { href: "/tools", label: "Calculators", description: "Set a win-rate target or build your own league.", icon: BarChart3 },
-  { href: "/wallpapers", label: "Wallpaper gallery", description: "Browse mobile and desktop artwork in source resolutions.", icon: Shield },
-  {
-    href: "/heroes",
-    label: "Hero browser",
-    description: "Scan every hero by role, tier, and win rate.",
-    icon: Shield,
-  },
-  {
-    href: "/heroes/rank",
-    label: "Rank board",
-    description: "See tier placement and strongest ranked picks.",
-    icon: Crown,
-  },
-  {
-    href: "/meta",
-    label: "Meta tracker",
-    description: "Compare win, pick, and ban pressure.",
-    icon: BarChart3,
-  },
-];
-
-const focusRingClass =
-  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-primary/70 focus-visible:ring-offset-2 focus-visible:ring-offset-page-background";
-
-type DataStatusTone = "live" | "partial" | "snapshot";
-
-type DataStatus = {
-  label: string;
-  detail: string;
-  tone: DataStatusTone;
-};
-
-type MetaPulseItem = {
-  label: string;
-  hero: HeroBrowserItem | null;
-  value: string;
-};
-
-const dataStatusToneClasses: Record<DataStatusTone, string> = {
-  live: "border-success-soft/30 bg-success-soft/10 text-success-soft",
-  partial: "border-warning-soft/30 bg-warning-soft/10 text-warning-soft",
-  snapshot: "border-border-subtle bg-card-surface/70 text-text-secondary",
-};
 
 export const metadata = createPageMetadata({
   title: "mlbbstats",
   description:
-    "Browse MLBB heroes, open detailed builds and matchup notes, and track the evolving rank board from a fast Mobile Legends dashboard.",
+    "MLBB hero tier list, builds, counters and meta trends, plus MPL PH and ID esports results, in one fast Mobile Legends stats site.",
   path: "/",
 });
 
-function formatStatusDate(value: string | null) {
-  if (!value) {
-    return "date unavailable";
-  }
+const tiles = [
+  { href: "/tools/win-rate", label: "Win-rate calculator", text: "Wins needed to reach your target WR", icon: Calculator },
+  { href: "/esports", label: "Playoff simulator", text: "Run MPL standings scenarios", icon: Trophy },
+  { href: "/academy", label: "Academy", text: "Items, emblems, spells and talents", icon: BookOpen },
+  { href: "/player", label: "Connect account", text: "Your private player dashboard", icon: UserRound },
+];
 
-  const date = new Date(value);
-
-  if (Number.isNaN(date.getTime())) {
-    return "date unavailable";
-  }
-
-  return new Intl.DateTimeFormat("en-US", {
-    month: "short",
-    day: "numeric",
-    year: "numeric",
-    timeZone: "UTC",
-  }).format(date);
-}
-
-function getDataStatus(payload: HeroBrowserPayload): DataStatus {
-  if (payload.source === "snapshot") {
-    return {
-      label: "Saved snapshot",
-      detail: "Captured " + formatStatusDate(payload.snapshotAt),
-      tone: "snapshot",
-    };
-  }
-
-  if (payload.source === "partial") {
-    return {
-      label: "Partial data",
-      detail: "Some feeds unavailable · synced " + formatStatusDate(payload.generatedAt),
-      tone: "partial",
-    };
-  }
-
-  return {
-    label: "Live data",
-    detail: "Synced " + formatStatusDate(payload.generatedAt),
-    tone: "live",
-  };
-}
-
-function getHeroInitials(name: string) {
-  return name
-    .split(/\s+/)
-    .filter(Boolean)
-    .slice(0, 2)
-    .map((part) => part[0]?.toUpperCase() ?? "")
-    .join("");
-}
-
-function sortHeroesForHomepage(heroes: HeroBrowserItem[]) {
-  return [...heroes].sort((heroA, heroB) => {
-    if (heroA.tierOrder !== heroB.tierOrder) {
-      return heroA.tierOrder - heroB.tierOrder;
-    }
-    if (heroA.winRate !== heroB.winRate) {
-      return heroB.winRate - heroA.winRate;
-    }
-    if (heroA.pickRate !== heroB.pickRate) {
-      return heroB.pickRate - heroA.pickRate;
-    }
-    return heroA.name.localeCompare(heroB.name);
-  });
-}
-
-function formatPercentage(value: number | null | undefined) {
-  return typeof value === "number" && Number.isFinite(value) && value > 0
-    ? value.toFixed(1) + "%"
-    : "—";
-}
-
-function findBestHero(
-  heroes: HeroBrowserItem[],
-  metric: "winRate" | "pickRate" | "banRate"
-) {
-  return heroes.reduce<HeroBrowserItem | null>((bestHero, hero) => {
-    if (!bestHero || hero[metric] > bestHero[metric]) {
-      return hero;
-    }
-
-    return bestHero;
-  }, null);
-}
-
-function getMetaPulseItems(heroes: HeroBrowserItem[]): MetaPulseItem[] {
-  const bestWinRateHero = findBestHero(heroes, "winRate");
-  const mostPickedHero = findBestHero(heroes, "pickRate");
-  const mostBannedHero = findBestHero(heroes, "banRate");
-
-  return [
-    {
-      label: "Best win rate",
-      hero: bestWinRateHero,
-      value: formatPercentage(bestWinRateHero?.winRate),
-    },
-    {
-      label: "Most picked",
-      hero: mostPickedHero,
-      value: formatPercentage(mostPickedHero?.pickRate),
-    },
-    {
-      label: "Most banned",
-      hero: mostBannedHero,
-      value: formatPercentage(mostBannedHero?.banRate),
-    },
-  ];
-}
-
-function SectionHeading({
-  eyebrow,
-  title,
-  href,
-  icon: Icon,
-}: {
-  eyebrow: string;
-  title: string;
-  href?: string;
-  icon: typeof Shield;
-}) {
+function HeroRow({ hero, rank, children }: { hero: HeroTierListItem; rank?: number; children: React.ReactNode }) {
   return (
-    <div className="flex items-center justify-between gap-4 border-b border-border-subtle pb-3">
-      <div className="flex min-w-0 items-center gap-3">
-        <div className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-accent-surface/70 text-accent-text">
-          <Icon className="size-4" strokeWidth={2} />
-        </div>
-        <div className="min-w-0">
-          <p className="text-[10px] font-semibold tracking-[0.2em] text-text-muted uppercase">{eyebrow}</p>
-          <h2 className="mt-0.5 truncate text-[18px] font-medium tracking-[-0.03em] text-text-primary sm:text-[20px]">
-            {title}
-          </h2>
-        </div>
+    <li className="border-b border-border-subtle last:border-b-0">
+      <Link href={`/heroes/${hero.slug}`} className="group flex items-center gap-2.5 py-1.5">
+        {rank ? <span className="num w-4 text-[12px] text-text-muted">{rank}</span> : null}
+        {rank ? <TierBadge tier={hero.tier} /> : null}
+        <span className="relative size-8 shrink-0 overflow-hidden rounded-md bg-surface-raised">
+          <HeroAvatarImage primarySrc={hero.image} fallbackSrc={hero.smallmap} alt="" sizes="32px" />
+        </span>
+        <span className="min-w-0 flex-1 truncate">
+          <span className="text-[13px] font-semibold group-hover:text-accent-text">{hero.name}</span>
+          <span className="ml-2 text-[11.5px]" style={{ color: ROLE_DOT[hero.primaryRole] }}>
+            {hero.primaryRole}
+          </span>
+        </span>
+        {children}
+      </Link>
+    </li>
+  );
+}
+
+function Panel({ title, action, children }: { title: string; action?: React.ReactNode; children: React.ReactNode }) {
+  return (
+    <section className="rounded-lg border border-border-subtle bg-card-surface p-4">
+      <div className="mb-2 flex items-center justify-between gap-3">
+        <h2 className="text-[14px] font-semibold">{title}</h2>
+        {action}
       </div>
-      {href ? (
-        <Link
-          href={href}
-          className={"inline-flex shrink-0 items-center gap-1 text-[12px] font-medium text-accent-text hover:text-text-primary " + focusRingClass}
-        >
-          Open board
-          <ArrowUpRight className="size-4" strokeWidth={2} />
-        </Link>
-      ) : null}
-    </div>
-  );
-}
-
-function HeroStats({ hero }: { hero: HeroBrowserItem }) {
-  return (
-    <div className="grid grid-cols-3 gap-2">
-      {[
-        { label: "WR", value: formatPercentage(hero.winRate) },
-        { label: "PR", value: formatPercentage(hero.pickRate) },
-        { label: "BR", value: formatPercentage(hero.banRate) },
-      ].map((stat) => (
-        <div key={stat.label} className="rounded-xl border border-border-subtle bg-page-background/45 px-3 py-2.5">
-          <div className="text-[10px] font-semibold tracking-[0.16em] text-text-muted uppercase">{stat.label}</div>
-          <div className="mt-1 text-[16px] font-medium text-text-primary">{stat.value}</div>
-        </div>
-      ))}
-    </div>
-  );
-}
-
-function FeaturedHero({
-  hero,
-  featureVisual,
-  dataStatus,
-}: {
-  hero: HeroBrowserItem | null;
-  featureVisual: Awaited<ReturnType<typeof getHeroFeatureVisual>> | null;
-  dataStatus: DataStatus;
-}) {
-  const primaryImage = featureVisual?.primarySrc ?? hero?.image ?? null;
-  const fallbackImage = featureVisual?.fallbackSrc ?? hero?.smallmap ?? null;
-
-  return (
-    <section className="overflow-hidden rounded-[28px] border border-border-subtle bg-[#121a29] shadow-[0_24px_80px_rgba(0,0,0,0.25)]">
-      {hero ? (
-        <div className="grid lg:grid-cols-[minmax(0,0.95fr)_minmax(360px,1.05fr)]">
-          <div className="relative flex flex-col justify-between overflow-hidden p-6 sm:p-8 lg:p-10">
-            <div className="absolute -left-24 top-10 size-64 rounded-full bg-accent-primary/10 blur-3xl" />
-            <div className="absolute bottom-[-100px] right-[-80px] size-72 rounded-full bg-[#18345c]/25 blur-3xl" />
-
-            <div className="relative">
-              <div className="flex flex-wrap items-center gap-2">
-                <span className="inline-flex items-center gap-2 rounded-full border border-accent-primary/30 bg-accent-surface/50 px-3 py-1 text-[10px] font-semibold tracking-[0.2em] text-accent-text uppercase">
-                  <Flame className="size-3.5" strokeWidth={2} />
-                  Featured signal
-                </span>
-                <span className="rounded-full border border-tier-s/30 bg-tier-s/10 px-2.5 py-1 text-[10px] font-semibold text-tier-s">
-                  Tier {hero.tier}
-                </span>
-              </div>
-
-              <p className="mt-8 text-[11px] font-medium tracking-[0.25em] text-text-muted uppercase">Current board leader</p>
-              <h2 className="mt-3 text-[42px] font-medium leading-none tracking-[-0.07em] text-text-primary sm:text-[58px]">
-                {hero.name}
-              </h2>
-              <p className="mt-3 text-[14px] text-text-secondary">
-                {hero.primaryRole} signal · {hero.tier}-tier priority pick
-              </p>
-              <p className="mt-4 max-w-md text-[14px] leading-6 text-text-secondary">
-                A strong place to start your next draft. Open the full hero page for matchup context and build notes.
-              </p>
-
-              <div className="mt-6">
-                <HeroStats hero={hero} />
-              </div>
-
-              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-                <Link
-                  href={`/heroes/${hero.slug}`}
-                  className={"inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border border-accent-primary bg-accent-surface px-4 text-[12px] font-semibold tracking-[0.12em] text-accent-text uppercase transition-colors hover:bg-[#21456f] " + focusRingClass}
-                >
-                  Open hero
-                  <ArrowRight className="size-4" strokeWidth={2} />
-                </Link>
-                <Link
-                  href="/heroes/rank"
-                  className={"inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border border-border-subtle bg-card-surface/60 px-4 text-[12px] font-semibold tracking-[0.12em] text-text-primary uppercase transition-colors hover:border-accent-primary hover:text-accent-text " + focusRingClass}
-                >
-                  View rank board
-                  <ArrowUpRight className="size-4" strokeWidth={2} />
-                </Link>
-              </div>
-
-              <div className="mt-4 flex flex-wrap items-center gap-2 text-[11px] text-text-secondary">
-                <span className={"inline-flex items-center gap-2 rounded-full border px-3 py-1.5 font-medium " + dataStatusToneClasses[dataStatus.tone]}>
-                  <span className="size-1.5 rounded-full bg-current" aria-hidden="true" />
-                  {dataStatus.label}
-                </span>
-                <span className="text-text-muted" aria-hidden="true">·</span>
-                <span>{dataStatus.detail}</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="relative min-h-[300px] overflow-hidden border-t border-border-subtle bg-[#0d1421] lg:min-h-[430px] lg:border-t-0 lg:border-l">
-            <div className="absolute -inset-6 scale-110 opacity-25 blur-3xl">
-              <HeroAvatarImage
-                primarySrc={primaryImage}
-                fallbackSrc={fallbackImage}
-                alt=""
-                sizes="60vw"
-                className="object-cover"
-              />
-            </div>
-            <div className="absolute inset-0 flex items-center justify-center text-5xl font-medium tracking-[0.12em] text-text-secondary/70">
-              {getHeroInitials(hero.name)}
-            </div>
-            <div className="absolute inset-0 scale-105">
-              <HeroAvatarImage
-                primarySrc={primaryImage}
-                fallbackSrc={fallbackImage}
-                alt={`${hero.name} hero artwork`}
-                sizes="(min-width: 1024px) 55vw, 100vw"
-                className="object-cover object-[50%_42%]"
-                preload
-              />
-            </div>
-            <div className="absolute inset-0 bg-[linear-gradient(90deg,#0d1421_0%,rgba(13,20,33,0.72)_28%,rgba(13,20,33,0.18)_68%,rgba(13,20,33,0.08)_100%)]" />
-            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(13,20,33,0.08)_0%,rgba(13,20,33,0.12)_52%,#0d1421_100%)]" />
-          </div>
-        </div>
-      ) : (
-        <div className="flex flex-col justify-between gap-8 p-6 sm:p-10 lg:flex-row lg:items-center">
-          <div>
-            <p className="text-[11px] font-semibold tracking-[0.24em] text-accent-text uppercase">MLBB scouting desk</p>
-            <h2 className="mt-4 max-w-xl text-[40px] font-medium leading-[0.98] tracking-[-0.07em] text-text-primary sm:text-[56px]">
-              Read the field. Draft smarter. Win more.
-            </h2>
-            <p className="mt-5 max-w-xl text-[15px] leading-7 text-text-secondary">
-              Hero signals are unavailable right now, but the public tools are ready when the board returns.
-            </p>
-          </div>
-          <div className="flex flex-col gap-3 sm:flex-row lg:shrink-0 lg:flex-col">
-            <Link
-              href="/heroes"
-              className={"inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border border-accent-primary bg-accent-surface px-4 text-[12px] font-semibold tracking-[0.12em] text-accent-text uppercase " + focusRingClass}
-            >
-              Explore heroes
-              <ArrowRight className="size-4" strokeWidth={2} />
-            </Link>
-            <Link
-              href="/meta"
-              className={"inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border border-border-subtle bg-card-surface/60 px-4 text-[12px] font-semibold tracking-[0.12em] text-text-primary uppercase " + focusRingClass}
-            >
-              View the meta
-              <ArrowUpRight className="size-4" strokeWidth={2} />
-            </Link>
-          </div>
-        </div>
-      )}
+      {children}
     </section>
   );
 }
 
-function TopTierPicks({ heroes }: { heroes: HeroBrowserItem[] }) {
-  return (
-    <section className="rounded-[24px] border border-border-subtle bg-[#141c2b] p-4 sm:p-5">
-      <SectionHeading eyebrow="Rank board" title="Top tier picks" href="/heroes/rank" icon={Crown} />
-
-      <div className="mt-4 space-y-2.5">
-        {heroes.length > 0 ? (
-          heroes.map((hero, index) => {
-            const isFeatured = index === 0;
-
-            return (
-              <Link
-                key={hero.heroId}
-                href={`/heroes/${hero.slug}`}
-                className={
-                  "group flex items-center gap-3 rounded-2xl border transition-colors hover:border-accent-primary " +
-                  focusRingClass +
-                  " " +
-                  (isFeatured
-                    ? "border-accent-primary/50 bg-accent-surface/20 px-4 py-4"
-                    : "border-border-subtle bg-page-background/35 px-3 py-3")
-                }
-              >
-                <div
-                  className={
-                    "flex shrink-0 items-center justify-center rounded-full font-medium " +
-                    (isFeatured
-                      ? "size-9 bg-accent-surface text-[12px] text-accent-text"
-                      : "size-8 bg-card-surface text-[11px] text-text-secondary")
-                  }
-                >
-                  {index + 1}
-                </div>
-                <div className={"relative shrink-0 overflow-hidden rounded-2xl bg-card-surface-strong " + (isFeatured ? "size-14" : "size-11")}>
-                  <div className="absolute inset-0 flex items-center justify-center text-[13px] font-medium tracking-[0.08em] text-text-secondary">
-                    {getHeroInitials(hero.name)}
-                  </div>
-                  <HeroAvatarImage
-                    primarySrc={hero.image}
-                    fallbackSrc={hero.smallmap}
-                    alt={hero.name}
-                    sizes={isFeatured ? "56px" : "44px"}
-                    className="object-cover"
-                  />
-                </div>
-                <div className="min-w-0 flex-1">
-                  <div className="flex items-center gap-2">
-                    <div className="truncate text-[14px] font-medium text-text-primary group-hover:text-accent-text">{hero.name}</div>
-                    <span className="rounded-full border border-border-subtle bg-card-surface px-2 py-0.5 text-[10px] font-semibold text-accent-text">
-                      {hero.tier}
-                    </span>
-                  </div>
-                  <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-text-secondary">
-                    <span>WR {formatPercentage(hero.winRate)}</span>
-                    <span>PR {formatPercentage(hero.pickRate)}</span>
-                    <span>BR {formatPercentage(hero.banRate)}</span>
-                  </div>
-                </div>
-                <ArrowUpRight
-                  className="size-4 shrink-0 text-text-muted opacity-0 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent-text group-hover:opacity-100"
-                  strokeWidth={2}
-                />
-              </Link>
-            );
-          })
-        ) : (
-          <div className="rounded-2xl border border-border-subtle bg-page-background/35 px-4 py-4 text-[12px] leading-6 text-text-secondary">
-            No ranked signals are available right now. {" "}
-            <Link href="/heroes/rank" className={"font-medium text-accent-text underline-offset-4 hover:underline " + focusRingClass}>
-              Open the rank board
-            </Link>
-          </div>
-        )}
-      </div>
-    </section>
-  );
+function pickMatches(league: League, schedule: ScheduledMatch[] | null) {
+  if (!schedule) return [];
+  const now = Date.now();
+  const timed = schedule.filter((match) => match.start).sort((a, b) => Date.parse(a.start!) - Date.parse(b.start!));
+  const played = timed.filter((match) => match.score1 !== null && match.score2 !== null && Date.parse(match.start!) <= now).slice(-1);
+  const upcoming = timed.filter((match) => Date.parse(match.start!) > now).slice(0, 1);
+  return [...played.map((match) => ({ league, match, played: true })), ...upcoming.map((match) => ({ league, match, played: false }))];
 }
 
-function MetaPulse({ items }: { items: MetaPulseItem[] }) {
-  return (
-    <section className="rounded-[24px] border border-border-subtle bg-[#141c2b] p-4 sm:p-5">
-      <SectionHeading eyebrow="Meta signals" title="Meta pulse" icon={BarChart3} />
-
-      <div className="mt-4 space-y-2.5">
-        {items.map((item) => {
-          const content = (
-            <>
-              <div className="min-w-0">
-                <div className="text-[10px] font-semibold tracking-[0.14em] text-text-muted uppercase">{item.label}</div>
-                <div className="mt-1 truncate text-[14px] font-medium text-text-primary group-hover:text-accent-text">
-                  {item.hero?.name ?? "No signal"}
-                </div>
-              </div>
-              <div className="flex shrink-0 items-center gap-2">
-                <span className="text-[16px] font-medium text-accent-text">{item.value}</span>
-                <ArrowUpRight className="size-4 text-text-muted opacity-0 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent-text group-hover:opacity-100" strokeWidth={2} />
-              </div>
-            </>
-          );
-
-          if (!item.hero) {
-            return (
-              <div key={item.label} className="flex items-center justify-between gap-4 rounded-2xl border border-border-subtle bg-page-background/35 px-3 py-3">
-                {content}
-              </div>
-            );
-          }
-
-          return (
-            <Link
-              key={item.label}
-              href={`/heroes/${item.hero.slug}`}
-              className={"group flex items-center justify-between gap-4 rounded-2xl border border-border-subtle bg-page-background/35 px-3 py-3 transition-colors hover:border-accent-primary " + focusRingClass}
-            >
-              {content}
-            </Link>
-          );
-        })}
-      </div>
-    </section>
-  );
-}
-
-function ExploreTools() {
-  return (
-    <section className="rounded-[24px] border border-border-subtle bg-[#121a29] p-4 sm:p-5">
-      <SectionHeading eyebrow="Public tools" title="Explore mlbbstats" icon={Flame} />
-      <div className="mt-4 grid gap-3 md:grid-cols-3">
-        {primaryRoutes.map((route) => {
-          const Icon = route.icon;
-
-          return (
-            <Link
-              key={route.href}
-              href={route.href}
-              className={"group rounded-2xl border border-border-subtle bg-page-background/35 p-4 transition-colors hover:border-accent-primary hover:bg-accent-surface/10 " + focusRingClass}
-            >
-              <div className="flex items-start justify-between gap-3">
-                <div className="flex size-10 items-center justify-center rounded-xl bg-accent-surface/70 text-accent-text">
-                  <Icon className="size-5" strokeWidth={2} />
-                </div>
-                <ArrowUpRight className="size-4 text-text-muted opacity-0 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent-text group-hover:opacity-100" strokeWidth={2} />
-              </div>
-              <h3 className="mt-5 text-[16px] font-medium text-text-primary group-hover:text-accent-text">{route.label}</h3>
-              <p className="mt-2 text-[12px] leading-6 text-text-secondary">{route.description}</p>
-            </Link>
-          );
-        })}
-      </div>
-    </section>
-  );
-}
-
-function AccountCta() {
-  return (
-    <Link
-      href="/player"
-      className={"group flex min-h-full items-center gap-4 rounded-[24px] border border-border-subtle bg-[linear-gradient(135deg,#172945_0%,#121a29_70%)] p-5 transition-colors hover:border-accent-primary sm:p-6 " + focusRingClass}
-    >
-      <div className="flex size-11 shrink-0 items-center justify-center rounded-2xl bg-accent-surface text-accent-text">
-        <UserRound className="size-5" strokeWidth={2} />
-      </div>
-      <div className="min-w-0 flex-1">
-        <p className="text-[10px] font-semibold tracking-[0.2em] text-accent-text uppercase">Private dashboard</p>
-        <h2 className="mt-1 text-[18px] font-medium tracking-[-0.03em] text-text-primary">Connect your MLBB account</h2>
-        <p className="mt-2 text-[12px] leading-6 text-text-secondary">
-          Unlock a private dashboard with your own match history and performance data.
-        </p>
-      </div>
-      <ArrowRight className="size-4 shrink-0 text-text-muted transition-transform group-hover:translate-x-0.5 group-hover:text-accent-text" strokeWidth={2} />
-    </Link>
-  );
-}
-
-function BoardGuide() {
-  return (
-    <section className="rounded-[24px] border border-border-subtle bg-[#141c2b] p-5 sm:p-6">
-      <SectionHeading eyebrow="Quick guide" title="How to read the board" icon={BookOpen} />
-      <dl className="mt-4 grid gap-2 sm:grid-cols-3 lg:grid-cols-1">
-        {[
-          { label: "WR", text: "Win rate — percentage of matches won.", color: "text-success-soft" },
-          { label: "PR", text: "Pick rate — how often a hero is selected.", color: "text-accent-text" },
-          { label: "BR", text: "Ban rate — how often a hero is removed.", color: "text-warning-soft" },
-        ].map((item) => (
-          <div key={item.label} className="flex gap-3 rounded-xl border border-border-subtle bg-page-background/35 px-3 py-3">
-            <dt className={"w-8 shrink-0 text-[11px] font-semibold " + item.color}>{item.label}</dt>
-            <dd className="text-[12px] leading-5 text-text-secondary">{item.text}</dd>
-          </div>
-        ))}
-      </dl>
-    </section>
-  );
-}
+const matchTime = (value: string | null) =>
+  value
+    ? new Intl.DateTimeFormat("en-PH", { month: "short", day: "numeric", hour: "numeric", minute: "2-digit", timeZone: "Asia/Manila" }).format(new Date(value))
+    : "Time TBA";
 
 export default async function Home() {
   await connection();
-  const heroBrowserData = await getHeroBrowserData();
-  const sortedHeroes = sortHeroesForHomepage(heroBrowserData.heroes);
-  const topTierHeroes = sortedHeroes.slice(0, 5);
-  const featuredHero = topTierHeroes[0] ?? null;
-  const featureVisual = featuredHero
-    ? await getHeroFeatureVisual(featuredHero.heroId)
-    : null;
-  const sTierCount = heroBrowserData.heroes.filter((hero) => hero.tier === "S").length;
-  const dataStatus = getDataStatus(heroBrowserData);
-  const metaPulseItems = getMetaPulseItems(heroBrowserData.heroes);
+  const [tierList, ph, id] = await Promise.all([
+    getHeroTierList("all", 7),
+    getLeagueData("ph").catch(() => null),
+    getLeagueData("id").catch(() => null),
+  ]);
+  const heroes = tierList.heroes.filter((hero) => hero.winRate > 0);
+  const byTier = [...heroes].sort((a, b) => a.tierOrder - b.tierOrder || b.winRate - a.winRate);
+  const leader = byTier[0];
+  const mostBanned = [...heroes].sort((a, b) => b.banRate - a.banRate);
+  const mostPicked = [...heroes].sort((a, b) => b.pickRate - a.pickRate)[0];
+  const movers = heroes.filter((hero) => hero.winRateDelta !== null).sort((a, b) => (b.winRateDelta ?? 0) - (a.winRateDelta ?? 0));
+  const riser = movers[0];
+  const matches = [...pickMatches("ph", ph?.schedule.value ?? null), ...pickMatches("id", id?.schedule.value ?? null)];
+
+  const kpis = [
+    leader && { label: "Patch leader", hero: leader, value: <span className="num text-positive">{leader.winRate.toFixed(1)}% WR</span> },
+    mostBanned[0] && { label: "Most banned", hero: mostBanned[0], value: <span className="num text-tier-s">{mostBanned[0].banRate.toFixed(1)}% BR</span> },
+    mostPicked && { label: "Most picked", hero: mostPicked, value: <span className="num text-text-secondary">{mostPicked.pickRate.toFixed(1)}% PR</span> },
+    riser && (riser.winRateDelta ?? 0) > 0 && { label: "Biggest riser", hero: riser, value: <DeltaValue value={riser.winRateDelta} suffix=" WR vs 30d" /> },
+  ].filter(Boolean) as Array<{ label: string; hero: HeroTierListItem; value: React.ReactNode }>;
 
   return (
-    <main className="relative isolate overflow-hidden pb-24 sm:pb-8">
-      <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
-        <div
-          className="absolute inset-0 opacity-[0.18]"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(55, 138, 221, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(55, 138, 221, 0.08) 1px, transparent 1px)",
-            backgroundSize: "72px 72px",
-            maskImage: "linear-gradient(to bottom, black 0%, black 55%, transparent 100%)",
-          }}
-        />
-        <div className="absolute -left-48 top-12 size-[34rem] rounded-full bg-accent-primary/[0.045] blur-3xl" />
-        <div className="absolute -right-48 top-[34rem] size-[30rem] rounded-full bg-[#2b5784]/[0.04] blur-3xl" />
-      </div>
-      <PageContainer className="py-5 sm:py-8">
-        <JsonLd data={createWebSiteJsonLd()} />
-
-        <div className="space-y-5">
-          <header className="px-1">
-            <div>
-              <p className="text-[10px] font-semibold tracking-[0.24em] text-accent-text uppercase">Mobile Legends scouting portal</p>
-              <h1 className="mt-3 max-w-3xl text-[32px] font-medium leading-[1.02] tracking-[-0.06em] text-text-primary sm:text-[44px]">
-                Read the field. <span className="text-accent-text">Draft smarter.</span> Win more.
-              </h1>
-              <p className="mt-3 max-w-2xl text-[14px] leading-6 text-text-secondary sm:text-[15px]">
-                Live hero tiers, matchup pressure, and rank signals to help you make your next pick with confidence.
-              </p>
-            </div>
-          </header>
-
-          <FeaturedHero hero={featuredHero} featureVisual={featureVisual} dataStatus={dataStatus} />
-
-          <div className="grid items-start gap-5 xl:grid-cols-[minmax(0,1.45fr)_minmax(310px,0.8fr)]">
-            <TopTierPicks heroes={topTierHeroes} />
-            <MetaPulse items={metaPulseItems} />
+    <main>
+      <JsonLd data={createWebSiteJsonLd()} />
+      <PageContainer className="space-y-4 pt-8 pb-10 sm:pt-12">
+        <header className="max-w-[760px] pb-4">
+          <p className="text-[11px] font-medium tracking-[0.12em] text-accent-text uppercase">
+            Mobile Legends stats · all ranks · last 7 days
+          </p>
+          <h1 className="mt-2.5 text-[30px] leading-[1.05] font-bold tracking-[-0.035em] text-balance sm:text-[44px]">
+            Read the field. <span className="text-accent-text">Draft smarter.</span> Win more.
+          </h1>
+          <HeroSearch size="large" className="mt-6" placeholder="Search a hero…" />
+          <div className="mt-2.5 flex flex-wrap gap-x-3 gap-y-1 text-[12.5px] text-text-muted">
+            <span>Popular:</span>
+            {mostBanned.slice(0, 5).map((hero) => (
+              <Link key={hero.heroId} href={`/heroes/${hero.slug}`} className="border-b border-dotted border-border-strong text-text-secondary hover:text-text-primary">
+                {hero.name}
+              </Link>
+            ))}
           </div>
+        </header>
 
-          <ExploreTools />
-
-          <div className="grid items-start gap-5 lg:grid-cols-[minmax(0,1.15fr)_minmax(300px,0.85fr)]">
-            <AccountCta />
-            <BoardGuide />
+        {kpis.length > 0 ? (
+          <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
+            {kpis.map((kpi) => (
+              <Link key={kpi.label} href={`/heroes/${kpi.hero.slug}`} className="group flex items-center gap-3 rounded-lg border border-border-subtle bg-card-surface p-3 hover:border-border-strong">
+                <span className="relative size-10 shrink-0 overflow-hidden rounded-md bg-surface-raised">
+                  <HeroAvatarImage primarySrc={kpi.hero.image} fallbackSrc={kpi.hero.smallmap} alt="" sizes="40px" />
+                </span>
+                <span className="min-w-0">
+                  <span className="eyebrow block">{kpi.label}</span>
+                  <span className="flex items-center gap-1.5 truncate text-[15px] font-semibold group-hover:text-accent-text">
+                    {kpi.hero.name}
+                    {kpi.label === "Patch leader" ? <TierBadge tier={kpi.hero.tier} /> : null}
+                  </span>
+                  <span className="block text-[12px]">{kpi.value}</span>
+                </span>
+              </Link>
+            ))}
           </div>
+        ) : null}
 
-          <div className="grid gap-3 sm:grid-cols-2">
-            <div className="rounded-2xl border border-border-subtle bg-card-surface/45 px-4 py-3">
-              <div className="text-[10px] font-semibold tracking-[0.18em] text-text-muted uppercase">Heroes tracked</div>
-              <div className="mt-1 text-[22px] font-medium tracking-[-0.04em] text-text-primary">{heroBrowserData.summary.totalHeroes}</div>
-              <p className="mt-1 text-[11px] text-text-secondary">Roster data available to explore.</p>
-            </div>
-            <div className="rounded-2xl border border-border-subtle bg-card-surface/45 px-4 py-3">
-              <div className="text-[10px] font-semibold tracking-[0.18em] text-text-muted uppercase">S-tier picks</div>
-              <div className="mt-1 text-[22px] font-medium tracking-[-0.04em] text-text-primary">{sTierCount > 0 ? sTierCount : "—"}</div>
-              <p className="mt-1 text-[11px] text-text-secondary">Highest tier on the current board.</p>
-            </div>
+        <div className="grid gap-4 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)]">
+          <Panel
+            title="Top of the tier list"
+            action={
+              <Link href="/heroes" className="inline-flex items-center gap-1 text-[12px] text-accent-text hover:underline">
+                Full tier list <ArrowRight className="size-3.5" />
+              </Link>
+            }
+          >
+            <ol>
+              {byTier.slice(0, 10).map((hero, index) => (
+                <HeroRow key={hero.heroId} hero={hero} rank={index + 1}>
+                  <WinRateValue value={hero.winRate} className="text-[12.5px]" />
+                  <span className="hidden w-14 text-right sm:block">
+                    <DeltaValue value={hero.winRateDelta} />
+                  </span>
+                </HeroRow>
+              ))}
+            </ol>
+          </Panel>
+
+          <div className="space-y-4">
+            {movers.length > 0 ? (
+              <Panel title="Rising this week" action={<span className="text-[11.5px] text-text-muted">WR vs 30-day</span>}>
+                <ul>
+                  {movers.slice(0, 4).map((hero) => (
+                    <HeroRow key={hero.heroId} hero={hero}>
+                      <span className="num text-[12px] text-text-secondary">{hero.winRate.toFixed(1)}%</span>
+                      <DeltaValue value={hero.winRateDelta} className="w-12 text-right" />
+                    </HeroRow>
+                  ))}
+                </ul>
+              </Panel>
+            ) : null}
+            <Panel title="Ban priority">
+              <ul>
+                {mostBanned.slice(0, 5).map((hero) => (
+                  <HeroRow key={hero.heroId} hero={hero}>
+                    <span className="num text-[12.5px] text-tier-s">{hero.banRate.toFixed(1)}%</span>
+                  </HeroRow>
+                ))}
+              </ul>
+            </Panel>
           </div>
         </div>
+
+        {matches.length > 0 ? (
+          <Panel
+            title="Esports"
+            action={
+              <span className="flex gap-3 text-[12px]">
+                <Link href="/esports/ph" className="text-accent-text hover:underline">MPL PH</Link>
+                <Link href="/esports/id" className="text-accent-text hover:underline">MPL ID</Link>
+              </span>
+            }
+          >
+            <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-4">
+              {matches.map(({ league, match, played }) => {
+                const href = match.id ? `/esports/${league}/matches/${match.id}` : `/esports/${league}`;
+
+                return (
+                  <Link key={`${league}-${match.week}-${match.team1.name}-${match.team2.name}`} href={href} className="space-y-1 rounded-md border border-border-subtle bg-page-background p-3 hover:border-border-strong">
+                    <div className="eyebrow">MPL {league.toUpperCase()} · Week {match.week}</div>
+                    {[
+                      [match.team1, match.score1],
+                      [match.team2, match.score2],
+                    ].map(([team, score], index) => (
+                      <div key={index} className="flex justify-between gap-2 text-[13px]">
+                        <span className="truncate font-medium">{(team as ScheduledMatch["team1"]).name}</span>
+                        <span className="num text-text-secondary">{played ? (score as number) : "–"}</span>
+                      </div>
+                    ))}
+                    <div className="text-[11.5px] text-text-muted">{played ? "Final" : matchTime(match.start)}</div>
+                  </Link>
+                );
+              })}
+            </div>
+          </Panel>
+        ) : null}
+
+        <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
+          {tiles.map((tile) => (
+            <Link key={tile.href} href={tile.href} className="flex gap-3 rounded-lg border border-border-subtle p-3.5 hover:border-border-strong hover:bg-card-surface">
+              <tile.icon className="mt-0.5 size-4 shrink-0 text-accent-text" />
+              <span>
+                <span className="block text-[13px] font-semibold">{tile.label}</span>
+                <span className="block text-[12px] text-text-secondary">{tile.text}</span>
+              </span>
+            </Link>
+          ))}
+        </div>
+
+        <p className="text-[11.5px] text-text-muted">
+          {tierList.source === "snapshot" ? "Showing a saved snapshot" : tierList.stale ? "Some feeds were unavailable" : "Live data"} · synced {formatPublicTimestamp(tierList.generatedAt)}
+        </p>
       </PageContainer>
     </main>
   );

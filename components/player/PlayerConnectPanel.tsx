@@ -109,7 +109,7 @@ export function PlayerConnectPanel() {
 
   return (
     <section
-      className="space-y-5 rounded-[28px] bg-card-surface p-5 sm:p-6"
+      className="space-y-5 rounded-lg bg-card-surface p-5 sm:p-6"
       style={{ border: "0.5px solid var(--border-subtle)" }}
     >
       <div className="space-y-2">
@@ -136,7 +136,7 @@ export function PlayerConnectPanel() {
                 onChange={(event) => setRoleId(event.target.value.replace(/\D+/g, ""))}
                 inputMode="numeric"
                 placeholder="123456789"
-                className="w-full rounded-xl bg-page-background px-3 py-3 text-[14px] text-text-primary outline-none transition-colors focus:border-accent-primary"
+                className="w-full rounded-md bg-page-background px-3 py-3 text-[14px] text-text-primary outline-none transition-colors focus:border-accent-primary"
                 style={{ border: "0.5px solid var(--border-subtle)" }}
               />
             </label>
@@ -150,7 +150,7 @@ export function PlayerConnectPanel() {
                 onChange={(event) => setZoneId(event.target.value.replace(/\D+/g, ""))}
                 inputMode="numeric"
                 placeholder="1234"
-                className="w-full rounded-xl bg-page-background px-3 py-3 text-[14px] text-text-primary outline-none transition-colors focus:border-accent-primary"
+                className="w-full rounded-md bg-page-background px-3 py-3 text-[14px] text-text-primary outline-none transition-colors focus:border-accent-primary"
                 style={{ border: "0.5px solid var(--border-subtle)" }}
               />
             </label>
@@ -176,7 +176,7 @@ export function PlayerConnectPanel() {
               onChange={(event) => setVerificationCode(event.target.value.replace(/\D+/g, "").slice(0, 4))}
               inputMode="numeric"
               placeholder="4-digit code"
-              className="w-full rounded-xl bg-page-background px-3 py-3 text-[14px] text-text-primary outline-none transition-colors focus:border-accent-primary"
+              className="w-full rounded-md bg-page-background px-3 py-3 text-[14px] text-text-primary outline-none transition-colors focus:border-accent-primary"
               style={{ border: "0.5px solid var(--border-subtle)" }}
             />
           </label>
@@ -202,7 +202,7 @@ export function PlayerConnectPanel() {
         </div>
 
         <aside
-          className="rounded-2xl bg-page-background/70 p-4 sm:p-5"
+          className="rounded-lg bg-page-background/70 p-4 sm:p-5"
           style={{ border: "0.5px solid var(--border-subtle)" }}
         >
           <div className="text-[11px] font-medium tracking-[0.16em] text-text-muted uppercase">

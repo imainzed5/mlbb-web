@@ -49,3 +49,8 @@ export type HeroBrowserPayload = {
   source: "live" | "partial" | "snapshot";
   snapshotAt: string | null;
 };
+
+export type HeroTierListItem = HeroBrowserItem & {
+  /** Win-rate change in percentage points versus the longer baseline window. */
+  winRateDelta: number | null;
+};

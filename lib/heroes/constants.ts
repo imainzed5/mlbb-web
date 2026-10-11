@@ -37,3 +37,12 @@ export const ROLE_BADGE_STYLES: Record<
   Fighter: { background: "var(--role-fighter-bg)", text: "var(--role-fighter-text)" },
   Support: { background: "var(--role-support-bg)", text: "var(--role-support-text)" },
 };
+/** Role accent colour for small dots and labels. */
+export const ROLE_DOT: Record<HeroRole, string> = {
+  Fighter: "var(--role-fighter-text)",
+  Mage: "var(--role-mage-text)",
+  Assassin: "var(--role-assassin-text)",
+  Tank: "var(--role-tank-text)",
+  Support: "var(--role-support-text)",
+  Marksman: "var(--role-marksman-text)",
+};

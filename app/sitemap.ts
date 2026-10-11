@@ -27,12 +27,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     {
       changeFrequency: "daily",
       lastModified,
-      priority: 0.8,
-      url: absoluteUrl("/heroes/rank"),
-    },
-    {
-      changeFrequency: "daily",
-      lastModified,
       priority: 0.7,
       url: absoluteUrl("/meta"),
     },

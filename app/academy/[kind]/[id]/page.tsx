@@ -29,7 +29,7 @@ export default async function EntryPage({ params, searchParams }: Props) {
   if (!entry) return <ExploreShell title="Reference unavailable" description="This entry could not be loaded. Please retry later." back={backHref}><p className={panelClass}>The source catalog is currently incomplete or unavailable.</p></ExploreShell>;
   return <ExploreShell title={entry.name} description={entry.category} back={backHref}>
     <article className={`${panelClass} max-w-3xl space-y-6`}>
-      {entry.image && <Image src={entry.image} alt={entry.name} width={96} height={96} className="rounded-2xl" />}
+      {entry.image && <Image src={entry.image} alt={entry.name} width={96} height={96} className="rounded-lg" />}
       {entry.attributes && <section><h2 className="mb-2 font-medium">Attributes</h2><p className="whitespace-pre-line text-sm leading-7 text-text-secondary">{entry.attributes}</p></section>}
       <section><h2 className="mb-2 font-medium">Effects</h2><p className="whitespace-pre-line text-sm leading-7 text-text-secondary">{entry.description || "No effect description is published for this entry."}</p></section>
       {entry.tips && <p className="whitespace-pre-line text-sm leading-7">{entry.tips}</p>}
