@@ -1,0 +1,73 @@
+{
+  "code": 0,
+  "message": "OK",
+  "data": {
+    "records": [
+      {
+        "_createdAt": 1723097697296,
+        "_id": "66b46261f25dc3aacf517fb2",
+        "_updatedAt": 1723097697296,
+        "data": {
+          "__data": {
+            "skilldesc": "After channeling for 3s, teleport to the target allied Turret, Base, Minion, or trap and gain 60% extra Movement Speed (decays over 3s) afterward.\nIf the channeling is canceled or interrupted, 30s of the spell cooldown will be <font color=\"62f8fe\">refunded</font>.",
+            "skilldescemblem": "After channeling for 3s, teleport to the target allied Turret, Base, Minion, or trap and gain 60% extra Movement Speed (decays over 3s) afterward.\nIf the channeling is canceled or interrupted, 30s of the spell cooldown will be <font color=\"62f8fe\">refunded</font>.",
+            "skillicon": "https://wsrv.nl/?url=https%3A%2F%2Fakmweb.youngjoygame.com%2Fweb%2Fsvnres%2Fimg%2Fmlbb%2Fhomepage%2F100_e4c101cdf5311dc1ce58bd8385c1c478.png",
+            "skillid": 20160,
+            "skillname": "Arrival"
+          },
+          "battleskillid": 20160,
+          "skillicon": "@__data.skillicon",
+          "skillname": "@__data.skillname1",
+          "skillshortdesc": "Long-range Support",
+          "skillvideo": ""
+        },
+        "id": 100059,
+        "sourceId": 2718122
+      },
+      {
+        "_createdAt": 1723097697296,
+        "_id": "66b46261f25dc3aacf517fb1",
+        "_updatedAt": 1723097697296,
+        "data": {
+          "__data": {
+            "skilldesc": "For 3s, gain 35% <font color=\"62f8fe\">Damage Reduction</font> and deal 35% <font color=\"7f62fe\">Magic Damage</font> back to the attacker each time you receive damage.",
+            "skilldescemblem": "For 3s, gain 35% <font color=\"62f8fe\">Damage Reduction</font> and deal 35% <font color=\"7f62fe\">Magic Damage</font> back to the attacker each time you receive damage.",
+            "skillicon": "https://wsrv.nl/?url=https%3A%2F%2Fakmweb.youngjoygame.com%2Fweb%2Fsvnres%2Fimg%2Fmlbb%2Fhomepage%2F100_b9bccc6a8b4634cf64ef2829d72dba85.png",
+            "skillid": 20190,
+            "skillname": "Vengeance"
+          },
+          "battleskillid": 20190,
+          "skillicon": "@__data.skillicon",
+          "skillname": "@__data.skillname1",
+          "skillshortdesc": "Reflect Damage",
+          "skillvideo": ""
+        },
+        "id": 100058,
+        "sourceId": 2718122
+      },
+      {
+        "_createdAt": 1723097697296,
+        "_id": "66b46261f25dc3aacf517fb0",
+        "_updatedAt": 1723097697296,
+        "data": {
+          "__data": {
+            "skilldesc": "Remove all debuffs (excluding Suppression) and gain <font color=\"62f8fe\">Control Immunity</font> and 15% Movement Speed for 1.2s.",
+            "skilldescemblem": "Remove all debuffs (excluding Suppression) and gain <font color=\"62f8fe\">Control Immunity</font> and 15% Movement Speed for 1.2s.",
+            "skillicon": "https://wsrv.nl/?url=https%3A%2F%2Fakmweb.youngjoygame.com%2Fweb%2Fsvnres%2Fimg%2Fmlbb%2Fhomepage%2F100_d4fefd7da2cc6c1e6ddf41d788176e98.png",
+            "skillid": 20080,
+            "skillname": "Purify"
+          },
+          "battleskillid": 20080,
+          "skillicon": "@__data.skillicon",
+          "skillname": "@__data.skillname1",
+          "skillshortdesc": "Cleanse Debuffs",
+          "skillvideo": ""
+        },
+        "id": 100057,
+        "sourceId": 2718122
+      }
+    ],
+    "total": 12
+  },
+  "traceID": null
+}

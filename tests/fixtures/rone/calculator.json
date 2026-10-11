@@ -1,0 +1,8 @@
+{
+  "status": "success",
+  "match_now": 100,
+  "wr_now": 50,
+  "wr_future": 60,
+  "required_no_lose_matches": 25,
+  "message": "To achieve a win rate of 60.0%, you need 25 consecutive wins without any losses."
+}

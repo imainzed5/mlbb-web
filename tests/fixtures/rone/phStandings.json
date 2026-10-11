@@ -1,0 +1,148 @@
+{
+  "standings": [
+    {
+      "rank": 1,
+      "team": {
+        "name": "TLPH",
+        "full_name": null,
+        "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/tlph-400.webp"
+      },
+      "match_point": 12,
+      "match_wl": {
+        "win": 12,
+        "lose": 2
+      },
+      "net_game_win": 19,
+      "game_wl": {
+        "win": 25,
+        "lose": 6
+      }
+    },
+    {
+      "rank": 2,
+      "team": {
+        "name": "FLCN",
+        "full_name": null,
+        "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/falcon-400.webp"
+      },
+      "match_point": 12,
+      "match_wl": {
+        "win": 12,
+        "lose": 2
+      },
+      "net_game_win": 16,
+      "game_wl": {
+        "win": 26,
+        "lose": 10
+      }
+    },
+    {
+      "rank": 3,
+      "team": {
+        "name": "RORA",
+        "full_name": null,
+        "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/aurora-gaming-400.webp"
+      },
+      "match_point": 9,
+      "match_wl": {
+        "win": 9,
+        "lose": 5
+      },
+      "net_game_win": 7,
+      "game_wl": {
+        "win": 20,
+        "lose": 13
+      }
+    },
+    {
+      "rank": 4,
+      "team": {
+        "name": "ONIC",
+        "full_name": null,
+        "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/onicph-bw-400.webp"
+      },
+      "match_point": 9,
+      "match_wl": {
+        "win": 9,
+        "lose": 5
+      },
+      "net_game_win": 7,
+      "game_wl": {
+        "win": 21,
+        "lose": 14
+      }
+    },
+    {
+      "rank": 5,
+      "team": {
+        "name": "OMG",
+        "full_name": null,
+        "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/smart-400.webp"
+      },
+      "match_point": 7,
+      "match_wl": {
+        "win": 7,
+        "lose": 7
+      },
+      "net_game_win": -3,
+      "game_wl": {
+        "win": 15,
+        "lose": 18
+      }
+    },
+    {
+      "rank": 6,
+      "team": {
+        "name": "TNC",
+        "full_name": null,
+        "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/tnc-400.webp"
+      },
+      "match_point": 4,
+      "match_wl": {
+        "win": 4,
+        "lose": 10
+      },
+      "net_game_win": -8,
+      "game_wl": {
+        "win": 14,
+        "lose": 22
+      }
+    },
+    {
+      "rank": 7,
+      "team": {
+        "name": "APBR",
+        "full_name": null,
+        "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/apbren-400.webp"
+      },
+      "match_point": 3,
+      "match_wl": {
+        "win": 3,
+        "lose": 11
+      },
+      "net_game_win": -13,
+      "game_wl": {
+        "win": 10,
+        "lose": 23
+      }
+    },
+    {
+      "rank": 8,
+      "team": {
+        "name": "TWIS",
+        "full_name": null,
+        "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/twistedminds-400.webp"
+      },
+      "match_point": 0,
+      "match_wl": {
+        "win": 0,
+        "lose": 14
+      },
+      "net_game_win": -25,
+      "game_wl": {
+        "win": 3,
+        "lose": 28
+      }
+    }
+  ]
+}

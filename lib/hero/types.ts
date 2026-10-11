@@ -46,6 +46,7 @@ export type RawHeroRelationGroup = {
 };
 
 export type RawHeroBattleSkillNode = {
+  battleskillid?: number | null;
   __data?: {
     skilldesc?: string | null;
     skilldescemblem?: string | null;
@@ -55,6 +56,7 @@ export type RawHeroBattleSkillNode = {
 };
 
 export type RawHeroEmblemSkillNode = {
+  giftid?: number | null;
   emblemskill?: {
     skilldesc?: string | null;
     skilldescemblem?: string | null;
@@ -65,6 +67,7 @@ export type RawHeroEmblemSkillNode = {
 };
 
 export type RawHeroRecommendedItem = {
+  equipid?: number | null;
   equipicon?: string | null;
   equipname?: string | null;
   equipskilldesc?: string | null;
@@ -189,6 +192,7 @@ export type HeroInsight = {
 };
 
 export type HeroBuildItem = {
+  catalogId?: string | null;
   icon: string | null;
   name: string;
   passiveText: string[];
@@ -197,6 +201,7 @@ export type HeroBuildItem = {
 };
 
 export type HeroBuildTalent = {
+  catalogId?: string | null;
   description: string | null;
   icon: string | null;
   name: string;
@@ -206,6 +211,7 @@ export type HeroBuildTalent = {
 export type HeroBuildPlan = {
   battleSpell:
     | {
+        catalogId?: string | null;
         description: string | null;
         icon: string | null;
         name: string;

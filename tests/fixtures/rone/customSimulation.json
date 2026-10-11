@@ -1,0 +1,315 @@
+{
+  "teams": 4,
+  "weeks_count": 4,
+  "playoff_spots": 3,
+  "eliminated": 1,
+  "matches_played": 0,
+  "matches_remaining": 12,
+  "edited_matches": 0,
+  "probability_model": "even",
+  "probability_simulations": 100,
+  "weeks": [
+    {
+      "week": 1,
+      "matches": [
+        {
+          "team1": {
+            "name": "Alpha",
+            "full_name": null,
+            "logo": null
+          },
+          "team2": {
+            "name": "Delta",
+            "full_name": null,
+            "logo": null
+          },
+          "score1": null,
+          "score2": null,
+          "state": "scheduled"
+        },
+        {
+          "team1": {
+            "name": "Bravo",
+            "full_name": null,
+            "logo": null
+          },
+          "team2": {
+            "name": "Charlie",
+            "full_name": null,
+            "logo": null
+          },
+          "score1": null,
+          "score2": null,
+          "state": "scheduled"
+        },
+        {
+          "team1": {
+            "name": "Alpha",
+            "full_name": null,
+            "logo": null
+          },
+          "team2": {
+            "name": "Charlie",
+            "full_name": null,
+            "logo": null
+          },
+          "score1": null,
+          "score2": null,
+          "state": "scheduled"
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "matches": [
+        {
+          "team1": {
+            "name": "Delta",
+            "full_name": null,
+            "logo": null
+          },
+          "team2": {
+            "name": "Bravo",
+            "full_name": null,
+            "logo": null
+          },
+          "score1": null,
+          "score2": null,
+          "state": "scheduled"
+        },
+        {
+          "team1": {
+            "name": "Alpha",
+            "full_name": null,
+            "logo": null
+          },
+          "team2": {
+            "name": "Bravo",
+            "full_name": null,
+            "logo": null
+          },
+          "score1": null,
+          "score2": null,
+          "state": "scheduled"
+        },
+        {
+          "team1": {
+            "name": "Charlie",
+            "full_name": null,
+            "logo": null
+          },
+          "team2": {
+            "name": "Delta",
+            "full_name": null,
+            "logo": null
+          },
+          "score1": null,
+          "score2": null,
+          "state": "scheduled"
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "matches": [
+        {
+          "team1": {
+            "name": "Delta",
+            "full_name": null,
+            "logo": null
+          },
+          "team2": {
+            "name": "Alpha",
+            "full_name": null,
+            "logo": null
+          },
+          "score1": null,
+          "score2": null,
+          "state": "scheduled"
+        },
+        {
+          "team1": {
+            "name": "Charlie",
+            "full_name": null,
+            "logo": null
+          },
+          "team2": {
+            "name": "Bravo",
+            "full_name": null,
+            "logo": null
+          },
+          "score1": null,
+          "score2": null,
+          "state": "scheduled"
+        },
+        {
+          "team1": {
+            "name": "Charlie",
+            "full_name": null,
+            "logo": null
+          },
+          "team2": {
+            "name": "Alpha",
+            "full_name": null,
+            "logo": null
+          },
+          "score1": null,
+          "score2": null,
+          "state": "scheduled"
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "matches": [
+        {
+          "team1": {
+            "name": "Bravo",
+            "full_name": null,
+            "logo": null
+          },
+          "team2": {
+            "name": "Delta",
+            "full_name": null,
+            "logo": null
+          },
+          "score1": null,
+          "score2": null,
+          "state": "scheduled"
+        },
+        {
+          "team1": {
+            "name": "Bravo",
+            "full_name": null,
+            "logo": null
+          },
+          "team2": {
+            "name": "Alpha",
+            "full_name": null,
+            "logo": null
+          },
+          "score1": null,
+          "score2": null,
+          "state": "scheduled"
+        },
+        {
+          "team1": {
+            "name": "Delta",
+            "full_name": null,
+            "logo": null
+          },
+          "team2": {
+            "name": "Charlie",
+            "full_name": null,
+            "logo": null
+          },
+          "score1": null,
+          "score2": null,
+          "state": "scheduled"
+        }
+      ]
+    }
+  ],
+  "standings": [
+    {
+      "rank": 1,
+      "team": {
+        "name": "Alpha",
+        "full_name": null,
+        "logo": null
+      },
+      "match_point": 0,
+      "match_wl": {
+        "win": 0,
+        "lose": 0
+      },
+      "net_game_win": 0,
+      "game_wl": {
+        "win": 0,
+        "lose": 0
+      },
+      "played": 0,
+      "remaining": 6,
+      "max_match_point": 6,
+      "tiebreak": "unresolved",
+      "status": "alive",
+      "in_playoffs_zone": true,
+      "playoff_probability": 78.0
+    },
+    {
+      "rank": 2,
+      "team": {
+        "name": "Bravo",
+        "full_name": null,
+        "logo": null
+      },
+      "match_point": 0,
+      "match_wl": {
+        "win": 0,
+        "lose": 0
+      },
+      "net_game_win": 0,
+      "game_wl": {
+        "win": 0,
+        "lose": 0
+      },
+      "played": 0,
+      "remaining": 6,
+      "max_match_point": 6,
+      "tiebreak": "unresolved",
+      "status": "alive",
+      "in_playoffs_zone": true,
+      "playoff_probability": 72.0
+    },
+    {
+      "rank": 3,
+      "team": {
+        "name": "Charlie",
+        "full_name": null,
+        "logo": null
+      },
+      "match_point": 0,
+      "match_wl": {
+        "win": 0,
+        "lose": 0
+      },
+      "net_game_win": 0,
+      "game_wl": {
+        "win": 0,
+        "lose": 0
+      },
+      "played": 0,
+      "remaining": 6,
+      "max_match_point": 6,
+      "tiebreak": "unresolved",
+      "status": "alive",
+      "in_playoffs_zone": true,
+      "playoff_probability": 76.0
+    },
+    {
+      "rank": 4,
+      "team": {
+        "name": "Delta",
+        "full_name": null,
+        "logo": null
+      },
+      "match_point": 0,
+      "match_wl": {
+        "win": 0,
+        "lose": 0
+      },
+      "net_game_win": 0,
+      "game_wl": {
+        "win": 0,
+        "lose": 0
+      },
+      "played": 0,
+      "remaining": 6,
+      "max_match_point": 6,
+      "tiebreak": "unresolved",
+      "status": "alive",
+      "in_playoffs_zone": false,
+      "playoff_probability": 74.0
+    }
+  ]
+}

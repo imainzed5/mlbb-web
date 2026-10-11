@@ -1,0 +1,3656 @@
+{
+  "match_id": "rora-onic-20260821",
+  "games": [
+    {
+      "number": 1,
+      "duration": null,
+      "timeline_minutes": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14
+      ],
+      "teams": [
+        {
+          "team": {
+            "name": "RORA",
+            "full_name": "Aurora Gaming",
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/aurora-gaming-400.webp"
+          },
+          "winner": null,
+          "kills": 0,
+          "stats": {
+            "total_assists": 0,
+            "total_deaths": 6,
+            "total_gold": 34946,
+            "gold_per_min": 2476,
+            "total_damage": 82500,
+            "damage_per_min": 5844,
+            "red_buff": 4,
+            "blue_buff": 3,
+            "lord_kill": 0,
+            "tortoise_kill": 0,
+            "tower_destroy": 0
+          },
+          "players": [
+            {
+              "name": "Koyl",
+              "hero": {
+                "name": "Hirara",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fm%2F33%2Fp%2F266%2F1810181178495.png"
+              },
+              "kills": 0,
+              "deaths": 2,
+              "assists": 0,
+              "kda": 0,
+              "items": [
+                {
+                  "id": "3431",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3431.png"
+                },
+                {
+                  "id": "3009",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3009.png"
+                },
+                {
+                  "id": "2014",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2014.png"
+                },
+                {
+                  "id": "2013",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2013.png"
+                },
+                {
+                  "id": "2001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2001.png"
+                }
+              ],
+              "emblem": {
+                "id": "20005",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Femblem%2F20005.png"
+              },
+              "talents": [
+                {
+                  "id": "111",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F111.png"
+                },
+                {
+                  "id": "122",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F122.png"
+                },
+                {
+                  "id": "531",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F531.png"
+                }
+              ],
+              "gold": 8165,
+              "damage_dealt": 18069,
+              "damage_taken": 54350,
+              "tower_damage": 0,
+              "item_sequence": [
+                {
+                  "id": "1411",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1411.png",
+                  "tier": 1,
+                  "timeline_percent": 0.56080283353011
+                },
+                {
+                  "id": "1001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1001.png",
+                  "tier": 1,
+                  "timeline_percent": 5.7201889020071
+                },
+                {
+                  "id": "2004",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2004.png",
+                  "tier": 2,
+                  "timeline_percent": 12.001180637544
+                },
+                {
+                  "id": "1008",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1008.png",
+                  "tier": 1,
+                  "timeline_percent": 19.515938606848
+                },
+                {
+                  "id": "2014",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2014.png",
+                  "tier": 3,
+                  "timeline_percent": 34.881936245573
+                },
+                {
+                  "id": "1205",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1205.png",
+                  "tier": 1,
+                  "timeline_percent": 38.246753246753
+                },
+                {
+                  "id": "3431",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3431.png",
+                  "tier": 3,
+                  "timeline_percent": 38.695395513577
+                },
+                {
+                  "id": "1005",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1005.png",
+                  "tier": 1,
+                  "timeline_percent": 45.761511216057
+                },
+                {
+                  "id": "1001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1001.png",
+                  "tier": 1,
+                  "timeline_percent": 47.443919716647
+                },
+                {
+                  "id": "3009",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3009.png",
+                  "tier": 3,
+                  "timeline_percent": 52.827626918536
+                },
+                {
+                  "id": "1001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1001.png",
+                  "tier": 1,
+                  "timeline_percent": 54.734356552538
+                },
+                {
+                  "id": "1201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1201.png",
+                  "tier": 1,
+                  "timeline_percent": 57.987012987013
+                },
+                {
+                  "id": "2002",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2002.png",
+                  "tier": 2,
+                  "timeline_percent": 59.220779220779
+                },
+                {
+                  "id": "1005",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1005.png",
+                  "tier": 1,
+                  "timeline_percent": 62.58559622196
+                },
+                {
+                  "id": "1205",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1205.png",
+                  "tier": 1,
+                  "timeline_percent": 69.203069657615
+                },
+                {
+                  "id": "2013",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2013.png",
+                  "tier": 3,
+                  "timeline_percent": 74.69893742621
+                },
+                {
+                  "id": "1001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1001.png",
+                  "tier": 1,
+                  "timeline_percent": 77.390791027155
+                },
+                {
+                  "id": "2001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2001.png",
+                  "tier": 2,
+                  "timeline_percent": 83.671782762692
+                }
+              ]
+            },
+            {
+              "name": "Light",
+              "hero": {
+                "name": "Belerick",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fm%2F33%2Fp%2F258%2F0614104933588.png"
+              },
+              "kills": 0,
+              "deaths": 2,
+              "assists": 0,
+              "kda": 0,
+              "items": [
+                {
+                  "id": "3522",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3522.png"
+                },
+                {
+                  "id": "3212",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3212.png"
+                },
+                {
+                  "id": "3205",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3205.png"
+                },
+                {
+                  "id": "2201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2201.png"
+                }
+              ],
+              "emblem": {
+                "id": "20003",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Femblem%2F20003.png"
+              },
+              "talents": [
+                {
+                  "id": "711",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F711.png"
+                },
+                {
+                  "id": "321",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F321.png"
+                },
+                {
+                  "id": "331",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F331.png"
+                }
+              ],
+              "gold": 6320,
+              "damage_dealt": 13320,
+              "damage_taken": 184653,
+              "tower_damage": 0,
+              "item_sequence": [
+                {
+                  "id": "1512",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1512.png",
+                  "tier": 1,
+                  "timeline_percent": 0.33648170011806
+                },
+                {
+                  "id": "3522",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3522.png",
+                  "tier": 3,
+                  "timeline_percent": 9.3093270365998
+                },
+                {
+                  "id": "1202",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1202.png",
+                  "tier": 1,
+                  "timeline_percent": 12.001180637544
+                },
+                {
+                  "id": "2206",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2206.png",
+                  "tier": 2,
+                  "timeline_percent": 16.936245572609
+                },
+                {
+                  "id": "1201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1201.png",
+                  "tier": 1,
+                  "timeline_percent": 22.432113341204
+                },
+                {
+                  "id": "2201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2201.png",
+                  "tier": 2,
+                  "timeline_percent": 27.255017709563
+                },
+                {
+                  "id": "3212",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3212.png",
+                  "tier": 3,
+                  "timeline_percent": 39.031877213695
+                },
+                {
+                  "id": "1201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1201.png",
+                  "tier": 1,
+                  "timeline_percent": 47.556080283353
+                },
+                {
+                  "id": "1203",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1203.png",
+                  "tier": 1,
+                  "timeline_percent": 47.668240850059
+                },
+                {
+                  "id": "2203",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2203.png",
+                  "tier": 2,
+                  "timeline_percent": 53.164108618654
+                },
+                {
+                  "id": "1201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1201.png",
+                  "tier": 1,
+                  "timeline_percent": 61.015348288076
+                },
+                {
+                  "id": "3205",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3205.png",
+                  "tier": 3,
+                  "timeline_percent": 68.866587957497
+                },
+                {
+                  "id": "1201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1201.png",
+                  "tier": 1,
+                  "timeline_percent": 74.811097992916
+                },
+                {
+                  "id": "2201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2201.png",
+                  "tier": 2,
+                  "timeline_percent": 82.998819362456
+                }
+              ]
+            },
+            {
+              "name": "Domeng",
+              "hero": {
+                "name": "Claude",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fhero_h%2F65.png"
+              },
+              "kills": 0,
+              "deaths": 0,
+              "assists": 0,
+              "kda": 0,
+              "items": [
+                {
+                  "id": "2301",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2301.png"
+                },
+                {
+                  "id": "2006",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2006.png"
+                },
+                {
+                  "id": "2009",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2009.png"
+                },
+                {
+                  "id": "2008",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2008.png"
+                },
+                {
+                  "id": "1006",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1006.png"
+                },
+                {
+                  "id": "1004",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1004.png"
+                }
+              ],
+              "emblem": {
+                "id": "20007",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Femblem%2F20007.png"
+              },
+              "talents": [
+                {
+                  "id": "111",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F111.png"
+                },
+                {
+                  "id": "721",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F721.png"
+                },
+                {
+                  "id": "132",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F132.png"
+                }
+              ],
+              "gold": 8260,
+              "damage_dealt": 27193,
+              "damage_taken": 53820,
+              "tower_damage": 0,
+              "item_sequence": [
+                {
+                  "id": "1301",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1301.png",
+                  "tier": 1,
+                  "timeline_percent": 0.22432113341204
+                },
+                {
+                  "id": "1202",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1202.png",
+                  "tier": 1,
+                  "timeline_percent": 2.5796930342385
+                },
+                {
+                  "id": "1301",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1301.png",
+                  "tier": 1,
+                  "timeline_percent": 6.1688311688312
+                },
+                {
+                  "id": "2301",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2301.png",
+                  "tier": 3,
+                  "timeline_percent": 9.5336481700118
+                },
+                {
+                  "id": "1002",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1002.png",
+                  "tier": 1,
+                  "timeline_percent": 13.907910271547
+                },
+                {
+                  "id": "1001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1001.png",
+                  "tier": 1,
+                  "timeline_percent": 17.721369539551
+                },
+                {
+                  "id": "1006",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1006.png",
+                  "tier": 1,
+                  "timeline_percent": 18.506493506494
+                },
+                {
+                  "id": "1004",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1004.png",
+                  "tier": 1,
+                  "timeline_percent": 22.880755608028
+                },
+                {
+                  "id": "1002",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1002.png",
+                  "tier": 1,
+                  "timeline_percent": 25.909090909091
+                },
+                {
+                  "id": "2006",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2006.png",
+                  "tier": 3,
+                  "timeline_percent": 35.667060212515
+                },
+                {
+                  "id": "1002",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1002.png",
+                  "tier": 1,
+                  "timeline_percent": 42.396694214876
+                },
+                {
+                  "id": "1001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1001.png",
+                  "tier": 1,
+                  "timeline_percent": 44.639905548996
+                },
+                {
+                  "id": "1006",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1006.png",
+                  "tier": 1,
+                  "timeline_percent": 44.976387249115
+                },
+                {
+                  "id": "1001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1001.png",
+                  "tier": 1,
+                  "timeline_percent": 47.556080283353
+                },
+                {
+                  "id": "2009",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2009.png",
+                  "tier": 2,
+                  "timeline_percent": 58.547815820543
+                },
+                {
+                  "id": "1002",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1002.png",
+                  "tier": 1,
+                  "timeline_percent": 62.361275088548
+                },
+                {
+                  "id": "1007",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1007.png",
+                  "tier": 1,
+                  "timeline_percent": 69.876033057851
+                },
+                {
+                  "id": "1002",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1002.png",
+                  "tier": 1,
+                  "timeline_percent": 72.680047225502
+                },
+                {
+                  "id": "1001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1001.png",
+                  "tier": 1,
+                  "timeline_percent": 75.371900826446
+                },
+                {
+                  "id": "1006",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1006.png",
+                  "tier": 1,
+                  "timeline_percent": 75.708382526564
+                },
+                {
+                  "id": "2008",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2008.png",
+                  "tier": 3,
+                  "timeline_percent": 81.765053128689
+                },
+                {
+                  "id": "1002",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1002.png",
+                  "tier": 1,
+                  "timeline_percent": 85.12987012987
+                },
+                {
+                  "id": "1001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1001.png",
+                  "tier": 1,
+                  "timeline_percent": 88.382526564345
+                },
+                {
+                  "id": "1006",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1006.png",
+                  "tier": 1,
+                  "timeline_percent": 89.167650531287
+                },
+                {
+                  "id": "1004",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1004.png",
+                  "tier": 1,
+                  "timeline_percent": 92.195985832349
+                }
+              ]
+            },
+            {
+              "name": "Yue",
+              "hero": {
+                "name": "Rafaela",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fhero_h%2F14.png"
+              },
+              "kills": 0,
+              "deaths": 0,
+              "assists": 0,
+              "kda": 0,
+              "items": [
+                {
+                  "id": "2306",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2306.png"
+                },
+                {
+                  "id": "3112",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3112.png"
+                },
+                {
+                  "id": "2102",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2102.png"
+                },
+                {
+                  "id": "3105",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3105.png"
+                },
+                {
+                  "id": "1103",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1103.png"
+                },
+                {
+                  "id": "1101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1101.png"
+                }
+              ],
+              "emblem": {
+                "id": "20006",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Femblem%2F20006.png"
+              },
+              "talents": [
+                {
+                  "id": "611",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F611.png"
+                },
+                {
+                  "id": "621",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F621.png"
+                },
+                {
+                  "id": "131",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F131.png"
+                }
+              ],
+              "gold": 6112,
+              "damage_dealt": 12814,
+              "damage_taken": 47432,
+              "tower_damage": 196,
+              "item_sequence": [
+                {
+                  "id": "1301",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1301.png",
+                  "tier": 1,
+                  "timeline_percent": 0.89728453364817
+                },
+                {
+                  "id": "1101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1101.png",
+                  "tier": 1,
+                  "timeline_percent": 4.8229043683589
+                },
+                {
+                  "id": "2101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2101.png",
+                  "tier": 2,
+                  "timeline_percent": 11.103896103896
+                },
+                {
+                  "id": "1104",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1104.png",
+                  "tier": 1,
+                  "timeline_percent": 17.609208972845
+                },
+                {
+                  "id": "1201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1201.png",
+                  "tier": 1,
+                  "timeline_percent": 21.086186540732
+                },
+                {
+                  "id": "3112",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3112.png",
+                  "tier": 3,
+                  "timeline_percent": 24.451003541913
+                },
+                {
+                  "id": "1103",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1103.png",
+                  "tier": 1,
+                  "timeline_percent": 27.142857142857
+                },
+                {
+                  "id": "1204",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1204.png",
+                  "tier": 1,
+                  "timeline_percent": 27.479338842975
+                },
+                {
+                  "id": "2306",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2306.png",
+                  "tier": 3,
+                  "timeline_percent": 37.349468713105
+                },
+                {
+                  "id": "1101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1101.png",
+                  "tier": 1,
+                  "timeline_percent": 43.181818181818
+                },
+                {
+                  "id": "2104",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2104.png",
+                  "tier": 2,
+                  "timeline_percent": 44.976387249115
+                },
+                {
+                  "id": "1101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1101.png",
+                  "tier": 1,
+                  "timeline_percent": 49.014167650531
+                },
+                {
+                  "id": "1201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1201.png",
+                  "tier": 1,
+                  "timeline_percent": 55.295159386068
+                },
+                {
+                  "id": "3105",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3105.png",
+                  "tier": 3,
+                  "timeline_percent": 68.754427390791
+                },
+                {
+                  "id": "1104",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1104.png",
+                  "tier": 1,
+                  "timeline_percent": 75.147579693034
+                },
+                {
+                  "id": "2102",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2102.png",
+                  "tier": 2,
+                  "timeline_percent": 81.877213695396
+                },
+                {
+                  "id": "1103",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1103.png",
+                  "tier": 1,
+                  "timeline_percent": 84.00826446281
+                },
+                {
+                  "id": "1101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1101.png",
+                  "tier": 1,
+                  "timeline_percent": 89.728453364817
+                }
+              ]
+            },
+            {
+              "name": "Nathzz",
+              "hero": {
+                "name": "Alice",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fm%2F33%2Fp%2F253%2F3015072019610.png"
+              },
+              "kills": 0,
+              "deaths": 2,
+              "assists": 0,
+              "kda": 0,
+              "items": [
+                {
+                  "id": "2301",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2301.png"
+                },
+                {
+                  "id": "2205",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2205.png"
+                },
+                {
+                  "id": "3212",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3212.png"
+                },
+                {
+                  "id": "3204",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3204.png"
+                },
+                {
+                  "id": "1202",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1202.png"
+                },
+                {
+                  "id": "1203",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1203.png"
+                }
+              ],
+              "emblem": {
+                "id": "20003",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Femblem%2F20003.png"
+              },
+              "talents": [
+                {
+                  "id": "311",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F311.png"
+                },
+                {
+                  "id": "721",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F721.png"
+                },
+                {
+                  "id": "731",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F731.png"
+                }
+              ],
+              "gold": 6089,
+              "damage_dealt": 11104,
+              "damage_taken": 130574,
+              "tower_damage": 0,
+              "item_sequence": [
+                {
+                  "id": "1301",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1301.png",
+                  "tier": 1,
+                  "timeline_percent": 0.22432113341204
+                },
+                {
+                  "id": "1202",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1202.png",
+                  "tier": 1,
+                  "timeline_percent": 6.6174734356553
+                },
+                {
+                  "id": "2301",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2301.png",
+                  "tier": 3,
+                  "timeline_percent": 9.6458087367178
+                },
+                {
+                  "id": "1202",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1202.png",
+                  "tier": 1,
+                  "timeline_percent": 12.337662337662
+                },
+                {
+                  "id": "2205",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2205.png",
+                  "tier": 2,
+                  "timeline_percent": 21.198347107438
+                },
+                {
+                  "id": "1202",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1202.png",
+                  "tier": 1,
+                  "timeline_percent": 24.899645808737
+                },
+                {
+                  "id": "2206",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2206.png",
+                  "tier": 2,
+                  "timeline_percent": 28.825265643447
+                },
+                {
+                  "id": "1201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1201.png",
+                  "tier": 1,
+                  "timeline_percent": 34.881936245573
+                },
+                {
+                  "id": "2201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2201.png",
+                  "tier": 2,
+                  "timeline_percent": 39.031877213695
+                },
+                {
+                  "id": "3212",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3212.png",
+                  "tier": 3,
+                  "timeline_percent": 53.949232585596
+                },
+                {
+                  "id": "1205",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1205.png",
+                  "tier": 1,
+                  "timeline_percent": 62.809917355372
+                },
+                {
+                  "id": "1201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1201.png",
+                  "tier": 1,
+                  "timeline_percent": 73.01652892562
+                },
+                {
+                  "id": "3204",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3204.png",
+                  "tier": 3,
+                  "timeline_percent": 84.456906729634
+                },
+                {
+                  "id": "1202",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1202.png",
+                  "tier": 1,
+                  "timeline_percent": 89.055489964581
+                },
+                {
+                  "id": "1203",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1203.png",
+                  "tier": 1,
+                  "timeline_percent": 92.195985832349
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "team": {
+            "name": "ONIC",
+            "full_name": "ONIC PH",
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/onicph-bw-400.webp"
+          },
+          "winner": null,
+          "kills": 6,
+          "stats": {
+            "total_assists": 19,
+            "total_deaths": 0,
+            "total_gold": 48645,
+            "gold_per_min": 3446,
+            "total_damage": 261703,
+            "damage_per_min": 18539,
+            "red_buff": 10,
+            "blue_buff": 11,
+            "lord_kill": 2,
+            "tortoise_kill": 3,
+            "tower_destroy": 9
+          },
+          "players": [
+            {
+              "name": "Kirk",
+              "hero": {
+                "name": "Barats",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fm%2F33%2Fp%2F259%2F1811260718385.png"
+              },
+              "kills": 2,
+              "deaths": 0,
+              "assists": 4,
+              "kda": 6,
+              "items": [
+                {
+                  "id": "2302",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2302.png"
+                },
+                {
+                  "id": "3206",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3206.png"
+                },
+                {
+                  "id": "3202",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3202.png"
+                },
+                {
+                  "id": "3212",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3212.png"
+                },
+                {
+                  "id": "1008",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1008.png"
+                },
+                {
+                  "id": "1205",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1205.png"
+                }
+              ],
+              "emblem": {
+                "id": "20003",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Femblem%2F20003.png"
+              },
+              "talents": [
+                {
+                  "id": "311",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F311.png"
+                },
+                {
+                  "id": "321",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F321.png"
+                },
+                {
+                  "id": "731",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F731.png"
+                }
+              ],
+              "gold": 9310,
+              "damage_dealt": 44264,
+              "damage_taken": 123166,
+              "tower_damage": 1967,
+              "item_sequence": [
+                {
+                  "id": "1301",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1301.png",
+                  "tier": 1,
+                  "timeline_percent": 0.22432113341204
+                },
+                {
+                  "id": "1203",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1203.png",
+                  "tier": 1,
+                  "timeline_percent": 5.7201889020071
+                },
+                {
+                  "id": "2302",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2302.png",
+                  "tier": 3,
+                  "timeline_percent": 8.2998819362456
+                },
+                {
+                  "id": "1202",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1202.png",
+                  "tier": 1,
+                  "timeline_percent": 10.767414403778
+                },
+                {
+                  "id": "1203",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1203.png",
+                  "tier": 1,
+                  "timeline_percent": 15.253837072019
+                },
+                {
+                  "id": "2204",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2204.png",
+                  "tier": 2,
+                  "timeline_percent": 17.721369539551
+                },
+                {
+                  "id": "1201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1201.png",
+                  "tier": 1,
+                  "timeline_percent": 21.759149940968
+                },
+                {
+                  "id": "2201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2201.png",
+                  "tier": 2,
+                  "timeline_percent": 27.030696576151
+                },
+                {
+                  "id": "1201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1201.png",
+                  "tier": 1,
+                  "timeline_percent": 30.17119244392
+                },
+                {
+                  "id": "1201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1201.png",
+                  "tier": 1,
+                  "timeline_percent": 40.714285714286
+                },
+                {
+                  "id": "3202",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3202.png",
+                  "tier": 3,
+                  "timeline_percent": 46.434474616293
+                },
+                {
+                  "id": "1202",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1202.png",
+                  "tier": 1,
+                  "timeline_percent": 50.023612750885
+                },
+                {
+                  "id": "1203",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1203.png",
+                  "tier": 1,
+                  "timeline_percent": 52.939787485242
+                },
+                {
+                  "id": "3206",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3206.png",
+                  "tier": 3,
+                  "timeline_percent": 62.361275088548
+                },
+                {
+                  "id": "1202",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1202.png",
+                  "tier": 1,
+                  "timeline_percent": 65.38961038961
+                },
+                {
+                  "id": "2206",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2206.png",
+                  "tier": 2,
+                  "timeline_percent": 68.417945690673
+                },
+                {
+                  "id": "1201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1201.png",
+                  "tier": 1,
+                  "timeline_percent": 70.212514757969
+                },
+                {
+                  "id": "2201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2201.png",
+                  "tier": 2,
+                  "timeline_percent": 73.353010625738
+                },
+                {
+                  "id": "3212",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3212.png",
+                  "tier": 3,
+                  "timeline_percent": 81.989374262102
+                },
+                {
+                  "id": "1008",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1008.png",
+                  "tier": 1,
+                  "timeline_percent": 85.466351829988
+                },
+                {
+                  "id": "1205",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1205.png",
+                  "tier": 1,
+                  "timeline_percent": 89.616292798111
+                }
+              ]
+            },
+            {
+              "name": "Savero",
+              "hero": {
+                "name": "Melissa",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fm%2F33%2Fp%2F253%2F1318001527975.png"
+              },
+              "kills": 1,
+              "deaths": 0,
+              "assists": 3,
+              "kda": 4,
+              "items": [
+                {
+                  "id": "1006",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1006.png"
+                },
+                {
+                  "id": "2008",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2008.png"
+                },
+                {
+                  "id": "2006",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2006.png"
+                },
+                {
+                  "id": "2009",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2009.png"
+                },
+                {
+                  "id": "3015",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3015.png"
+                },
+                {
+                  "id": "2305",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2305.png"
+                }
+              ],
+              "emblem": {
+                "id": "20007",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Femblem%2F20007.png"
+              },
+              "talents": [
+                {
+                  "id": "112",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F112.png"
+                },
+                {
+                  "id": "621",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F621.png"
+                },
+                {
+                  "id": "132",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F132.png"
+                }
+              ],
+              "gold": 10898,
+              "damage_dealt": 99292,
+              "damage_taken": 33414,
+              "tower_damage": 29997,
+              "item_sequence": [
+                {
+                  "id": "1301",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1301.png",
+                  "tier": 1,
+                  "timeline_percent": 0.44864226682408
+                },
+                {
+                  "id": "1202",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1202.png",
+                  "tier": 1,
+                  "timeline_percent": 3.1404958677686
+                },
+                {
+                  "id": "1002",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1002.png",
+                  "tier": 1,
+                  "timeline_percent": 7.2904368358914
+                },
+                {
+                  "id": "1007",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1007.png",
+                  "tier": 1,
+                  "timeline_percent": 13.907910271547
+                },
+                {
+                  "id": "1002",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1002.png",
+                  "tier": 1,
+                  "timeline_percent": 16.936245572609
+                },
+                {
+                  "id": "1001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1001.png",
+                  "tier": 1,
+                  "timeline_percent": 18.394332939787
+                },
+                {
+                  "id": "1006",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1006.png",
+                  "tier": 1,
+                  "timeline_percent": 19.17945690673
+                },
+                {
+                  "id": "2008",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2008.png",
+                  "tier": 3,
+                  "timeline_percent": 25.011806375443
+                },
+                {
+                  "id": "1002",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1002.png",
+                  "tier": 1,
+                  "timeline_percent": 28.376623376623
+                },
+                {
+                  "id": "1006",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1006.png",
+                  "tier": 1,
+                  "timeline_percent": 30.619834710744
+                },
+                {
+                  "id": "1004",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1004.png",
+                  "tier": 1,
+                  "timeline_percent": 33.5360094451
+                },
+                {
+                  "id": "1002",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1002.png",
+                  "tier": 1,
+                  "timeline_percent": 34.433293978749
+                },
+                {
+                  "id": "2006",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2006.png",
+                  "tier": 3,
+                  "timeline_percent": 43.40613931523
+                },
+                {
+                  "id": "1002",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1002.png",
+                  "tier": 1,
+                  "timeline_percent": 45.312868949233
+                },
+                {
+                  "id": "1001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1001.png",
+                  "tier": 1,
+                  "timeline_percent": 46.770956316411
+                },
+                {
+                  "id": "1006",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1006.png",
+                  "tier": 1,
+                  "timeline_percent": 46.883116883117
+                },
+                {
+                  "id": "1001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1001.png",
+                  "tier": 1,
+                  "timeline_percent": 49.462809917355
+                },
+                {
+                  "id": "2009",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2009.png",
+                  "tier": 2,
+                  "timeline_percent": 59.332939787485
+                },
+                {
+                  "id": "1301",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1301.png",
+                  "tier": 1,
+                  "timeline_percent": 60.230224321133
+                },
+                {
+                  "id": "1002",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1002.png",
+                  "tier": 1,
+                  "timeline_percent": 63.14639905549
+                },
+                {
+                  "id": "1006",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1006.png",
+                  "tier": 1,
+                  "timeline_percent": 65.613931523022
+                },
+                {
+                  "id": "1001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1001.png",
+                  "tier": 1,
+                  "timeline_percent": 67.969303423849
+                },
+                {
+                  "id": "2004",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2004.png",
+                  "tier": 2,
+                  "timeline_percent": 69.539551357733
+                },
+                {
+                  "id": "1002",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1002.png",
+                  "tier": 1,
+                  "timeline_percent": 71.670602125148
+                },
+                {
+                  "id": "3015",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3015.png",
+                  "tier": 3,
+                  "timeline_percent": 78.288075560803
+                },
+                {
+                  "id": "1301",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1301.png",
+                  "tier": 1,
+                  "timeline_percent": 81.652892561983
+                },
+                {
+                  "id": "2305",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2305.png",
+                  "tier": 3,
+                  "timeline_percent": 86.81227863046
+                },
+                {
+                  "id": "1002",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1002.png",
+                  "tier": 1,
+                  "timeline_percent": 87.933884297521
+                },
+                {
+                  "id": "1006",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1006.png",
+                  "tier": 1,
+                  "timeline_percent": 89.391971664699
+                }
+              ]
+            },
+            {
+              "name": "SuperFrince",
+              "hero": {
+                "name": "Novaria",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fm%2F33%2Fp%2F258%2F0614150910495.png"
+              },
+              "kills": 2,
+              "deaths": 0,
+              "assists": 3,
+              "kda": 5,
+              "items": [
+                {
+                  "id": "2303",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2303.png"
+                },
+                {
+                  "id": "3105",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3105.png"
+                },
+                {
+                  "id": "1103",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1103.png"
+                },
+                {
+                  "id": "3110",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3110.png"
+                },
+                {
+                  "id": "3101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3101.png"
+                },
+                {
+                  "id": "2101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2101.png"
+                }
+              ],
+              "emblem": {
+                "id": "20006",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Femblem%2F20006.png"
+              },
+              "talents": [
+                {
+                  "id": "611",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F611.png"
+                },
+                {
+                  "id": "121",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F121.png"
+                },
+                {
+                  "id": "131",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F131.png"
+                }
+              ],
+              "gold": 8370,
+              "damage_dealt": 69199,
+              "damage_taken": 4199,
+              "tower_damage": 510,
+              "item_sequence": [
+                {
+                  "id": "1301",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1301.png",
+                  "tier": 1,
+                  "timeline_percent": 0.22432113341204
+                },
+                {
+                  "id": "1101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1101.png",
+                  "tier": 1,
+                  "timeline_percent": 7.1782762691854
+                },
+                {
+                  "id": "2104",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2104.png",
+                  "tier": 2,
+                  "timeline_percent": 10.99173553719
+                },
+                {
+                  "id": "1101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1101.png",
+                  "tier": 1,
+                  "timeline_percent": 13.571428571429
+                },
+                {
+                  "id": "1201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1201.png",
+                  "tier": 1,
+                  "timeline_percent": 17.721369539551
+                },
+                {
+                  "id": "3105",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3105.png",
+                  "tier": 3,
+                  "timeline_percent": 28.040141676505
+                },
+                {
+                  "id": "1103",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1103.png",
+                  "tier": 1,
+                  "timeline_percent": 30.283353010626
+                },
+                {
+                  "id": "1101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1101.png",
+                  "tier": 1,
+                  "timeline_percent": 33.760330578512
+                },
+                {
+                  "id": "2101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2101.png",
+                  "tier": 2,
+                  "timeline_percent": 38.134592680047
+                },
+                {
+                  "id": "1104",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1104.png",
+                  "tier": 1,
+                  "timeline_percent": 46.210153482881
+                },
+                {
+                  "id": "1102",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1102.png",
+                  "tier": 1,
+                  "timeline_percent": 47.107438016529
+                },
+                {
+                  "id": "3110",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3110.png",
+                  "tier": 3,
+                  "timeline_percent": 54.510035419126
+                },
+                {
+                  "id": "1101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1101.png",
+                  "tier": 1,
+                  "timeline_percent": 59.445100354191
+                },
+                {
+                  "id": "2101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2101.png",
+                  "tier": 2,
+                  "timeline_percent": 65.501770956316
+                },
+                {
+                  "id": "3101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3101.png",
+                  "tier": 3,
+                  "timeline_percent": 80.419126328217
+                },
+                {
+                  "id": "2303",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2303.png",
+                  "tier": 3,
+                  "timeline_percent": 85.354191263282
+                },
+                {
+                  "id": "1101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1101.png",
+                  "tier": 1,
+                  "timeline_percent": 90.064935064935
+                },
+                {
+                  "id": "2101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2101.png",
+                  "tier": 2,
+                  "timeline_percent": 93.205430932704
+                }
+              ]
+            },
+            {
+              "name": "SUPERYOSHI",
+              "hero": {
+                "name": "Mathilda",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fm%2F33%2Fp%2F258%2F0614161952513.png"
+              },
+              "kills": 0,
+              "deaths": 0,
+              "assists": 5,
+              "kda": 5,
+              "items": [
+                {
+                  "id": "3523",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3523.png"
+                },
+                {
+                  "id": "3112",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3112.png"
+                },
+                {
+                  "id": "2106",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2106.png"
+                },
+                {
+                  "id": "2101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2101.png"
+                },
+                {
+                  "id": "2101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2101.png"
+                },
+                {
+                  "id": "2101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2101.png"
+                }
+              ],
+              "emblem": {
+                "id": "20008",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Femblem%2F20008.png"
+              },
+              "talents": [
+                {
+                  "id": "611",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F611.png"
+                },
+                {
+                  "id": "121",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F121.png"
+                },
+                {
+                  "id": "132",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F132.png"
+                }
+              ],
+              "gold": 7750,
+              "damage_dealt": 18342,
+              "damage_taken": 30132,
+              "tower_damage": 969,
+              "item_sequence": [
+                {
+                  "id": "1513",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1513.png",
+                  "tier": 1,
+                  "timeline_percent": 0.22432113341204
+                },
+                {
+                  "id": "1101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1101.png",
+                  "tier": 1,
+                  "timeline_percent": 7.6269185360094
+                },
+                {
+                  "id": "2101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2101.png",
+                  "tier": 2,
+                  "timeline_percent": 16.263282172373
+                },
+                {
+                  "id": "1104",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1104.png",
+                  "tier": 1,
+                  "timeline_percent": 23.329397874852
+                },
+                {
+                  "id": "1201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1201.png",
+                  "tier": 1,
+                  "timeline_percent": 28.600944510035
+                },
+                {
+                  "id": "3112",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3112.png",
+                  "tier": 3,
+                  "timeline_percent": 31.741440377804
+                },
+                {
+                  "id": "1203",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1203.png",
+                  "tier": 1,
+                  "timeline_percent": 35.667060212515
+                },
+                {
+                  "id": "3523",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3523.png",
+                  "tier": 3,
+                  "timeline_percent": 39.144037780401
+                },
+                {
+                  "id": "1103",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1103.png",
+                  "tier": 1,
+                  "timeline_percent": 41.72373081464
+                },
+                {
+                  "id": "1104",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1104.png",
+                  "tier": 1,
+                  "timeline_percent": 47.219598583235
+                },
+                {
+                  "id": "2102",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2102.png",
+                  "tier": 2,
+                  "timeline_percent": 51.818181818182
+                },
+                {
+                  "id": "1103",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1103.png",
+                  "tier": 1,
+                  "timeline_percent": 52.827626918536
+                },
+                {
+                  "id": "1101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1101.png",
+                  "tier": 1,
+                  "timeline_percent": 57.201889020071
+                },
+                {
+                  "id": "2101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2101.png",
+                  "tier": 2,
+                  "timeline_percent": 62.922077922078
+                },
+                {
+                  "id": "2106",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2106.png",
+                  "tier": 3,
+                  "timeline_percent": 65.726092089728
+                },
+                {
+                  "id": "1101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1101.png",
+                  "tier": 1,
+                  "timeline_percent": 68.305785123967
+                },
+                {
+                  "id": "2101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2101.png",
+                  "tier": 2,
+                  "timeline_percent": 74.586776859504
+                },
+                {
+                  "id": "1101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1101.png",
+                  "tier": 1,
+                  "timeline_percent": 77.839433293979
+                },
+                {
+                  "id": "1101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1101.png",
+                  "tier": 1,
+                  "timeline_percent": 86.924439197166
+                }
+              ]
+            },
+            {
+              "name": "K1NGKONG",
+              "hero": {
+                "name": "Nolan",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fhero_h%2F122.png"
+              },
+              "kills": 1,
+              "deaths": 0,
+              "assists": 4,
+              "kda": 5,
+              "items": [
+                {
+                  "id": "3431",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3431.png"
+                },
+                {
+                  "id": "3009",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3009.png"
+                },
+                {
+                  "id": "3007",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3007.png"
+                },
+                {
+                  "id": "3001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3001.png"
+                },
+                {
+                  "id": "3008",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3008.png"
+                },
+                {
+                  "id": "3004",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3004.png"
+                }
+              ],
+              "emblem": {
+                "id": "20005",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Femblem%2F20005.png"
+              },
+              "talents": [
+                {
+                  "id": "111",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F111.png"
+                },
+                {
+                  "id": "122",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F122.png"
+                },
+                {
+                  "id": "631",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F631.png"
+                }
+              ],
+              "gold": 12317,
+              "damage_dealt": 30606,
+              "damage_taken": 15795,
+              "tower_damage": 3643,
+              "item_sequence": [
+                {
+                  "id": "1411",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1411.png",
+                  "tier": 1,
+                  "timeline_percent": 0.22432113341204
+                },
+                {
+                  "id": "1001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1001.png",
+                  "tier": 1,
+                  "timeline_percent": 5.6080283353011
+                },
+                {
+                  "id": "2004",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2004.png",
+                  "tier": 2,
+                  "timeline_percent": 14.693034238489
+                },
+                {
+                  "id": "1005",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1005.png",
+                  "tier": 1,
+                  "timeline_percent": 17.609208972845
+                },
+                {
+                  "id": "1001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1001.png",
+                  "tier": 1,
+                  "timeline_percent": 19.515938606848
+                },
+                {
+                  "id": "3009",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3009.png",
+                  "tier": 3,
+                  "timeline_percent": 23.890200708383
+                },
+                {
+                  "id": "3431",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3431.png",
+                  "tier": 3,
+                  "timeline_percent": 28.937426210153
+                },
+                {
+                  "id": "1001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1001.png",
+                  "tier": 1,
+                  "timeline_percent": 33.311688311688
+                },
+                {
+                  "id": "2004",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2004.png",
+                  "tier": 2,
+                  "timeline_percent": 36.227863046045
+                },
+                {
+                  "id": "1001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1001.png",
+                  "tier": 1,
+                  "timeline_percent": 38.134592680047
+                },
+                {
+                  "id": "1201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1201.png",
+                  "tier": 1,
+                  "timeline_percent": 39.256198347107
+                },
+                {
+                  "id": "2002",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2002.png",
+                  "tier": 2,
+                  "timeline_percent": 40.377804014168
+                },
+                {
+                  "id": "3007",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3007.png",
+                  "tier": 3,
+                  "timeline_percent": 43.181818181818
+                },
+                {
+                  "id": "1001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1001.png",
+                  "tier": 1,
+                  "timeline_percent": 45.537190082645
+                },
+                {
+                  "id": "2001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2001.png",
+                  "tier": 2,
+                  "timeline_percent": 51.03305785124
+                },
+                {
+                  "id": "3001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3001.png",
+                  "tier": 3,
+                  "timeline_percent": 57.987012987013
+                },
+                {
+                  "id": "1001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1001.png",
+                  "tier": 1,
+                  "timeline_percent": 60.791027154664
+                },
+                {
+                  "id": "2001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2001.png",
+                  "tier": 2,
+                  "timeline_percent": 63.595041322314
+                },
+                {
+                  "id": "1001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1001.png",
+                  "tier": 1,
+                  "timeline_percent": 65.613931523022
+                },
+                {
+                  "id": "3008",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3008.png",
+                  "tier": 3,
+                  "timeline_percent": 81.092089728453
+                },
+                {
+                  "id": "1001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1001.png",
+                  "tier": 1,
+                  "timeline_percent": 82.550177095632
+                },
+                {
+                  "id": "2002",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2002.png",
+                  "tier": 2,
+                  "timeline_percent": 83.896103896104
+                },
+                {
+                  "id": "3004",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3004.png",
+                  "tier": 3,
+                  "timeline_percent": 93.205430932704
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "duration": null,
+      "timeline_minutes": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12
+      ],
+      "teams": [
+        {
+          "team": {
+            "name": "RORA",
+            "full_name": "Aurora Gaming",
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/aurora-gaming-400.webp"
+          },
+          "winner": null,
+          "kills": 3,
+          "stats": {
+            "total_assists": 7,
+            "total_deaths": 19,
+            "total_gold": 35115,
+            "gold_per_min": 2650,
+            "total_damage": 109931,
+            "damage_per_min": 8297,
+            "red_buff": 6,
+            "blue_buff": 5,
+            "lord_kill": 0,
+            "tortoise_kill": 0,
+            "tower_destroy": 2
+          },
+          "players": [
+            {
+              "name": "Domeng",
+              "hero": {
+                "name": "Melissa",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fm%2F33%2Fp%2F253%2F1318001527975.png"
+              },
+              "kills": 1,
+              "deaths": 1,
+              "assists": 1,
+              "kda": 2,
+              "items": [
+                {
+                  "id": "2301",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2301.png"
+                },
+                {
+                  "id": "2008",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2008.png"
+                },
+                {
+                  "id": "2009",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2009.png"
+                },
+                {
+                  "id": "2006",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2006.png"
+                },
+                {
+                  "id": "3015",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3015.png"
+                }
+              ],
+              "emblem": {
+                "id": "20007",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Femblem%2F20007.png"
+              },
+              "talents": [
+                {
+                  "id": "112",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F112.png"
+                },
+                {
+                  "id": "621",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F621.png"
+                },
+                {
+                  "id": "132",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F132.png"
+                }
+              ],
+              "gold": 8781,
+              "damage_dealt": 21869,
+              "damage_taken": 33337,
+              "tower_damage": 5824,
+              "item_sequence": [
+                {
+                  "id": "1301",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1301.png",
+                  "tier": 1,
+                  "timeline_percent": 0.47798742138365
+                },
+                {
+                  "id": "1202",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1202.png",
+                  "tier": 1,
+                  "timeline_percent": 1.7924528301887
+                },
+                {
+                  "id": "1301",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1301.png",
+                  "tier": 1,
+                  "timeline_percent": 6.3333333333333
+                },
+                {
+                  "id": "2301",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2301.png",
+                  "tier": 3,
+                  "timeline_percent": 12.308176100629
+                },
+                {
+                  "id": "1002",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1002.png",
+                  "tier": 1,
+                  "timeline_percent": 13.74213836478
+                },
+                {
+                  "id": "1007",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1007.png",
+                  "tier": 1,
+                  "timeline_percent": 22.704402515723
+                },
+                {
+                  "id": "1002",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1002.png",
+                  "tier": 1,
+                  "timeline_percent": 26.408805031447
+                },
+                {
+                  "id": "1001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1001.png",
+                  "tier": 1,
+                  "timeline_percent": 29.754716981132
+                },
+                {
+                  "id": "1006",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1006.png",
+                  "tier": 1,
+                  "timeline_percent": 29.874213836478
+                },
+                {
+                  "id": "2008",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2008.png",
+                  "tier": 3,
+                  "timeline_percent": 34.893081761006
+                },
+                {
+                  "id": "1002",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1002.png",
+                  "tier": 1,
+                  "timeline_percent": 37.283018867925
+                },
+                {
+                  "id": "1001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1001.png",
+                  "tier": 1,
+                  "timeline_percent": 39.075471698113
+                },
+                {
+                  "id": "1006",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1006.png",
+                  "tier": 1,
+                  "timeline_percent": 39.314465408805
+                },
+                {
+                  "id": "1001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1001.png",
+                  "tier": 1,
+                  "timeline_percent": 41.345911949686
+                },
+                {
+                  "id": "2009",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2009.png",
+                  "tier": 2,
+                  "timeline_percent": 50.547169811321
+                },
+                {
+                  "id": "1002",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1002.png",
+                  "tier": 1,
+                  "timeline_percent": 55.685534591195
+                },
+                {
+                  "id": "1001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1001.png",
+                  "tier": 1,
+                  "timeline_percent": 56.880503144654
+                },
+                {
+                  "id": "1006",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1006.png",
+                  "tier": 1,
+                  "timeline_percent": 57.119496855346
+                },
+                {
+                  "id": "1004",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1004.png",
+                  "tier": 1,
+                  "timeline_percent": 59.748427672956
+                },
+                {
+                  "id": "1002",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1002.png",
+                  "tier": 1,
+                  "timeline_percent": 61.540880503145
+                },
+                {
+                  "id": "2006",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2006.png",
+                  "tier": 3,
+                  "timeline_percent": 71.698113207547
+                },
+                {
+                  "id": "1001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1001.png",
+                  "tier": 1,
+                  "timeline_percent": 76.119496855346
+                },
+                {
+                  "id": "2004",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2004.png",
+                  "tier": 2,
+                  "timeline_percent": 79.943396226415
+                },
+                {
+                  "id": "1002",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1002.png",
+                  "tier": 1,
+                  "timeline_percent": 82.811320754717
+                },
+                {
+                  "id": "3015",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3015.png",
+                  "tier": 3,
+                  "timeline_percent": 92.37106918239
+                }
+              ]
+            },
+            {
+              "name": "Koyl",
+              "hero": {
+                "name": "Nolan",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fhero_h%2F122.png"
+              },
+              "kills": 1,
+              "deaths": 5,
+              "assists": 2,
+              "kda": 0.6,
+              "items": [
+                {
+                  "id": "3431",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3431.png"
+                },
+                {
+                  "id": "3007",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3007.png"
+                },
+                {
+                  "id": "3009",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3009.png"
+                },
+                {
+                  "id": "3001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3001.png"
+                },
+                {
+                  "id": "2001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2001.png"
+                }
+              ],
+              "emblem": {
+                "id": "20005",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Femblem%2F20005.png"
+              },
+              "talents": [
+                {
+                  "id": "111",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F111.png"
+                },
+                {
+                  "id": "122",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F122.png"
+                },
+                {
+                  "id": "631",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F631.png"
+                }
+              ],
+              "gold": 7755,
+              "damage_dealt": 13268,
+              "damage_taken": 31319,
+              "tower_damage": 0,
+              "item_sequence": [
+                {
+                  "id": "1411",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1411.png",
+                  "tier": 1,
+                  "timeline_percent": 0.59748427672956
+                },
+                {
+                  "id": "1001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1001.png",
+                  "tier": 1,
+                  "timeline_percent": 6.0943396226415
+                },
+                {
+                  "id": "2004",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2004.png",
+                  "tier": 2,
+                  "timeline_percent": 11.830188679245
+                },
+                {
+                  "id": "1001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1001.png",
+                  "tier": 1,
+                  "timeline_percent": 14.220125786164
+                },
+                {
+                  "id": "1201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1201.png",
+                  "tier": 1,
+                  "timeline_percent": 17.805031446541
+                },
+                {
+                  "id": "2002",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2002.png",
+                  "tier": 2,
+                  "timeline_percent": 18.283018867925
+                },
+                {
+                  "id": "3007",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3007.png",
+                  "tier": 3,
+                  "timeline_percent": 22.823899371069
+                },
+                {
+                  "id": "3431",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3431.png",
+                  "tier": 3,
+                  "timeline_percent": 30.710691823899
+                },
+                {
+                  "id": "1001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1001.png",
+                  "tier": 1,
+                  "timeline_percent": 33.937106918239
+                },
+                {
+                  "id": "2004",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2004.png",
+                  "tier": 2,
+                  "timeline_percent": 40.748427672956
+                },
+                {
+                  "id": "1005",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1005.png",
+                  "tier": 1,
+                  "timeline_percent": 46.125786163522
+                },
+                {
+                  "id": "1001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1001.png",
+                  "tier": 1,
+                  "timeline_percent": 48.635220125786
+                },
+                {
+                  "id": "3009",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3009.png",
+                  "tier": 3,
+                  "timeline_percent": 51.981132075472
+                },
+                {
+                  "id": "1001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1001.png",
+                  "tier": 1,
+                  "timeline_percent": 56.880503144654
+                },
+                {
+                  "id": "2001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2001.png",
+                  "tier": 2,
+                  "timeline_percent": 62.496855345912
+                },
+                {
+                  "id": "3001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3001.png",
+                  "tier": 3,
+                  "timeline_percent": 77.314465408805
+                },
+                {
+                  "id": "1001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1001.png",
+                  "tier": 1,
+                  "timeline_percent": 82.452830188679
+                },
+                {
+                  "id": "2001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2001.png",
+                  "tier": 2,
+                  "timeline_percent": 93.566037735849
+                }
+              ]
+            },
+            {
+              "name": "Light",
+              "hero": {
+                "name": "Belerick",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fm%2F33%2Fp%2F258%2F0614104933588.png"
+              },
+              "kills": 1,
+              "deaths": 7,
+              "assists": 2,
+              "kda": 0.43,
+              "items": [
+                {
+                  "id": "3522",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3522.png"
+                },
+                {
+                  "id": "3203",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3203.png"
+                },
+                {
+                  "id": "3205",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3205.png"
+                },
+                {
+                  "id": "2201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2201.png"
+                },
+                {
+                  "id": "1201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1201.png"
+                },
+                {
+                  "id": "1202",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1202.png"
+                }
+              ],
+              "emblem": {
+                "id": "20003",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Femblem%2F20003.png"
+              },
+              "talents": [
+                {
+                  "id": "711",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F711.png"
+                },
+                {
+                  "id": "321",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F321.png"
+                },
+                {
+                  "id": "331",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F331.png"
+                }
+              ],
+              "gold": 6389,
+              "damage_dealt": 19041,
+              "damage_taken": 119961,
+              "tower_damage": 0,
+              "item_sequence": [
+                {
+                  "id": "1512",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1512.png",
+                  "tier": 1,
+                  "timeline_percent": 0.47798742138365
+                },
+                {
+                  "id": "1203",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1203.png",
+                  "tier": 1,
+                  "timeline_percent": 6.811320754717
+                },
+                {
+                  "id": "3522",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3522.png",
+                  "tier": 3,
+                  "timeline_percent": 9.440251572327
+                },
+                {
+                  "id": "1202",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1202.png",
+                  "tier": 1,
+                  "timeline_percent": 13.861635220126
+                },
+                {
+                  "id": "2205",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2205.png",
+                  "tier": 2,
+                  "timeline_percent": 18.880503144654
+                },
+                {
+                  "id": "2201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2201.png",
+                  "tier": 2,
+                  "timeline_percent": 34.415094339623
+                },
+                {
+                  "id": "3203",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3203.png",
+                  "tier": 3,
+                  "timeline_percent": 40.748427672956
+                },
+                {
+                  "id": "1201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1201.png",
+                  "tier": 1,
+                  "timeline_percent": 48.635220125786
+                },
+                {
+                  "id": "1203",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1203.png",
+                  "tier": 1,
+                  "timeline_percent": 51.383647798742
+                },
+                {
+                  "id": "2203",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2203.png",
+                  "tier": 2,
+                  "timeline_percent": 58.194968553459
+                },
+                {
+                  "id": "1201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1201.png",
+                  "tier": 1,
+                  "timeline_percent": 66.798742138365
+                },
+                {
+                  "id": "3205",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3205.png",
+                  "tier": 3,
+                  "timeline_percent": 76.358490566038
+                },
+                {
+                  "id": "2201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2201.png",
+                  "tier": 2,
+                  "timeline_percent": 88.786163522013
+                },
+                {
+                  "id": "1201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1201.png",
+                  "tier": 1,
+                  "timeline_percent": 92.610062893082
+                },
+                {
+                  "id": "1202",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1202.png",
+                  "tier": 1,
+                  "timeline_percent": 93.088050314465
+                }
+              ]
+            },
+            {
+              "name": "Nathzz",
+              "hero": {
+                "name": "Carmilla",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fm%2F27%2Fp%2F252%2F1317582665675.jpg"
+              },
+              "kills": 0,
+              "deaths": 5,
+              "assists": 0,
+              "kda": 0,
+              "items": [
+                {
+                  "id": "2301",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2301.png"
+                },
+                {
+                  "id": "3212",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3212.png"
+                },
+                {
+                  "id": "1202",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1202.png"
+                },
+                {
+                  "id": "3210",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3210.png"
+                }
+              ],
+              "emblem": {
+                "id": "20003",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Femblem%2F20003.png"
+              },
+              "talents": [
+                {
+                  "id": "311",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F311.png"
+                },
+                {
+                  "id": "321",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F321.png"
+                },
+                {
+                  "id": "731",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F731.png"
+                }
+              ],
+              "gold": 5514,
+              "damage_dealt": 9665,
+              "damage_taken": 108812,
+              "tower_damage": 0,
+              "item_sequence": [
+                {
+                  "id": "1202",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1202.png",
+                  "tier": 1,
+                  "timeline_percent": 3.3459119496855
+                },
+                {
+                  "id": "1301",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1301.png",
+                  "tier": 1,
+                  "timeline_percent": 5.9748427672956
+                },
+                {
+                  "id": "2301",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2301.png",
+                  "tier": 3,
+                  "timeline_percent": 10.037735849057
+                },
+                {
+                  "id": "1202",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1202.png",
+                  "tier": 1,
+                  "timeline_percent": 14.459119496855
+                },
+                {
+                  "id": "2206",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2206.png",
+                  "tier": 2,
+                  "timeline_percent": 22.704402515723
+                },
+                {
+                  "id": "1201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1201.png",
+                  "tier": 1,
+                  "timeline_percent": 26.408805031447
+                },
+                {
+                  "id": "2201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2201.png",
+                  "tier": 2,
+                  "timeline_percent": 31.427672955975
+                },
+                {
+                  "id": "3212",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3212.png",
+                  "tier": 3,
+                  "timeline_percent": 48.396226415094
+                },
+                {
+                  "id": "1202",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1202.png",
+                  "tier": 1,
+                  "timeline_percent": 52.100628930818
+                },
+                {
+                  "id": "1203",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1203.png",
+                  "tier": 1,
+                  "timeline_percent": 56.283018867925
+                },
+                {
+                  "id": "1201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1201.png",
+                  "tier": 1,
+                  "timeline_percent": 60.106918238994
+                },
+                {
+                  "id": "2203",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2203.png",
+                  "tier": 2,
+                  "timeline_percent": 73.012578616352
+                },
+                {
+                  "id": "1203",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1203.png",
+                  "tier": 1,
+                  "timeline_percent": 78.150943396226
+                },
+                {
+                  "id": "1204",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1204.png",
+                  "tier": 1,
+                  "timeline_percent": 79.106918238994
+                },
+                {
+                  "id": "3210",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3210.png",
+                  "tier": 3,
+                  "timeline_percent": 89.264150943396
+                }
+              ]
+            },
+            {
+              "name": "Yue",
+              "hero": {
+                "name": "Lylia",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fhero_h%2F86.png"
+              },
+              "kills": 0,
+              "deaths": 1,
+              "assists": 2,
+              "kda": 2,
+              "items": [
+                {
+                  "id": "2303",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2303.png"
+                },
+                {
+                  "id": "1103",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1103.png"
+                },
+                {
+                  "id": "3105",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3105.png"
+                },
+                {
+                  "id": "3101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3101.png"
+                },
+                {
+                  "id": "2101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2101.png"
+                },
+                {
+                  "id": "1104",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1104.png"
+                }
+              ],
+              "emblem": {
+                "id": "20006",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Femblem%2F20006.png"
+              },
+              "talents": [
+                {
+                  "id": "611",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F611.png"
+                },
+                {
+                  "id": "821",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F821.png"
+                },
+                {
+                  "id": "131",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F131.png"
+                }
+              ],
+              "gold": 6676,
+              "damage_dealt": 46088,
+              "damage_taken": 24538,
+              "tower_damage": 552,
+              "item_sequence": [
+                {
+                  "id": "1301",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1301.png",
+                  "tier": 1,
+                  "timeline_percent": 0.59748427672956
+                },
+                {
+                  "id": "1103",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1103.png",
+                  "tier": 1,
+                  "timeline_percent": 7.6477987421384
+                },
+                {
+                  "id": "1101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1101.png",
+                  "tier": 1,
+                  "timeline_percent": 9.3207547169811
+                },
+                {
+                  "id": "2104",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2104.png",
+                  "tier": 2,
+                  "timeline_percent": 10.993710691824
+                },
+                {
+                  "id": "1101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1101.png",
+                  "tier": 1,
+                  "timeline_percent": 16.132075471698
+                },
+                {
+                  "id": "1201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1201.png",
+                  "tier": 1,
+                  "timeline_percent": 21.389937106918
+                },
+                {
+                  "id": "3105",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3105.png",
+                  "tier": 3,
+                  "timeline_percent": 33.937106918239
+                },
+                {
+                  "id": "1205",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1205.png",
+                  "tier": 1,
+                  "timeline_percent": 40.150943396226
+                },
+                {
+                  "id": "2303",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2303.png",
+                  "tier": 3,
+                  "timeline_percent": 40.748427672956
+                },
+                {
+                  "id": "1101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1101.png",
+                  "tier": 1,
+                  "timeline_percent": 45.289308176101
+                },
+                {
+                  "id": "2101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2101.png",
+                  "tier": 2,
+                  "timeline_percent": 50.547169811321
+                },
+                {
+                  "id": "3101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3101.png",
+                  "tier": 3,
+                  "timeline_percent": 68.11320754717
+                },
+                {
+                  "id": "1101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1101.png",
+                  "tier": 1,
+                  "timeline_percent": 72.534591194969
+                },
+                {
+                  "id": "2101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2101.png",
+                  "tier": 2,
+                  "timeline_percent": 79.704402515723
+                },
+                {
+                  "id": "1104",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1104.png",
+                  "tier": 1,
+                  "timeline_percent": 84.723270440252
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "team": {
+            "name": "ONIC",
+            "full_name": "ONIC PH",
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/onicph-bw-400.webp"
+          },
+          "winner": null,
+          "kills": 19,
+          "stats": {
+            "total_assists": 48,
+            "total_deaths": 3,
+            "total_gold": 46978,
+            "gold_per_min": 3546,
+            "total_damage": 193325,
+            "damage_per_min": 14591,
+            "red_buff": 6,
+            "blue_buff": 9,
+            "lord_kill": 1,
+            "tortoise_kill": 3,
+            "tower_destroy": 9
+          },
+          "players": [
+            {
+              "name": "Kirk",
+              "hero": {
+                "name": "Barats",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fm%2F33%2Fp%2F259%2F1811260718385.png"
+              },
+              "kills": 2,
+              "deaths": 1,
+              "assists": 11,
+              "kda": 13,
+              "items": [
+                {
+                  "id": "2306",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2306.png"
+                },
+                {
+                  "id": "3210",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3210.png"
+                },
+                {
+                  "id": "3212",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3212.png"
+                },
+                {
+                  "id": "2107",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2107.png"
+                },
+                {
+                  "id": "2204",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2204.png"
+                }
+              ],
+              "emblem": {
+                "id": "20003",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Femblem%2F20003.png"
+              },
+              "talents": [
+                {
+                  "id": "311",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F311.png"
+                },
+                {
+                  "id": "321",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F321.png"
+                },
+                {
+                  "id": "731",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F731.png"
+                }
+              ],
+              "gold": 7984,
+              "damage_dealt": 34471,
+              "damage_taken": 101761,
+              "tower_damage": 637,
+              "item_sequence": [
+                {
+                  "id": "1301",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1301.png",
+                  "tier": 1,
+                  "timeline_percent": 0.47798742138365
+                },
+                {
+                  "id": "1204",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1204.png",
+                  "tier": 1,
+                  "timeline_percent": 6.4528301886792
+                },
+                {
+                  "id": "2306",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2306.png",
+                  "tier": 3,
+                  "timeline_percent": 10.993710691824
+                },
+                {
+                  "id": "1201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1201.png",
+                  "tier": 1,
+                  "timeline_percent": 14.459119496855
+                },
+                {
+                  "id": "1203",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1203.png",
+                  "tier": 1,
+                  "timeline_percent": 17.088050314465
+                },
+                {
+                  "id": "2203",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2203.png",
+                  "tier": 2,
+                  "timeline_percent": 19.955974842767
+                },
+                {
+                  "id": "1202",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1202.png",
+                  "tier": 1,
+                  "timeline_percent": 22.943396226415
+                },
+                {
+                  "id": "1203",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1203.png",
+                  "tier": 1,
+                  "timeline_percent": 25.213836477987
+                },
+                {
+                  "id": "1204",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1204.png",
+                  "tier": 1,
+                  "timeline_percent": 27.364779874214
+                },
+                {
+                  "id": "3210",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3210.png",
+                  "tier": 3,
+                  "timeline_percent": 34.77358490566
+                },
+                {
+                  "id": "2206",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2206.png",
+                  "tier": 2,
+                  "timeline_percent": 38.358490566038
+                },
+                {
+                  "id": "1201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1201.png",
+                  "tier": 1,
+                  "timeline_percent": 41.345911949686
+                },
+                {
+                  "id": "2201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2201.png",
+                  "tier": 2,
+                  "timeline_percent": 47.679245283019
+                },
+                {
+                  "id": "3212",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3212.png",
+                  "tier": 3,
+                  "timeline_percent": 57
+                },
+                {
+                  "id": "1008",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1008.png",
+                  "tier": 1,
+                  "timeline_percent": 68.591194968553
+                },
+                {
+                  "id": "1205",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1205.png",
+                  "tier": 1,
+                  "timeline_percent": 73.251572327044
+                },
+                {
+                  "id": "1201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1201.png",
+                  "tier": 1,
+                  "timeline_percent": 79.106918238994
+                },
+                {
+                  "id": "2107",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2107.png",
+                  "tier": 3,
+                  "timeline_percent": 85.081761006289
+                },
+                {
+                  "id": "1203",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1203.png",
+                  "tier": 1,
+                  "timeline_percent": 90.220125786164
+                },
+                {
+                  "id": "1202",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1202.png",
+                  "tier": 1,
+                  "timeline_percent": 90.698113207547
+                },
+                {
+                  "id": "2204",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2204.png",
+                  "tier": 2,
+                  "timeline_percent": 93.327044025157
+                }
+              ]
+            },
+            {
+              "name": "K1NGKONG",
+              "hero": {
+                "name": "Hirara",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fm%2F33%2Fp%2F266%2F1810181178495.png"
+              },
+              "kills": 6,
+              "deaths": 1,
+              "assists": 8,
+              "kda": 14,
+              "items": [
+                {
+                  "id": "3432",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3432.png"
+                },
+                {
+                  "id": "3009",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3009.png"
+                },
+                {
+                  "id": "2013",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2013.png"
+                },
+                {
+                  "id": "3008",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3008.png"
+                },
+                {
+                  "id": "3001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3001.png"
+                },
+                {
+                  "id": "3004",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3004.png"
+                }
+              ],
+              "emblem": {
+                "id": "20005",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Femblem%2F20005.png"
+              },
+              "talents": [
+                {
+                  "id": "111",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F111.png"
+                },
+                {
+                  "id": "122",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F122.png"
+                },
+                {
+                  "id": "531",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F531.png"
+                }
+              ],
+              "gold": 12472,
+              "damage_dealt": 42966,
+              "damage_taken": 27113,
+              "tower_damage": 6588,
+              "item_sequence": [
+                {
+                  "id": "1411",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1411.png",
+                  "tier": 1,
+                  "timeline_percent": 0.47798742138365
+                },
+                {
+                  "id": "1412",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1412.png",
+                  "tier": 1,
+                  "timeline_percent": 6.0943396226415
+                },
+                {
+                  "id": "2004",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2004.png",
+                  "tier": 2,
+                  "timeline_percent": 15.534591194969
+                },
+                {
+                  "id": "1005",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1005.png",
+                  "tier": 1,
+                  "timeline_percent": 21.509433962264
+                },
+                {
+                  "id": "1001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1001.png",
+                  "tier": 1,
+                  "timeline_percent": 24.496855345912
+                },
+                {
+                  "id": "3009",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3009.png",
+                  "tier": 3,
+                  "timeline_percent": 28.798742138365
+                },
+                {
+                  "id": "1205",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1205.png",
+                  "tier": 1,
+                  "timeline_percent": 32.74213836478
+                },
+                {
+                  "id": "3432",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3432.png",
+                  "tier": 3,
+                  "timeline_percent": 33.459119496855
+                },
+                {
+                  "id": "1001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1001.png",
+                  "tier": 1,
+                  "timeline_percent": 34.295597484277
+                },
+                {
+                  "id": "1201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1201.png",
+                  "tier": 1,
+                  "timeline_percent": 36.685534591195
+                },
+                {
+                  "id": "2002",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2002.png",
+                  "tier": 2,
+                  "timeline_percent": 37.522012578616
+                },
+                {
+                  "id": "1005",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1005.png",
+                  "tier": 1,
+                  "timeline_percent": 41.22641509434
+                },
+                {
+                  "id": "1205",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1205.png",
+                  "tier": 1,
+                  "timeline_percent": 45.767295597484
+                },
+                {
+                  "id": "2013",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2013.png",
+                  "tier": 3,
+                  "timeline_percent": 48.874213836478
+                },
+                {
+                  "id": "1001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1001.png",
+                  "tier": 1,
+                  "timeline_percent": 51.264150943396
+                },
+                {
+                  "id": "2001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2001.png",
+                  "tier": 2,
+                  "timeline_percent": 55.566037735849
+                },
+                {
+                  "id": "1001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1001.png",
+                  "tier": 1,
+                  "timeline_percent": 58.194968553459
+                },
+                {
+                  "id": "3008",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3008.png",
+                  "tier": 3,
+                  "timeline_percent": 73.849056603774
+                },
+                {
+                  "id": "1001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1001.png",
+                  "tier": 1,
+                  "timeline_percent": 74.446540880503
+                },
+                {
+                  "id": "2001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2001.png",
+                  "tier": 2,
+                  "timeline_percent": 79.22641509434
+                },
+                {
+                  "id": "3001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3001.png",
+                  "tier": 3,
+                  "timeline_percent": 84.962264150943
+                },
+                {
+                  "id": "2002",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2002.png",
+                  "tier": 2,
+                  "timeline_percent": 88.308176100629
+                },
+                {
+                  "id": "3004",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3004.png",
+                  "tier": 3,
+                  "timeline_percent": 95
+                }
+              ]
+            },
+            {
+              "name": "SUPERYOSHI",
+              "hero": {
+                "name": "Kaja",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fhero_h%2F62.png"
+              },
+              "kills": 4,
+              "deaths": 0,
+              "assists": 9,
+              "kda": 13,
+              "items": [
+                {
+                  "id": "3561",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3561.png"
+                },
+                {
+                  "id": "3109",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3109.png"
+                },
+                {
+                  "id": "3207",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3207.png"
+                },
+                {
+                  "id": "3205",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3205.png"
+                },
+                {
+                  "id": "2201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2201.png"
+                }
+              ],
+              "emblem": {
+                "id": "20008",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Femblem%2F20008.png"
+              },
+              "talents": [
+                {
+                  "id": "811",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F811.png"
+                },
+                {
+                  "id": "821",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F821.png"
+                },
+                {
+                  "id": "731",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F731.png"
+                }
+              ],
+              "gold": 8090,
+              "damage_dealt": 15018,
+              "damage_taken": 31556,
+              "tower_damage": 953,
+              "item_sequence": [
+                {
+                  "id": "1301",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1301.png",
+                  "tier": 1,
+                  "timeline_percent": 0.47798742138365
+                },
+                {
+                  "id": "1511",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1511.png",
+                  "tier": 1,
+                  "timeline_percent": 5.2578616352201
+                },
+                {
+                  "id": "3561",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3561.png",
+                  "tier": 3,
+                  "timeline_percent": 12.308176100629
+                },
+                {
+                  "id": "1205",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1205.png",
+                  "tier": 1,
+                  "timeline_percent": 19.955974842767
+                },
+                {
+                  "id": "1008",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1008.png",
+                  "tier": 1,
+                  "timeline_percent": 28.440251572327
+                },
+                {
+                  "id": "3109",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3109.png",
+                  "tier": 3,
+                  "timeline_percent": 34.893081761006
+                },
+                {
+                  "id": "1201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1201.png",
+                  "tier": 1,
+                  "timeline_percent": 37.761006289308
+                },
+                {
+                  "id": "2201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2201.png",
+                  "tier": 2,
+                  "timeline_percent": 42.899371069182
+                },
+                {
+                  "id": "1201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1201.png",
+                  "tier": 1,
+                  "timeline_percent": 48.396226415094
+                },
+                {
+                  "id": "1202",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1202.png",
+                  "tier": 1,
+                  "timeline_percent": 51.622641509434
+                },
+                {
+                  "id": "3207",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3207.png",
+                  "tier": 3,
+                  "timeline_percent": 64.408805031447
+                },
+                {
+                  "id": "1201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1201.png",
+                  "tier": 1,
+                  "timeline_percent": 69.188679245283
+                },
+                {
+                  "id": "1203",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1203.png",
+                  "tier": 1,
+                  "timeline_percent": 71.100628930818
+                },
+                {
+                  "id": "2203",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2203.png",
+                  "tier": 2,
+                  "timeline_percent": 76.836477987421
+                },
+                {
+                  "id": "1201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1201.png",
+                  "tier": 1,
+                  "timeline_percent": 82.094339622642
+                },
+                {
+                  "id": "3205",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3205.png",
+                  "tier": 3,
+                  "timeline_percent": 88.547169811321
+                },
+                {
+                  "id": "1201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1201.png",
+                  "tier": 1,
+                  "timeline_percent": 90.578616352201
+                },
+                {
+                  "id": "2201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2201.png",
+                  "tier": 2,
+                  "timeline_percent": 93.446540880503
+                }
+              ]
+            },
+            {
+              "name": "SuperFrince",
+              "hero": {
+                "name": "Aurora",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fm%2F27%2Fp%2F251%2F2519055031814.jpg"
+              },
+              "kills": 1,
+              "deaths": 0,
+              "assists": 13,
+              "kda": 14,
+              "items": [
+                {
+                  "id": "2304",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2304.png"
+                },
+                {
+                  "id": "3105",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3105.png"
+                },
+                {
+                  "id": "1103",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1103.png"
+                },
+                {
+                  "id": "3101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3101.png"
+                },
+                {
+                  "id": "3108",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3108.png"
+                },
+                {
+                  "id": "1101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1101.png"
+                }
+              ],
+              "emblem": {
+                "id": "20006",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Femblem%2F20006.png"
+              },
+              "talents": [
+                {
+                  "id": "511",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F511.png"
+                },
+                {
+                  "id": "121",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F121.png"
+                },
+                {
+                  "id": "131",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F131.png"
+                }
+              ],
+              "gold": 7441,
+              "damage_dealt": 55610,
+              "damage_taken": 18941,
+              "tower_damage": 1165,
+              "item_sequence": [
+                {
+                  "id": "1301",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1301.png",
+                  "tier": 1,
+                  "timeline_percent": 0.47798742138365
+                },
+                {
+                  "id": "2104",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2104.png",
+                  "tier": 2,
+                  "timeline_percent": 11.949685534591
+                },
+                {
+                  "id": "1101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1101.png",
+                  "tier": 1,
+                  "timeline_percent": 14.459119496855
+                },
+                {
+                  "id": "1201",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1201.png",
+                  "tier": 1,
+                  "timeline_percent": 17.924528301887
+                },
+                {
+                  "id": "3105",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3105.png",
+                  "tier": 3,
+                  "timeline_percent": 29.51572327044
+                },
+                {
+                  "id": "1103",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1103.png",
+                  "tier": 1,
+                  "timeline_percent": 30.352201257862
+                },
+                {
+                  "id": "1101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1101.png",
+                  "tier": 1,
+                  "timeline_percent": 35.610062893082
+                },
+                {
+                  "id": "2304",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2304.png",
+                  "tier": 3,
+                  "timeline_percent": 39.792452830189
+                },
+                {
+                  "id": "1101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1101.png",
+                  "tier": 1,
+                  "timeline_percent": 44.213836477987
+                },
+                {
+                  "id": "2101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2101.png",
+                  "tier": 2,
+                  "timeline_percent": 48.993710691824
+                },
+                {
+                  "id": "3101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3101.png",
+                  "tier": 3,
+                  "timeline_percent": 68.352201257862
+                },
+                {
+                  "id": "1101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1101.png",
+                  "tier": 1,
+                  "timeline_percent": 72.893081761006
+                },
+                {
+                  "id": "2101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2101.png",
+                  "tier": 2,
+                  "timeline_percent": 76
+                },
+                {
+                  "id": "1101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1101.png",
+                  "tier": 1,
+                  "timeline_percent": 81.25786163522
+                },
+                {
+                  "id": "3108",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3108.png",
+                  "tier": 3,
+                  "timeline_percent": 90.220125786164
+                },
+                {
+                  "id": "1101",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1101.png",
+                  "tier": 1,
+                  "timeline_percent": 93.924528301887
+                }
+              ]
+            },
+            {
+              "name": "Savero",
+              "hero": {
+                "name": "Beatrix",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fhero_h%2F105.png"
+              },
+              "kills": 6,
+              "deaths": 1,
+              "assists": 7,
+              "kda": 13,
+              "items": [
+                {
+                  "id": "3009",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3009.png"
+                },
+                {
+                  "id": "3008",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3008.png"
+                },
+                {
+                  "id": "2305",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2305.png"
+                },
+                {
+                  "id": "3015",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3015.png"
+                },
+                {
+                  "id": "3013",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3013.png"
+                },
+                {
+                  "id": "1004",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1004.png"
+                }
+              ],
+              "emblem": {
+                "id": "20012",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Femblem%2F20012.png"
+              },
+              "talents": [
+                {
+                  "id": "111",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F111.png"
+                },
+                {
+                  "id": "1221",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F1221.png"
+                },
+                {
+                  "id": "132",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F132.png"
+                }
+              ],
+              "gold": 10991,
+              "damage_dealt": 45260,
+              "damage_taken": 15346,
+              "tower_damage": 26713,
+              "item_sequence": [
+                {
+                  "id": "1301",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1301.png",
+                  "tier": 1,
+                  "timeline_percent": 0.47798742138365
+                },
+                {
+                  "id": "1202",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1202.png",
+                  "tier": 1,
+                  "timeline_percent": 3.2264150943396
+                },
+                {
+                  "id": "1001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1001.png",
+                  "tier": 1,
+                  "timeline_percent": 7.0503144654088
+                },
+                {
+                  "id": "2001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2001.png",
+                  "tier": 2,
+                  "timeline_percent": 15.654088050314
+                },
+                {
+                  "id": "1001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1001.png",
+                  "tier": 1,
+                  "timeline_percent": 17.207547169811
+                },
+                {
+                  "id": "3008",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3008.png",
+                  "tier": 3,
+                  "timeline_percent": 35.968553459119
+                },
+                {
+                  "id": "1301",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1301.png",
+                  "tier": 1,
+                  "timeline_percent": 38.358490566038
+                },
+                {
+                  "id": "1002",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1002.png",
+                  "tier": 1,
+                  "timeline_percent": 41.106918238994
+                },
+                {
+                  "id": "2305",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2305.png",
+                  "tier": 3,
+                  "timeline_percent": 41.345911949686
+                },
+                {
+                  "id": "1001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1001.png",
+                  "tier": 1,
+                  "timeline_percent": 44.094339622642
+                },
+                {
+                  "id": "2004",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2004.png",
+                  "tier": 2,
+                  "timeline_percent": 47.440251572327
+                },
+                {
+                  "id": "1002",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1002.png",
+                  "tier": 1,
+                  "timeline_percent": 50.547169811321
+                },
+                {
+                  "id": "3015",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3015.png",
+                  "tier": 3,
+                  "timeline_percent": 56.880503144654
+                },
+                {
+                  "id": "1001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1001.png",
+                  "tier": 1,
+                  "timeline_percent": 60.465408805031
+                },
+                {
+                  "id": "2004",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2004.png",
+                  "tier": 2,
+                  "timeline_percent": 68.232704402516
+                },
+                {
+                  "id": "1005",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1005.png",
+                  "tier": 1,
+                  "timeline_percent": 70.861635220126
+                },
+                {
+                  "id": "1001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1001.png",
+                  "tier": 1,
+                  "timeline_percent": 73.849056603774
+                },
+                {
+                  "id": "3009",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3009.png",
+                  "tier": 3,
+                  "timeline_percent": 73.96855345912
+                },
+                {
+                  "id": "1001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1001.png",
+                  "tier": 1,
+                  "timeline_percent": 80.062893081761
+                },
+                {
+                  "id": "2001",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/2001.png",
+                  "tier": 2,
+                  "timeline_percent": 83.528301886792
+                },
+                {
+                  "id": "1002",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1002.png",
+                  "tier": 1,
+                  "timeline_percent": 85.081761006289
+                },
+                {
+                  "id": "1006",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1006.png",
+                  "tier": 1,
+                  "timeline_percent": 88.547169811321
+                },
+                {
+                  "id": "3013",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/3013.png",
+                  "tier": 3,
+                  "timeline_percent": 91.415094339623
+                },
+                {
+                  "id": "1004",
+                  "image": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mlbb/2024/equipments/1004.png",
+                  "tier": 1,
+                  "timeline_percent": 93.088050314465
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

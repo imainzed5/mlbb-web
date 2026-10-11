@@ -1,0 +1,1095 @@
+{
+  "teams": 8,
+  "weeks_count": 8,
+  "playoff_spots": 6,
+  "eliminated": 2,
+  "matches_played": 56,
+  "matches_remaining": 0,
+  "edited_matches": 0,
+  "probability_model": "form",
+  "probability_simulations": 0,
+  "weeks": [
+    {
+      "week": 1,
+      "matches": [
+        {
+          "team1": {
+            "name": "RORA",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/aurora-gaming-400.webp"
+          },
+          "team2": {
+            "name": "ONIC",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/onicph-bw-400.webp"
+          },
+          "score1": 0,
+          "score2": 2,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "TLPH",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/tlph-400.webp"
+          },
+          "team2": {
+            "name": "FLCN",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/falcon-400.webp"
+          },
+          "score1": 1,
+          "score2": 2,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "APBR",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/apbren-400.webp"
+          },
+          "team2": {
+            "name": "TWIS",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/twistedminds-400.webp"
+          },
+          "score1": 2,
+          "score2": 1,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "OMG",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/smart-400.webp"
+          },
+          "team2": {
+            "name": "TLPH",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/tlph-400.webp"
+          },
+          "score1": 0,
+          "score2": 2,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "FLCN",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/falcon-400.webp"
+          },
+          "team2": {
+            "name": "TNC",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/tnc-400.webp"
+          },
+          "score1": 2,
+          "score2": 0,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "ONIC",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/onicph-bw-400.webp"
+          },
+          "team2": {
+            "name": "APBR",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/apbren-400.webp"
+          },
+          "score1": 2,
+          "score2": 0,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "TNC",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/tnc-400.webp"
+          },
+          "team2": {
+            "name": "RORA",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/aurora-gaming-400.webp"
+          },
+          "score1": 2,
+          "score2": 1,
+          "state": "played"
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "matches": [
+        {
+          "team1": {
+            "name": "APBR",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/apbren-400.webp"
+          },
+          "team2": {
+            "name": "TLPH",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/tlph-400.webp"
+          },
+          "score1": 0,
+          "score2": 2,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "TWIS",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/twistedminds-400.webp"
+          },
+          "team2": {
+            "name": "ONIC",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/onicph-bw-400.webp"
+          },
+          "score1": 0,
+          "score2": 2,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "APBR",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/apbren-400.webp"
+          },
+          "team2": {
+            "name": "TNC",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/tnc-400.webp"
+          },
+          "score1": 1,
+          "score2": 2,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "OMG",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/smart-400.webp"
+          },
+          "team2": {
+            "name": "FLCN",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/falcon-400.webp"
+          },
+          "score1": 2,
+          "score2": 1,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "TLPH",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/tlph-400.webp"
+          },
+          "team2": {
+            "name": "RORA",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/aurora-gaming-400.webp"
+          },
+          "score1": 2,
+          "score2": 0,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "TWIS",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/twistedminds-400.webp"
+          },
+          "team2": {
+            "name": "FLCN",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/falcon-400.webp"
+          },
+          "score1": 0,
+          "score2": 2,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "ONIC",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/onicph-bw-400.webp"
+          },
+          "team2": {
+            "name": "OMG",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/smart-400.webp"
+          },
+          "score1": 2,
+          "score2": 1,
+          "state": "played"
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "matches": [
+        {
+          "team1": {
+            "name": "TWIS",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/twistedminds-400.webp"
+          },
+          "team2": {
+            "name": "RORA",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/aurora-gaming-400.webp"
+          },
+          "score1": 0,
+          "score2": 2,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "TNC",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/tnc-400.webp"
+          },
+          "team2": {
+            "name": "ONIC",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/onicph-bw-400.webp"
+          },
+          "score1": 1,
+          "score2": 2,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "OMG",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/smart-400.webp"
+          },
+          "team2": {
+            "name": "APBR",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/apbren-400.webp"
+          },
+          "score1": 2,
+          "score2": 1,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "TNC",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/tnc-400.webp"
+          },
+          "team2": {
+            "name": "TLPH",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/tlph-400.webp"
+          },
+          "score1": 0,
+          "score2": 2,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "ONIC",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/onicph-bw-400.webp"
+          },
+          "team2": {
+            "name": "FLCN",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/falcon-400.webp"
+          },
+          "score1": 1,
+          "score2": 2,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "TLPH",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/tlph-400.webp"
+          },
+          "team2": {
+            "name": "TWIS",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/twistedminds-400.webp"
+          },
+          "score1": 2,
+          "score2": 0,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "RORA",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/aurora-gaming-400.webp"
+          },
+          "team2": {
+            "name": "OMG",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/smart-400.webp"
+          },
+          "score1": 2,
+          "score2": 0,
+          "state": "played"
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "matches": [
+        {
+          "team1": {
+            "name": "OMG",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/smart-400.webp"
+          },
+          "team2": {
+            "name": "TWIS",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/twistedminds-400.webp"
+          },
+          "score1": 2,
+          "score2": 1,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "RORA",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/aurora-gaming-400.webp"
+          },
+          "team2": {
+            "name": "APBR",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/apbren-400.webp"
+          },
+          "score1": 2,
+          "score2": 0,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "TWIS",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/twistedminds-400.webp"
+          },
+          "team2": {
+            "name": "TNC",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/tnc-400.webp"
+          },
+          "score1": 0,
+          "score2": 2,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "FLCN",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/falcon-400.webp"
+          },
+          "team2": {
+            "name": "APBR",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/apbren-400.webp"
+          },
+          "score1": 2,
+          "score2": 0,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "ONIC",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/onicph-bw-400.webp"
+          },
+          "team2": {
+            "name": "TLPH",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/tlph-400.webp"
+          },
+          "score1": 0,
+          "score2": 2,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "TNC",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/tnc-400.webp"
+          },
+          "team2": {
+            "name": "OMG",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/smart-400.webp"
+          },
+          "score1": 1,
+          "score2": 2,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "FLCN",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/falcon-400.webp"
+          },
+          "team2": {
+            "name": "RORA",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/aurora-gaming-400.webp"
+          },
+          "score1": 2,
+          "score2": 1,
+          "state": "played"
+        }
+      ]
+    },
+    {
+      "week": 5,
+      "matches": [
+        {
+          "team1": {
+            "name": "TLPH",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/tlph-400.webp"
+          },
+          "team2": {
+            "name": "TNC",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/tnc-400.webp"
+          },
+          "score1": 2,
+          "score2": 1,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "OMG",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/smart-400.webp"
+          },
+          "team2": {
+            "name": "RORA",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/aurora-gaming-400.webp"
+          },
+          "score1": 0,
+          "score2": 2,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "TNC",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/tnc-400.webp"
+          },
+          "team2": {
+            "name": "APBR",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/apbren-400.webp"
+          },
+          "score1": 0,
+          "score2": 2,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "FLCN",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/falcon-400.webp"
+          },
+          "team2": {
+            "name": "TWIS",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/twistedminds-400.webp"
+          },
+          "score1": 2,
+          "score2": 0,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "RORA",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/aurora-gaming-400.webp"
+          },
+          "team2": {
+            "name": "TLPH",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/tlph-400.webp"
+          },
+          "score1": 2,
+          "score2": 0,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "APBR",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/apbren-400.webp"
+          },
+          "team2": {
+            "name": "ONIC",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/onicph-bw-400.webp"
+          },
+          "score1": 1,
+          "score2": 2,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "TLPH",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/tlph-400.webp"
+          },
+          "team2": {
+            "name": "OMG",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/smart-400.webp"
+          },
+          "score1": 2,
+          "score2": 0,
+          "state": "played"
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "matches": [
+        {
+          "team1": {
+            "name": "TWIS",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/twistedminds-400.webp"
+          },
+          "team2": {
+            "name": "APBR",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/apbren-400.webp"
+          },
+          "score1": 0,
+          "score2": 2,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "OMG",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/smart-400.webp"
+          },
+          "team2": {
+            "name": "ONIC",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/onicph-bw-400.webp"
+          },
+          "score1": 0,
+          "score2": 2,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "TNC",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/tnc-400.webp"
+          },
+          "team2": {
+            "name": "TWIS",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/twistedminds-400.webp"
+          },
+          "score1": 2,
+          "score2": 0,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "APBR",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/apbren-400.webp"
+          },
+          "team2": {
+            "name": "RORA",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/aurora-gaming-400.webp"
+          },
+          "score1": 0,
+          "score2": 2,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "FLCN",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/falcon-400.webp"
+          },
+          "team2": {
+            "name": "ONIC",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/onicph-bw-400.webp"
+          },
+          "score1": 2,
+          "score2": 1,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "OMG",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/smart-400.webp"
+          },
+          "team2": {
+            "name": "TNC",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/tnc-400.webp"
+          },
+          "score1": 2,
+          "score2": 0,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "RORA",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/aurora-gaming-400.webp"
+          },
+          "team2": {
+            "name": "FLCN",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/falcon-400.webp"
+          },
+          "score1": 0,
+          "score2": 2,
+          "state": "played"
+        }
+      ]
+    },
+    {
+      "week": 7,
+      "matches": [
+        {
+          "team1": {
+            "name": "ONIC",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/onicph-bw-400.webp"
+          },
+          "team2": {
+            "name": "TWIS",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/twistedminds-400.webp"
+          },
+          "score1": 2,
+          "score2": 0,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "RORA",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/aurora-gaming-400.webp"
+          },
+          "team2": {
+            "name": "TNC",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/tnc-400.webp"
+          },
+          "score1": 2,
+          "score2": 1,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "TWIS",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/twistedminds-400.webp"
+          },
+          "team2": {
+            "name": "OMG",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/smart-400.webp"
+          },
+          "score1": 0,
+          "score2": 2,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "APBR",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/apbren-400.webp"
+          },
+          "team2": {
+            "name": "FLCN",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/falcon-400.webp"
+          },
+          "score1": 1,
+          "score2": 2,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "ONIC",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/onicph-bw-400.webp"
+          },
+          "team2": {
+            "name": "RORA",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/aurora-gaming-400.webp"
+          },
+          "score1": 1,
+          "score2": 2,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "TLPH",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/tlph-400.webp"
+          },
+          "team2": {
+            "name": "APBR",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/apbren-400.webp"
+          },
+          "score1": 2,
+          "score2": 0,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "FLCN",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/falcon-400.webp"
+          },
+          "team2": {
+            "name": "OMG",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/smart-400.webp"
+          },
+          "score1": 2,
+          "score2": 0,
+          "state": "played"
+        }
+      ]
+    },
+    {
+      "week": 8,
+      "matches": [
+        {
+          "team1": {
+            "name": "TWIS",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/twistedminds-400.webp"
+          },
+          "team2": {
+            "name": "TLPH",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/tlph-400.webp"
+          },
+          "score1": 0,
+          "score2": 2,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "ONIC",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/onicph-bw-400.webp"
+          },
+          "team2": {
+            "name": "TNC",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/tnc-400.webp"
+          },
+          "score1": 2,
+          "score2": 1,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "APBR",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/apbren-400.webp"
+          },
+          "team2": {
+            "name": "OMG",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/smart-400.webp"
+          },
+          "score1": 0,
+          "score2": 2,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "TNC",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/tnc-400.webp"
+          },
+          "team2": {
+            "name": "FLCN",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/falcon-400.webp"
+          },
+          "score1": 1,
+          "score2": 2,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "TLPH",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/tlph-400.webp"
+          },
+          "team2": {
+            "name": "ONIC",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/onicph-bw-400.webp"
+          },
+          "score1": 2,
+          "score2": 0,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "RORA",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/aurora-gaming-400.webp"
+          },
+          "team2": {
+            "name": "TWIS",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/twistedminds-400.webp"
+          },
+          "score1": 2,
+          "score2": 1,
+          "state": "played"
+        },
+        {
+          "team1": {
+            "name": "FLCN",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/falcon-400.webp"
+          },
+          "team2": {
+            "name": "TLPH",
+            "full_name": null,
+            "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/tlph-400.webp"
+          },
+          "score1": 1,
+          "score2": 2,
+          "state": "played"
+        }
+      ]
+    }
+  ],
+  "standings": [
+    {
+      "rank": 1,
+      "team": {
+        "name": "TLPH",
+        "full_name": null,
+        "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/tlph-400.webp"
+      },
+      "match_point": 12,
+      "match_wl": {
+        "win": 12,
+        "lose": 2
+      },
+      "net_game_win": 19,
+      "game_wl": {
+        "win": 25,
+        "lose": 6
+      },
+      "played": 14,
+      "remaining": 0,
+      "max_match_point": 12,
+      "tiebreak": "net_game_win",
+      "status": "clinched",
+      "in_playoffs_zone": true,
+      "playoff_probability": 100
+    },
+    {
+      "rank": 2,
+      "team": {
+        "name": "FLCN",
+        "full_name": null,
+        "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/falcon-400.webp"
+      },
+      "match_point": 12,
+      "match_wl": {
+        "win": 12,
+        "lose": 2
+      },
+      "net_game_win": 16,
+      "game_wl": {
+        "win": 26,
+        "lose": 10
+      },
+      "played": 14,
+      "remaining": 0,
+      "max_match_point": 12,
+      "tiebreak": "net_game_win",
+      "status": "clinched",
+      "in_playoffs_zone": true,
+      "playoff_probability": 100
+    },
+    {
+      "rank": 3,
+      "team": {
+        "name": "ONIC",
+        "full_name": null,
+        "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/onicph-bw-400.webp"
+      },
+      "match_point": 9,
+      "match_wl": {
+        "win": 9,
+        "lose": 5
+      },
+      "net_game_win": 7,
+      "game_wl": {
+        "win": 21,
+        "lose": 14
+      },
+      "played": 14,
+      "remaining": 0,
+      "max_match_point": 9,
+      "tiebreak": "head_to_head",
+      "status": "clinched",
+      "in_playoffs_zone": true,
+      "playoff_probability": 100
+    },
+    {
+      "rank": 4,
+      "team": {
+        "name": "RORA",
+        "full_name": null,
+        "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/aurora-gaming-400.webp"
+      },
+      "match_point": 9,
+      "match_wl": {
+        "win": 9,
+        "lose": 5
+      },
+      "net_game_win": 7,
+      "game_wl": {
+        "win": 20,
+        "lose": 13
+      },
+      "played": 14,
+      "remaining": 0,
+      "max_match_point": 9,
+      "tiebreak": "head_to_head",
+      "status": "clinched",
+      "in_playoffs_zone": true,
+      "playoff_probability": 100
+    },
+    {
+      "rank": 5,
+      "team": {
+        "name": "OMG",
+        "full_name": null,
+        "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/smart-400.webp"
+      },
+      "match_point": 7,
+      "match_wl": {
+        "win": 7,
+        "lose": 7
+      },
+      "net_game_win": -3,
+      "game_wl": {
+        "win": 15,
+        "lose": 18
+      },
+      "played": 14,
+      "remaining": 0,
+      "max_match_point": 7,
+      "tiebreak": null,
+      "status": "clinched",
+      "in_playoffs_zone": true,
+      "playoff_probability": 100
+    },
+    {
+      "rank": 6,
+      "team": {
+        "name": "TNC",
+        "full_name": null,
+        "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/tnc-400.webp"
+      },
+      "match_point": 4,
+      "match_wl": {
+        "win": 4,
+        "lose": 10
+      },
+      "net_game_win": -8,
+      "game_wl": {
+        "win": 14,
+        "lose": 22
+      },
+      "played": 14,
+      "remaining": 0,
+      "max_match_point": 4,
+      "tiebreak": null,
+      "status": "clinched",
+      "in_playoffs_zone": true,
+      "playoff_probability": 100
+    },
+    {
+      "rank": 7,
+      "team": {
+        "name": "APBR",
+        "full_name": null,
+        "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/apbren-400.webp"
+      },
+      "match_point": 3,
+      "match_wl": {
+        "win": 3,
+        "lose": 11
+      },
+      "net_game_win": -13,
+      "game_wl": {
+        "win": 10,
+        "lose": 23
+      },
+      "played": 14,
+      "remaining": 0,
+      "max_match_point": 3,
+      "tiebreak": null,
+      "status": "eliminated",
+      "in_playoffs_zone": false,
+      "playoff_probability": 0
+    },
+    {
+      "rank": 8,
+      "team": {
+        "name": "TWIS",
+        "full_name": null,
+        "logo": "https://wsrv.nl?url=https://ik.imagekit.io/nloe8dhf7w/mplph/s18/teams/twistedminds-400.webp"
+      },
+      "match_point": 0,
+      "match_wl": {
+        "win": 0,
+        "lose": 14
+      },
+      "net_game_win": -25,
+      "game_wl": {
+        "win": 3,
+        "lose": 28
+      },
+      "played": 14,
+      "remaining": 0,
+      "max_match_point": 0,
+      "tiebreak": null,
+      "status": "eliminated",
+      "in_playoffs_zone": false,
+      "playoff_probability": 0
+    }
+  ]
+}

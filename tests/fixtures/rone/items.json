@@ -1,0 +1,82 @@
+{
+  "code": 0,
+  "message": "OK",
+  "data": {
+    "records": [
+      {
+        "_createdAt": 1778228703156,
+        "_id": "69fd9ddf54ae2bda46fdee5e",
+        "_updatedAt": 1778228703156,
+        "data": {
+          "equipicon": "https://wsrv.nl/?url=https%3A%2F%2Fakmweb.youngjoygame.com%2Fweb%2Fsvnres%2Fimg%2Fmlbb%2Fhomepage%2F100_ca2a5c2be6010eb0ecff954a27bf05db.png",
+          "equipid": 3573,
+          "equipname": "Demon Boots - Favor",
+          "equipskill1": "\nPassive - Favor: ",
+          "equipskill2": "\n: ",
+          "equipskill3": "\nMysticism: Getting a kill or assist on an enemy Minion will restore 4% Mana. (An assist occurs when a Minion dies within 2s after taking damage from the hero.)",
+          "equipskill4": "\n<font color=\"FFD700\">Devotion</font>: When near allied heroes, does not share Gold and EXP from minions and creep, but gains 35% Gold and EXP independently. Revealing enemies also grants Gold and EXP.\n A maximum of 2000 Gold can be gained through this skill. (Only triggers when you have the lowest Gold among all heroes with active Roaming Blessing on your team).",
+          "equipskill5": "\n<font color=\"FFD700\">Thriving</font>: <font color=\"7f62fe\">Unique in Team</font>: Gain 6 Gold and 12 EXP every 5s. After 8 minutes into the match, gain an additional 66% boost (only triggers when you have the lowest Gold among all heroes with active Roaming Blessing on your team).",
+          "equipskill6": "\n<font color=\"FFD700\">Blessing</font>: Accumulate 1000 Gold via Devotion and Thriving to unlock a skill.\n<font color=\"A4AAC7\">During the first 5 minutes, Minion rewards are reduced to 50% when earned alone. After 2 minutes, Roaming Blessing can no longer be enchanted.</font>",
+          "equipskill7": "\n: ",
+          "equipskilldesc": "\nPassive - Favor: \nMysticism: Getting a kill or assist on an enemy Minion will restore 4% Mana. (An assist occurs when a Minion dies within 2s after taking damage from the hero.)\n<font color=\"FFD700\">Devotion</font>: When near allied heroes, does not share Gold and EXP from minions and creep, but gains 35% Gold and EXP independently. Revealing enemies also grants Gold and EXP.\n A maximum of 2000 Gold can be gained through this skill. (Only triggers when you have the lowest Gold among all heroes with active Roaming Blessing on your team).\n<font color=\"FFD700\">Thriving</font>: <font color=\"7f62fe\">Unique in Team</font>: Gain 6 Gold and 12 EXP every 5s. After 8 minutes into the match, gain an additional 66% boost (only triggers when you have the lowest Gold among all heroes with active Roaming Blessing on your team).\n<font color=\"FFD700\">Blessing</font>: Accumulate 1000 Gold via Devotion and Thriving to unlock a skill.\n<font color=\"A4AAC7\">During the first 5 minutes, Minion rewards are reduced to 50% when earned alone. After 2 minutes, Roaming Blessing can no longer be enchanted.</font>",
+          "equiptips": "+40 Movement Speed<br>+10 Mana Regen<br>",
+          "equiptype": "5",
+          "equiptypename": "Roam",
+          "targetequipid": ""
+        },
+        "id": 107021,
+        "sourceId": 2713995
+      },
+      {
+        "_createdAt": 1778228703156,
+        "_id": "69fd9ddf54ae2bda46fdee5d",
+        "_updatedAt": 1778228703156,
+        "data": {
+          "equipicon": "https://wsrv.nl/?url=https%3A%2F%2Fakmweb.youngjoygame.com%2Fweb%2Fsvnres%2Fimg%2Fmlbb%2Fhomepage%2F100_82279f79f5b1b60fd482de35bb5c4e01.png",
+          "equipid": 3574,
+          "equipname": "Demon Boots - Dire Hit",
+          "equipskill1": "\nPassive - Dire Hit: ",
+          "equipskill2": "\n: ",
+          "equipskill3": "\nMysticism: Getting a kill or assist on an enemy Minion will restore 4% Mana. (An assist occurs when a Minion dies within 2s after taking damage from the hero.)",
+          "equipskill4": "\n<font color=\"FFD700\">Devotion</font>: When near allied heroes, does not share Gold and EXP from minions and creep, but gains 35% Gold and EXP independently. Revealing enemies also grants Gold and EXP.\n A maximum of 2000 Gold can be gained through this skill. (Only triggers when you have the lowest Gold among all heroes with active Roaming Blessing on your team).",
+          "equipskill5": "\n<font color=\"FFD700\">Thriving</font>: <font color=\"7f62fe\">Unique in Team</font>: Gain 6 Gold and 12 EXP every 5s. After 8 minutes into the match, gain an additional 66% boost (only triggers when you have the lowest Gold among all heroes with active Roaming Blessing on your team).",
+          "equipskill6": "\n<font color=\"FFD700\">Blessing</font>: Accumulate 1000 Gold via Devotion and Thriving to unlock a skill.\n<font color=\"A4AAC7\">During the first 5 minutes, Minion rewards are reduced to 50% when earned alone. After 2 minutes, Roaming Blessing can no longer be enchanted.</font>",
+          "equipskill7": "\n: ",
+          "equipskilldesc": "\nPassive - Dire Hit: \nMysticism: Getting a kill or assist on an enemy Minion will restore 4% Mana. (An assist occurs when a Minion dies within 2s after taking damage from the hero.)\n<font color=\"FFD700\">Devotion</font>: When near allied heroes, does not share Gold and EXP from minions and creep, but gains 35% Gold and EXP independently. Revealing enemies also grants Gold and EXP.\n A maximum of 2000 Gold can be gained through this skill. (Only triggers when you have the lowest Gold among all heroes with active Roaming Blessing on your team).\n<font color=\"FFD700\">Thriving</font>: <font color=\"7f62fe\">Unique in Team</font>: Gain 6 Gold and 12 EXP every 5s. After 8 minutes into the match, gain an additional 66% boost (only triggers when you have the lowest Gold among all heroes with active Roaming Blessing on your team).\n<font color=\"FFD700\">Blessing</font>: Accumulate 1000 Gold via Devotion and Thriving to unlock a skill.\n<font color=\"A4AAC7\">During the first 5 minutes, Minion rewards are reduced to 50% when earned alone. After 2 minutes, Roaming Blessing can no longer be enchanted.</font>",
+          "equiptips": "+40 Movement Speed<br>+10 Mana Regen<br>",
+          "equiptype": "5",
+          "equiptypename": "Roam",
+          "targetequipid": ""
+        },
+        "id": 107020,
+        "sourceId": 2713995
+      },
+      {
+        "_createdAt": 1778228703156,
+        "_id": "69fd9ddf54ae2bda46fdee5c",
+        "_updatedAt": 1778228703156,
+        "data": {
+          "equipicon": "https://wsrv.nl/?url=https%3A%2F%2Fakmweb.youngjoygame.com%2Fweb%2Fsvnres%2Fimg%2Fmlbb%2Fhomepage%2F100_408eb36dbcec5cdc9604d6f12d2d15c6.png",
+          "equipid": 3571,
+          "equipname": "Demon Boots - Conceal",
+          "equipskill1": "\nConceal: <font color=\"ffe63c\">Blessing</font>: Accumulate 1000 Gold through Devotion and Thriving to unlock <font color=\"a6aafb\">Conceal</font>! (Current: <font color=\"ffe63c\"> <#bv 25></font>)\nActive: Nearby allied heroes enter camouflaged state and gain 40% Movement Speed for 5s. Dealing or taking damage ends this state.",
+          "equipskill2": "\nMysticism: Getting a kill or assist on an enemy Minion will restore 4% Mana. (An assist occurs when a Minion dies within 2s after taking damage from the hero.)",
+          "equipskill3": "\n: ",
+          "equipskill4": "\n<font color=\"FFD700\">Devotion</font>: When near allied heroes, does not share Gold and EXP from minions and creep, but gains 35% Gold and EXP independently. Revealing enemies also grants Gold and EXP.\n A maximum of 2000 Gold can be gained through this skill. (Only triggers when you have the lowest Gold among all heroes with active Roaming Blessing on your team).",
+          "equipskill5": "\n<font color=\"FFD700\">Thriving</font>: <font color=\"7f62fe\">Unique in Team</font>: Gain 6 Gold and 12 EXP every 5s. After 8 minutes into the match, gain an additional 66% boost (only triggers when you have the lowest Gold among all heroes with active Roaming Blessing on your team).",
+          "equipskill6": "\n<font color=\"FFD700\">Blessing</font>: Accumulate 1000 Gold via Devotion and Thriving to unlock a skill.\n<font color=\"A4AAC7\">During the first 5 minutes, Minion rewards are reduced to 50% when earned alone. After 2 minutes, Roaming Blessing can no longer be enchanted.</font>",
+          "equipskill7": "\n: ",
+          "equipskilldesc": "\nConceal: <font color=\"ffe63c\">Blessing</font>: Accumulate 1000 Gold through Devotion and Thriving to unlock <font color=\"a6aafb\">Conceal</font>! (Current: <font color=\"ffe63c\"> <#bv 25></font>)\nActive: Nearby allied heroes enter camouflaged state and gain 40% Movement Speed for 5s. Dealing or taking damage ends this state.\nMysticism: Getting a kill or assist on an enemy Minion will restore 4% Mana. (An assist occurs when a Minion dies within 2s after taking damage from the hero.)\n<font color=\"FFD700\">Devotion</font>: When near allied heroes, does not share Gold and EXP from minions and creep, but gains 35% Gold and EXP independently. Revealing enemies also grants Gold and EXP.\n A maximum of 2000 Gold can be gained through this skill. (Only triggers when you have the lowest Gold among all heroes with active Roaming Blessing on your team).\n<font color=\"FFD700\">Thriving</font>: <font color=\"7f62fe\">Unique in Team</font>: Gain 6 Gold and 12 EXP every 5s. After 8 minutes into the match, gain an additional 66% boost (only triggers when you have the lowest Gold among all heroes with active Roaming Blessing on your team).\n<font color=\"FFD700\">Blessing</font>: Accumulate 1000 Gold via Devotion and Thriving to unlock a skill.\n<font color=\"A4AAC7\">During the first 5 minutes, Minion rewards are reduced to 50% when earned alone. After 2 minutes, Roaming Blessing can no longer be enchanted.</font>",
+          "equiptips": "+40 Movement Speed<br>+10 Mana Regen<br>",
+          "equiptype": "5",
+          "equiptypename": "Roam",
+          "targetequipid": ""
+        },
+        "id": 107019,
+        "sourceId": 2713995
+      }
+    ],
+    "total": 152
+  },
+  "traceID": null
+}

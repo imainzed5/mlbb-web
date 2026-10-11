@@ -1,0 +1,1247 @@
+{
+  "match_id": "1036",
+  "games": [
+    {
+      "number": 1,
+      "duration": "16:51",
+      "timeline_minutes": [],
+      "teams": [
+        {
+          "team": {
+            "name": "EVOS",
+            "full_name": null,
+            "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/evos-500.png"
+          },
+          "winner": true,
+          "kills": 11,
+          "stats": {},
+          "players": [
+            {
+              "name": "Rendyyy",
+              "hero": {
+                "name": "Dyrroth",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fhero_h%2F85.png"
+              },
+              "kills": 3,
+              "deaths": 2,
+              "assists": 3,
+              "kda": 3,
+              "items": [
+                {
+                  "id": "3204",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                },
+                {
+                  "id": "3212",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fm%2F33%2Fp%2F2511%2F0617014872193.png"
+                },
+                {
+                  "id": "2302",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                },
+                {
+                  "id": "3210",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                },
+                {
+                  "id": "3206",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                }
+              ],
+              "emblem": {
+                "id": "20003",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Femblem%2F20003.png"
+              },
+              "talents": [
+                {
+                  "id": "811",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F811.png"
+                },
+                {
+                  "id": "721",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F721.png"
+                },
+                {
+                  "id": "731",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F731.png"
+                }
+              ],
+              "gold": 9316,
+              "damage_dealt": 38859,
+              "damage_taken": 126389,
+              "tower_damage": 1699,
+              "item_sequence": []
+            },
+            {
+              "name": "Alberttt",
+              "hero": {
+                "name": "Paquito",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fm%2F33%2Fp%2F258%2F0614085454643.png"
+              },
+              "kills": 3,
+              "deaths": 1,
+              "assists": 6,
+              "kda": 9,
+              "items": [
+                {
+                  "id": "3001",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                },
+                {
+                  "id": "3207",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                },
+                {
+                  "id": "3421",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                },
+                {
+                  "id": "3009",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                },
+                {
+                  "id": "2013",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fm%2F33%2Fp%2F248%2F1615180828774.png"
+                },
+                {
+                  "id": "2208",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                }
+              ],
+              "emblem": {
+                "id": "20005",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Femblem%2F20005.png"
+              },
+              "talents": [
+                {
+                  "id": "511",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F511.png"
+                },
+                {
+                  "id": "122",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F122.png"
+                },
+                {
+                  "id": "531",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F531.png"
+                }
+              ],
+              "gold": 13399,
+              "damage_dealt": 41934,
+              "damage_taken": 71412,
+              "tower_damage": 3701,
+              "item_sequence": []
+            },
+            {
+              "name": "DrianW",
+              "hero": {
+                "name": "Eudora",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fhero_h%2F15.png"
+              },
+              "kills": 5,
+              "deaths": 2,
+              "assists": 5,
+              "kda": 5,
+              "items": [
+                {
+                  "id": "3101",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                },
+                {
+                  "id": "2107",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                },
+                {
+                  "id": "2302",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                },
+                {
+                  "id": "3105",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                },
+                {
+                  "id": "1101",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                },
+                {
+                  "id": "2112",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fm%2F33%2Fp%2F248%2F1620350626880.png"
+                }
+              ],
+              "emblem": {
+                "id": "20006",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Femblem%2F20006.png"
+              },
+              "talents": [
+                {
+                  "id": "511",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F511.png"
+                },
+                {
+                  "id": "821",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F821.png"
+                },
+                {
+                  "id": "631",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F631.png"
+                }
+              ],
+              "gold": 9634,
+              "damage_dealt": 40215,
+              "damage_taken": 26460,
+              "tower_damage": 1329,
+              "item_sequence": []
+            },
+            {
+              "name": "Muezza",
+              "hero": {
+                "name": "Belerick",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fm%2F33%2Fp%2F258%2F0614104933588.png"
+              },
+              "kills": 0,
+              "deaths": 2,
+              "assists": 11,
+              "kda": 5.5,
+              "items": [
+                {
+                  "id": "1202",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                },
+                {
+                  "id": "3521",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                },
+                {
+                  "id": "2207",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                },
+                {
+                  "id": "3203",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                },
+                {
+                  "id": "3212",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fm%2F33%2Fp%2F2511%2F0617014872193.png"
+                },
+                {
+                  "id": "3210",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                }
+              ],
+              "emblem": {
+                "id": "20003",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Femblem%2F20003.png"
+              },
+              "talents": [
+                {
+                  "id": "311",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F311.png"
+                },
+                {
+                  "id": "821",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F821.png"
+                },
+                {
+                  "id": "731",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F731.png"
+                }
+              ],
+              "gold": 9304,
+              "damage_dealt": 18611,
+              "damage_taken": 132094,
+              "tower_damage": 878,
+              "item_sequence": []
+            },
+            {
+              "name": "Erlan",
+              "hero": {
+                "name": "Melissa",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fm%2F33%2Fp%2F253%2F1318001527975.png"
+              },
+              "kills": 0,
+              "deaths": 0,
+              "assists": 7,
+              "kda": 7,
+              "items": [
+                {
+                  "id": "2301",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                },
+                {
+                  "id": "3015",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fm%2F33%2Fp%2F248%2F1620354227288.png"
+                },
+                {
+                  "id": "2009",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                },
+                {
+                  "id": "2008",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                },
+                {
+                  "id": "2006",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                },
+                {
+                  "id": "2011",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                }
+              ],
+              "emblem": {
+                "id": "20007",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Femblem%2F20007.png"
+              },
+              "talents": [
+                {
+                  "id": "112",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F112.png"
+                },
+                {
+                  "id": "821",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F821.png"
+                },
+                {
+                  "id": "132",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F132.png"
+                }
+              ],
+              "gold": 12467,
+              "damage_dealt": 94791,
+              "damage_taken": 34440,
+              "tower_damage": 14865,
+              "item_sequence": []
+            }
+          ]
+        },
+        {
+          "team": {
+            "name": "RRQ",
+            "full_name": null,
+            "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/rrq-500.png"
+          },
+          "winner": false,
+          "kills": 7,
+          "stats": {},
+          "players": [
+            {
+              "name": "Joshua",
+              "hero": {
+                "name": "Esmeralda",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fhero_h%2F81.png"
+              },
+              "kills": 0,
+              "deaths": 2,
+              "assists": 2,
+              "kda": 1,
+              "items": [
+                {
+                  "id": "2206",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F2206.png"
+                },
+                {
+                  "id": "2302",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F2302.png"
+                },
+                {
+                  "id": "3204",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F3204.png"
+                },
+                {
+                  "id": "2106",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F2106.png"
+                },
+                {
+                  "id": "3206",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F3206.png"
+                }
+              ],
+              "emblem": {
+                "id": "20008",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Femblem%2F20008.png"
+              },
+              "talents": [
+                {
+                  "id": "131",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F131.png"
+                },
+                {
+                  "id": "811",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F811.png"
+                },
+                {
+                  "id": "321",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F321.png"
+                }
+              ],
+              "gold": 7293,
+              "damage_dealt": 43881,
+              "damage_taken": 195266,
+              "tower_damage": 432,
+              "item_sequence": []
+            },
+            {
+              "name": "Demonkite",
+              "hero": {
+                "name": "Hirara",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fm%2F33%2Fp%2F266%2F1810181178495.png"
+              },
+              "kills": 1,
+              "deaths": 1,
+              "assists": 2,
+              "kda": 3,
+              "items": [
+                {
+                  "id": "3001",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F3001.png"
+                },
+                {
+                  "id": "3008",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F3008.png"
+                },
+                {
+                  "id": "3431",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F3431.png"
+                },
+                {
+                  "id": "3009",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F3009.png"
+                },
+                {
+                  "id": "2013",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fm%2F33%2Fp%2F248%2F1615180828774.png"
+                },
+                {
+                  "id": "2005",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F2005.png"
+                }
+              ],
+              "emblem": {
+                "id": "20005",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Femblem%2F20005.png"
+              },
+              "talents": [
+                {
+                  "id": "531",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F531.png"
+                },
+                {
+                  "id": "111",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F111.png"
+                },
+                {
+                  "id": "122",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F122.png"
+                }
+              ],
+              "gold": 12161,
+              "damage_dealt": 47574,
+              "damage_taken": 36798,
+              "tower_damage": 0,
+              "item_sequence": []
+            },
+            {
+              "name": "Hajirin",
+              "hero": {
+                "name": "Kadita",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fhero_h%2F75.png"
+              },
+              "kills": 3,
+              "deaths": 2,
+              "assists": 2,
+              "kda": 2.5,
+              "items": [
+                {
+                  "id": "3101",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F3101.png"
+                },
+                {
+                  "id": "2304",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F2304.png"
+                },
+                {
+                  "id": "3111",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F3111.png"
+                },
+                {
+                  "id": "3102",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F3102.png"
+                }
+              ],
+              "emblem": {
+                "id": "20005",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Femblem%2F20005.png"
+              },
+              "talents": [
+                {
+                  "id": "131",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F131.png"
+                },
+                {
+                  "id": "511",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F511.png"
+                },
+                {
+                  "id": "821",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F821.png"
+                }
+              ],
+              "gold": 7771,
+              "damage_dealt": 41911,
+              "damage_taken": 41019,
+              "tower_damage": 820,
+              "item_sequence": []
+            },
+            {
+              "name": "Said",
+              "hero": {
+                "name": "Tigreal",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fm%2F33%2Fp%2F256%2F0913135849062.png"
+              },
+              "kills": 2,
+              "deaths": 4,
+              "assists": 5,
+              "kda": 1.75,
+              "items": [
+                {
+                  "id": "3521",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F3521.png"
+                },
+                {
+                  "id": "3205",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F3205.png"
+                },
+                {
+                  "id": "2206",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F2206.png"
+                },
+                {
+                  "id": "3206",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F3206.png"
+                },
+                {
+                  "id": "3207",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F3207.png"
+                }
+              ],
+              "emblem": {
+                "id": "20003",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Femblem%2F20003.png"
+              },
+              "talents": [
+                {
+                  "id": "331",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F331.png"
+                },
+                {
+                  "id": "711",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F711.png"
+                },
+                {
+                  "id": "821",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F821.png"
+                }
+              ],
+              "gold": 8214,
+              "damage_dealt": 17311,
+              "damage_taken": 137061,
+              "tower_damage": 0,
+              "item_sequence": []
+            },
+            {
+              "name": "Arthur",
+              "hero": {
+                "name": "Claude",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fhero_h%2F65.png"
+              },
+              "kills": 1,
+              "deaths": 2,
+              "assists": 4,
+              "kda": 2.5,
+              "items": [
+                {
+                  "id": "2301",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F2301.png"
+                },
+                {
+                  "id": "2009",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F2009.png"
+                },
+                {
+                  "id": "2011",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F2011.png"
+                },
+                {
+                  "id": "2008",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F2008.png"
+                },
+                {
+                  "id": "2006",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F2006.png"
+                },
+                {
+                  "id": "2004",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F2004.png"
+                }
+              ],
+              "emblem": {
+                "id": "20007",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Femblem%2F20007.png"
+              },
+              "talents": [
+                {
+                  "id": "132",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F132.png"
+                },
+                {
+                  "id": "111",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F111.png"
+                },
+                {
+                  "id": "721",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F721.png"
+                }
+              ],
+              "gold": 10771,
+              "damage_dealt": 57091,
+              "damage_taken": 64063,
+              "tower_damage": 0,
+              "item_sequence": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "duration": "24:40",
+      "timeline_minutes": [],
+      "teams": [
+        {
+          "team": {
+            "name": "RRQ",
+            "full_name": null,
+            "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/rrq-500.png"
+          },
+          "winner": false,
+          "kills": 9,
+          "stats": {},
+          "players": [
+            {
+              "name": "Joshua",
+              "hero": {
+                "name": "Sora",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fm%2F33%2Fp%2F2512%2F1717443916579.png"
+              },
+              "kills": 2,
+              "deaths": 2,
+              "assists": 4,
+              "kda": 3,
+              "items": [
+                {
+                  "id": "2107",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                },
+                {
+                  "id": "2302",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                },
+                {
+                  "id": "3210",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                },
+                {
+                  "id": "3203",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                },
+                {
+                  "id": "3204",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                },
+                {
+                  "id": "3206",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                }
+              ],
+              "emblem": {
+                "id": "20003",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Femblem%2F20003.png"
+              },
+              "talents": [
+                {
+                  "id": "311",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F311.png"
+                },
+                {
+                  "id": "721",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F721.png"
+                },
+                {
+                  "id": "331",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F331.png"
+                }
+              ],
+              "gold": 12867,
+              "damage_dealt": 33147,
+              "damage_taken": 154651,
+              "tower_damage": 0,
+              "item_sequence": []
+            },
+            {
+              "name": "Demonkite",
+              "hero": {
+                "name": "Fredrinn",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fhero_h%2F117.png"
+              },
+              "kills": 3,
+              "deaths": 2,
+              "assists": 5,
+              "kda": 4,
+              "items": [
+                {
+                  "id": "2208",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                },
+                {
+                  "id": "3421",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                },
+                {
+                  "id": "3202",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                },
+                {
+                  "id": "3208",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                },
+                {
+                  "id": "3210",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                },
+                {
+                  "id": "3203",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                }
+              ],
+              "emblem": {
+                "id": "20003",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Femblem%2F20003.png"
+              },
+              "talents": [
+                {
+                  "id": "111",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F111.png"
+                },
+                {
+                  "id": "122",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F122.png"
+                },
+                {
+                  "id": "131",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F131.png"
+                }
+              ],
+              "gold": 14823,
+              "damage_dealt": 53496,
+              "damage_taken": 167929,
+              "tower_damage": 0,
+              "item_sequence": []
+            },
+            {
+              "name": "Hajirin",
+              "hero": {
+                "name": "Valentina",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fhero_h%2F110.png"
+              },
+              "kills": 1,
+              "deaths": 2,
+              "assists": 5,
+              "kda": 3,
+              "items": [
+                {
+                  "id": "3101",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                },
+                {
+                  "id": "2303",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                },
+                {
+                  "id": "3110",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                },
+                {
+                  "id": "3105",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                },
+                {
+                  "id": "3102",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                },
+                {
+                  "id": "2107",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                }
+              ],
+              "emblem": {
+                "id": "20006",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Femblem%2F20006.png"
+              },
+              "talents": [
+                {
+                  "id": "611",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F611.png"
+                },
+                {
+                  "id": "121",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F121.png"
+                },
+                {
+                  "id": "131",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F131.png"
+                }
+              ],
+              "gold": 15406,
+              "damage_dealt": 83760,
+              "damage_taken": 55314,
+              "tower_damage": 0,
+              "item_sequence": []
+            },
+            {
+              "name": "Said",
+              "hero": {
+                "name": "Mathilda",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fm%2F33%2Fp%2F258%2F0614161952513.png"
+              },
+              "kills": 0,
+              "deaths": 1,
+              "assists": 9,
+              "kda": 9,
+              "items": [
+                {
+                  "id": "3108",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                },
+                {
+                  "id": "3102",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                },
+                {
+                  "id": "3523",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F3523.png"
+                },
+                {
+                  "id": "3112",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                },
+                {
+                  "id": "2106",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                },
+                {
+                  "id": "1008",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fm%2F26%2Fp%2F246%2F2914355635270.png"
+                }
+              ],
+              "emblem": {
+                "id": "20008",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Femblem%2F20008.png"
+              },
+              "talents": [
+                {
+                  "id": "611",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F611.png"
+                },
+                {
+                  "id": "121",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F121.png"
+                },
+                {
+                  "id": "132",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F132.png"
+                }
+              ],
+              "gold": 11915,
+              "damage_dealt": 23274,
+              "damage_taken": 82043,
+              "tower_damage": 0,
+              "item_sequence": []
+            },
+            {
+              "name": "Arthur",
+              "hero": {
+                "name": "Brody",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fm%2F33%2Fp%2F258%2F0614132418223.png"
+              },
+              "kills": 3,
+              "deaths": 2,
+              "assists": 2,
+              "kda": 2.5,
+              "items": [
+                {
+                  "id": "3008",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                },
+                {
+                  "id": "2006",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                },
+                {
+                  "id": "3015",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fm%2F33%2Fp%2F248%2F1620354227288.png"
+                },
+                {
+                  "id": "2011",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                },
+                {
+                  "id": "3013",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                },
+                {
+                  "id": "3007",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fexample.com%2Ffixture.png"
+                }
+              ],
+              "emblem": {
+                "id": "20007",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Femblem%2F20007.png"
+              },
+              "talents": [
+                {
+                  "id": "111",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F111.png"
+                },
+                {
+                  "id": "521",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F521.png"
+                },
+                {
+                  "id": "132",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F132.png"
+                }
+              ],
+              "gold": 20079,
+              "damage_dealt": 68390,
+              "damage_taken": 54643,
+              "tower_damage": 0,
+              "item_sequence": []
+            }
+          ]
+        },
+        {
+          "team": {
+            "name": "EVOS",
+            "full_name": null,
+            "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/evos-500.png"
+          },
+          "winner": true,
+          "kills": 9,
+          "stats": {},
+          "players": [
+            {
+              "name": "Rendyyy",
+              "hero": {
+                "name": "Uranus",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fhero_h%2F59.png"
+              },
+              "kills": 0,
+              "deaths": 3,
+              "assists": 2,
+              "kda": 0.67,
+              "items": [
+                {
+                  "id": "3212",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fm%2F33%2Fp%2F2511%2F0617014872193.png"
+                },
+                {
+                  "id": "3203",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F3203.png"
+                },
+                {
+                  "id": "3204",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F3204.png"
+                },
+                {
+                  "id": "2302",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F2302.png"
+                },
+                {
+                  "id": "3210",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F3210.png"
+                },
+                {
+                  "id": "3208",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F3208.png"
+                }
+              ],
+              "emblem": {
+                "id": "20001",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Femblem%2F20001.png"
+              },
+              "talents": [
+                {
+                  "id": "731",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F731.png"
+                },
+                {
+                  "id": "811",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F811.png"
+                },
+                {
+                  "id": "321",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F321.png"
+                }
+              ],
+              "gold": 14712,
+              "damage_dealt": 38786,
+              "damage_taken": 345559,
+              "tower_damage": 2590,
+              "item_sequence": []
+            },
+            {
+              "name": "Alberttt",
+              "hero": {
+                "name": "Paquito",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fm%2F33%2Fp%2F258%2F0614085454643.png"
+              },
+              "kills": 5,
+              "deaths": 2,
+              "assists": 3,
+              "kda": 4,
+              "items": [
+                {
+                  "id": "3008",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F3008.png"
+                },
+                {
+                  "id": "3207",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F3207.png"
+                },
+                {
+                  "id": "3421",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F3421.png"
+                },
+                {
+                  "id": "3009",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F3009.png"
+                },
+                {
+                  "id": "2013",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fm%2F33%2Fp%2F248%2F1615180828774.png"
+                },
+                {
+                  "id": "2107",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fm%2F33%2Fp%2F248%2F1620344127331.png"
+                }
+              ],
+              "emblem": {
+                "id": "20005",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Femblem%2F20005.png"
+              },
+              "talents": [
+                {
+                  "id": "531",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F531.png"
+                },
+                {
+                  "id": "511",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F511.png"
+                },
+                {
+                  "id": "122",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F122.png"
+                }
+              ],
+              "gold": 19218,
+              "damage_dealt": 44811,
+              "damage_taken": 79877,
+              "tower_damage": 1649,
+              "item_sequence": []
+            },
+            {
+              "name": "DrianW",
+              "hero": {
+                "name": "Eudora",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fhero_h%2F15.png"
+              },
+              "kills": 1,
+              "deaths": 1,
+              "assists": 6,
+              "kda": 7,
+              "items": [
+                {
+                  "id": "3101",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F3101.png"
+                },
+                {
+                  "id": "3108",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F3108.png"
+                },
+                {
+                  "id": "2302",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F2302.png"
+                },
+                {
+                  "id": "3105",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fm%2F33%2Fp%2F248%2F1617061327160.png"
+                },
+                {
+                  "id": "3111",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F3111.png"
+                },
+                {
+                  "id": "2107",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fm%2F33%2Fp%2F248%2F1620344127331.png"
+                }
+              ],
+              "emblem": {
+                "id": "20006",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Femblem%2F20006.png"
+              },
+              "talents": [
+                {
+                  "id": "631",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F631.png"
+                },
+                {
+                  "id": "511",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F511.png"
+                },
+                {
+                  "id": "821",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F821.png"
+                }
+              ],
+              "gold": 12829,
+              "damage_dealt": 64487,
+              "damage_taken": 26339,
+              "tower_damage": 1712,
+              "item_sequence": []
+            },
+            {
+              "name": "Muezza",
+              "hero": {
+                "name": "Rafaela",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fhero_h%2F14.png"
+              },
+              "kills": 1,
+              "deaths": 1,
+              "assists": 7,
+              "kda": 8,
+              "items": [
+                {
+                  "id": "2106",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F2106.png"
+                },
+                {
+                  "id": "3204",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F3204.png"
+                },
+                {
+                  "id": "3562",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F3562.png"
+                },
+                {
+                  "id": "3207",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F3207.png"
+                },
+                {
+                  "id": "3112",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F3112.png"
+                },
+                {
+                  "id": "3104",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F3104.png"
+                }
+              ],
+              "emblem": {
+                "id": "20008",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Femblem%2F20008.png"
+              },
+              "talents": [
+                {
+                  "id": "131",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F131.png"
+                },
+                {
+                  "id": "811",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F811.png"
+                },
+                {
+                  "id": "121",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F121.png"
+                }
+              ],
+              "gold": 13268,
+              "damage_dealt": 26819,
+              "damage_taken": 40822,
+              "tower_damage": 780,
+              "item_sequence": []
+            },
+            {
+              "name": "Erlan",
+              "hero": {
+                "name": "Clint",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fhero_h%2F13.png"
+              },
+              "kills": 2,
+              "deaths": 2,
+              "assists": 2,
+              "kda": 2,
+              "items": [
+                {
+                  "id": "3013",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F3013.png"
+                },
+                {
+                  "id": "3015",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fm%2F33%2Fp%2F248%2F1620354227288.png"
+                },
+                {
+                  "id": "3207",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F3207.png"
+                },
+                {
+                  "id": "3003",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F3003.png"
+                },
+                {
+                  "id": "3004",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F3004.png"
+                },
+                {
+                  "id": "3014",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Fequip%2F3014.png"
+                }
+              ],
+              "emblem": {
+                "id": "20007",
+                "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Femblem%2F20007.png"
+              },
+              "talents": [
+                {
+                  "id": "132",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F132.png"
+                },
+                {
+                  "id": "111",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F111.png"
+                },
+                {
+                  "id": "721",
+                  "image": "https://wsrv.nl/?url=https%3A%2F%2Fmlbb-image.scoregg.com%2Frune%2F721.png"
+                }
+              ],
+              "gold": 17612,
+              "damage_dealt": 96224,
+              "damage_taken": 49386,
+              "tower_damage": 21305,
+              "item_sequence": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

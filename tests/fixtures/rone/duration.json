@@ -1,0 +1,55 @@
+{
+  "code": 0,
+  "message": "OK",
+  "data": {
+    "records": [
+      {
+        "_createdAt": 1791660899400,
+        "_id": "6aca93631781f4a0e4d8a405",
+        "_updatedAt": 1791660899400,
+        "data": {
+          "big_rank": "101",
+          "hero_name": "奥利",
+          "heroid": 108,
+          "real_road": 4,
+          "time_win_rate": [
+            {
+              "time_max": 12,
+              "time_min": 10,
+              "win_rate": 0.6797107424878387
+            },
+            {
+              "time_max": 14,
+              "time_min": 12,
+              "win_rate": 0.644125224471691
+            },
+            {
+              "time_max": 16,
+              "time_min": 14,
+              "win_rate": 0.6260846285213925
+            },
+            {
+              "time_max": 18,
+              "time_min": 16,
+              "win_rate": 0.5886177349854952
+            },
+            {
+              "time_max": 20,
+              "time_min": 18,
+              "win_rate": 0.5570230077774968
+            },
+            {
+              "time_min": 20,
+              "win_rate": 0.5300767847096207
+            }
+          ],
+          "total_win_rate": 0.6173214992600042
+        },
+        "id": 5786306,
+        "sourceId": 2777027
+      }
+    ],
+    "total": 1
+  },
+  "traceID": null
+}

@@ -1,0 +1,1507 @@
+{
+  "weeks": [
+    {
+      "week": 1,
+      "days": [
+        {
+          "day": null,
+          "label": "Friday, 14 August 2026",
+          "matches": [
+            {
+              "match_id": "1036",
+              "start_at": "2026-08-14T08:00:00+00:00",
+              "local_time": "15:00",
+              "team1": {
+                "name": "EVOS",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/evos-64.png"
+              },
+              "team2": {
+                "name": "RRQ",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/rrq-64.png"
+              },
+              "score1": 2,
+              "score2": 0,
+              "replay_url": "https://www.youtube.com/watch?v=40fehk2f4_E"
+            },
+            {
+              "match_id": "1037",
+              "start_at": "2026-08-14T11:00:00+00:00",
+              "local_time": "18:00",
+              "team1": {
+                "name": "NAVI",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/navi-64.png"
+              },
+              "team2": {
+                "name": "AE",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/ae-64.png"
+              },
+              "score1": 0,
+              "score2": 2,
+              "replay_url": "https://www.youtube.com/watch?v=40fehk2f4_E"
+            }
+          ]
+        },
+        {
+          "day": null,
+          "label": "Saturday, 15 August 2026",
+          "matches": [
+            {
+              "match_id": "1038",
+              "start_at": "2026-08-15T07:00:00+00:00",
+              "local_time": "14:00",
+              "team1": {
+                "name": "TLID",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/tlid-64.png"
+              },
+              "team2": {
+                "name": "GEEK",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/geek-64.png"
+              },
+              "score1": 2,
+              "score2": 1,
+              "replay_url": "https://youtube.com/watch?v=tpgvzhEO1Qc"
+            },
+            {
+              "match_id": "1039",
+              "start_at": "2026-08-15T10:00:00+00:00",
+              "local_time": "17:00",
+              "team1": {
+                "name": "DEWA",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/dewa-64.png"
+              },
+              "team2": {
+                "name": "RRQ",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/rrq-64.png"
+              },
+              "score1": 1,
+              "score2": 2,
+              "replay_url": "https://youtube.com/watch?v=tpgvzhEO1Qc"
+            },
+            {
+              "match_id": "1040",
+              "start_at": "2026-08-15T13:00:00+00:00",
+              "local_time": "20:00",
+              "team1": {
+                "name": "EVOS",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/evos-64.png"
+              },
+              "team2": {
+                "name": "NAVI",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/navi-64.png"
+              },
+              "score1": 1,
+              "score2": 2,
+              "replay_url": "https://youtube.com/watch?v=tpgvzhEO1Qc"
+            }
+          ]
+        },
+        {
+          "day": null,
+          "label": "Sunday, 16 August 2026",
+          "matches": [
+            {
+              "match_id": "1041",
+              "start_at": "2026-08-16T07:00:00+00:00",
+              "local_time": "14:00",
+              "team1": {
+                "name": "TLID",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/tlid-64.png"
+              },
+              "team2": {
+                "name": "DEWA",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/dewa-64.png"
+              },
+              "score1": 2,
+              "score2": 0,
+              "replay_url": "https://www.youtube.com/live/X1yGjaXTbww"
+            },
+            {
+              "match_id": "1042",
+              "start_at": "2026-08-16T10:00:00+00:00",
+              "local_time": "17:00",
+              "team1": {
+                "name": "BTR",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/btr-vit-64.png"
+              },
+              "team2": {
+                "name": "GEEK",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/geek-64.png"
+              },
+              "score1": 2,
+              "score2": 1,
+              "replay_url": "https://www.youtube.com/live/X1yGjaXTbww"
+            },
+            {
+              "match_id": "1043",
+              "start_at": "2026-08-16T13:00:00+00:00",
+              "local_time": "20:00",
+              "team1": {
+                "name": "AE",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/ae-64.png"
+              },
+              "team2": {
+                "name": "ONIC",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/onic-b-64.png"
+              },
+              "score1": 0,
+              "score2": 2,
+              "replay_url": "https://www.youtube.com/live/X1yGjaXTbww"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "days": [
+        {
+          "day": null,
+          "label": "Friday, 21 August 2026",
+          "matches": [
+            {
+              "match_id": "1044",
+              "start_at": "2026-08-21T08:00:00+00:00",
+              "local_time": "15:00",
+              "team1": {
+                "name": "TLID",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/tlid-64.png"
+              },
+              "team2": {
+                "name": "NAVI",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/navi-64.png"
+              },
+              "score1": 0,
+              "score2": 2,
+              "replay_url": "https://www.youtube.com/watch?v=O1vhySUmgj0"
+            },
+            {
+              "match_id": "1045",
+              "start_at": "2026-08-21T11:00:00+00:00",
+              "local_time": "18:00",
+              "team1": {
+                "name": "BTR",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/btr-vit-64.png"
+              },
+              "team2": {
+                "name": "DEWA",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/dewa-64.png"
+              },
+              "score1": 2,
+              "score2": 0,
+              "replay_url": "https://www.youtube.com/watch?v=O1vhySUmgj0"
+            }
+          ]
+        },
+        {
+          "day": null,
+          "label": "Saturday, 22 August 2026",
+          "matches": [
+            {
+              "match_id": "1046",
+              "start_at": "2026-08-22T07:00:00+00:00",
+              "local_time": "14:00",
+              "team1": {
+                "name": "TLID",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/tlid-64.png"
+              },
+              "team2": {
+                "name": "EVOS",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/evos-64.png"
+              },
+              "score1": 2,
+              "score2": 0,
+              "replay_url": "https://www.youtube.com/watch?v=QsOUpAE-Jd8"
+            },
+            {
+              "match_id": "1047",
+              "start_at": "2026-08-22T10:00:00+00:00",
+              "local_time": "17:00",
+              "team1": {
+                "name": "NAVI",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/navi-64.png"
+              },
+              "team2": {
+                "name": "GEEK",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/geek-64.png"
+              },
+              "score1": 2,
+              "score2": 1,
+              "replay_url": "https://www.youtube.com/watch?v=QsOUpAE-Jd8"
+            },
+            {
+              "match_id": "1048",
+              "start_at": "2026-08-22T13:00:00+00:00",
+              "local_time": "20:00",
+              "team1": {
+                "name": "ONIC",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/onic-b-64.png"
+              },
+              "team2": {
+                "name": "RRQ",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/rrq-64.png"
+              },
+              "score1": 2,
+              "score2": 0,
+              "replay_url": "https://www.youtube.com/watch?v=QsOUpAE-Jd8"
+            }
+          ]
+        },
+        {
+          "day": null,
+          "label": "Sunday, 23 August 2026",
+          "matches": [
+            {
+              "match_id": "1049",
+              "start_at": "2026-08-23T07:00:00+00:00",
+              "local_time": "14:00",
+              "team1": {
+                "name": "DEWA",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/dewa-64.png"
+              },
+              "team2": {
+                "name": "AE",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/ae-64.png"
+              },
+              "score1": 0,
+              "score2": 2,
+              "replay_url": "https://www.youtube.com/watch?v=C-H_iCLxtL8"
+            },
+            {
+              "match_id": "1050",
+              "start_at": "2026-08-23T10:00:00+00:00",
+              "local_time": "17:00",
+              "team1": {
+                "name": "ONIC",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/onic-b-64.png"
+              },
+              "team2": {
+                "name": "BTR",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/btr-vit-64.png"
+              },
+              "score1": 1,
+              "score2": 2,
+              "replay_url": "https://www.youtube.com/watch?v=C-H_iCLxtL8"
+            },
+            {
+              "match_id": "1051",
+              "start_at": "2026-08-23T13:00:00+00:00",
+              "local_time": "20:00",
+              "team1": {
+                "name": "GEEK",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/geek-64.png"
+              },
+              "team2": {
+                "name": "EVOS",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/evos-64.png"
+              },
+              "score1": 0,
+              "score2": 2,
+              "replay_url": "https://www.youtube.com/watch?v=C-H_iCLxtL8"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "days": [
+        {
+          "day": null,
+          "label": "Friday, 28 August 2026",
+          "matches": [
+            {
+              "match_id": "1052",
+              "start_at": "2026-08-28T08:00:00+00:00",
+              "local_time": "15:00",
+              "team1": {
+                "name": "BTR",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/btr-vit-64.png"
+              },
+              "team2": {
+                "name": "NAVI",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/navi-64.png"
+              },
+              "score1": 2,
+              "score2": 0,
+              "replay_url": "https://www.youtube.com/watch?v=9c2wPhSYTGA"
+            },
+            {
+              "match_id": "1053",
+              "start_at": "2026-08-28T11:00:00+00:00",
+              "local_time": "18:00",
+              "team1": {
+                "name": "DEWA",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/dewa-64.png"
+              },
+              "team2": {
+                "name": "GEEK",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/geek-64.png"
+              },
+              "score1": 2,
+              "score2": 0,
+              "replay_url": "https://www.youtube.com/watch?v=9c2wPhSYTGA"
+            }
+          ]
+        },
+        {
+          "day": null,
+          "label": "Saturday, 29 August 2026",
+          "matches": [
+            {
+              "match_id": "1054",
+              "start_at": "2026-08-29T07:00:00+00:00",
+              "local_time": "14:00",
+              "team1": {
+                "name": "TLID",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/tlid-64.png"
+              },
+              "team2": {
+                "name": "ONIC",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/onic-b-64.png"
+              },
+              "score1": 2,
+              "score2": 1,
+              "replay_url": "https://www.youtube.com/watch?v=FDioYoG4ads"
+            },
+            {
+              "match_id": "1055",
+              "start_at": "2026-08-29T10:00:00+00:00",
+              "local_time": "17:00",
+              "team1": {
+                "name": "AE",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/ae-64.png"
+              },
+              "team2": {
+                "name": "EVOS",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/evos-64.png"
+              },
+              "score1": 2,
+              "score2": 0,
+              "replay_url": "https://www.youtube.com/watch?v=FDioYoG4ads"
+            },
+            {
+              "match_id": "1056",
+              "start_at": "2026-08-29T13:00:00+00:00",
+              "local_time": "20:00",
+              "team1": {
+                "name": "RRQ",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/rrq-64.png"
+              },
+              "team2": {
+                "name": "BTR",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/btr-vit-64.png"
+              },
+              "score1": 1,
+              "score2": 2,
+              "replay_url": "https://www.youtube.com/watch?v=FDioYoG4ads"
+            }
+          ]
+        },
+        {
+          "day": null,
+          "label": "Sunday, 30 August 2026",
+          "matches": [
+            {
+              "match_id": "1057",
+              "start_at": "2026-08-30T07:00:00+00:00",
+              "local_time": "14:00",
+              "team1": {
+                "name": "NAVI",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/navi-64.png"
+              },
+              "team2": {
+                "name": "ONIC",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/onic-b-64.png"
+              },
+              "score1": 2,
+              "score2": 0,
+              "replay_url": "https://www.youtube.com/live/3bAUu2t3FGI?si=ambF7BnCnnL-Obv5"
+            },
+            {
+              "match_id": "1058",
+              "start_at": "2026-08-30T10:00:00+00:00",
+              "local_time": "17:00",
+              "team1": {
+                "name": "GEEK",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/geek-64.png"
+              },
+              "team2": {
+                "name": "RRQ",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/rrq-64.png"
+              },
+              "score1": 0,
+              "score2": 2,
+              "replay_url": "https://www.youtube.com/live/3bAUu2t3FGI?si=ambF7BnCnnL-Obv5"
+            },
+            {
+              "match_id": "1059",
+              "start_at": "2026-08-30T13:00:00+00:00",
+              "local_time": "20:00",
+              "team1": {
+                "name": "TLID",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/tlid-64.png"
+              },
+              "team2": {
+                "name": "AE",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/ae-64.png"
+              },
+              "score1": 2,
+              "score2": 1,
+              "replay_url": "https://www.youtube.com/live/3bAUu2t3FGI?si=ambF7BnCnnL-Obv5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "days": [
+        {
+          "day": null,
+          "label": "Friday, 4 September 2026",
+          "matches": [
+            {
+              "match_id": "1060",
+              "start_at": "2026-09-04T08:00:00+00:00",
+              "local_time": "15:00",
+              "team1": {
+                "name": "NAVI",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/navi-64.png"
+              },
+              "team2": {
+                "name": "DEWA",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/dewa-64.png"
+              },
+              "score1": 2,
+              "score2": 0,
+              "replay_url": "https://www.youtube.com/watch?v=W-LSKxUkUi4"
+            },
+            {
+              "match_id": "1061",
+              "start_at": "2026-09-04T11:00:00+00:00",
+              "local_time": "18:00",
+              "team1": {
+                "name": "TLID",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/tlid-64.png"
+              },
+              "team2": {
+                "name": "RRQ",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/rrq-64.png"
+              },
+              "score1": 2,
+              "score2": 0,
+              "replay_url": "https://www.youtube.com/watch?v=W-LSKxUkUi4"
+            }
+          ]
+        },
+        {
+          "day": null,
+          "label": "Saturday, 5 September 2026",
+          "matches": [
+            {
+              "match_id": "1062",
+              "start_at": "2026-09-05T07:00:00+00:00",
+              "local_time": "14:00",
+              "team1": {
+                "name": "DEWA",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/dewa-64.png"
+              },
+              "team2": {
+                "name": "ONIC",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/onic-b-64.png"
+              },
+              "score1": 2,
+              "score2": 1,
+              "replay_url": "https://www.youtube.com/watch?v=-M1_bwTRlHk"
+            },
+            {
+              "match_id": "1063",
+              "start_at": "2026-09-05T10:00:00+00:00",
+              "local_time": "17:00",
+              "team1": {
+                "name": "EVOS",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/evos-64.png"
+              },
+              "team2": {
+                "name": "BTR",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/btr-vit-64.png"
+              },
+              "score1": 2,
+              "score2": 1,
+              "replay_url": "https://www.youtube.com/watch?v=-M1_bwTRlHk"
+            },
+            {
+              "match_id": "1064",
+              "start_at": "2026-09-05T13:00:00+00:00",
+              "local_time": "20:00",
+              "team1": {
+                "name": "AE",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/ae-64.png"
+              },
+              "team2": {
+                "name": "GEEK",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/geek-64.png"
+              },
+              "score1": 2,
+              "score2": 0,
+              "replay_url": "https://www.youtube.com/watch?v=-M1_bwTRlHk"
+            }
+          ]
+        },
+        {
+          "day": null,
+          "label": "Sunday, 6 September 2026",
+          "matches": [
+            {
+              "match_id": "1065",
+              "start_at": "2026-09-06T07:00:00+00:00",
+              "local_time": "14:00",
+              "team1": {
+                "name": "RRQ",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/rrq-64.png"
+              },
+              "team2": {
+                "name": "NAVI",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/navi-64.png"
+              },
+              "score1": 0,
+              "score2": 2,
+              "replay_url": "https://www.youtube.com/watch?v=nu3RfzQdsec"
+            },
+            {
+              "match_id": "1066",
+              "start_at": "2026-09-06T10:00:00+00:00",
+              "local_time": "17:00",
+              "team1": {
+                "name": "ONIC",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/onic-b-64.png"
+              },
+              "team2": {
+                "name": "EVOS",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/evos-64.png"
+              },
+              "score1": 2,
+              "score2": 0,
+              "replay_url": "https://www.youtube.com/watch?v=nu3RfzQdsec"
+            },
+            {
+              "match_id": "1067",
+              "start_at": "2026-09-06T13:00:00+00:00",
+              "local_time": "20:00",
+              "team1": {
+                "name": "BTR",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/btr-vit-64.png"
+              },
+              "team2": {
+                "name": "AE",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/ae-64.png"
+              },
+              "score1": 0,
+              "score2": 2,
+              "replay_url": "https://www.youtube.com/watch?v=nu3RfzQdsec"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 5,
+      "days": [
+        {
+          "day": null,
+          "label": "Friday, 11 September 2026",
+          "matches": [
+            {
+              "match_id": "1069",
+              "start_at": "2026-09-11T11:00:00+00:00",
+              "local_time": "18:00",
+              "team1": {
+                "name": "GEEK",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/geek-64.png"
+              },
+              "team2": {
+                "name": "ONIC",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/onic-b-64.png"
+              },
+              "score1": 2,
+              "score2": 1,
+              "replay_url": "https://www.youtube.com/watch?v=TeegcSSZJbI"
+            }
+          ]
+        },
+        {
+          "day": null,
+          "label": "Saturday, 12 September 2026",
+          "matches": [
+            {
+              "match_id": "1070",
+              "start_at": "2026-09-12T07:00:00+00:00",
+              "local_time": "14:00",
+              "team1": {
+                "name": "TLID",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/tlid-64.png"
+              },
+              "team2": {
+                "name": "BTR",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/btr-vit-64.png"
+              },
+              "score1": 2,
+              "score2": 0,
+              "replay_url": "https://www.youtube.com/watch?v=ykgecDVRvlI"
+            },
+            {
+              "match_id": "1071",
+              "start_at": "2026-09-12T10:00:00+00:00",
+              "local_time": "17:00",
+              "team1": {
+                "name": "AE",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/ae-64.png"
+              },
+              "team2": {
+                "name": "RRQ",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/rrq-64.png"
+              },
+              "score1": 2,
+              "score2": 0,
+              "replay_url": "https://www.youtube.com/watch?v=ykgecDVRvlI"
+            },
+            {
+              "match_id": "1072",
+              "start_at": "2026-09-12T13:00:00+00:00",
+              "local_time": "20:00",
+              "team1": {
+                "name": "NAVI",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/navi-64.png"
+              },
+              "team2": {
+                "name": "EVOS",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/evos-64.png"
+              },
+              "score1": 2,
+              "score2": 0,
+              "replay_url": "https://www.youtube.com/watch?v=ykgecDVRvlI"
+            }
+          ]
+        },
+        {
+          "day": null,
+          "label": "Sunday, 13 September 2026",
+          "matches": [
+            {
+              "match_id": "1073",
+              "start_at": "2026-09-13T07:00:00+00:00",
+              "local_time": "14:00",
+              "team1": {
+                "name": "GEEK",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/geek-64.png"
+              },
+              "team2": {
+                "name": "TLID",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/tlid-64.png"
+              },
+              "score1": 0,
+              "score2": 2,
+              "replay_url": "https://www.youtube.com/watch?v=YPbOKyQltIo"
+            },
+            {
+              "match_id": "1074",
+              "start_at": "2026-09-13T10:00:00+00:00",
+              "local_time": "17:00",
+              "team1": {
+                "name": "ONIC",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/onic-b-64.png"
+              },
+              "team2": {
+                "name": "AE",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/ae-64.png"
+              },
+              "score1": 0,
+              "score2": 2,
+              "replay_url": "https://www.youtube.com/watch?v=YPbOKyQltIo"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "days": [
+        {
+          "day": null,
+          "label": "Friday, 18 September 2026",
+          "matches": [
+            {
+              "match_id": "1076",
+              "start_at": "2026-09-18T07:00:00+00:00",
+              "local_time": "14:00",
+              "team1": {
+                "name": "ONIC",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/onic-b-64.png"
+              },
+              "team2": {
+                "name": "GEEK",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/geek-64.png"
+              },
+              "score1": 0,
+              "score2": 2,
+              "replay_url": "https://www.youtube.com/watch?v=wRRWT8fO_h0"
+            },
+            {
+              "match_id": "1077",
+              "start_at": "2026-09-18T10:00:00+00:00",
+              "local_time": "17:00",
+              "team1": {
+                "name": "DEWA",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/dewa-64.png"
+              },
+              "team2": {
+                "name": "EVOS",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/evos-64.png"
+              },
+              "score1": 0,
+              "score2": 2,
+              "replay_url": "https://www.youtube.com/watch?v=wRRWT8fO_h0"
+            },
+            {
+              "match_id": "1075",
+              "start_at": "2026-09-18T13:00:00+00:00",
+              "local_time": "20:00",
+              "team1": {
+                "name": "RRQ",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/rrq-64.png"
+              },
+              "team2": {
+                "name": "DEWA",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/dewa-64.png"
+              },
+              "score1": 1,
+              "score2": 2,
+              "replay_url": "https://www.youtube.com/watch?v=wRRWT8fO_h0"
+            }
+          ]
+        },
+        {
+          "day": null,
+          "label": "Saturday, 19 September 2026",
+          "matches": [
+            {
+              "match_id": "1078",
+              "start_at": "2026-09-19T07:00:00+00:00",
+              "local_time": "14:00",
+              "team1": {
+                "name": "GEEK",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/geek-64.png"
+              },
+              "team2": {
+                "name": "NAVI",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/navi-64.png"
+              },
+              "score1": 0,
+              "score2": 2,
+              "replay_url": "https://www.youtube.com/watch?v=5tOPeDiETK0"
+            },
+            {
+              "match_id": "1079",
+              "start_at": "2026-09-19T10:00:00+00:00",
+              "local_time": "17:00",
+              "team1": {
+                "name": "RRQ",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/rrq-64.png"
+              },
+              "team2": {
+                "name": "AE",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/ae-64.png"
+              },
+              "score1": 1,
+              "score2": 2,
+              "replay_url": "https://www.youtube.com/watch?v=5tOPeDiETK0"
+            },
+            {
+              "match_id": "1080",
+              "start_at": "2026-09-19T13:00:00+00:00",
+              "local_time": "20:00",
+              "team1": {
+                "name": "BTR",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/btr-vit-64.png"
+              },
+              "team2": {
+                "name": "TLID",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/tlid-64.png"
+              },
+              "score1": 0,
+              "score2": 2,
+              "replay_url": "https://www.youtube.com/watch?v=5tOPeDiETK0"
+            }
+          ]
+        },
+        {
+          "day": null,
+          "label": "Sunday, 20 September 2026",
+          "matches": [
+            {
+              "match_id": "1081",
+              "start_at": "2026-09-20T07:00:00+00:00",
+              "local_time": "14:00",
+              "team1": {
+                "name": "AE",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/ae-64.png"
+              },
+              "team2": {
+                "name": "DEWA",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/dewa-64.png"
+              },
+              "score1": 0,
+              "score2": 2,
+              "replay_url": "https://www.youtube.com/watch?v=K30JsmMhQ4Q"
+            },
+            {
+              "match_id": "1082",
+              "start_at": "2026-09-20T10:00:00+00:00",
+              "local_time": "17:00",
+              "team1": {
+                "name": "BTR",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/btr-vit-64.png"
+              },
+              "team2": {
+                "name": "ONIC",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/onic-b-64.png"
+              },
+              "score1": 0,
+              "score2": 2,
+              "replay_url": "https://www.youtube.com/watch?v=K30JsmMhQ4Q"
+            },
+            {
+              "match_id": "1083",
+              "start_at": "2026-09-20T13:00:00+00:00",
+              "local_time": "20:00",
+              "team1": {
+                "name": "EVOS",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/evos-64.png"
+              },
+              "team2": {
+                "name": "TLID",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/tlid-64.png"
+              },
+              "score1": 2,
+              "score2": 1,
+              "replay_url": "https://www.youtube.com/watch?v=K30JsmMhQ4Q"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 7,
+      "days": [
+        {
+          "day": null,
+          "label": "Friday, 2 October 2026",
+          "matches": [
+            {
+              "match_id": "1084",
+              "start_at": "2026-10-02T08:00:00+00:00",
+              "local_time": "15:00",
+              "team1": {
+                "name": "GEEK",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/geek-64.png"
+              },
+              "team2": {
+                "name": "BTR",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/btr-vit-64.png"
+              },
+              "score1": 1,
+              "score2": 2,
+              "replay_url": "https://www.youtube.com/watch?v=Nd_s3qCnRPY"
+            },
+            {
+              "match_id": "1085",
+              "start_at": "2026-10-02T11:00:00+00:00",
+              "local_time": "18:00",
+              "team1": {
+                "name": "DEWA",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/dewa-64.png"
+              },
+              "team2": {
+                "name": "TLID",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/tlid-64.png"
+              },
+              "score1": 2,
+              "score2": 1,
+              "replay_url": "https://www.youtube.com/watch?v=Nd_s3qCnRPY"
+            }
+          ]
+        },
+        {
+          "day": null,
+          "label": "Saturday, 3 October 2026",
+          "matches": [
+            {
+              "match_id": "1086",
+              "start_at": "2026-10-03T07:00:00+00:00",
+              "local_time": "14:00",
+              "team1": {
+                "name": "AE",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/ae-64.png"
+              },
+              "team2": {
+                "name": "NAVI",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/navi-64.png"
+              },
+              "score1": 1,
+              "score2": 2,
+              "replay_url": "https://www.youtube.com/watch?v=px_HftyZBxo"
+            },
+            {
+              "match_id": "1087",
+              "start_at": "2026-10-03T10:00:00+00:00",
+              "local_time": "17:00",
+              "team1": {
+                "name": "BTR",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/btr-vit-64.png"
+              },
+              "team2": {
+                "name": "RRQ",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/rrq-64.png"
+              },
+              "score1": 2,
+              "score2": 1,
+              "replay_url": "https://www.youtube.com/watch?v=px_HftyZBxo"
+            },
+            {
+              "match_id": "1088",
+              "start_at": "2026-10-03T13:00:00+00:00",
+              "local_time": "20:00",
+              "team1": {
+                "name": "GEEK",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/geek-64.png"
+              },
+              "team2": {
+                "name": "DEWA",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/dewa-64.png"
+              },
+              "score1": 2,
+              "score2": 1,
+              "replay_url": "https://www.youtube.com/watch?v=px_HftyZBxo"
+            }
+          ]
+        },
+        {
+          "day": null,
+          "label": "Sunday, 4 October 2026",
+          "matches": [
+            {
+              "match_id": "1089",
+              "start_at": "2026-10-04T07:00:00+00:00",
+              "local_time": "14:00",
+              "team1": {
+                "name": "AE",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/ae-64.png"
+              },
+              "team2": {
+                "name": "TLID",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/tlid-64.png"
+              },
+              "score1": 0,
+              "score2": 2,
+              "replay_url": "https://www.youtube.com/watch?v=S7ugRA3UMjo"
+            },
+            {
+              "match_id": "1090",
+              "start_at": "2026-10-04T10:00:00+00:00",
+              "local_time": "17:00",
+              "team1": {
+                "name": "RRQ",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/rrq-64.png"
+              },
+              "team2": {
+                "name": "EVOS",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/evos-64.png"
+              },
+              "score1": 2,
+              "score2": 1,
+              "replay_url": "https://www.youtube.com/watch?v=S7ugRA3UMjo"
+            },
+            {
+              "match_id": "1091",
+              "start_at": "2026-10-04T13:00:00+00:00",
+              "local_time": "20:00",
+              "team1": {
+                "name": "ONIC",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/onic-b-64.png"
+              },
+              "team2": {
+                "name": "NAVI",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/navi-64.png"
+              },
+              "score1": 2,
+              "score2": 1,
+              "replay_url": "https://www.youtube.com/watch?v=S7ugRA3UMjo"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 8,
+      "days": [
+        {
+          "day": null,
+          "label": "Thursday, 8 October 2026",
+          "matches": [
+            {
+              "match_id": "1068",
+              "start_at": "2026-10-08T07:00:00+00:00",
+              "local_time": "14:00",
+              "team1": {
+                "name": "EVOS",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/evos-64.png"
+              },
+              "team2": {
+                "name": "DEWA",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/dewa-64.png"
+              },
+              "score1": 2,
+              "score2": 1,
+              "replay_url": "https://www.youtube.com/watch?v=7Fk2t0Kc9-Q"
+            },
+            {
+              "match_id": "1092",
+              "start_at": "2026-10-08T10:00:00+00:00",
+              "local_time": "17:00",
+              "team1": {
+                "name": "AE",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/ae-64.png"
+              },
+              "team2": {
+                "name": "BTR",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/btr-vit-64.png"
+              },
+              "score1": 2,
+              "score2": 0,
+              "replay_url": "https://www.youtube.com/watch?v=7Fk2t0Kc9-Q"
+            },
+            {
+              "match_id": "1093",
+              "start_at": "2026-10-08T13:00:00+00:00",
+              "local_time": "20:00",
+              "team1": {
+                "name": "NAVI",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/navi-64.png"
+              },
+              "team2": {
+                "name": "TLID",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/tlid-64.png"
+              },
+              "score1": 2,
+              "score2": 0,
+              "replay_url": "https://www.youtube.com/watch?v=7Fk2t0Kc9-Q"
+            }
+          ]
+        },
+        {
+          "day": null,
+          "label": "Friday, 9 October 2026",
+          "matches": [
+            {
+              "match_id": "1094",
+              "start_at": "2026-10-09T07:00:00+00:00",
+              "local_time": "14:00",
+              "team1": {
+                "name": "EVOS",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/evos-64.png"
+              },
+              "team2": {
+                "name": "ONIC",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/onic-b-64.png"
+              },
+              "score1": 2,
+              "score2": 1,
+              "replay_url": "https://www.youtube.com/watch?v=VWScHYPW7Qc"
+            },
+            {
+              "match_id": "1095",
+              "start_at": "2026-10-09T10:00:00+00:00",
+              "local_time": "17:00",
+              "team1": {
+                "name": "RRQ",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/rrq-64.png"
+              },
+              "team2": {
+                "name": "TLID",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/tlid-64.png"
+              },
+              "score1": 0,
+              "score2": 2,
+              "replay_url": "https://www.youtube.com/watch?v=VWScHYPW7Qc"
+            },
+            {
+              "match_id": "1096",
+              "start_at": "2026-10-09T13:00:00+00:00",
+              "local_time": "20:00",
+              "team1": {
+                "name": "DEWA",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/dewa-64.png"
+              },
+              "team2": {
+                "name": "NAVI",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/navi-64.png"
+              },
+              "score1": 0,
+              "score2": 2,
+              "replay_url": "https://www.youtube.com/watch?v=VWScHYPW7Qc"
+            }
+          ]
+        },
+        {
+          "day": null,
+          "label": "Sunday, 11 October 2026",
+          "matches": [
+            {
+              "match_id": "1097",
+              "start_at": "2026-10-11T07:00:00+00:00",
+              "local_time": "14:00",
+              "team1": {
+                "name": "EVOS",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/evos-64.png"
+              },
+              "team2": {
+                "name": "GEEK",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/geek-64.png"
+              },
+              "score1": 0,
+              "score2": 2,
+              "replay_url": "https://www.youtube.com/watch?v=jz3rH4xDoak"
+            },
+            {
+              "match_id": "1098",
+              "start_at": "2026-10-11T10:00:00+00:00",
+              "local_time": "17:00",
+              "team1": {
+                "name": "RRQ",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/rrq-64.png"
+              },
+              "team2": {
+                "name": "ONIC",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/onic-b-64.png"
+              },
+              "score1": 1,
+              "score2": 2,
+              "replay_url": "https://www.youtube.com/watch?v=jz3rH4xDoak"
+            },
+            {
+              "match_id": "1099",
+              "start_at": "2026-10-11T13:00:00+00:00",
+              "local_time": "20:00",
+              "team1": {
+                "name": "DEWA",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/dewa-64.png"
+              },
+              "team2": {
+                "name": "BTR",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/btr-vit-64.png"
+              },
+              "score1": 0,
+              "score2": 2,
+              "replay_url": "https://www.youtube.com/watch?v=jz3rH4xDoak"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 9,
+      "days": [
+        {
+          "day": null,
+          "label": "Friday, 16 October 2026",
+          "matches": [
+            {
+              "match_id": null,
+              "start_at": "2026-10-16T08:00:00+00:00",
+              "local_time": "15:00",
+              "team1": {
+                "name": "NAVI",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/navi-64.png"
+              },
+              "team2": {
+                "name": "RRQ",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/rrq-64.png"
+              },
+              "score1": null,
+              "score2": null,
+              "replay_url": null
+            },
+            {
+              "match_id": null,
+              "start_at": "2026-10-16T11:00:00+00:00",
+              "local_time": "18:00",
+              "team1": {
+                "name": "GEEK",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/geek-64.png"
+              },
+              "team2": {
+                "name": "AE",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/ae-64.png"
+              },
+              "score1": null,
+              "score2": null,
+              "replay_url": null
+            }
+          ]
+        },
+        {
+          "day": null,
+          "label": "Saturday, 17 October 2026",
+          "matches": [
+            {
+              "match_id": null,
+              "start_at": "2026-10-17T07:00:00+00:00",
+              "local_time": "14:00",
+              "team1": {
+                "name": "ONIC",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/onic-b-64.png"
+              },
+              "team2": {
+                "name": "DEWA",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/dewa-64.png"
+              },
+              "score1": null,
+              "score2": null,
+              "replay_url": null
+            },
+            {
+              "match_id": null,
+              "start_at": "2026-10-17T10:00:00+00:00",
+              "local_time": "17:00",
+              "team1": {
+                "name": "BTR",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/btr-vit-64.png"
+              },
+              "team2": {
+                "name": "EVOS",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/evos-64.png"
+              },
+              "score1": null,
+              "score2": null,
+              "replay_url": null
+            },
+            {
+              "match_id": null,
+              "start_at": "2026-10-17T13:00:00+00:00",
+              "local_time": "20:00",
+              "team1": {
+                "name": "RRQ",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/rrq-64.png"
+              },
+              "team2": {
+                "name": "GEEK",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/geek-64.png"
+              },
+              "score1": null,
+              "score2": null,
+              "replay_url": null
+            }
+          ]
+        },
+        {
+          "day": null,
+          "label": "Sunday, 18 October 2026",
+          "matches": [
+            {
+              "match_id": null,
+              "start_at": "2026-10-18T07:00:00+00:00",
+              "local_time": "14:00",
+              "team1": {
+                "name": "EVOS",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/evos-64.png"
+              },
+              "team2": {
+                "name": "AE",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/ae-64.png"
+              },
+              "score1": null,
+              "score2": null,
+              "replay_url": null
+            },
+            {
+              "match_id": null,
+              "start_at": "2026-10-18T10:00:00+00:00",
+              "local_time": "17:00",
+              "team1": {
+                "name": "NAVI",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/navi-64.png"
+              },
+              "team2": {
+                "name": "BTR",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/btr-vit-64.png"
+              },
+              "score1": null,
+              "score2": null,
+              "replay_url": null
+            },
+            {
+              "match_id": null,
+              "start_at": "2026-10-18T13:00:00+00:00",
+              "local_time": "20:00",
+              "team1": {
+                "name": "ONIC",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/onic-b-64.png"
+              },
+              "team2": {
+                "name": "TLID",
+                "full_name": null,
+                "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/tlid-64.png"
+              },
+              "score1": null,
+              "score2": null,
+              "replay_url": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

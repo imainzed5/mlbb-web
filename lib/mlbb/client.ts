@@ -32,6 +32,17 @@ type MlbbFetchOptions = {
   searchParams?: Record<string, number | string | null | undefined>;
 };
 
+export function isPublicMlbbOperation(path: string, method: "GET" | "POST") {
+  const pathname = path.split("?")[0];
+  if (method === "POST") {
+    return /^\/esports\/(?:ph|id)\/standings\/simulate$/.test(pathname) ||
+      pathname === "/esports/standings/calculate";
+  }
+  return /^\/(?:heroes|academy)(?:\/|$)/.test(pathname) ||
+    pathname === "/addon/win-rate-calculator" ||
+    /^\/esports\/(?:ph|id)\/(?:schedule|standings|matches\/[a-z0-9-]+)$/.test(pathname);
+}
+
 type MlbbMutationOptions<BodyType> = {
   body?: BodyType;
 } & MlbbFetchOptions;
@@ -136,13 +147,14 @@ async function fetchMlbbResponse(
     method: "GET" | "POST";
     options?: MlbbFetchOptions;
     publicCollection?: boolean;
+    validate?: (payload: unknown) => void;
   }
 ) {
   const baseUrlQueue = getBaseUrlCandidates();
   const attemptedBaseUrls = new Set<string>();
   let lastError: MlbbApiError | null = null;
 
-  while (baseUrlQueue.length > 0) {
+  while (baseUrlQueue.length > 0 && attemptedBaseUrls.size < 4) {
     const baseUrl = baseUrlQueue.shift();
 
     if (!baseUrl || attemptedBaseUrls.has(baseUrl)) {
@@ -178,6 +190,7 @@ async function fetchMlbbResponse(
         cache: request.options?.revalidate ? undefined : "no-store",
         headers,
         method: request.method,
+        signal: AbortSignal.timeout(request.method === "POST" ? 20000 : 8000),
         next: request.options?.revalidate
           ? { revalidate: request.options.revalidate }
           : undefined,
@@ -194,6 +207,16 @@ async function fetchMlbbResponse(
     }
 
     if (response.ok) {
+      if (request.validate) {
+        try {
+          request.validate(await response.clone().json());
+        } catch (error) {
+          lastError = new MlbbApiError("MLBB API returned an invalid response.", {
+            url: url.toString(), status: response.status, cause: error,
+          });
+          continue;
+        }
+      }
       return {
         response,
         url,
@@ -218,7 +241,7 @@ async function fetchMlbbResponse(
     );
 
     // The canonical host can deny public requests from hosting providers.
-    // Try the provider's backup for public hero data; authenticated requests
+    // Try the provider's backup for allowed public data; authenticated requests
     // retain their authorization failures instead of retrying on 403.
     if (!shouldRetryWithFallback(response.status) &&
       !(request.publicCollection && response.status === 403)) {
@@ -240,7 +263,7 @@ async function fetchValidatedCollection<RecordType>(
   const { response, url } = await fetchMlbbResponse(path, {
     method: "GET",
     options: { ...options, revalidate: 0 },
-    publicCollection: !options?.headers && /^\/heroes(?:[/?]|$)/.test(path),
+    publicCollection: !options?.headers && isPublicMlbbOperation(path, "GET"),
   });
 
   const payload = (await response.json()) as MlbbCollectionResponse<RecordType>;
@@ -260,6 +283,31 @@ async function fetchValidatedCollection<RecordType>(
   }
 
   return payload;
+}
+
+/** Public computations and structured resources have dedicated validators. */
+export async function fetchMlbbPublicResource<T>(
+  path: string,
+  validate: (payload: unknown) => T,
+  options: { revalidate?: number; body?: unknown } = {}
+): Promise<T> {
+  const method = options.body === undefined ? "GET" : "POST";
+  if (!isPublicMlbbOperation(path, method)) {
+    throw new MlbbApiError("Unsupported public MLBB operation.");
+  }
+  const load = async () => {
+    const { response } = await fetchMlbbResponse(path, {
+      method,
+      body: options.body === undefined ? undefined : JSON.stringify(options.body),
+      publicCollection: true,
+      validate,
+    });
+    return validate(await response.json());
+  };
+  if (method === "POST" || !options.revalidate || options.revalidate <= 0) return load();
+  return unstable_cache(load, ["mlbb-public-v1", path,
+    JSON.stringify(getBaseUrlCandidates()), DEFAULT_LANGUAGE, String(options.revalidate), validate.toString()],
+  { revalidate: options.revalidate })();
 }
 
 export async function fetchMlbbCollection<RecordType>(

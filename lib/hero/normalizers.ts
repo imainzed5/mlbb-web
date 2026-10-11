@@ -182,6 +182,7 @@ function normalizeTalent(node: RawHeroEmblemSkillNode | null | undefined) {
       cleanText(node?.emblemskill?.skilldescemblem) ||
       null,
     icon: node?.emblemskill?.skillicon ?? null,
+    catalogId: node?.giftid ? `talent-${node.giftid}` : null,
     name,
     tier: node?.gifttiers ?? null,
   };
@@ -199,6 +200,7 @@ function normalizeBuildPlan(plan: RawHeroRecommendedPlan): HeroBuildPlan | null 
 
       return {
         icon: item.equipicon ?? null,
+        catalogId: item.equipid ? String(item.equipid) : null,
         name,
         passiveText: splitCopy(item.equipskilldesc),
         statText: splitCopy(item.equiptips),
@@ -231,6 +233,7 @@ function normalizeBuildPlan(plan: RawHeroRecommendedPlan): HeroBuildPlan | null 
           cleanText(plan.battleskill?.__data?.skilldescemblem) ||
           null,
         icon: plan.battleskill?.__data?.skillicon ?? null,
+        catalogId: plan.battleskill?.battleskillid ? String(plan.battleskill.battleskillid) : null,
         name: battleSpellName,
       }
     : null;

@@ -1,0 +1,166 @@
+{
+  "standings": [
+    {
+      "rank": 1,
+      "team": {
+        "name": "NAVI",
+        "full_name": "NAVI",
+        "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/navi-64.png"
+      },
+      "match_point": 11,
+      "match_wl": {
+        "win": 11,
+        "lose": 3
+      },
+      "net_game_win": 14,
+      "game_wl": {
+        "win": 23,
+        "lose": 9
+      }
+    },
+    {
+      "rank": 2,
+      "team": {
+        "name": "TLID",
+        "full_name": "TEAM LIQUID ID",
+        "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/tlid-64.png"
+      },
+      "match_point": 11,
+      "match_wl": {
+        "win": 11,
+        "lose": 4
+      },
+      "net_game_win": 13,
+      "game_wl": {
+        "win": 24,
+        "lose": 11
+      }
+    },
+    {
+      "rank": 3,
+      "team": {
+        "name": "AE",
+        "full_name": "ALTER EGO ESPORTS",
+        "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/ae-64.png"
+      },
+      "match_point": 9,
+      "match_wl": {
+        "win": 9,
+        "lose": 5
+      },
+      "net_game_win": 9,
+      "game_wl": {
+        "win": 20,
+        "lose": 11
+      }
+    },
+    {
+      "rank": 4,
+      "team": {
+        "name": "BTR",
+        "full_name": "BIGETRON BY VIT",
+        "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/btr-vit-64.png"
+      },
+      "match_point": 8,
+      "match_wl": {
+        "win": 8,
+        "lose": 6
+      },
+      "net_game_win": 0,
+      "game_wl": {
+        "win": 17,
+        "lose": 17
+      }
+    },
+    {
+      "rank": 5,
+      "team": {
+        "name": "EVOS",
+        "full_name": "EVOS",
+        "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/evos-64.png"
+      },
+      "match_point": 7,
+      "match_wl": {
+        "win": 7,
+        "lose": 7
+      },
+      "net_game_win": -2,
+      "game_wl": {
+        "win": 16,
+        "lose": 18
+      }
+    },
+    {
+      "rank": 6,
+      "team": {
+        "name": "ONIC",
+        "full_name": "ONIC",
+        "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/onic-b-64.png"
+      },
+      "match_point": 6,
+      "match_wl": {
+        "win": 6,
+        "lose": 8
+      },
+      "net_game_win": -1,
+      "game_wl": {
+        "win": 17,
+        "lose": 18
+      }
+    },
+    {
+      "rank": 7,
+      "team": {
+        "name": "DEWA",
+        "full_name": "DEWA UNITED",
+        "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/dewa-64.png"
+      },
+      "match_point": 5,
+      "match_wl": {
+        "win": 5,
+        "lose": 10
+      },
+      "net_game_win": -10,
+      "game_wl": {
+        "win": 13,
+        "lose": 23
+      }
+    },
+    {
+      "rank": 8,
+      "team": {
+        "name": "GEEK",
+        "full_name": "GEEK FAM",
+        "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/geek-64.png"
+      },
+      "match_point": 4,
+      "match_wl": {
+        "win": 4,
+        "lose": 10
+      },
+      "net_game_win": -10,
+      "game_wl": {
+        "win": 12,
+        "lose": 22
+      }
+    },
+    {
+      "rank": 9,
+      "team": {
+        "name": "RRQ",
+        "full_name": "RRQ HOSHI",
+        "logo": "https://wsrv.nl/?url=https://ik.imagekit.io/nloe8dhf7w/mplid/s14/teams/rrq-64.png"
+      },
+      "match_point": 3,
+      "match_wl": {
+        "win": 3,
+        "lose": 11
+      },
+      "net_game_win": -13,
+      "game_wl": {
+        "win": 11,
+        "lose": 24
+      }
+    }
+  ]
+}

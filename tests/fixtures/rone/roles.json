@@ -1,0 +1,276 @@
+{
+  "code": 0,
+  "message": "OK",
+  "data": {
+    "records": [
+      {
+        "_id": "6698bd01613093b976b4a90b",
+        "caption": "通用",
+        "configId": 144237,
+        "createdAt": 1721285889064,
+        "data": {
+          "_object": 2740627,
+          "emblem_detail": {
+            "_createdAt": 1723097697235,
+            "_id": "66b46261f25dc3aacf517fa1",
+            "_updatedAt": 1727436297890,
+            "data": {
+              "attriicon": "https://wsrv.nl/?url=https%3A%2F%2Fakmweb.youngjoygame.com%2Fweb%2Fsvnres%2Fimg%2Fmlbb%2Fhomepage%2F100_4e0cd7364830b178279479bff1146e5e.png",
+              "attriicon2": "",
+              "emblemattr": {
+                "emblemattr": "+12 HP Regen\n+12 Mana Regen\n+275 Extra Max HP\n+22 Adaptive Attack\n",
+                "emblemattrid": "2000160",
+                "emblemname": "All"
+              },
+              "emblembg": 0,
+              "emblemid": 20001,
+              "emblemname": "All"
+            },
+            "id": 100050,
+            "sourceId": 2718120
+          },
+          "emblem_icon": "https://wsrv.nl/?url=https%3A%2F%2Fakmweb.youngjoygame.com%2Fweb%2Fgms%2Fimage%2Fcf9a85ddcdc9d53f3a1b76f8d8965d53.svg",
+          "emblem_id": 20001,
+          "emblem_title": "All"
+        },
+        "dynamic": null,
+        "id": 2740640,
+        "linkId": [
+          2740627
+        ],
+        "sort": 0,
+        "updatedAt": 1721287925214
+      },
+      {
+        "_id": "6698bd01613093b976b4a90f",
+        "caption": "坦克",
+        "configId": 144237,
+        "createdAt": 1721285889076,
+        "data": {
+          "_object": 2740627,
+          "emblem_detail": {
+            "_createdAt": 1723097697235,
+            "_id": "66b46261f25dc3aacf517fa0",
+            "_updatedAt": 1727436297890,
+            "data": {
+              "attriicon": "https://wsrv.nl/?url=https%3A%2F%2Fakmweb.youngjoygame.com%2Fweb%2Fsvnres%2Fimg%2Fmlbb%2Fhomepage%2F100_9854de7cfbb30c9fb0002521a274be4c.png",
+              "attriicon2": "",
+              "emblemattr": {
+                "emblemattr": "+500 Extra Max HP\n+10 Extra Physical Defense\n+10 Extra Magic Defense\n+4 HP Regen\n",
+                "emblemattrid": "2000360",
+                "emblemname": "Tank"
+              },
+              "emblembg": 0,
+              "emblemid": 20003,
+              "emblemname": "Tank"
+            },
+            "id": 100049,
+            "sourceId": 2718120
+          },
+          "emblem_icon": "https://wsrv.nl/?url=https%3A%2F%2Fakmweb.youngjoygame.com%2Fweb%2Fgms%2Fimage%2F7184e72d9151b05a25b365e5a5058b10.svg",
+          "emblem_id": 20003,
+          "emblem_title": "Tank"
+        },
+        "dynamic": null,
+        "id": 2740641,
+        "linkId": [
+          2740627
+        ],
+        "sort": 0,
+        "updatedAt": 1721287916467
+      },
+      {
+        "_id": "6698bd01613093b976b4a907",
+        "caption": "刺客",
+        "configId": 144237,
+        "createdAt": 1721285889050,
+        "data": {
+          "_object": 2740627,
+          "emblem_detail": {
+            "_createdAt": 1723097697235,
+            "_id": "66b46261f25dc3aacf517fa3",
+            "_updatedAt": 1723097697235,
+            "data": {
+              "attriicon": "https://wsrv.nl/?url=https%3A%2F%2Fakmweb.youngjoygame.com%2Fweb%2Fsvnres%2Fimg%2Fmlbb%2Fhomepage%2F100_ae89ce5b37dcd804686133c8d7044430.png",
+              "attriicon2": "",
+              "emblemattr": {
+                "emblemattr": "+14 Adaptive Penetration\n+10 Adaptive Attack\n+3% Movement Speed\n",
+                "emblemattrid": "2000560",
+                "emblemname": "Assassin"
+              },
+              "emblembg": 0,
+              "emblemid": 20005,
+              "emblemname": "Assassin"
+            },
+            "id": 100052,
+            "sourceId": 2718120
+          },
+          "emblem_icon": "https://wsrv.nl/?url=https%3A%2F%2Fakmweb.youngjoygame.com%2Fweb%2Fgms%2Fimage%2F74f8552eeb50d7def8ad60c8930cacd9.svg",
+          "emblem_id": 20005,
+          "emblem_title": "Assassin"
+        },
+        "dynamic": null,
+        "id": 2740639,
+        "linkId": [
+          2740627
+        ],
+        "sort": 0,
+        "updatedAt": 1721287932888
+      },
+      {
+        "_id": "6698bd01613093b976b4a8fd",
+        "caption": "法师",
+        "configId": 144237,
+        "createdAt": 1721285889007,
+        "data": {
+          "_object": 2740627,
+          "emblem_detail": {
+            "_createdAt": 1723097697235,
+            "_id": "66b46261f25dc3aacf517fa2",
+            "_updatedAt": 1723097697235,
+            "data": {
+              "attriicon": "https://wsrv.nl/?url=https%3A%2F%2Fakmweb.youngjoygame.com%2Fweb%2Fsvnres%2Fimg%2Fmlbb%2Fhomepage%2F100_c7febdebe70929be98c7007af3cd0f3a.png",
+              "attriicon2": "",
+              "emblemattr": {
+                "emblemattr": "+30 Magic Power\n+5% Cooldown Reduction\n+8 Magic Penetration\n",
+                "emblemattrid": "2000660",
+                "emblemname": "Mage"
+              },
+              "emblembg": 0,
+              "emblemid": 20006,
+              "emblemname": "Mage"
+            },
+            "id": 100051,
+            "sourceId": 2718120
+          },
+          "emblem_icon": "https://wsrv.nl/?url=https%3A%2F%2Fakmweb.youngjoygame.com%2Fweb%2Fgms%2Fimage%2F5a15f2782cf102f2cb9b3959132cef0a.svg",
+          "emblem_id": 20006,
+          "emblem_title": "Mage"
+        },
+        "dynamic": null,
+        "id": 2740635,
+        "linkId": [
+          2740627
+        ],
+        "sort": 0,
+        "updatedAt": 1721287964017
+      },
+      {
+        "_id": "6698bd01613093b976b4a8ff",
+        "caption": "战士",
+        "configId": 144237,
+        "createdAt": 1721285889030,
+        "data": {
+          "_object": 2740627,
+          "emblem_detail": {
+            "_createdAt": 1723097697235,
+            "_id": "66b46261f25dc3aacf517fa4",
+            "_updatedAt": 1727436297890,
+            "data": {
+              "attriicon": "https://wsrv.nl/?url=https%3A%2F%2Fakmweb.youngjoygame.com%2Fweb%2Fsvnres%2Fimg%2Fmlbb%2Fhomepage%2F100_2153bf01770633e3251dea1f2ac6c956.png",
+              "attriicon2": "",
+              "emblemattr": {
+                "emblemattr": "+10% Spell Vamp\n+22 Adaptive Attack\n+6 Extra Physical Defense\n+6 Extra Magic Defense\n",
+                "emblemattrid": "2000760",
+                "emblemname": "Fighter"
+              },
+              "emblembg": 0,
+              "emblemid": 20007,
+              "emblemname": "Fighter"
+            },
+            "id": 100053,
+            "sourceId": 2718120
+          },
+          "emblem_icon": "https://wsrv.nl/?url=https%3A%2F%2Fakmweb.youngjoygame.com%2Fweb%2Fgms%2Fimage%2F36abca67530ccc9cf9902fdc4d5af42f.svg",
+          "emblem_id": 20007,
+          "emblem_title": "Fighter"
+        },
+        "dynamic": null,
+        "id": 2740637,
+        "linkId": [
+          2740627
+        ],
+        "sort": 0,
+        "updatedAt": 1721287948684
+      },
+      {
+        "_id": "6698bd01613093b976b4a903",
+        "caption": "辅助",
+        "configId": 144237,
+        "createdAt": 1721285889041,
+        "data": {
+          "_object": 2740627,
+          "emblem_detail": {
+            "_createdAt": 1723097697235,
+            "_id": "66b46261f25dc3aacf517fa5",
+            "_updatedAt": 1723097697235,
+            "data": {
+              "attriicon": "https://wsrv.nl/?url=https%3A%2F%2Fakmweb.youngjoygame.com%2Fweb%2Fsvnres%2Fimg%2Fmlbb%2Fhomepage%2F100_3bd7417bce76995285722e25d8ff5ebd.png",
+              "attriicon2": "",
+              "emblemattr": {
+                "emblemattr": "+12% Healing Effect\n+10% Cooldown Reduction\n+6% Movement Speed\n",
+                "emblemattrid": "2000860",
+                "emblemname": "Support"
+              },
+              "emblembg": 0,
+              "emblemid": 20008,
+              "emblemname": "Support"
+            },
+            "id": 100054,
+            "sourceId": 2718120
+          },
+          "emblem_icon": "https://wsrv.nl/?url=https%3A%2F%2Fakmweb.youngjoygame.com%2Fweb%2Fgms%2Fimage%2F45c6a344b2aa53272aba17db5d752d07.svg",
+          "emblem_id": 20008,
+          "emblem_title": "Support"
+        },
+        "dynamic": null,
+        "id": 2740638,
+        "linkId": [
+          2740627
+        ],
+        "sort": 0,
+        "updatedAt": 1721287940606
+      },
+      {
+        "_id": "6698bd01613093b976b4a8fe",
+        "caption": "射手",
+        "configId": 144237,
+        "createdAt": 1721285889020,
+        "data": {
+          "_object": 2740627,
+          "emblem_detail": {
+            "_createdAt": 1723097697235,
+            "_id": "66b46261f25dc3aacf517fa6",
+            "_updatedAt": 1727436297890,
+            "data": {
+              "attriicon": "https://wsrv.nl/?url=https%3A%2F%2Fakmweb.youngjoygame.com%2Fweb%2Fsvnres%2Fimg%2Fmlbb%2Fhomepage%2F100_99f3b68d12e90a6cf8f465ff3a71c850.png",
+              "attriicon2": "",
+              "emblemattr": {
+                "emblemattr": "+15% Extra Attack Speed\n+16 Adaptive Attack\n+5% Lifesteal\n",
+                "emblemattrid": "2001260",
+                "emblemname": "Marksman"
+              },
+              "emblembg": 0,
+              "emblemid": 20012,
+              "emblemname": "Marksman"
+            },
+            "id": 100055,
+            "sourceId": 2718120
+          },
+          "emblem_icon": "https://wsrv.nl/?url=https%3A%2F%2Fakmweb.youngjoygame.com%2Fweb%2Fgms%2Fimage%2F3c1eae71693619993d42539348d610f2.svg",
+          "emblem_id": 20012,
+          "emblem_title": "Marksman"
+        },
+        "dynamic": null,
+        "id": 2740636,
+        "linkId": [
+          2740627
+        ],
+        "sort": 0,
+        "updatedAt": 1721287955812
+      }
+    ],
+    "total": 7
+  },
+  "traceID": null
+}

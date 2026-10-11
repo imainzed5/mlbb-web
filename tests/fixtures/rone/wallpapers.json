@@ -1,0 +1,244 @@
+{
+  "code": 0,
+  "message": "OK",
+  "data": {
+    "records": [
+      {
+        "_id": "6aa12bc237d3aef1633662af",
+        "configId": 144237,
+        "id": 3500261,
+        "caption": "10th_allheroes",
+        "data": {
+          "_object": 3254983,
+          "channel": [
+            {
+              "_object": 2677469,
+              "id": 3255313,
+              "parent": {
+                "_object": 2677469,
+                "id": 3255311
+              },
+              "sort": 1,
+              "title": "Wallpaper"
+            }
+          ],
+          "heroid": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88,
+            89,
+            90,
+            91,
+            92,
+            93,
+            94,
+            95,
+            96,
+            97,
+            98,
+            99,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110,
+            111,
+            112,
+            113,
+            114,
+            115,
+            116,
+            117,
+            118,
+            119,
+            120,
+            121,
+            122,
+            123,
+            124,
+            125,
+            126,
+            127,
+            128,
+            129,
+            130,
+            131,
+            132,
+            133
+          ],
+          "pictures": [
+            {
+              "md5": "",
+              "resolution": "1920x1080",
+              "url": "https://wsrv.nl/?url=https%3A%2F%2Fakmweb.youngjoygame.com%2Fweb%2Fgms%2Fimage%2F3771c7d64b937545fa387e4b5ae82d34.jpg"
+            },
+            {
+              "md5": "",
+              "resolution": "2560x1440",
+              "url": "https://wsrv.nl/?url=https%3A%2F%2Fakmweb.youngjoygame.com%2Fweb%2Fgms%2Fimage%2Fec0b0b6425caec552e252f84524ac8cd.jpg"
+            },
+            {
+              "md5": "",
+              "resolution": "1080x2400",
+              "url": "https://wsrv.nl/?url=https%3A%2F%2Fakmweb.youngjoygame.com%2Fweb%2Fgms%2Fimage%2Fa8f7a23110f75f25dad479bcc8520922.jpg"
+            },
+            {
+              "md5": "",
+              "resolution": "1080x1920",
+              "url": "https://wsrv.nl/?url=https%3A%2F%2Fakmweb.youngjoygame.com%2Fweb%2Fgms%2Fimage%2Fa908664852cc4e62dbaa2921b9158f39.png"
+            }
+          ],
+          "skinid": "/",
+          "update_time": 1788948000000
+        },
+        "dynamic": null,
+        "createdAt": 1788947394429,
+        "updatedAt": 1789025875302,
+        "linkId": [
+          3254983,
+          3255313
+        ],
+        "sort": 0
+      },
+      {
+        "_id": "6a86cd4d10c5d60a7b6d4d7f",
+        "configId": 144237,
+        "id": 3496638,
+        "caption": "108_aulus_skin05",
+        "data": {
+          "_object": 3254983,
+          "channel": [
+            {
+              "_object": 2677469,
+              "id": 3255313,
+              "parent": {
+                "_object": 2677469,
+                "id": 3255311
+              },
+              "sort": 1,
+              "title": "Wallpaper"
+            }
+          ],
+          "heroid": [
+            108
+          ],
+          "pictures": [
+            {
+              "md5": "4a959265612dae59895ccf0f36dcd46f",
+              "resolution": "1920x1080",
+              "url": "https://wsrv.nl/?url=https%3A%2F%2Fakmweb.youngjoygame.com%2Fweb%2Fgms%2Fimage%2F4a959265612dae59895ccf0f36dcd46f.jpg"
+            },
+            {
+              "md5": "1d779421e297a7e7b0ce9e53d6e17bb7",
+              "resolution": "2560x1440",
+              "url": "https://wsrv.nl/?url=https%3A%2F%2Fakmweb.youngjoygame.com%2Fweb%2Fgms%2Fimage%2F1d779421e297a7e7b0ce9e53d6e17bb7.jpg"
+            }
+          ],
+          "skinid": "skin05",
+          "update_time": 1785513600000
+        },
+        "dynamic": null,
+        "createdAt": 1787219277069,
+        "updatedAt": 1787219277069,
+        "linkId": [
+          3254983,
+          3255313
+        ],
+        "sort": 0
+      }
+    ],
+    "total": 7
+  },
+  "traceID": null
+}
