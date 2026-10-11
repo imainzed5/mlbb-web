@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 
 import {
   CartesianGrid,
@@ -21,6 +21,7 @@ type HeroTrendChartProps = {
 const axisFormatter = new Intl.DateTimeFormat("en-US", {
   day: "numeric",
   month: "short",
+  timeZone: "UTC",
 });
 
 function formatDateLabel(value: string) {
@@ -28,12 +29,12 @@ function formatDateLabel(value: string) {
   return Number.isNaN(date.getTime()) ? value : axisFormatter.format(date);
 }
 
-export function HeroTrendChart({ points }: HeroTrendChartProps) {
-  const [isMounted, setIsMounted] = useState(false);
+const subscribeToHydration = () => () => {};
+const clientSnapshot = () => true;
+const serverSnapshot = () => false;
 
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
+export function HeroTrendChart({ points }: HeroTrendChartProps) {
+  const isMounted = useSyncExternalStore(subscribeToHydration, clientSnapshot, serverSnapshot);
 
   if (!isMounted) {
     return (
@@ -46,7 +47,7 @@ export function HeroTrendChart({ points }: HeroTrendChartProps) {
 
   return (
     <div className="h-[280px] w-full overflow-hidden rounded-xl">
-      <ResponsiveContainer>
+      <ResponsiveContainer initialDimension={{ width: 1, height: 280 }}>
         <LineChart data={points} margin={{ top: 8, right: 8, bottom: 0, left: 0 }}>
           <CartesianGrid stroke="rgba(90, 100, 119, 0.28)" vertical={false} />
           <XAxis

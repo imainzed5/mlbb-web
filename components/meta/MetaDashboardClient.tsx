@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { startTransition, useEffect, useState } from "react";
+import { formatPublicTimestamp } from "@/lib/date-time";
 
 import { HeroAvatarImage } from "@/components/heroes/HeroAvatarImage";
 import { RoleBadge } from "@/components/heroes/RoleBadge";
@@ -103,10 +104,7 @@ export function MetaDashboardClient({ data }: MetaDashboardClientProps) {
   const activeRole = normalizeMetaRole(searchParams.get("role") ?? data.filters.role);
   const activeRank = normalizeHeroDetailRank(searchParams.get("rank") ?? data.filters.rank);
   const view = deriveMetaDashboardView(dashboardData.heroes, activeLane, activeRole);
-  const generatedAt = new Intl.DateTimeFormat("en-US", {
-    dateStyle: "medium",
-    timeStyle: "short",
-  }).format(new Date(dashboardData.generatedAt));
+  const generatedAt = formatPublicTimestamp(dashboardData.generatedAt);
 
   useEffect(() => {
     setDashboardData(data);

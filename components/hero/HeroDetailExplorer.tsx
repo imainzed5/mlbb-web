@@ -15,6 +15,7 @@ import {
   normalizeHeroTrendWindow,
 } from "@/lib/hero/constants";
 import type { HeroPageData } from "@/lib/hero/types";
+import { formatPublicTimestamp } from "@/lib/date-time";
 
 type HeroDetailExplorerProps = {
   initialData: HeroPageData;
@@ -124,13 +125,10 @@ export function HeroDetailExplorer({ initialData, slug }: HeroDetailExplorerProp
       isActive = false;
       controller.abort();
     };
-  }, [activeRank, activeTrendWindow, initialData, slug]);
+  }, [activeRank, activeTrendWindow, initialData, slug, detailData.overview.slug, detailData.filters.rank, detailData.filters.trendWindow]);
 
   const latestTrend = detailData.trends[detailData.trends.length - 1] ?? null;
-  const generatedAt = new Intl.DateTimeFormat("en-US", {
-    dateStyle: "medium",
-    timeStyle: "short",
-  }).format(new Date(detailData.generatedAt));
+  const generatedAt = formatPublicTimestamp(detailData.generatedAt);
 
   return (
     <div className="min-w-0 space-y-5">

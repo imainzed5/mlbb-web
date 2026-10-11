@@ -74,6 +74,14 @@ These are baseline observations, not completed expansion tasks. Recheck changing
 
 ## Verification record template
 
+### Production audit and hydration repair — October 12, 2026
+
+- Release pushed to main; GitHub/Vercel Production deployment `6998598370` successfully deployed `44efa10`. Detailed route, data, image, calculator, scenario and metadata evidence migrated to `docs/qa/rone-expansion-verification.md`.
+- Production browser diagnostics exposed hero timestamp text hydration error 418: Vercel server and browser default timezones disagreed. Shared explicit UTC+8 timestamp formatting now covers hero server/client and meta client. Added a three-timezone regression test: total 22/22 tests pass.
+- Chart date-only ticks now use UTC and ResponsiveContainer has positive initial dimensions. Replaced the existing chart mount effect with hydration-aware external-store snapshots; included missing hero refresh dependencies. Targeted lint and final exact-source build are running. Do not deploy an unverified fix or remove temporary docs before the repaired production render is checked.
+- Whole-repo lint recheck before these repairs: 84 pre-existing errors, 1 warning. Production source API and new computations were healthy during this audit; provider-specific missing hero builds and PH duration/winner values remain explicitly unavailable rather than invented.
+- Exact-source production build after all timestamp/chart/hook edits passed (26 static entries), and targeted lint passed for all touched repair files. The 22-test suite passed. Deploy the repair next, then use fresh-tab hero/meta diagnostics to verify hydration before cleanup.
+
 ### Final local validation and release preparation — October 12, 2026
 
 - Resumed the full implementation goal after the documentation-only checkpoint. Existing drafts were preserved and reviewed; production and cleanup gates remain open.

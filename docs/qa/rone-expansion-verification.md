@@ -28,6 +28,17 @@ Screenshots in this folder accompany the detailed tracker. Tested layouts includ
 
 No-edit simulation preserves team records but can reorder published tied ranks using the provider's tiebreak calculation. The UI retains both published and scenario ranks and explains this difference; it must not invent a local tiebreaker. Historical Academy builds do not replace the preferred hero build feed. Rounded win-rate inputs remain estimates, and duration buckets have no inferred sample size or interval-inclusivity claims.
 
-## Production gate
+## Production verification and remaining gate
 
-Pending: release push, deployed commit confirmation, and production checks for every feature family, core routes, images, cache/error behavior and computations. Keep the temporary plan/tracker until these checks pass and durable notes have been migrated. Preserve user files under `docs/screenshots/`.
+Vercel Production deployment `6998598370`, commit `44efa10e628dce47f771869b65bb1aa6efd2cbcd`, completed successfully. Canonical site: https://mlbbstats-snowy.vercel.app.
+
+- Live catalog routes: 152 items, 12 spells, 33 emblem/talent entries, all available. Item 3573 resolves to Demon Boots - Favor, spell 20160 to Arrival, and talent-1221 to Weapons Master, with descriptions and HTTPS icons. Browser spell names are resolved and six observed spell icons loaded.
+- Duration API returns six Aulus Jungle buckets. Browser Gatotkaca Roam chart/table loads, and changing to EXP/Mythic retains URL context and returns 45.0% overall. Existing daily trends, counters and teammates also render. Gatotkaca has no published build; no recommendation was fabricated. Build component identity/dialog behavior is covered by the captured-data harness and contract test noted above.
+- Browser consecutive-win form returns 25 wins, 125 matches and approximately 60%, labeled as a provider result checked locally. Screenshot: `production-win-rate.jpg`.
+- All three scenario APIs return successful uncached computations. PH result flip changes RORA 9→10 and ONIC 9→8; ID flip changes EVOS 7→6 and RRQ 3→4; custom edits affect the correct teams. Browser custom generation/edit/reset and ID real-result edit/comparison work. Duplicate names and invalid lanes return 400/no-store; oversized scenario body returns 413/no-store.
+- Both league pages and completed-match pages return real content without unavailable states. ID game switch changes duration 16:51→24:40; PH game switch retains week 1 and shows source player/purchase-sequence data. Eight observed images loaded on each match page. ID week 9 shows eight upcoming matches without invented scores or detail links.
+- Hero gallery/viewer images load, source links expose 1920×1080 and 2560×1440, and Escape restores focus. Global mobile gallery has 45 records, page 2 changes artwork and retains device/page; desktop has 1152 records. Four observed mobile images loaded.
+- Home, Heroes, Rank, Meta, Account, Tools and both leagues return 200 with appropriate canonical metadata. Custom scenario page is noindex. Sitemap includes stable Academy details and excludes simulator states.
+- Whole-repository ESLint baseline rechecked: 84 errors and 1 warning before the subsequent timestamp/chart repair. These are pre-existing failures; touched files must pass targeted lint.
+
+Remaining gate discovered by browser diagnostics: hero timestamps hydrated differently because server and browser used different default timezones (React error 418). The fix uses a shared explicit Asia/Manila formatter with a UTC+8 label for hero/meta timestamps. A new test proves identical output under UTC, America/Los_Angeles and Asia/Manila (22 total tests pass). Chart initial dimensions and UTC date-only labels were corrected; final validation/redeployment and a fresh production diagnostic check remain before temporary-doc cleanup.

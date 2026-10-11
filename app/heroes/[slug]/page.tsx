@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
+import { formatPublicTimestamp } from "@/lib/date-time";
 
 import { HeroBuildPlanCard } from "@/components/hero/HeroBuildPlanCard";
 import { HeroDurationPanel } from "@/components/hero/HeroDurationPanel";
@@ -99,10 +100,7 @@ export default async function HeroDetailPage({ params, searchParams }: HeroDetai
   const draftInsights = overview.insights.filter(
     (insight) => insight.title !== "Watch Out For"
   );
-  const generatedAt = new Intl.DateTimeFormat("en-US", {
-    dateStyle: "medium",
-    timeStyle: "short",
-  }).format(new Date(heroPageData.generatedAt));
+  const generatedAt = formatPublicTimestamp(heroPageData.generatedAt);
 
   return (
     <main>
