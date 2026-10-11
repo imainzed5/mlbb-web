@@ -186,6 +186,7 @@ async function fetchMlbbResponse(
         error instanceof Error ? error.message : "Failed to fetch MLBB API data.",
         {
           url: url.toString(),
+          cause: error instanceof Error ? error.cause ?? error : error,
         }
       );
       continue;

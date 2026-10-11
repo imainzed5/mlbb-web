@@ -4,6 +4,7 @@ import type { HeroDetailRank } from "@/lib/hero/types";
 import { REVALIDATE_WINDOWS } from "@/lib/mlbb/cache";
 import { HERO_BROWSER_PAGE_SIZE } from "@/lib/mlbb/constants";
 import { fetchMlbbCollection } from "@/lib/mlbb/client";
+import { reportMlbbCollectionFailure } from "@/lib/mlbb/errors";
 import type {
   RawHeroListRecord,
   RawHeroPositionsRecord,
@@ -24,7 +25,8 @@ async function fetchOptionalCollection<RecordType>(
 ) {
   try {
     return await fetchMlbbCollection<RecordType>(path, { revalidate });
-  } catch {
+  } catch (error) {
+    reportMlbbCollectionFailure(path, error);
     return null;
   }
 }

@@ -16,7 +16,7 @@ function loadTs(file, dependencies, globals = {}) {
       assert.ok(name in dependencies, `Unexpected dependency: ${name}`);
       return dependencies[name];
     },
-    URL, Headers, Response, ...globals,
+    URL, Headers, Response, Error, console, ...globals,
   });
   return exports;
 }
@@ -89,4 +89,21 @@ test("partial data and snapshots never receive shared cache lifetimes", () => {
   const { publicDataCacheControl } = loadTs("lib/mlbb/cache.ts", {});
   assert.equal(publicDataCacheControl(true, 3600), "no-store");
   assert.match(publicDataCacheControl(false, 3600), /s-maxage=3600/);
+});
+
+test("failure logs identify upstream status and network cause without credentials or queries", () => {
+  const logs = [];
+  const { MlbbApiError, reportMlbbCollectionFailure } = loadTs("lib/mlbb/errors.ts", {}, {
+    console: { error: (...args) => logs.push(args) },
+  });
+  reportMlbbCollectionFailure("/heroes?token=private", new MlbbApiError("Unavailable", {
+    status: 403,
+    url: "https://user:password@arena.rone.dev/api/heroes?token=private",
+    cause: { code: "EAI_AGAIN" },
+  }));
+  assert.equal(logs[0][1].upstreamHost, "arena.rone.dev");
+  assert.equal(logs[0][1].endpoint, "/heroes");
+  assert.equal(logs[0][1].status, 403);
+  assert.equal(logs[0][1].networkCode, "EAI_AGAIN");
+  assert.doesNotMatch(JSON.stringify(logs), /password|token|private/);
 });

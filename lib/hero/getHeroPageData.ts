@@ -2,6 +2,7 @@ import { cache } from "react";
 
 import { REVALIDATE_WINDOWS } from "@/lib/mlbb/cache";
 import { fetchMlbbCollection } from "@/lib/mlbb/client";
+import { reportMlbbCollectionFailure } from "@/lib/mlbb/errors";
 
 import {
   createFallbackHeroOverview,
@@ -33,7 +34,8 @@ async function fetchOptionalCollection<RecordType>(
 ) {
   try {
     return await fetchMlbbCollection<RecordType>(path, { revalidate });
-  } catch {
+  } catch (error) {
+    reportMlbbCollectionFailure(path, error);
     return null;
   }
 }

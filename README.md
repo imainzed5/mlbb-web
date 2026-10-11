@@ -67,6 +67,8 @@ Public collections are validated before caching: hero catalogs and rankings refr
 
 The current source is `https://arena.rone.dev/api`. Its image URLs can use the `wsrv.nl` proxy, which is supported alongside the original MLBB image hosts. Additional fallback hosts must be configured explicitly; the former FastAPI Cloud host is no longer a default.
 
+If a Vercel deployment is Ready but still shows the saved snapshot, open `/api/heroes` and search the project's runtime Logs for `[mlbb] Public collection unavailable`. Snapshot responses intentionally return HTTP 200, so the deployment error rate can remain zero during upstream failures. These server logs identify the failing endpoint, upstream host, HTTP status, and network error code without logging request headers or URL query values. Check that the Production `MLBB_API_BASE_URL` is `https://arena.rone.dev/api`, then redeploy after any environment change.
+
 ### SEO & Sharing
 
 MLBB Stats includes:

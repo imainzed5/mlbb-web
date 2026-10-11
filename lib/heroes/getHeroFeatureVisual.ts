@@ -2,6 +2,7 @@ import { cache } from "react";
 
 import { REVALIDATE_WINDOWS } from "@/lib/mlbb/cache";
 import { fetchMlbbCollection } from "@/lib/mlbb/client";
+import { reportMlbbCollectionFailure } from "@/lib/mlbb/errors";
 import type { RawHeroDetailRecord } from "@/lib/hero/types";
 
 export type HeroFeatureVisual = {
@@ -36,7 +37,8 @@ export const getHeroFeatureVisual = cache(
         primarySrc: sources[0] ?? null,
         fallbackSrc: sources[1] ?? null,
       };
-    } catch {
+    } catch (error) {
+      reportMlbbCollectionFailure(`/heroes/${heroId}`, error);
       return {
         primarySrc: null,
         fallbackSrc: null,
