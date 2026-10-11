@@ -21,7 +21,7 @@ function loadTs(file, dependencies, globals = {}) {
   return exports;
 }
 
-function createClient(fetch) {
+function createClient(fetch, constants = {}) {
   const entries = new Map();
   const errors = loadTs("lib/mlbb/errors.ts", {});
   return loadTs("lib/mlbb/client.ts", {
@@ -32,6 +32,7 @@ function createClient(fetch) {
       DEFAULT_MLBB_API_FALLBACK_BASE_URLS: [],
       MLBB_API_BASE_URL: "https://arena.rone.dev/api",
       MLBB_API_FALLBACK_BASE_URLS: [],
+      ...constants,
     },
     "next/cache": {
       unstable_cache(fn, keys) {
@@ -106,4 +107,36 @@ test("failure logs identify upstream status and network cause without credential
   assert.equal(logs[0][1].status, 403);
   assert.equal(logs[0][1].networkCode, "EAI_AGAIN");
   assert.doesNotMatch(JSON.stringify(logs), /password|token|private/);
+});
+
+test("public hero feeds recover from canonical-host 403 using the provider backup", async () => {
+  const requests = [];
+  const client = createClient(async (url) => {
+    requests.push(url.toString());
+    return url.host === "arena.rone.dev"
+      ? new Response("Forbidden", { status: 403 })
+      : Response.json(collection);
+  }, { DEFAULT_MLBB_API_FALLBACK_BASE_URLS: ["https://arena.fastapicloud.dev/api"] });
+  for (const endpoint of ["/heroes", "/heroes/positions", "/heroes/rank", "/heroes/108"]) {
+    const result = await client.fetchMlbbCollection(`${endpoint}?lang=en`, {
+      revalidate: 3600, searchParams: { rank: "glory" },
+    });
+    assert.equal(result.code, 0);
+  }
+  assert.equal(requests.length, 8);
+  assert.ok(requests.every((url) => url.includes("lang=en") && url.includes("rank=glory")));
+  assert.equal(new URL(requests[1]).host, "arena.fastapicloud.dev");
+});
+
+test("authenticated GET and POST requests stop on 403", async () => {
+  const requests = [];
+  const client = createClient(async (url) => {
+    requests.push(url.toString());
+    return new Response("Forbidden", { status: 403 });
+  }, { DEFAULT_MLBB_API_FALLBACK_BASE_URLS: ["https://arena.fastapicloud.dev/api"] });
+  await assert.rejects(client.fetchMlbbQuery("/user/info", { jwt: "test" }));
+  await assert.rejects(client.fetchMlbbMutation("/user/auth/login", { body: { vc: 123 } }));
+  await assert.rejects(client.fetchMlbbCollection("/heroes", { headers: { authorization: "Bearer test" } }));
+  assert.equal(requests.length, 3);
+  assert.ok(requests.every((url) => new URL(url).host === "arena.rone.dev"));
 });

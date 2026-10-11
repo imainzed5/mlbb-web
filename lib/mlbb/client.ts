@@ -135,6 +135,7 @@ async function fetchMlbbResponse(
     body?: BodyInit;
     method: "GET" | "POST";
     options?: MlbbFetchOptions;
+    publicCollection?: boolean;
   }
 ) {
   const baseUrlQueue = getBaseUrlCandidates();
@@ -216,7 +217,11 @@ async function fetchMlbbResponse(
       }
     );
 
-    if (!shouldRetryWithFallback(response.status)) {
+    // The canonical host can deny public requests from hosting providers.
+    // Try the provider's backup for public hero data; authenticated requests
+    // retain their authorization failures instead of retrying on 403.
+    if (!shouldRetryWithFallback(response.status) &&
+      !(request.publicCollection && response.status === 403)) {
       throw lastError;
     }
   }
@@ -235,6 +240,7 @@ async function fetchValidatedCollection<RecordType>(
   const { response, url } = await fetchMlbbResponse(path, {
     method: "GET",
     options: { ...options, revalidate: 0 },
+    publicCollection: !options?.headers && /^\/heroes(?:[/?]|$)/.test(path),
   });
 
   const payload = (await response.json()) as MlbbCollectionResponse<RecordType>;
