@@ -81,6 +81,7 @@ These are baseline observations, not completed expansion tasks. Recheck changing
 - Chart date-only ticks now use UTC and ResponsiveContainer has positive initial dimensions. Replaced the existing chart mount effect with hydration-aware external-store snapshots; included missing hero refresh dependencies. Targeted lint and final exact-source build are running. Do not deploy an unverified fix or remove temporary docs before the repaired production render is checked.
 - Whole-repo lint recheck before these repairs: 84 pre-existing errors, 1 warning. Production source API and new computations were healthy during this audit; provider-specific missing hero builds and PH duration/winner values remain explicitly unavailable rather than invented.
 - Exact-source production build after all timestamp/chart/hook edits passed (26 static entries), and targeted lint passed for all touched repair files. The 22-test suite passed. Deploy the repair next, then use fresh-tab hero/meta diagnostics to verify hydration before cleanup.
+- Repair `213ece4` deployed successfully as Production `6998749847`. Fresh hero/meta loads and lane/rank/15-day trend interactions have no new browser errors/warnings; sync labels match, EXP/Mythic duration stays 45.0%, and meta Jungle has 36 heroes. Final screenshot exposed tooltip contrast/excess decimals: styling now follows site colors and one-decimal percentages. Final polish validation/deployment/visual check is pending before cleanup.
 
 ### Final local validation and release preparation — October 12, 2026
 
