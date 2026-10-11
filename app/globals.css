@@ -29,6 +29,7 @@
   --color-tier-a: var(--tier-a);
   --color-tier-b: var(--tier-b);
   --color-tier-c: var(--tier-c);
+  --breakpoint-wide: 90rem;
   --radius-sm: 5px;
   --radius-md: 8px;
   --radius-lg: 10px;

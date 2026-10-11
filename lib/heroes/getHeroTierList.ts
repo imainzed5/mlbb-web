@@ -41,6 +41,7 @@ export const getHeroTierList = cache(async (
         ...hero,
         winRateDelta:
           previous && hero.winRate ? Number((hero.winRate - previous).toFixed(1)) : null,
+        baselineWinRate: previous || null,
       };
     }),
   };

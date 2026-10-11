@@ -205,9 +205,13 @@ export function TierListClient({ heroes, hasDelta, baselineLabel, query }: TierL
                   <SortHeader sort={sort} onSort={onSort} id="name" label="Hero" className="text-left" />
                   <SortHeader sort={sort} onSort={onSort} id="winRate" label="Win rate" className="text-right" />
                   {hasDelta ? <SortHeader sort={sort} onSort={onSort} id="winRateDelta" label={baselineLabel} className="text-right" /> : null}
+                  {hasDelta ? (
+                    <th scope="col" className="eyebrow hidden px-3 py-2.5 text-right font-medium wide:table-cell">{baselineLabel.replace("vs ", "")} WR</th>
+                  ) : null}
                   <SortHeader sort={sort} onSort={onSort} id="pickRate" label="Pick" className="text-right" />
                   <SortHeader sort={sort} onSort={onSort} id="banRate" label="Ban" className="text-right" />
                   <th scope="col" className="eyebrow hidden px-3 py-2.5 text-left font-medium md:table-cell">Lane</th>
+                  <th scope="col" className="eyebrow hidden px-3 py-2.5 text-left font-medium wide:table-cell">Ban pressure</th>
                 </tr>
               </thead>
               <tbody>
@@ -246,12 +250,22 @@ export function TierListClient({ heroes, hasDelta, baselineLabel, query }: TierL
                         <DeltaValue value={hero.winRateDelta} />
                       </td>
                     ) : null}
+                    {hasDelta ? (
+                      <td className="num hidden px-3 py-1.5 text-right text-text-muted wide:table-cell">
+                        {hero.baselineWinRate ? `${hero.baselineWinRate.toFixed(1)}%` : "–"}
+                      </td>
+                    ) : null}
                     <td className="num px-3 py-1.5 text-right text-text-secondary">{hero.pickRate.toFixed(1)}%</td>
                     <td className={cn("num px-3 py-1.5 text-right", hero.banRate >= 20 ? "text-tier-s" : "text-text-secondary")}>
                       {hero.banRate.toFixed(1)}%
                     </td>
                     <td className="hidden px-3 py-1.5 text-[12px] text-text-secondary md:table-cell">
                       {hero.lanes.map((lane) => LANE_LABELS[lane]).join(", ") || "–"}
+                    </td>
+                    <td className="hidden w-40 px-3 py-1.5 wide:table-cell" aria-hidden>
+                      <span className="block h-1 overflow-hidden rounded-full bg-border-strong">
+                        <span className="block h-full rounded-full bg-tier-s/80" style={{ width: `${Math.min(100, hero.banRate)}%` }} />
+                      </span>
                     </td>
                   </tr>
                 ))}

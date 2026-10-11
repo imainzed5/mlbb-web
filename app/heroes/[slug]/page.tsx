@@ -192,7 +192,7 @@ export default async function HeroDetailPage({ params, searchParams }: HeroDetai
           </div>
         </section>
 
-        <nav aria-label="Hero sections" className="sticky top-14 z-30 -mx-4 flex gap-5 overflow-x-auto border-b border-border-subtle bg-page-background/95 px-4 text-[13px] backdrop-blur sm:mx-0 sm:px-0">
+        <nav aria-label="Hero sections" className="sticky top-14 z-30 -mx-4 flex gap-5 wide:hidden overflow-x-auto border-b border-border-subtle bg-page-background/95 px-4 text-[13px] backdrop-blur sm:mx-0 sm:px-0">
           {sections.map(([id, label]) => (
             <a key={id} href={`#${id}`} className="border-b-2 border-transparent py-2.5 whitespace-nowrap text-text-secondary hover:border-border-strong hover:text-text-primary">
               {label}
@@ -204,7 +204,39 @@ export default async function HeroDetailPage({ params, searchParams }: HeroDetai
           <p className="text-[12px] text-text-muted">Some sections are using backup data while the latest hero updates catch up.</p>
         ) : null}
 
-        <div className="grid gap-4 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)]">
+        <div className="grid gap-4 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)] wide:grid-cols-[200px_minmax(0,1fr)_380px]">
+          <aside className="hidden wide:block">
+            <div className="sticky top-20 space-y-4">
+              <nav aria-label="Hero sections" className="flex flex-col border-l border-border-subtle text-[13px]">
+                {sections.map(([id, label]) => (
+                  <a key={id} href={`#${id}`} className="-ml-px border-l-2 border-transparent py-1.5 pl-3 text-text-secondary hover:border-accent-primary hover:text-text-primary">
+                    {label}
+                  </a>
+                ))}
+              </nav>
+              <dl className="space-y-2.5 rounded-lg border border-border-subtle bg-card-surface p-3 text-[12px]">
+                <div>
+                  <dt className="eyebrow">Roles</dt>
+                  <dd className="mt-0.5">{overview.roles.join(" / ")}</dd>
+                </div>
+                <div>
+                  <dt className="eyebrow">Lanes</dt>
+                  <dd className="mt-0.5">{overview.lanes.map((lane) => LANE_LABELS[lane] ?? lane).join(", ") || "–"}</dd>
+                </div>
+                <div>
+                  <dt className="eyebrow">Difficulty</dt>
+                  <dd className="num mt-0.5">{overview.difficulty.toFixed(0)} / 100</dd>
+                </div>
+                {overview.specialties.length > 0 ? (
+                  <div>
+                    <dt className="eyebrow">Specialties</dt>
+                    <dd className="mt-0.5 text-text-secondary">{overview.specialties.join(", ")}</dd>
+                  </div>
+                ) : null}
+              </dl>
+            </div>
+          </aside>
+
           <div className="min-w-0 space-y-4">
             <section id="build" className="scroll-mt-28">
               <HeroBuildSheet heroName={overview.name} plans={heroPageData.builds} skillPriority={overview.skillPriority} />

@@ -53,4 +53,6 @@ export type HeroBrowserPayload = {
 export type HeroTierListItem = HeroBrowserItem & {
   /** Win-rate change in percentage points versus the longer baseline window. */
   winRateDelta: number | null;
+  /** Win rate over the baseline window, when available. */
+  baselineWinRate: number | null;
 };
