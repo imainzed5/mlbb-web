@@ -1,6 +1,6 @@
 # Rone API integration
 
-This document describes the expansion implementation. See the temporary plan/tracker for release acceptance and outstanding verification until the release is complete.
+This document describes the completed expansion implementation. Release evidence and provider limitations are recorded in [expansion verification](qa/rone-expansion-verification.md).
 
 ## Public surfaces
 
@@ -35,6 +35,8 @@ Collection and structured-resource validators run before successful data enters 
 
 Optional modules have independent unavailable/retry states. Retrieval/render time is distinct from an upstream sync timestamp. Reloading a view does not bypass the provider or application cache.
 
+Hero and meta timestamp text uses explicit Asia/Manila time with a UTC+8 label so server/browser timezone defaults cannot change hydration text. Daily trend date-only labels use UTC to preserve source dates.
+
 ## Identity and numerical meaning
 
 Catalog links prefer upstream item/spell IDs; name matching is allowed only when unique. Talent gift IDs and emblem-family IDs use distinct namespaces. Missing identities remain readable without fabricated links. Descriptions are normalized to text; upstream HTML is not inserted directly.
@@ -57,6 +59,6 @@ JSON exports contain `version: 1`, the tool/league `kind`, and validated `input`
 
 Run `npm test`, `npm run typecheck`, targeted ESLint on changed files, and `npm run build`. Contract tests use sanitized fixtures without network access. Review 390px, 768px and 1440px layouts, keyboard dialogs/focus, error/empty states and actual image loading. Verify production data and cache behavior after deployment; HTTP 200 and a Ready deployment alone do not prove live-source health.
 
-Existing whole-repository lint failures are recorded separately in the tracker; they do not excuse new failures. Preserve user screenshots in `docs/screenshots` during planning-document cleanup.
+Existing whole-repository lint failures are recorded separately in the verification notes; they do not excuse new failures. Preserve user screenshots in `docs/screenshots`.
 
 API source and game artwork attribution remains visible in each new feature. This is an unofficial community frontend; data/artwork belongs to the respective source owners.

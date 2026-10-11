@@ -5,7 +5,7 @@ Local release review: October 12, 2026, Asia/Manila.
 ## Release checks
 
 - `npm test`: 21/21 pass, including public/private fallback boundaries, validation before caching, pagination/partial responses, streamed request limits, both league contracts, stable catalog/build IDs, duration fractions/ranges, source image variants, scenario input rules and minimal integer win-rate mathematics.
-- Typecheck and targeted ESLint for changed/new files: pass. Existing whole-repository lint baseline remains outside this release; see the temporary tracker until cleanup.
+- Typecheck and targeted ESLint for changed/new files: pass. Existing whole-repository lint baseline remains outside this release; its observed counts are recorded below.
 - Final `npm run build`: pass after the final Academy outage/status and duration cache-header changes. 26 static entries; dynamic hero and feature routes listed correctly. No upstream errors appeared in this build output. This is a build result, not proof of production data health.
 
 ## Local browser evidence
@@ -28,7 +28,7 @@ Screenshots in this folder accompany the detailed tracker. Tested layouts includ
 
 No-edit simulation preserves team records but can reorder published tied ranks using the provider's tiebreak calculation. The UI retains both published and scenario ranks and explains this difference; it must not invent a local tiebreaker. Historical Academy builds do not replace the preferred hero build feed. Rounded win-rate inputs remain estimates, and duration buckets have no inferred sample size or interval-inclusivity claims.
 
-## Production verification and remaining gate
+## Production verification
 
 Vercel Production deployment `6998598370`, commit `44efa10e628dce47f771869b65bb1aa6efd2cbcd`, completed successfully. Canonical site: https://mlbbstats-snowy.vercel.app.
 
@@ -43,4 +43,10 @@ Vercel Production deployment `6998598370`, commit `44efa10e628dce47f771869b65bb1
 
 Hydration repair verified on Production deployment `6998749847`, commit `213ece4ed6e6827eaabcae57ccd5eeacf759a216`: hero/meta use shared explicit Asia/Manila timestamps with a UTC+8 label. A new test proves identical output under UTC, America/Los_Angeles and Asia/Manila (22 total tests pass). Chart initial dimensions and UTC date-only labels were corrected; targeted lint and the exact-source production build pass. Fresh full-page hero/meta loads and lane/rank/15-day trend interactions produced no new browser errors or warnings. Both hero sync labels agree and filtered duration data remains 45.0%. Meta Jungle returns 36 heroes. PH simulator browser baseline preserves all published team points and explains the two tied ranks.
 
-Final screenshot review found default duration tooltip contrast and excessive decimals. The final UI polish uses site colors and one-decimal percentages; build/deployment/visual verification is pending before temporary-doc cleanup.
+Final tooltip polish passed targeted lint and the production build, then deployed successfully as `6be24b16a4318145bbb7d9ab37ff1eb4a4305f92` (Production deployment `6998821311`). Browser chart tooltip displays `40.3%` with site colors, matching its table; filtered EXP/Mythic overall remains 45.0%. Fresh browser diagnostics after this deployment contain no errors/warnings. Screenshot: `production-hero-duration.jpg`.
+
+## Completion and documentation cleanup
+
+All six requested feature families are implemented and production-verified, with desktop/mobile discovery, source contracts, failure states and existing-route regression checks recorded above. The final automated suite has 22 passing tests; typecheck, touched-file lint and exact-source production build pass. Existing unrelated whole-repository lint failures remain outside this release.
+
+Durable routes, cache/fallback rules, assumptions and maintenance commands are in `docs/rone-api-integration.md`; this report retains verification evidence and source limitations. Only the two temporary planning documents were removed after this migration. All user files under `docs/screenshots/` and these QA artifacts were preserved. Cleanup changes documentation only; runtime code remains the production-verified `6be24b1` implementation.

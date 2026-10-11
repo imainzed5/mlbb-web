@@ -63,7 +63,7 @@ Players can connect an MLBB account to access a private dashboard. Authenticatio
 
 The expansion adds item/spell/emblem reference catalogs, hero win rates grouped by match duration, PH/ID professional schedules and match details, real/custom league scenarios, a consecutive-win calculator, and global/hero wallpaper galleries. Explore links connect these sections across desktop and mobile.
 
-Implementation details, routes, cache policies, calculation assumptions, and provider limitations are documented in [Rone API integration](docs/rone-api-integration.md). The temporary expansion tracker records release verification until the rollout is complete.
+Implementation details, routes, cache policies, calculation assumptions, and provider limitations are documented in [Rone API integration](docs/rone-api-integration.md). Release evidence is recorded in [expansion verification](docs/qa/rone-expansion-verification.md).
 
 ### Resilient API Loading
 
