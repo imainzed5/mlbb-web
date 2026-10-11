@@ -1,12 +1,14 @@
 # Rone API expansion implementation plan
 
-Status: implementation resumed under the active expansion goal. Existing local draft code does not satisfy a phase's acceptance criteria until checked; consult the tracker for evidence and remaining work.
+Status: implementation resumed under the active expansion goal. Existing local draft code does not satisfy a phase's acceptance criteria until checked; consult the tracker for evidence and remaining work. The documentation-only checkpoint below is historical.
 
 Prepared: October 11, 2026, Asia/Manila. API reference: Rone Arena 1.2.3.
 
 Planning review: October 12, 2026. The canonical Swagger page and OpenAPI schema were accessible during this review. This documentation pass does not implement, commit, push, or deploy features. Preserve existing local work and audit it before resuming implementation.
 
 This is a temporary working plan for the six additions requested in chat. Start or resume implementation only when the user asks. Use the [tracker](./rone-api-expansion-tracker.md) to record progress, evidence, and remaining work. Proposed route names and cache intervals below are project decisions, not upstream requirements.
+
+Latest planning checkpoint: October 12, 2026. The working tree already contains expansion drafts and local foundation commit `be7e01c`. This review preserves that work and changes planning documents only. The canonical Swagger page timed out during the latest read; the provider's public esports router was accessible on GitHub. Earlier schema observations below are dated evidence, not a claim that every endpoint is currently healthy. Recheck live contracts at the start of implementation.
 
 ## 1. Outcome and scope
 

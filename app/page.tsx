@@ -21,6 +21,10 @@ import { createWebSiteJsonLd } from "@/lib/seo/jsonld";
 import { createPageMetadata } from "@/lib/seo/metadata";
 
 const primaryRoutes = [
+  { href: "/academy", label: "Academy reference", description: "Search equipment, battle spells, emblems, and talents.", icon: BookOpen },
+  { href: "/esports", label: "Esports & scenarios", description: "Follow PH/ID leagues and explore playoff outcomes.", icon: Crown },
+  { href: "/tools", label: "Calculators", description: "Set a win-rate target or build your own league.", icon: BarChart3 },
+  { href: "/wallpapers", label: "Wallpaper gallery", description: "Browse mobile and desktop artwork in source resolutions.", icon: Shield },
   {
     href: "/heroes",
     label: "Hero browser",

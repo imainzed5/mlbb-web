@@ -4,7 +4,7 @@ Plan: [implementation plan](./rone-api-expansion-plan.md).
 
 Created October 11, 2026, Asia/Manila. Reviewed October 12, 2026. Status: implementation resumed under the active expansion goal. No feature work is marked complete by writing these documents.
 
-Working-tree inventory: uncommitted drafts exist for Academy, hero duration, calculators, wallpapers, PH/ID esports, scenarios, shared transport, navigation, sitemap, and fixtures. Some local checks are recorded below, but the complete acceptance and production checks remain open. Treat drafts as candidate implementation, not completed deliverables. Audit them first when implementation is requested; do not reset or discard unrelated work.
+Working-tree inventory: foundation adapters, fixtures and contract tests are in local commit `be7e01c`; feature routes, components, navigation and later fixes remain uncommitted. Some local checks are recorded below, but the complete acceptance and production checks remain open. Treat drafts as candidate implementation, not completed deliverables. Audit them first when implementation is requested; do not reset or discard unrelated work.
 
 ## How to resume
 
@@ -18,14 +18,14 @@ Working-tree inventory: uncommitted drafts exist for Academy, hero duration, cal
 
 | Phase | Dependency | Status | Commit / evidence |
 | --- | --- | --- | --- |
-| 0. API foundation and representative fixtures | None | Verified locally; production gate open | 20 contract tests, all expansion GET/POST fallback paths, validation and pagination checks |
-| 1. Items, spells, emblems, build links | 0 | In progress | Draft catalogs/routes; build inspection and verification remain |
-| 2. Hero duration statistics | 0 | In progress | Independent module, endpoint, chart/table, fixture tests; UI QA pending |
-| 3. Tools and win-rate calculator | 0 | In progress | Form, provider adapter/local math, boundary tests; UI QA pending |
-| 4. Wallpaper galleries | 0 | In progress | Global/hero routes, preview, viewer, filters; UI QA pending |
-| 5. Esports hub and match details | 0; reuse 1 for item details | In progress | Both leagues and match details load locally; UI QA pending |
-| 6. Playoff and custom league simulators | 5 | Draft available; acceptance review pending | Local routes, builder, validation, and fixtures present; recheck against plan |
-| 7. Navigation, discovery, production QA | Incremental through 1–6 | Draft available; full QA pending | Navigation, discovery, sitemap, loading/error UI present; production checks open |
+| 0. API foundation and representative fixtures | None | Verified locally; production gate open | Latest recorded suite: 21 tests; expansion GET/POST fallback paths, validation and pagination checks; revalidate final changes |
+| 1. Items, spells, emblems, build links | 0 | Reviewed locally; production gate open | 98e881f; catalog/detail/filter and fixture build-dialog checks below |
+| 2. Hero duration statistics | 0 | Reviewed locally; production gate open | 98e881f; single/multi-lane data, URL state, chart/table and outage checks |
+| 3. Tools and win-rate calculator | 0 | Reviewed locally; production gate open | 98e881f; boundary matrix, provider agreement and unreachable UI |
+| 4. Wallpaper galleries | 0 | Reviewed locally; production gate open | 98e881f; global paging/viewer and hero source-resolution image checks |
+| 5. Esports hub and match details | 0; reuse 1 for item details | Reviewed locally; production gate open | b49573d; both leagues, completed/upcoming states, game switching and week context |
+| 6. Playoff and custom league simulators | 5 | Reviewed locally; production gate open | b49573d; real score edits, reset, custom imports/exports, server input limits |
+| 7. Navigation, discovery, production QA | Incremental through 1–6 | Local regression reviewed; production pending | Desktop/mobile navigation, discovery and metadata; production checks open |
 | 8. Durable documentation and cleanup | All features verified | Planned | — |
 
 ## Required deliverables
@@ -74,6 +74,24 @@ These are baseline observations, not completed expansion tasks. Recheck changing
 
 ## Verification record template
 
+### Final local validation and release preparation — October 12, 2026
+
+- Resumed the full implementation goal after the documentation-only checkpoint. Existing drafts were preserved and reviewed; production and cleanup gates remain open.
+- Revalidated the pending lint/typecheck process: exit 0. Re-ran the complete 21-test suite: all pass. Final production build after the Academy 503/no-store and duration input-header changes: pass, 26 static entries, no upstream diagnostic failures in this build output.
+- Desktop 1440px review: account connection form renders without changing authentication; Explore exposes Rank, Academy, Esports, Tools and Wallpapers, and Escape restores trigger focus. Homepage shows live Aulus 59.8% and six observed images loaded successfully, plus all four new discovery cards; no horizontal overflow.
+- Hero browser search for Gatot returns the correct single hero. Rank search for Aulus and Ban rate sorting retain the correct single result. Meta Jungle filter shows 36 heroes and updates lane context; at 390px, page width is 380px. Mobile Explore retains five primary slots and all section links.
+- Remaining release work: review/stage feature groups, push the authorized release, verify deployed commit and all feature families on production, migrate durable evidence, then remove only the two temporary planning files.
+- Mobile Academy family filter/search resolves Assassin emblem to `family-20005`, retains query/category on Back, renders a loaded icon and source attributes, and uses a canonical URL without query parameters. Page width 380px at a 390px viewport; screenshot `docs/qa/emblem-family-mobile.jpg`.
+- Feature groups committed as `98e881f` (Academy/duration/calculator/galleries) and `b49573d` (esports/scenarios). Foundation is `be7e01c`. No production verification is claimed by these local commits.
+
+### Current documentation-only checkpoint — October 12, 2026
+
+- Reviewed the existing plan, progress tracker, integration notes, working-tree inventory and local commit history for the user's plan-first request.
+- Preserved all existing feature drafts and prior dated evidence. Updated the current status to distinguish planning review from implementation and production completion.
+- Canonical Swagger fetch timed out; the upstream public esports router on GitHub was accessible. Recheck current schemas and representative responses when implementation resumes.
+- This checkpoint changes only the plan and tracker. It does not run feature tests, implement code, commit, push, deploy or remove documents.
+- Next implementation step: audit the foundation and existing drafts, then address the first unmet acceptance criteria in phase order. Keep release and cleanup gates open until the deployed features are verified.
+
 ### Release audit — October 12, 2026
 
 - Added a build-to-catalog integration test using a synthetic recommendation assembled from captured item/spell/talent entries. It verifies preserved IDs and the talent namespace; it is not a claimed live hero recommendation.
@@ -82,6 +100,9 @@ These are baseline observations, not completed expansion tasks. Recheck changing
 - PH phone standings/schedule fit 390px (page width 380px). Selected week carried into match links, Game 2, and the Back link. ID phone standings/schedule also fit, showing nine teams and eight upcoming matches; upcoming NAVI–RRQ correctly displays no result and no unavailable detail link.
 - Standings now reject missing/duplicate team identities; schedule parsing rejects malformed day arrays and noninteger weeks before caching. Added regression assertions. Wallpaper failures now use the sanitized shared diagnostic helper.
 - Latest production build passed with 26 static entries and no temporary harness route. Limited provider rate-limit diagnostics remain during shared hero/catalog prerender work. No deployment or production completeness is claimed yet.
+- Foundation committed locally as `be7e01c` (adapters, normalized identities, transport, fixtures, contract tests and planning/integration docs); not pushed yet.
+- ID simulator phone check changed Week 1 EVOS–RRQ from 2–0 to 0–2; provider standings showed EVOS 7→6 and RRQ 3→4, with other team points unchanged. Reset restored 2–0. Both leagues' phone pages and simulator fit within 390px.
+- Catalog API now returns 503/no-store for complete source outages instead of a misleading successful missing-entry result. Added route-level outage/missing/partial/invalid-kind checks; duration input errors also explicitly use no-store. Latest tests: 21/21 pass.
 
 ### Implementation and UI review — October 12, 2026
 
