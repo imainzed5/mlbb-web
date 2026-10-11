@@ -6,6 +6,11 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
+        hostname: "wsrv.nl",
+        pathname: "/",
+      },
+      {
+        protocol: "https",
         hostname: "akmweb.youngjoygame.com",
       },
       {

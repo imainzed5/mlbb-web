@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { connection } from "next/server";
 import {
   ArrowRight,
   ArrowUpRight,
@@ -563,6 +564,7 @@ function BoardGuide() {
 }
 
 export default async function Home() {
+  await connection();
   const heroBrowserData = await getHeroBrowserData();
   const sortedHeroes = sortHeroesForHomepage(heroBrowserData.heroes);
   const topTierHeroes = sortedHeroes.slice(0, 5);

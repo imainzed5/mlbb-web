@@ -1,7 +1,7 @@
 import type { NextRequest } from "next/server";
 
 import { normalizeHeroDetailRank } from "@/lib/hero/constants";
-import { REVALIDATE_WINDOWS, STALE_WINDOWS } from "@/lib/mlbb/cache";
+import { publicDataCacheControl, REVALIDATE_WINDOWS } from "@/lib/mlbb/cache";
 import { getErrorMessage } from "@/lib/mlbb/errors";
 import { getMetaDashboardData } from "@/lib/meta/getMetaDashboardData";
 import { normalizeMetaLane, normalizeMetaRole } from "@/lib/meta/dashboard";
@@ -15,7 +15,7 @@ export async function GET(request: NextRequest) {
 
     return Response.json(payload, {
       headers: {
-        "Cache-Control": `s-maxage=${REVALIDATE_WINDOWS.meta}, stale-while-revalidate=${STALE_WINDOWS.heroes}`,
+        "Cache-Control": publicDataCacheControl(payload.stale, REVALIDATE_WINDOWS.meta),
       },
     });
   } catch (error) {

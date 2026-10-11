@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { connection } from "next/server";
 
 import { HeroesPageClient } from "@/components/heroes/HeroesPageClient";
 import { PageContainer } from "@/components/layout/PageContainer";
@@ -19,6 +20,7 @@ export const metadata: Metadata = createPageMetadata({
 });
 
 export default async function HeroesPage() {
+  await connection();
   try {
     const heroBrowserData = await getHeroBrowserData();
 

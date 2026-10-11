@@ -1,5 +1,5 @@
 import { getErrorMessage } from "@/lib/mlbb/errors";
-import { REVALIDATE_WINDOWS, STALE_WINDOWS } from "@/lib/mlbb/cache";
+import { publicDataCacheControl, REVALIDATE_WINDOWS } from "@/lib/mlbb/cache";
 import { getHeroBrowserData } from "@/lib/heroes/getHeroBrowserData";
 
 export async function GET() {
@@ -8,7 +8,7 @@ export async function GET() {
 
     return Response.json(payload, {
       headers: {
-        "Cache-Control": `s-maxage=${REVALIDATE_WINDOWS.heroes}, stale-while-revalidate=${STALE_WINDOWS.heroes}`,
+        "Cache-Control": publicDataCacheControl(payload.stale, REVALIDATE_WINDOWS.heroes),
       },
     });
   } catch (error) {

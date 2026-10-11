@@ -9,3 +9,9 @@ export const REVALIDATE_WINDOWS = {
 export const STALE_WINDOWS = {
   heroes: 86400,
 } as const;
+
+export function publicDataCacheControl(stale: boolean, revalidate: number) {
+  return stale
+    ? "no-store"
+    : `public, max-age=0, s-maxage=${revalidate}, stale-while-revalidate=${STALE_WINDOWS.heroes}`;
+}

@@ -1,3 +1,5 @@
+import { unstable_cache } from "next/cache";
+
 import { MlbbApiError } from "@/lib/mlbb/errors";
 
 import {
@@ -225,13 +227,13 @@ async function fetchMlbbResponse(
   throw new MlbbApiError("Failed to fetch MLBB API data.");
 }
 
-export async function fetchMlbbCollection<RecordType>(
+async function fetchValidatedCollection<RecordType>(
   path: string,
   options?: MlbbFetchOptions
 ) {
   const { response, url } = await fetchMlbbResponse(path, {
     method: "GET",
-    options,
+    options: { ...options, revalidate: 0 },
   });
 
   const payload = (await response.json()) as MlbbCollectionResponse<RecordType>;
@@ -243,7 +245,37 @@ export async function fetchMlbbCollection<RecordType>(
     });
   }
 
+  if (!Array.isArray(payload.data?.records)) {
+    throw new MlbbApiError("MLBB API returned an invalid collection.", {
+      status: response.status,
+      url: url.toString(),
+    });
+  }
+
   return payload;
+}
+
+export async function fetchMlbbCollection<RecordType>(
+  path: string,
+  options?: MlbbFetchOptions
+) {
+  if (!options?.revalidate || options.revalidate <= 0 || options.headers) {
+    return fetchValidatedCollection<RecordType>(path, options);
+  }
+
+  // This project uses the caching model without Cache Components. Cache only
+  // validated data so HTTP 200 API errors cannot keep the snapshot in use.
+  return unstable_cache(
+    () => fetchValidatedCollection<RecordType>(path, options),
+    [
+      "mlbb-collection-v2",
+      JSON.stringify(getBaseUrlCandidates()),
+      DEFAULT_LANGUAGE,
+      path,
+      JSON.stringify(options),
+    ],
+    { revalidate: options.revalidate }
+  )();
 }
 
 export async function fetchMlbbMutation<ResponseType, BodyType>(

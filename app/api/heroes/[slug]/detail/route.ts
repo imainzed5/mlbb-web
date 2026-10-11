@@ -1,4 +1,4 @@
-import { REVALIDATE_WINDOWS, STALE_WINDOWS } from "@/lib/mlbb/cache";
+import { publicDataCacheControl, REVALIDATE_WINDOWS } from "@/lib/mlbb/cache";
 import { getErrorMessage } from "@/lib/mlbb/errors";
 import { getHeroPageData } from "@/lib/hero/getHeroPageData";
 import { normalizeHeroDetailRank, normalizeHeroTrendWindow } from "@/lib/hero/constants";
@@ -28,7 +28,7 @@ export async function GET(request: Request, context: HeroDetailRouteContext) {
 
     return Response.json(payload, {
       headers: {
-        "Cache-Control": `s-maxage=${REVALIDATE_WINDOWS.heroDetail}, stale-while-revalidate=${STALE_WINDOWS.heroes}`,
+        "Cache-Control": publicDataCacheControl(payload.stale, REVALIDATE_WINDOWS.heroDetail),
       },
     });
   } catch (error) {

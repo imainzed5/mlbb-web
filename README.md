@@ -63,6 +63,10 @@ Players can connect an MLBB account to access a private dashboard. Authenticatio
 
 The application normalizes hero data from multiple upstream endpoints and includes fallback handling for upstream failures. Selected public views can use a read-only snapshot when the API is unavailable.
 
+Public collections are validated before caching: hero catalogs and rankings refresh hourly, while hero details refresh every six hours. Failed or malformed API responses are not saved as successful data. The home, hero browser, and rank board render per request so an outage during a build cannot freeze them on the saved snapshot. API responses containing partial data or the saved snapshot use `Cache-Control: no-store` so subsequent requests can retry the source.
+
+The current source is `https://arena.rone.dev/api`. Its image URLs can use the `wsrv.nl` proxy, which is supported alongside the original MLBB image hosts. Additional fallback hosts must be configured explicitly; the former FastAPI Cloud host is no longer a default.
+
 ### SEO & Sharing
 
 MLBB Stats includes:
@@ -203,6 +207,7 @@ npm run dev
 npm run build
 npm run lint
 npm run typecheck
+npm test
 ```
 
 ## Environment Variables
