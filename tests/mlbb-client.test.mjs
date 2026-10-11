@@ -310,6 +310,32 @@ test("hero build references preserve source identities and join the catalog with
   assert.equal(academy.findCatalogEntry(talentCatalog, "Missing reference", "family-1221"), null);
 });
 
+test("catalog lookups distinguish outages from absent identities and do not cache error states", async () => {
+  const records = loadTs("lib/mlbb/records.ts", {});
+  const academy = loadTs("lib/academy/normalizers.ts", { "@/lib/mlbb/records": records });
+  const cache = loadTs("lib/mlbb/cache.ts", {});
+  let catalog = { available: false, partial: true, entries: [] };
+  const route = loadTs("app/api/academy/[kind]/route.ts", {
+    "@/lib/academy/catalog": { getAcademyCatalog: async () => catalog },
+    "@/lib/academy/normalizers": academy, "@/lib/mlbb/cache": cache,
+  });
+  const context = kind => ({ params: Promise.resolve({ kind }) });
+  const request = new Request("https://site.test/api/academy/spells?name=Arrival");
+  const outage = await route.GET(request, context("spells"));
+  assert.equal(outage.status, 503);
+  assert.equal(outage.headers.get("Cache-Control"), "no-store");
+  catalog = { available: true, partial: false, entries: [] };
+  const missing = await route.GET(request, context("spells"));
+  assert.equal(missing.status, 200);
+  assert.equal((await missing.json()).entry, null);
+  catalog.partial = true;
+  const incomplete = await route.GET(request, context("spells"));
+  assert.equal(incomplete.headers.get("Cache-Control"), "no-store");
+  const invalid = await route.GET(request, context("unknown"));
+  assert.equal(invalid.status, 404);
+  assert.equal(invalid.headers.get("Cache-Control"), "no-store");
+});
+
 test("API errors and malformed collections retry and recover without caching failures", async () => {
   for (const failure of [{ code: 1001, message: "Unavailable" }, { code: 0, data: null }]) {
     let requests = 0;

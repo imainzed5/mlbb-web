@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 
 import { HeroBuildPlanCard } from "@/components/hero/HeroBuildPlanCard";
+import { HeroDurationPanel } from "@/components/hero/HeroDurationPanel";
+import { HeroWallpaperPreview } from "@/components/hero/HeroWallpaperPreview";
 import { HeroDetailExplorer } from "@/components/hero/HeroDetailExplorer";
 import { HeroMatchupList } from "@/components/hero/HeroMatchupList";
 import { RoleBadge } from "@/components/heroes/RoleBadge";
@@ -13,7 +16,7 @@ import { HeroAvatarImage } from "@/components/heroes/HeroAvatarImage";
 import { PageContainer } from "@/components/layout/PageContainer";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { StateMessage } from "@/components/ui/StateMessage";
-import { getHeroCatalog, getHeroCatalogItemBySlug } from "@/lib/hero/getHeroCatalog";
+import { getHeroCatalogItemBySlug } from "@/lib/hero/getHeroCatalog";
 import { getHeroPageData } from "@/lib/hero/getHeroPageData";
 import { getErrorMessage } from "@/lib/mlbb/errors";
 import { createBreadcrumbJsonLd, createHeroPageJsonLd } from "@/lib/seo/jsonld";
@@ -31,11 +34,6 @@ function getHeroInitials(name: string) {
     .slice(0, 2)
     .map((part) => part[0]?.toUpperCase() ?? "")
     .join("");
-}
-
-export async function generateStaticParams() {
-  const heroes = await getHeroCatalog();
-  return heroes.map((hero) => ({ slug: hero.slug }));
 }
 
 export async function generateMetadata({
@@ -438,6 +436,8 @@ export default async function HeroDetailPage({ params, searchParams }: HeroDetai
               )}
             </section>
 
+            <HeroDurationPanel heroId={overview.heroId} />
+            <Suspense fallback={<p className="text-sm text-text-secondary">Loading hero artwork…</p>}><HeroWallpaperPreview heroId={overview.heroId} slug={overview.slug} /></Suspense>
             <HeroDetailExplorer
               slug={overview.slug}
               initialData={{

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { CatalogReference } from "@/components/academy/CatalogReference";
 
 import type { HeroBuildPlan } from "@/lib/hero/types";
 
@@ -80,7 +81,7 @@ export function HeroBuildPlanCard({ plan }: HeroBuildPlanCardProps) {
                     </div>
                     <div className="min-w-0">
                       <div className="truncate text-[13px] font-medium text-text-primary">
-                        {item.name}
+                        <CatalogReference kind="items" name={item.name} id={item.catalogId} />
                       </div>
                       {item.typeLabel ? (
                         <div className="text-[11px] text-text-secondary">{item.typeLabel}</div>
@@ -126,7 +127,7 @@ export function HeroBuildPlanCard({ plan }: HeroBuildPlanCardProps) {
                 </div>
                 <div className="space-y-1">
                   <div className="text-[13px] font-medium text-text-primary">
-                    {plan.battleSpell.name}
+                    <CatalogReference kind="spells" name={plan.battleSpell.name} id={plan.battleSpell.catalogId} />
                   </div>
                   {plan.battleSpell.description ? (
                     <div className="text-[11px] leading-5 text-text-secondary">
@@ -160,7 +161,7 @@ export function HeroBuildPlanCard({ plan }: HeroBuildPlanCardProps) {
                 </div>
                 <div className="min-w-0 flex-1 space-y-2">
                   <div className="text-[13px] font-medium text-text-primary">
-                    {plan.emblem.name}
+                    <CatalogReference kind="emblems" name={plan.emblem.name} />
                   </div>
                   {plan.emblem.bonuses.length > 0 ? (
                     <div className="flex flex-wrap gap-2 text-[11px] text-text-secondary">
@@ -194,7 +195,7 @@ export function HeroBuildPlanCard({ plan }: HeroBuildPlanCardProps) {
                           <div>
                             <div className="text-[12px] font-medium text-text-primary">
                               {talent.tier ? `Tier ${talent.tier} · ` : ""}
-                              {talent.name}
+                              <CatalogReference kind="emblems" name={talent.name} id={talent.catalogId} />
                             </div>
                             {talent.description ? (
                               <div className="text-[11px] leading-5 text-text-secondary">
